@@ -6,3 +6,6 @@
 * Ordered List
 * `<h1>` and `<h2>`
 * `iframe` of Google Maps
+* Borders
+* Different system font stack
+* Box shadow

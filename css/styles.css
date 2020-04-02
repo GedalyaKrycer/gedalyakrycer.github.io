@@ -1,0 +1,27 @@
+* {
+    margin: 0;
+}
+header {
+    background-color: teal;
+    color: white;
+    text-align: center;
+    text-transform: uppercase;
+    padding: 50px 0;
+}
+
+h2 {
+    margin-top: 40px;
+    margin-bottom: 10px;
+    color: teal;
+}
+
+main {
+    margin: 0 auto;
+    max-width: 800px;
+}
+
+.bx-shadow {
+    -webkit-box-shadow: 10px 10px 92px -34px rgba(0,0,0,0.75);
+    -moz-box-shadow: 10px 10px 92px -34px rgba(0,0,0,0.75);
+    box-shadow: 10px 10px 92px -34px rgba(0,0,0,0.75);
+}

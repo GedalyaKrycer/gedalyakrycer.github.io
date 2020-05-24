@@ -1,28 +1,26 @@
-# 02-homework-bootstrap-responsive-portfolio
-In this project I created a 3 page responsive portfolio website. It is built on the Bootstrap 4 framework and then further modified with custom CSS. 
+# Gedalya Krycer Portfolio
+This is an experimental Bootstrap 4 portfolio site. The goal is to grow this website as I learn more about web development. 
 
-## Highlights From Project
-* Navbar designates the "active" link for each page and includes the `sr-only` class for link. This is to help people understand what page they are on, from both a UX and accessibility standpoint. 
+### [View Deployed Site](https://gedalyakrycer.github.io/)
 
-* Made the navigation fixed, so it stays in position when scrolling.
+## V2 (Current)
+* Updated [About page](https://gedalyakrycer.github.io/) with new bio and a resume.
 
-* On mobile gave the image a shadow for stylistic purposes. It also centers on the page and no longer floats the text around it.
-![Home Demo](./assets/images/gifs/home-demo.gif)
+* Added my GitHub repository icon/link in the footer. 
 
-* Added a meta description for SEO benefits and for Google to grab and display on the SERP page.
+* Added my email and phone number (both linked) to the [Contact page](https://gedalyakrycer.github.io/contact.html), however the form is still not connected. 
 
-* Where possible I tried to stay away from using element selectors and instead using classes. (Except for items like `<h1>` and `<body>` and other such base elements) 
+* Increased the overall width for the content sections
 
-* Brought in custom fonts from Google Fonts
+* Added 3 new projects to the [Portfolio page](https://gedalyakrycer.github.io/portfolio.html) that are internally linked.
 
-* Pinned the footer to the bottom of the screen
+    * [Developer Quiz](https://gedalyakrycer.github.io/projects/developer-quiz.html)
 
-* Added Font Awesome icons for social media 
+    * [Vegg-in-Place Entertainment Generator](https://gedalyakrycer.github.io/projects/vegg-in-place.html) (This also includes a Figma embed)
 
-* On the portfolio page's thumbnail I added an overlay hoverstate that contains additional text and link's to my external portfolio. (These hide on mobile)
-![Portfolio Demo](./assets/images/gifs/portfolio-demo.gif)
+    * [Weather Forecast](https://gedalyakrycer.github.io/projects/weather-forecast.html)
 
-* Validated HTML [index.html](https://take.ms/NcoHI), [portfolio.html](https://take.ms/aNqTL), [contact.html](https://take.ms/Vn3Ke)
 
-* Validated CSS [custom-styles.css](https://take.ms/6hQle)
 
+## V1
+Started as a basic bootstrap site that linked to past projects on my [Adobe Portfolio built site](https://gedalyakrycer.com/). 

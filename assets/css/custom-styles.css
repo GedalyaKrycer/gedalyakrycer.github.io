@@ -156,6 +156,7 @@ Main Content
 
 .main-content__profile-img {
     border-radius: 50%;
+    box-shadow: 0px 6px 36px -11px rgba(0,0,0,0.41);
 }
 
 
@@ -234,7 +235,6 @@ Media Queries
 
     .main-content__profile-img {
         max-width: 150px;
-        box-shadow: 0px 6px 36px -11px rgba(0,0,0,0.41);
         transition: ease .5s;
     }
 

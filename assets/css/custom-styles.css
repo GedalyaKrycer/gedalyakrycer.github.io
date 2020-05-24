@@ -31,6 +31,13 @@ h3 {
     padding: 0;
 }
 
+h4 {
+    font-family: 'Lato', sans-serif;
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
 p {
     font-family: 'Lato', sans-serif;
 }
@@ -143,9 +150,6 @@ Main Content
 }
 
 .main-content__profile-img {
-    height: 150px;
-    width: 150px;
-    margin-right: 20px;
     border-radius: 50%;
 }
 
@@ -221,7 +225,14 @@ footer {
 Media Queries
 ***************************************/
 
-@media screen and (max-width: 725px) {
+@media screen and (max-width: 767px) {
+
+    .main-content__profile-img {
+        max-width: 150px;
+        box-shadow: 0px 6px 36px -11px rgba(0,0,0,0.41);
+        transition: ease .5s;
+    }
+
     .portfolio--sm-hide {
         display: none;
     }
@@ -255,21 +266,10 @@ Media Queries
         padding: 2rem 1rem;
     }
 
-    .main-content--sm-flex {
-        display: flex;
-        flex-direction: column;
-        margin-left: 0;
-    }
-
     .main-content__header {
         text-align: center;
     }
 
-    .main-content__profile-img {
-        align-self: center;
-        margin-bottom: 10px;
-        box-shadow: 0px 6px 36px -11px rgba(0,0,0,0.41);
-    }
     
 
     /*———————————————————————————————————————

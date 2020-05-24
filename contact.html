@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html lang="en" class="h-100">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact</title>
     <meta name="description" content="Contact me to start work on your next web project!">
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <!-- Custom CSS -->
     <link rel="stylesheet" href="./assets/css/custom-styles.css">
     <!-- FontAwesome -->
@@ -15,8 +17,9 @@
     <link rel="apple-touch-icon" sizes="180x180" href="./assets/images/img-links/favicon_io/apple-touch-icon.png.png">
     <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/img-links/favicon_io/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="./assets/images/img-links/favicon_io/favicon-16x16.png">
-    <link rel="manifest" href="/site.webmanifest"> 
+    <link rel="manifest" href="/site.webmanifest">
 </head>
+
 <body class="d-flex flex-column h-100">
     <!-- Nav -->
     <header>
@@ -37,29 +40,46 @@
                     </li>
                 </ul>
             </div>
-          </nav>
+        </nav>
     </header>
     <!-- Central Content Box -->
     <main class="container main-content shadow-sm">
-            <div class="main-content__header">
-                <h1>Contact</h1>
-                <hr class="section-divider">
+        <div class="main-content__header">
+            <h1>Contact</h1>
+            <hr class="section-divider">
+        </div>
+        <form>
+            <div class="form-group">
+                <label for="inputName">Name</label>
+                <input type="text" class="form-control" id="inputName" aria-describedby="inputName"
+                    placeholder="John Smith">
             </div>
-            <form>
-                <div class="form-group">
-                    <label for="inputName">Name</label>
-                    <input type="text" class="form-control" id="inputName" aria-describedby="inputName" placeholder="John Smith">
-                  </div>
-                <div class="form-group">
-                  <label for="exampleInputEmail1">Email address</label>
-                  <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="exampleInputEmail1" placeholder="example@gmail.com">
+            <div class="form-group">
+                <label for="exampleInputEmail1">Email address</label>
+                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="exampleInputEmail1"
+                    placeholder="example@gmail.com">
+            </div>
+            <div class="form-group">
+                <label for="exampleFormControlTextarea1">Message</label>
+                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+
+        <section>
+            <hr class="section-divider mt-5">
+            <div class="row">
+                <div class="col-md">
+                    <h4><a href="mailto:gedalya@krycer.com">gedalya@krycer.com</a></h4>
                 </div>
-                <div class="form-group">
-                    <label for="exampleFormControlTextarea1">Message</label>
-                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-                  </div>
-                <button type="submit" class="btn btn-primary">Submit</button>
-              </form>
+                <div class="col-md">
+                    <h4><a href="tel:2142987368">(214) 298-7368</a></h4>
+                </div>
+            </div>
+
+        </section>
+
+
     </main>
     <!-- Footer -->
     <footer class="mt-auto">
@@ -67,20 +87,31 @@
             <div class="row footer--flex">
                 <p class="copyright">&copy; Copyright 2020</p>
                 <ul class="footer__social">
-                    <li class="footer__social-item"><a href="https://www.linkedin.com/in/gedalyakrycer/" target="_blank">
-                        <i class="fab fa-linkedin"></i>
-                    </a></li>
+                    <li class="footer__social-item"><a href="https://www.linkedin.com/in/gedalyakrycer/"
+                            target="_blank">
+                            <i class="fab fa-linkedin"></i>
+                        </a></li>
                     <li class="footer__social-item"><a href="https://www.facebook.com/gkrycer" target="_blank">
-                        <i class="fab fa-facebook"></i>
-                    </a></li>
+                            <i class="fab fa-facebook"></i>
+                        </a></li>
+                    <li class="footer__social-item"><a href="https://github.com/GedalyaKrycer" target="_blank">
+                            <i class="fab fa-github"></i>
+                        </a></li>
                 </ul>
             </div>
         </div>
     </footer>
 
     <!-- Bootstrap Scripts -->
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
 </body>
+
 </html>

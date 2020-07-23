@@ -10,11 +10,11 @@ This is an experimental Bootstrap 4 portfolio site. The goal is to grow this web
 
 * Updated [Portfolio page](https://gedalyakrycer.github.io/portfolio.html) with a new group project called **wellyes Goal Tracker**.
 
-* Added a [project page](https://gedalyakrycer.github.io/wellyes-goal-tracker.html) for the new wellyes portfolio addition. This includes an embedded Figma design.
+* [Added a project page](https://gedalyakrycer.github.io/projects/wellyes-goal-tracker.html) for the new wellyes portfolio addition. This includes an embedded Figma design.
 
 * Added alt tags to the thumbnail images on the Portfolio page.
 
-* Fixed the Gif on the [Vegg-In-Place](https://gedalyakrycer.github.io/vegg-in-place.html) project to match the correct project. 
+* Fixed the Gif on the [Vegg-In-Place](https://gedalyakrycer.github.io/projects/vegg-in-place.html) project to match the correct project. 
 
 
 

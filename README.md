@@ -3,7 +3,22 @@ This is an experimental Bootstrap 4 portfolio site. The goal is to grow this web
 
 ### [View Deployed Site](https://gedalyakrycer.github.io/)
 
-## V2 (Current)
+
+
+## V3 (Current)
+* Removed Facebook icon from the footer
+
+* Updated [Portfolio page](https://gedalyakrycer.github.io/portfolio.html) with a new group project called **wellyes Goal Tracker**.
+
+* Added a [project page](https://gedalyakrycer.github.io/wellyes-goal-tracker.html) for the new wellyes portfolio addition. This includes an embedded Figma design.
+
+* Added alt tags to the thumbnail images on the Portfolio page.
+
+* Fixed the Gif on the [Vegg-In-Place](https://gedalyakrycer.github.io/vegg-in-place.html) project to match the correct project. 
+
+
+
+## V2
 * Updated [About page](https://gedalyakrycer.github.io/) with new bio and a resume.
 
 * Added my GitHub repository icon/link in the footer. 

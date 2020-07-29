@@ -4,7 +4,7 @@ This is an experimental Bootstrap 4 portfolio site. The goal is to grow this web
 ### [View Deployed Site](practical-neumann-1924c6.netlify.app)
 
 
-## V5 (Current)
+## V4 (Current)
 * Changed deployed link above and changelog links below to Netlify
 
 * Updated the form on the [Contact page](https://practical-neumann-1924c6.netlify.app/contact.html) to be functional with Netlify.

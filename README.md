@@ -9,6 +9,11 @@ This is an experimental Bootstrap 4 portfolio site. The goal is to grow this web
 
 * Updated the form on the [Contact page](https://practical-neumann-1924c6.netlify.app/contact.html) to be functional with Netlify.
 
+* Added Spam Protection 
+    * There is a hidden Honeypot input field in the contact form.
+
+    * There is a Google reCaptcha 2 module.  
+
 
 ## V3
 * Removed Facebook icon from the footer

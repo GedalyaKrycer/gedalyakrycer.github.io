@@ -1,7 +1,7 @@
 [build]
   command = "npm run build"
-  publish="path-to-react-app/build"
-  base = "path-to-react-app"
+  publish="gk-portfolio/build"
+  base = "gk-portfolio"
 
   [[redirects]]
   from = "/*"

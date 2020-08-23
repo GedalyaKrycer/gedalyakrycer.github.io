@@ -19,7 +19,7 @@ function TopNavbar() {
             <Navbar.Collapse id="responsive-navbar-nav">
                 <Nav className="mr-auto">
                     <LinkContainer to="/">
-                        <Nav.Link>Dev</Nav.Link>
+                        <Nav.Link >Dev</Nav.Link>
                     </LinkContainer>
                     <Nav.Link href="http://gedalya.myportfolio.com/" target="_blank" rel="noopener noreferrer">Design</Nav.Link>
                     <LinkContainer to="/about">

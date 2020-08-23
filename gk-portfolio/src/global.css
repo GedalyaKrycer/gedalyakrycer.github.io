@@ -17,12 +17,19 @@ code {
     monospace;
 }
 
+header {
+  text-align: center;
+  padding: 130px 0;
+}
+
 
 /* Fonts */
 h1 {
   font-weight: 900;
   font-size: 36px;
   line-height: 140%;
+  max-width: 350px;
+  margin: 0 auto;
 }
 
 h2 {
@@ -35,6 +42,8 @@ h3 {
   font-weight: 400;
   font-size: 18px;
   line-height: 140%;
+  max-width: 210px;
+  margin: 0 auto;
 }
 
 h4 {
@@ -83,6 +92,12 @@ p {
 }
 .white-color {
   color: white;
+}
+
+
+hr {
+  border-top: solid #007CBA 9px;
+  width: 210px;  
 }
 
 /* Flex */

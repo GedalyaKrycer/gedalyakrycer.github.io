@@ -1,0 +1,15 @@
+img {
+    height: 40px;
+}
+
+/* Many Navbar Overrides Are Located on the "global.css" files To Solve Specificity */
+
+.social {
+    font-size: 18px;
+}
+
+/* Toggle Button */
+.navbar-light .navbar-toggler {
+    background: #b6b6b6;
+   
+  }

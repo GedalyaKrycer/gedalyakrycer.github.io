@@ -163,6 +163,10 @@ hr {
     padding: 10px;
     text-align: center;
   }
+
+  header {
+    padding: 50px 0;
+  }
   
 }
 

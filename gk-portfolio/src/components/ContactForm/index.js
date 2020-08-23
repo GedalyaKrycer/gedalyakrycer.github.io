@@ -18,21 +18,21 @@ function Bio() {
                                 <label>Don’t fill this out if you're human: <input name="bot-field" /></label>
                             </p>
                             <div className="form-group">
-                                <label for="inputName">Name</label>
+                                <label htmlFor="inputName">Name</label>
                                 <input type="text" className="form-control" id="inputName" aria-describedby="inputName" placeholder="John Smith" name="name" />
                             </div>
                             <div className="form-group">
-                                <label for="exampleInputEmail1">Email address</label>
+                                <label htmlFor="exampleInputEmail1">Email address</label>
                                 <input type="email" className="form-control" id="exampleInputEmail1" aria-describedby="exampleInputEmail1" placeholder="example@gmail.com" name="email" />
                             </div>
                             <div className="form-group">
-                                <label for="exampleFormControlTextarea1">Message</label>
+                                <label htmlFor="exampleFormControlTextarea1">Message</label>
                                 <textarea className="form-control" id="exampleFormControlTextarea1" rows="3" name="message"></textarea>
                             </div>
 
                             {/* <!-- reCaptcha 2 --> */}
                             <div data-netlify-recaptcha="true" className="mb-4"></div>
-                            <button type="submit" class="btn btn-primary">Submit</button>
+                            <button type="submit" className="btn btn-primary">Submit</button>
                         </form>
                     </Col>
                 </Row>

@@ -19,8 +19,7 @@ footer {
     text-decoration: underline;
 }
 
-.social,
-.resume {
+.social {
     margin-left: 16px;
     color: white;
     transition: ease .5s;

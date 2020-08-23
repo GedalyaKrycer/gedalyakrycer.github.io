@@ -52,19 +52,17 @@ h3 {
 h4 {
   font-weight: 900;
   font-size: 16px;
-  line-height: 24;
 }
 
 h5 {
   font-weight: 400;
   font-size: 14px;
-  line-height: 24;
+  line-height: 70%;
 }
 
 h6 {
   font-weight: 600;
   font-size: 16px;
-  line-height: 140%;
   margin: 0;
 }
 
@@ -130,12 +128,11 @@ hr {
 }
 
 
-
 /* Flex */
-
 .justify-end {
   justify-content: flex-end;    
 }
+
 
 /* Navbar Overides */
 .navbar-light .navbar-nav .nav-link{
@@ -156,11 +153,25 @@ hr {
   transition: ease .5s;
 }
 
+
+/* Page Margins */
+.negative-margin {
+  margin-top: -8rem;
+}
+
+
+
+
+
 @media only screen and (max-width: 1201px) {
   
   h2 {
     font-size: 180px;
-    
+  }
+
+  .negative-margin {
+    margin-top: -6rem;
+    transition: ease 1s;
   }
 }
 
@@ -169,7 +180,14 @@ hr {
   h2 {
     font-size: 150px;
   }
+
+  .negative-margin {
+    margin-top: -5rem;
+    transition: ease 1s;
+  }
+
 }
+
 @media only screen and (max-width: 767px) {
   .navbar-collapse {
     margin-top: 10px;
@@ -186,6 +204,11 @@ hr {
     font-size: 110px;
     line-height: 90%;
     margin-top: 1rem;
+  }
+
+  .negative-margin {
+    margin-top: -2rem;
+    transition: ease 1s;
   }
 }
 

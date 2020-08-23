@@ -1,5 +1,83 @@
+/* Project Thumbnail */
 .projet-img {
     width: 415px;
     height: 252px;
-    border-radius: 16px;
+    border-radius: 18px;
+    -webkit-box-shadow: 0px 4px 23px 0px rgba(0,0,0,0.65);
+       -moz-box-shadow: 0px 4px 23px 0px rgba(0,0,0,0.65);
+            box-shadow: 0px 4px 23px 0px rgba(0,0,0,0.65);
+    transition: ease .5s;
+}
+
+.projet-img:hover {
+    -webkit-box-shadow: 0px 10px 30px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 10px 30px 0px rgba(0,0,0,0.75);
+         box-shadow: 0px 10px 30px 0px rgba(0,0,0,0.75);
+    transition: ease .5s;
+}
+
+
+/* Meta container */
+.meta-container {
+    background: #007CBA;
+    height: 252px;
+    border-radius: 18px;
+    z-index: 1;
+    padding: 125px 30px 0;
+}
+
+.project-links {
+    margin-bottom: 25px;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 45%;
+    background-color: #076492;
+    padding: 10px;
+    border-radius: 23px;
+    color: aliceblue;
+    font-weight: 600;
+    transition: ease .7s;
+}
+
+.button:hover {
+    color: #076492;
+    background-color: aliceblue;
+    transition: ease .7s;
+}
+
+.button h5 {
+    margin-top: 7px;
+    margin-left: 4px;
+}
+
+
+
+/* Animation Classes */
+.cardSlide {
+    position: relative;
+    top: 178px;
+    z-index: 2;
+    transition: ease .5s;
+    color: none;
+    padding: 0;
+    border-radius: 20px;
+    border: none;
+}
+
+.cardSlide:focus {
+    border: none;
+    outline: none;
+}
+
+.cardSlideUp {
+    top: 90px;
+    z-index: 2;
+    transition: ease .5s;
 }

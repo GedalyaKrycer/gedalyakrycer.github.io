@@ -1,7 +1,7 @@
 # Gedalya Krycer Portfolio
 This is an experimental Bootstrap 4 portfolio site. The goal is to grow this website as I learn more about web development. 
 
-### [View Deployed Site](https://practical-neumann-1924c6.netlify.app/index.html)
+### [View Deployed Site](https://practical-neumann-1924c6.netlify.app/)
 
 
 ## V5 (Current)

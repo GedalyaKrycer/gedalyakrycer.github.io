@@ -1,0 +1,50 @@
+[
+    {
+        "img": "https://raw.githubusercontent.com/GedalyaKrycer/gedalyakrycer.github.io/react/gk-portfolio/public/assets/images/img-links/portfolio/Card/directory-thumbnail.jpg",
+        "title": "DigiBit Team Directory",
+        "tech": "React.js",
+        "deployLink": "https://unit-19-react-homework-employee-directory.netlify.app/",
+        "repoLink": "https://github.com/GedalyaKrycer/unit-19-react-homework-employee-directory"
+
+    },
+    {
+        "img": "https://raw.githubusercontent.com/GedalyaKrycer/gedalyakrycer.github.io/react/gk-portfolio/public/assets/images/img-links/portfolio/Card/webdev-thumbnail.jpg",
+        "title": "WebDev Challenge Quiz",
+        "tech": "Bootstrap / JS",
+        "deployLink": "https://gedalyakrycer.github.io/04-web-api-code-quiz/",
+        "repoLink": "https://github.com/GedalyaKrycer/04-web-api-code-quiz"
+
+    },
+    {
+        "img": "https://raw.githubusercontent.com/GedalyaKrycer/gedalyakrycer.github.io/react/gk-portfolio/public/assets/images/img-links/portfolio/Card/wellyes-thumbnail.jpg",
+        "title": "wellyes. Goal Tracker",
+        "tech": "Bootstrap / MySQL / Express / JS",
+        "deployLink": "https://glacial-meadow-97517.herokuapp.com/",
+        "repoLink": "https://github.com/jtcravey1991/the-a-team-project-2"
+
+    },
+    {
+        "img": "https://raw.githubusercontent.com/GedalyaKrycer/gedalyakrycer.github.io/react/gk-portfolio/public/assets/images/img-links/portfolio/Card/weather-thumbnail.jpg",
+        "title": "Weather Forcaster",
+        "tech": "Bootstrap / OpenWeather.js / JS",
+        "deployLink": "https://gedalyakrycer.github.io/hw-6-weather-dashboard/",
+        "repoLink": "https://github.com/GedalyaKrycer/hw-6-weather-dashboard"
+
+    },
+    {
+        "img": "https://raw.githubusercontent.com/GedalyaKrycer/gedalyakrycer.github.io/react/gk-portfolio/public/assets/images/img-links/portfolio/Card/vegg-thumbnail.jpg",
+        "title": "Vegg-in-Place",
+        "tech": "Bulma / JS",
+        "deployLink": "https://dpayton92.github.io/Vegg_In_Place_Survival_Kit/",
+        "repoLink": "https://github.com/dpayton92/Vegg_In_Place_Survival_Kit"
+
+    },
+    {
+        "img": "https://raw.githubusercontent.com/GedalyaKrycer/gedalyakrycer.github.io/react/gk-portfolio/public/assets/images/img-links/portfolio/Card/cli-thumbnail.jpg",
+        "title": "CLI README Generator",
+        "tech": "Node.js",
+        "deployLink": "https://github.com/GedalyaKrycer/hw-10-employee-summary",
+        "repoLink": "https://github.com/GedalyaKrycer/hw-10-employee-summary"
+
+    },
+]

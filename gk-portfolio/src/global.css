@@ -34,7 +34,7 @@ h1 {
 
 h2 {
   font-weight: 900;
-  font-size: 240px;
+  font-size: 180px;
   line-height: 140%;
   text-align: center;
   color: #353535;
@@ -156,21 +156,23 @@ hr {
 
 /* Page Margins */
 .negative-margin {
-  margin-top: -8rem;
+  margin-top: -6.5rem;
+}
+
+.projects-container {
+    margin-top: -170px;
 }
 
 
-
-
-
+/* MOBILE */
 @media only screen and (max-width: 1201px) {
   
   h2 {
-    font-size: 180px;
+    font-size: 155px;
   }
 
   .negative-margin {
-    margin-top: -6rem;
+    margin-top: -5rem;
     transition: ease 1s;
   }
 }
@@ -178,11 +180,11 @@ hr {
 @media only screen and (max-width: 993px) {
   
   h2 {
-    font-size: 150px;
+    font-size: 110px;
   }
 
   .negative-margin {
-    margin-top: -5rem;
+    margin-top: -4rem;
     transition: ease 1s;
   }
 
@@ -201,14 +203,35 @@ hr {
   }
   
   h2 {
-    font-size: 110px;
+    font-size: 70px;
     line-height: 90%;
-    margin-top: 1rem;
+    margin-top: 2rem;
   }
 
   .negative-margin {
-    margin-top: -2rem;
+    margin-top: -1.5rem;
     transition: ease 1s;
   }
+
+  .cardSlide,
+  .project-img,
+  .meta-container {
+      border-radius: 8px;
+  }
+
+
+  .cardSlide {
+      border-radius: 12px;
+  }
+}
+
+@media only screen and (max-width: 439px) {
+  h2 {
+    font-size: 50px;
+    line-height: 90%;
+    margin-top: 2rem;
+  }
+
+
 }
 

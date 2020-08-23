@@ -10,7 +10,7 @@ function DevPortfolio() {
     return (
         <section>
             <Container>
-                <h2>Dev Work</h2>
+                <h2>Development</h2>
 
                 <Row className="justify-content-around negative-margin">
 
@@ -24,8 +24,6 @@ function DevPortfolio() {
                             repoLink={project.repoLink}
                         />
                     ))}
-                   
-
 
                 </Row>
 

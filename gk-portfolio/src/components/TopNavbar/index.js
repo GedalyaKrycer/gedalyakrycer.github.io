@@ -8,16 +8,23 @@ import './style.css';
 // This is static top section of the page and gives it semantic value.
 function TopNavbar() {
     return (
-        <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
+        <Navbar collapseOnSelect expand="lg">
+            
             <LinkContainer to="/" className="d-lg-none">
                 <Navbar.Brand>
                     <img src="https://raw.githubusercontent.com/GedalyaKrycer/gedalyakrycer.github.io/46e78fe53858d535b8db1d9e7e42455fa0a8b090/gk-portfolio/public/assets/images/img-links/gk-logo-white.svg" alt="GK Logo" />
                 </Navbar.Brand>
             </LinkContainer>
+            <Navbar.Toggle aria-controls="responsive-navbar-nav" />
             <Navbar.Collapse id="responsive-navbar-nav">
                 <Nav className="mr-auto">
-                    <Nav.Link href="#features">Features</Nav.Link>
-                    <Nav.Link href="#pricing">Pricing</Nav.Link>
+                    <LinkContainer to="/">
+                        <Nav.Link>Development</Nav.Link>
+                    </LinkContainer>
+                    <Nav.Link href="http://gedalya.myportfolio.com/" target="_blank" rel="noopener noreferrer">Design</Nav.Link>
+                    <LinkContainer to="/about">
+                    <Nav.Link>About</Nav.Link>
+                    </LinkContainer>
                 </Nav>
             </Navbar.Collapse>
             <LinkContainer to="/" className="d-none d-lg-block">
@@ -26,14 +33,14 @@ function TopNavbar() {
                 </Navbar.Brand>
             </LinkContainer>
             <Navbar.Collapse className="justify-end">
-                <Nav>
-                    <Nav.Link href="https://www.linkedin.com/in/gedalyakrycer/" target="_blank" rel="noopener noreferrer"><FaLinkedinIn /></Nav.Link>
-                    <Nav.Link href="https://github.com/GedalyaKrycer" target="_blank" rel="noopener noreferrer"><FaGithub /></Nav.Link>
+                <Nav className="social">
+                    <Nav.Link href="https://www.linkedin.com/in/gedalyakrycer/" target="_blank" rel="noopener noreferrer"><FaLinkedinIn/></Nav.Link>
+                    <Nav.Link href="https://github.com/GedalyaKrycer" target="_blank" rel="noopener noreferrer" ><FaGithub /></Nav.Link>
                     <Nav.Link href="https://www.behance.net/gedalyakrycer" target="_blank" rel="noopener noreferrer"><FaBehance /></Nav.Link>
 
                 </Nav>
             </Navbar.Collapse>
-            <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+            
 
 
         </Navbar>

@@ -8,6 +8,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background: #202120;
+  font-weight: 600;
 }
 
 code {
@@ -66,20 +67,20 @@ p {
 
 
 /* Colors */
-bg-color {
+.bg-color {
   background: #202120;
 }
-primary-blue-color {
-  background: #007CBA;
+.primary-blue-color {
+  background: #545657;
 }
-secondary-blue-color {
+.secondary-blue-color {
   background: #00628A;
 }
-section-headlines-color {
+.section-headlines-color {
   background: #353535;
 }
-white-color {
-  background: #fff;
+.white-color {
+  color: white;
 }
 
 /* Flex */
@@ -87,3 +88,33 @@ white-color {
 .justify-end {
   justify-content: flex-end;    
 }
+
+/* Navbar Overides */
+.navbar-light .navbar-nav .nav-link{
+  color: white;
+  transition: ease .5s;
+}
+
+.navbar-light .navbar-nav .nav-link:focus, 
+.navbar-light .navbar-nav .nav-link:hover{
+  color: white;
+  opacity: .5;
+  transition: ease .5s;
+}
+
+.navbar-light .navbar-nav .nav-link:active,
+.navbar-light .navbar-nav .nav-link:visited{
+  color: white;
+  transition: ease .5s;
+}
+
+@media only screen and (max-width: 992px) {
+  .navbar-collapse {
+    margin-top: 10px;
+    background: #353535;
+    padding: 10px;
+    text-align: center;
+  }
+  
+}
+

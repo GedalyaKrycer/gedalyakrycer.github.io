@@ -11,7 +11,7 @@ function DevProjectCard() {
     const cardSlider = () => !cardSlide ? setCardSlide(true) : setCardSlide(false);
 
     return (
-        <div>
+        <div className="projects-container">
             <button className={`cardSlide ${cardSlide ? "cardSlideUp" : ""}`} onClick={cardSlider}>
                 <img src="https://raw.githubusercontent.com/GedalyaKrycer/gedalyakrycer.github.io/react/gk-portfolio/public/assets/images/img-links/portfolio/Card/directory-thumbnail.jpg" alt="Name" className="projet-img" />
             </button>

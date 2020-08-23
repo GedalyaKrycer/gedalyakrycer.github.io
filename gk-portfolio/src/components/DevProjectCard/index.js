@@ -6,7 +6,7 @@ import './style.css';
 function DevProjectCard() {
     return (
         <div>
-            <img src="#" alt="Name" />
+            <img src="https://raw.githubusercontent.com/GedalyaKrycer/gedalyakrycer.github.io/react/gk-portfolio/public/assets/images/img-links/portfolio/Card/directory-thumbnail.jpg" alt="Name" className="projet-img "/>
 
         </div>
     )

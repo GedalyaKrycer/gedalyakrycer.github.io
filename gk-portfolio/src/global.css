@@ -156,6 +156,20 @@ hr {
   transition: ease .5s;
 }
 
+@media only screen and (max-width: 1201px) {
+  
+  h2 {
+    font-size: 180px;
+    
+  }
+}
+
+@media only screen and (max-width: 993px) {
+  
+  h2 {
+    font-size: 150px;
+  }
+}
 @media only screen and (max-width: 767px) {
   .navbar-collapse {
     margin-top: 10px;
@@ -168,5 +182,10 @@ hr {
     padding: 50px 0;
   }
   
+  h2 {
+    font-size: 110px;
+    line-height: 90%;
+    margin-top: 1rem;
+  }
 }
 

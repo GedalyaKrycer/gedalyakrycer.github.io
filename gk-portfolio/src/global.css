@@ -81,3 +81,9 @@ section-headlines-color {
 white-color {
   background: #fff;
 }
+
+/* Flex */
+
+.justify-end {
+  justify-content: flex-end;    
+}

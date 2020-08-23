@@ -16,9 +16,11 @@ function TopNavbar() {
                     <Nav.Link href="#pricing">Pricing</Nav.Link>
                 </Nav>
             </Navbar.Collapse>
+            
             <Navbar.Brand href="#home">React-Bootstrap</Navbar.Brand>
             <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-            <Navbar.Collapse>
+
+            <Navbar.Collapse className="justify-end">
                 <Nav>
                     <Nav.Link href="https://www.linkedin.com/in/gedalyakrycer/" target="_blank" rel="noopener noreferrer"><FaLinkedinIn /></Nav.Link>
                     <Nav.Link href="https://github.com/GedalyaKrycer" target="_blank" rel="noopener noreferrer"><FaGithub /></Nav.Link>

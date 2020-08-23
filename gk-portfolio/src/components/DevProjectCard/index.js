@@ -4,7 +4,7 @@ import { FaGithub, FaDesktop } from 'react-icons/fa';
 
 
 // This is static top section of the page and gives it semantic value.
-function DevProjectCard() {
+function DevProjectCard({ img, title, tech, deployLink, repoLink }) {
 
     const [cardSlide, setCardSlide] = useState(false);
 
@@ -13,27 +13,27 @@ function DevProjectCard() {
     return (
         <div className="projects-container">
             <button className={`cardSlide ${cardSlide ? "cardSlideUp" : ""}`} onClick={cardSlider}>
-                <img src="https://raw.githubusercontent.com/GedalyaKrycer/gedalyakrycer.github.io/react/gk-portfolio/public/assets/images/img-links/portfolio/Card/directory-thumbnail.jpg" alt="Name" className="projet-img" />
+                <img src={img} alt={title} className="projet-img" />
             </button>
 
             <div className="meta-container white-color">
                 <div className="project-links">
-                    <a href="https://google.com"
+                    <a href={deployLink}
                         target="_blank"
                         rel="noopener noreferrer" className="button">
                         <FaDesktop />
                         <h5>View Deployed</h5>
                     </a>
-                    <a href="https://google.com"
+                    <a href={repoLink}
                         target="_blank"
                         rel="noopener noreferrer" className="button">
-                            <FaGithub />
+                        <FaGithub />
                         <h5>View Repo</h5>
                     </a>
                 </div>
                 <div>
-                    <h4>DigiBit Team Directory</h4>
-                    <h5>React.js</h5>
+                    <h4>{title}</h4>
+                    <h5>{tech}</h5>
                 </div>
             </div>
 

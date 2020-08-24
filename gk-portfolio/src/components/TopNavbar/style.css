@@ -1,5 +1,10 @@
-nav img {
+.nav__logo-desktop {
+    margin-right: 67px;
     height: 40px;
+}
+
+.nav__logo-mobile {
+    height: 32px;
 }
 
 /* Many Navbar Overrides Are Located on the "global.css" files To Solve Specificity */
@@ -8,11 +13,10 @@ nav img {
     font-size: 17px;
 }
 
-.nav-logo-middle {
-    margin-right: 22px;
-}
+
 
 /* Toggle Button */
 .navbar-light .navbar-toggler {
-    background: #b6b6b6;
-  }
+    background: none;
+}
+

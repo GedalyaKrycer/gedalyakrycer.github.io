@@ -11,12 +11,11 @@ function Bio() {
             <Container>
                 <Row className="justify-content-md-center mt-5">
                     <Col className="white-color" lg={8}>
-                        <form data-netlify="true" name="contact" method="POST" netlify-honeypot="bot-field" data-netlify-recaptcha="true">
 
-                            {/* <!-- Honeypot protection from spam bots --> */}
-                            <p className="hidden">
-                                <label>Don’t fill this out if you're human: <input name="bot-field" /></label>
-                            </p>
+
+                        <form name="contact" method="POST">
+
+
                             <div className="form-group">
                                 <label htmlFor="inputName">Name</label>
                                 <input type="text" className="form-control" id="inputName" aria-describedby="inputName" placeholder="John Smith" name="name" />
@@ -30,8 +29,7 @@ function Bio() {
                                 <textarea className="form-control" id="exampleFormControlTextarea1" rows="3" name="message"></textarea>
                             </div>
 
-                            {/* <!-- reCaptcha 2 --> */}
-                            <div data-netlify-recaptcha="true" className="mb-4"></div>
+
                             <button type="submit" className="btn btn-primary">Submit</button>
                         </form>
                     </Col>

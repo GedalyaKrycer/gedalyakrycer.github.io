@@ -8,12 +8,29 @@
   <link rel="icon" type="image/png" sizes="16x16" href="./assets/favicon_package/favicon-16x16.png">
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="description" content="Gedalya is a Front-End Developer based in Las Vegas." />
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-122656834-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'UA-122656834-1');
+  </script>
+  <!-- END Global site tag (gtag.js) - Google Analytics -->
+
   <title>Gedalya Krycer Portfolio</title>
 </head>
 
 <body>
   <noscript>You need to enable JavaScript to run this app.</noscript>
   <div id="root"></div>
+  <form name="contact" netlify netlify-honeypot="bot-field" hidden>
+    <input type="text" name="name" />
+    <input type="email" name="email" />
+    <textarea name="message"></textarea>
+  </form>
 
   <script src="https://unpkg.com/react/umd/react.production.min.js" crossorigin></script>
   <script src="https://unpkg.com/react-dom/umd/react-dom.production.min.js" crossorigin></script>

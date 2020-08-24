@@ -6,3 +6,8 @@
     background-color: #353535;
 }
 
+.btn-primary, .btn {
+    border-color: none;
+    border: none;
+}
+

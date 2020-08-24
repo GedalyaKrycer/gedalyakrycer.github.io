@@ -4,7 +4,6 @@ import Nav from 'react-bootstrap/Nav';
 import { LinkContainer } from "react-router-bootstrap";
 import { FaGithub, FaLinkedinIn, FaBehance } from 'react-icons/fa';
 import { FiArrowUpRight } from 'react-icons/fi';
-import { RiMenu5Fill } from 'react-icons/ri';
 import './style.css';
 
 // This is static top section of the page and gives it semantic value.

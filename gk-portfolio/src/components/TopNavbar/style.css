@@ -1,5 +1,5 @@
 .nav__logo-desktop {
-    margin-right: 67px;
+    margin-right: 65px;
     height: 40px;
 }
 
@@ -12,8 +12,6 @@
 .nav__social {
     font-size: 17px;
 }
-
-
 
 /* Toggle Button */
 .navbar-light .navbar-toggler {

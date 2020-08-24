@@ -3,6 +3,7 @@ import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
 import { LinkContainer } from "react-router-bootstrap";
 import { FaGithub, FaLinkedinIn, FaBehance } from 'react-icons/fa';
+import { FiArrowUpRight } from 'react-icons/fi';
 import './style.css';
 
 // This is static top section of the page and gives it semantic value.
@@ -21,7 +22,7 @@ function TopNavbar() {
                     <LinkContainer to="/">
                         <Nav.Link >Dev</Nav.Link>
                     </LinkContainer>
-                    <Nav.Link href="http://gedalya.myportfolio.com/" target="_blank" rel="noopener noreferrer">Design</Nav.Link>
+                    <Nav.Link href="http://gedalya.myportfolio.com/" target="_blank" rel="noopener noreferrer">Design <FiArrowUpRight /> </Nav.Link>
                     <LinkContainer to="/about">
                     <Nav.Link>About</Nav.Link>
                     </LinkContainer>
@@ -29,11 +30,11 @@ function TopNavbar() {
             </Navbar.Collapse>
             <LinkContainer to="/" className="d-none d-md-block">
                 <Navbar.Brand>
-                    <img src="https://raw.githubusercontent.com/GedalyaKrycer/gedalyakrycer.github.io/46e78fe53858d535b8db1d9e7e42455fa0a8b090/gk-portfolio/public/assets/images/img-links/gk-logo-white.svg" alt="GK Logo" />
+                    <img src="https://raw.githubusercontent.com/GedalyaKrycer/gedalyakrycer.github.io/46e78fe53858d535b8db1d9e7e42455fa0a8b090/gk-portfolio/public/assets/images/img-links/gk-logo-white.svg" alt="GK Logo" className="nav-logo-middle" />
                 </Navbar.Brand>
             </LinkContainer>
             <Navbar.Collapse className="justify-end">
-                <Nav>
+                <Nav className="nav__social">
                     <Nav.Link href="https://www.linkedin.com/in/gedalyakrycer/" target="_blank" rel="noopener noreferrer"><FaLinkedinIn/></Nav.Link>
                     <Nav.Link href="https://github.com/GedalyaKrycer" target="_blank" rel="noopener noreferrer" ><FaGithub /></Nav.Link>
                     <Nav.Link href="https://www.behance.net/gedalyakrycer" target="_blank" rel="noopener noreferrer"><FaBehance /></Nav.Link>

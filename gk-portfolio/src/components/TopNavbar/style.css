@@ -1,15 +1,18 @@
-img {
+nav img {
     height: 40px;
 }
 
 /* Many Navbar Overrides Are Located on the "global.css" files To Solve Specificity */
 
-.social {
-    font-size: 18px;
+.nav__social {
+    font-size: 17px;
+}
+
+.nav-logo-middle {
+    margin-right: 22px;
 }
 
 /* Toggle Button */
 .navbar-light .navbar-toggler {
     background: #b6b6b6;
-   
   }

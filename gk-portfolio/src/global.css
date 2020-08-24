@@ -157,6 +157,8 @@ hr {
 /* Page Margins */
 .negative-margin {
   margin-top: -6.5rem;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 .projects-container {
@@ -222,6 +224,15 @@ hr {
 
   .cardSlide {
       border-radius: 12px;
+  }
+
+  nav,
+  .social {
+    font-size: 18px;
+  }
+
+  .nav__social {
+    font-size: 19px;
   }
 }
 

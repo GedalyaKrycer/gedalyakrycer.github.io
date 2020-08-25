@@ -181,6 +181,8 @@ hr {
     margin-top: -5rem;
     transition: ease 1s;
   }
+
+  
 }
 
 @media only screen and (max-width: 993px) {
@@ -192,6 +194,12 @@ hr {
   .negative-margin {
     margin-top: -4rem;
     transition: ease 1s;
+  }
+
+  .cardSlide,
+  .project-img,
+  .meta-container {
+      border-radius: 30px;
   }
 
 }
@@ -219,16 +227,12 @@ hr {
     transition: ease 1s;
   }
 
-  .cardSlide,
+
   .project-img,
   .meta-container {
-      border-radius: 8px;
+      border-radius: 20px;
   }
 
-
-  .cardSlide {
-      border-radius: 12px;
-  }
 
   nav,
   .social {

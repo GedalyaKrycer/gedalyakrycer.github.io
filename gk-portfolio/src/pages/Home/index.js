@@ -14,6 +14,7 @@ function Home() {
             />
             <DevPortfolio />
             <DesignPortfolio />
+           
         </>
     )
 }

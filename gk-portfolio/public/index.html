@@ -24,14 +24,19 @@
 </head>
 
 <body>
-  <noscript>You need to enable JavaScript to run this app.</noscript>
-  <div id="root"></div>
-  <form name="contact" netlify netlify-honeypot="bot-field" hidden>
+  <!-- Netlify Form Workaround -->
+  <form data-netlify="true" hidden name="contact" netlify-honeypot="bot-field">
     <input type="text" name="name" />
     <input type="email" name="email" />
     <textarea name="message"></textarea>
+    <input name="bot-field" type="hidden" />
   </form>
 
+
+  <!-- React Hook-in -->
+  <div id="root"></div>
+
+  <!-- Bootstrap Code -->
   <script src="https://unpkg.com/react/umd/react.production.min.js" crossorigin></script>
   <script src="https://unpkg.com/react-dom/umd/react-dom.production.min.js" crossorigin></script>
   <script src="https://unpkg.com/react-bootstrap@next/dist/react-bootstrap.min.js" crossorigin></script>

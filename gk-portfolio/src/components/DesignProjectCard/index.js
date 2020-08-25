@@ -21,9 +21,7 @@ function DesignPortfolio() {
 
                     <h4 className="design__text">View Design Projects</h4>
                     <FaArrowRight className="design__icon" />
-
                 </div>
-
             </a>
         </div>
 

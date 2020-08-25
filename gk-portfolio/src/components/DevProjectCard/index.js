@@ -12,9 +12,9 @@ function DevProjectCard({ img, title, tech, deployLink, repoLink }) {
 
     return (
         <div className="projects-container">
-            <a tabindex="0" className={`cardSlide ${cardSlide ? "cardSlideUp" : ""}`} onClick={cardSlider}>
+            <button tabIndex="0" className={`cardSlide ${cardSlide ? "cardSlideUp" : ""}`} onClick={cardSlider}>
                 <img src={img} alt={title} className="project-img" />
-            </a>
+            </button>
 
             <div className="meta-container white-color">
                 <div className="project-links">

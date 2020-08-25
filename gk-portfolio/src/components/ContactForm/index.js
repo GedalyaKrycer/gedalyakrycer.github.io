@@ -22,7 +22,7 @@ function ContactForm() {
     const [executing, setExecuting] = useState(false);
     const [formValues, setFormValues] = useState({});
     const [formReset, setFormReset] = useState({});
-    // const [loaded, setLoaded] = useState(false);
+    const [loaded, setLoaded] = useState(false);
     const [msgSent, setMsgSent] = useState(false);
     const [rcError, setRcError] = useState("");
     const [isSubmitting, setIsSubmitting] = useState(false);
@@ -70,6 +70,7 @@ function ContactForm() {
 
     const onLoad = resetForm => {
         console.log("loaded...");
+        setLoaded(true);
         setFormReset(resetForm);
     };
 
@@ -240,7 +241,7 @@ function ContactForm() {
                                     </div>
                                     <Reaptcha
                                         ref={rcRef}
-                                        sitekey="6Le_laEUAAAAACRNoby3_NLejhu0lCqb4_WeSotQ"
+                                        sitekey="6LdZTMMZAAAAAGJy0j2AyImgkQ33Mv4juhtQElid"
                                         data-netlify-recaptcha="true"
                                         onError={onError}
                                         onExpire={onExpire}
@@ -248,6 +249,40 @@ function ContactForm() {
                                         onLoad={() => onLoad(() => resetForm)}
                                         size="invisible"
                                     />
+                                    <div className="m-2 col-form-label col-form-label-lg">
+                                        <span className="mr-1">ReCaptcha status:</span>
+                                        <br className="d-block d-sm-none mt-1" />
+                                        <span
+                                            className={`badge badge-${
+                                                loaded ? "success" : "primary"
+                                                } mx-2 p-2`}
+                                        >
+                                            loaded
+              </span>
+                                        <span
+                                            className={`badge badge-${
+                                                verified ? "success" : "primary"
+                                                } mx-2 p-2`}
+                                        >
+                                            verified
+              </span>
+                                        {executing && (
+                                            <span className={`badge badge-primary mx-2 p-2`}>
+                                                executing
+                                            </span>
+                                        )}
+                                        {rcError && (
+                                            <span className={`badge badge-primary mx-2 p-2`}>error</span>
+                                        )}
+                                        {rcError && (
+                                            <button
+                                                className="btn btn-link text-dark"
+                                                onClick={() => resetEverything(resetForm)}
+                                            >
+                                                reset
+                                            </button>
+                                        )}
+                                    </div>
                                     {renderButton(isSubmitting, executing, verified)}
                                     {errMsg ? <div className="text-primary m-1">{errMsg}</div> : null}
                                     {(msgSent || errMsg) && (

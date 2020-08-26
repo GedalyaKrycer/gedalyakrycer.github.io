@@ -284,12 +284,12 @@ function ContactForm() {
                                     </div>
                                     {renderButton(isSubmitting, executing, verified)}
                                     {errMsg ? <div className="text-primary m-1">{errMsg}</div> : null}
-                                    {(msgSent || errMsg) && (
-                                        <button className=""
+                                    {(errMsg) && (
+                                        <button className="contact__reset-btn"
 
                                             onClick={() => resetEverything(resetForm)}
                                         >
-                                            reset form
+                                            Reset form
                                         </button>
                                     )}
                                 </Form>

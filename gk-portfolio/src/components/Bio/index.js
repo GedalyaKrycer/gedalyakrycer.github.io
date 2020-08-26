@@ -20,7 +20,7 @@ function Bio() {
                             I recently left my agency job as a Digital Design Director to follow my true passion—building websites from the ground up.
                         </p>
                         <p>
-                            I am attending the University of Arizona's Coding Bootcamp, for certification in Full Stack Development.
+                            I am currently attending the University of Arizona's Coding Bootcamp, for a certification in Full Stack Development. I have a special passion for HTML/CSS and am actively growing in the MERN stack.
 
                         </p>
                         <p>
@@ -28,7 +28,7 @@ function Bio() {
                         </p>
                     </Col>
                 </Row>
-                
+
             </Container>
 
         </section>

@@ -13,7 +13,9 @@ function DevProjectCard({ img, title, tech, deployLink, repoLink }) {
     return (
         <div className="g_projects-container">
             <button tabIndex="0" className={`g_card-slide ${cardSlide ? "g_card-slide-up" : ""}`} onClick={cardSlider}>
+
                 <img src={img} alt={title} className="g_project-img" />
+
             </button>
 
             <div className="g_meta-container dev-project__meta-container">

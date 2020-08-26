@@ -16,7 +16,7 @@ function DesignPortfolio() {
                 target="_blank"
                 rel="noopener noreferrer" >
                 <div className="g_card-slide  design-project__card-slide">
-                    <video autoplay="true" loop="true" muted="true" playsInline="true" className="design-project__project-img">
+                    <video autoPlay={true} loop={true} muted={true} playsInline={true} className="design-project__project-img">
                         <source src={videoWebp} type="video/webm" />
                         <source src={videoMp4} type="video/mp4" />
                     </video>

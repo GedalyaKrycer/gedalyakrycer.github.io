@@ -14,3 +14,20 @@
     border-radius: .25rem;
 }
 
+.contact__reset-btn {
+    background-color: #6e6e6e;
+    max-width: 200px;
+    display: inline-block;
+    font-weight: 600;
+    color: white;
+    text-align: center;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    user-select: none;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: .25rem;
+    margin-top: 20px;
+}
+

@@ -285,7 +285,7 @@ function ContactForm() {
                                     {renderButton(isSubmitting, executing, verified)}
                                     {errMsg ? <div className="text-primary m-1">{errMsg}</div> : null}
                                     {(msgSent || errMsg) && (
-                                        <button
+                                        <button className=""
 
                                             onClick={() => resetEverything(resetForm)}
                                         >

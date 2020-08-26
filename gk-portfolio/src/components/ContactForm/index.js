@@ -85,7 +85,7 @@ function ContactForm() {
         if (errMsg) {
             return (
                 <button
-                    className="btn btn-lg btn-outline-primary mt-3"
+                    className="contact__submit-btn mt-3"
                     type="submit"
                     disabled
                 >
@@ -95,7 +95,7 @@ function ContactForm() {
         } else if (msgSent) {
             return (
                 <button
-                    className="btn btn-lg btn-outline-success mt-3"
+                    className="contact__submit-btn mt-3"
                     type="submit"
                     disabled
                 >
@@ -105,7 +105,7 @@ function ContactForm() {
         } else {
             return (
                 <button
-                    className="btn btn-lg btn-outline-info mt-3"
+                    className="contact__submit-btn mt-3"
                     type="submit"
                     disabled={isSubmitting || executing}
                 >
@@ -140,7 +140,7 @@ function ContactForm() {
         <section>
             <Container>
                 <Row className="justify-content-md-center mt-5">
-                    <Col className="white-color" lg={8}>
+                    <Col className="white-color" lg={6}>
                         {/* // END Code Copied From https://github.com/kimfucious/netlify-forms-formik/blob/master/src/FormikForm.js#L7
     // */}
                         <Formik
@@ -148,7 +148,8 @@ function ContactForm() {
                                 "bot-field": "",
                                 "form-name": "contact",
                                 email: "",
-                                username: ""
+                                name: "",
+                                message: ""
                             }}
                             validate={values => {
                                 let errors = {};
@@ -160,7 +161,7 @@ function ContactForm() {
                                     errors.email = "Invalid email address";
                                 }
                                 if (!values.name) {
-                                    errors.username = "Required";
+                                    errors.name = "Required";
                                 }
                                 if (!values.message) {
                                     errors.message = "Required";
@@ -179,7 +180,7 @@ function ContactForm() {
                                     data-netlify="true"
                                     data-netlify-honeypot="bot-field"
                                     data-netlify-recaptcha="true"
-                                    className="d-flex flex-column align-items-center"
+                                    className="d-flex flex-column"
                                     name="contact"
                                     noValidate
                                 >
@@ -188,10 +189,10 @@ function ContactForm() {
                                     <div className="form-group">
                                         <label
                                             className="col-form-label col-form-label-lg"
-                                            htmlFor="username"
+                                            htmlFor="name"
                                         >
                                             Name
-              </label>
+                                        </label>
                                         <Field
                                             className="form-control form-control-lg"
                                             name="name"
@@ -209,7 +210,7 @@ function ContactForm() {
                                             htmlFor="email"
                                         >
                                             Email
-              </label>
+                                        </label>
                                         <Field
                                             className="form-control form-control-lg"
                                             name="email"
@@ -227,7 +228,7 @@ function ContactForm() {
                                             htmlFor="message"
                                         >
                                             Message
-              </label>
+                                        </label>
                                         <Field
                                             className="form-control form-control-lg"
                                             name="message"
@@ -249,9 +250,7 @@ function ContactForm() {
                                         onLoad={() => onLoad(() => resetForm)}
                                         size="invisible"
                                     />
-                                    <div className="m-2 col-form-label col-form-label-lg">
-                                        <span className="mr-1">ReCaptcha status:</span>
-                                        <br className="d-block d-sm-none mt-1" />
+                                    <div className="m-2 col-form-label col-form-label-lg hidden">
                                         <span
                                             className={`badge badge-${
                                                 loaded ? "success" : "primary"
@@ -287,7 +286,7 @@ function ContactForm() {
                                     {errMsg ? <div className="text-primary m-1">{errMsg}</div> : null}
                                     {(msgSent || errMsg) && (
                                         <button
-                                            className="btn btn-lg btn-link text-dark"
+
                                             onClick={() => resetEverything(resetForm)}
                                         >
                                             reset form
@@ -296,31 +295,6 @@ function ContactForm() {
                                 </Form>
                             )}
                         </Formik>
-
-                        {/* // END Code Copied From https://github.com/kimfucious/netlify-forms-formik/blob/master/src/FormikForm.js#L7
-    // */}
-
-
-
-                        {/* <form name="contact" method="POST">
-
-
-                            <div className="form-group">
-                                <label htmlFor="inputName">Name</label>
-                                <input type="text" className="form-control" id="inputName" aria-describedby="inputName" placeholder="John Smith" name="name" />
-                            </div>
-                            <div className="form-group">
-                                <label htmlFor="inputEmail">Email address</label>
-                                <input type="email" className="form-control" id="inputEmail" aria-describedby="inputEmail" placeholder="example@gmail.com" name="email" />
-                            </div>
-                            <div className="form-group">
-                                <label htmlFor="inputTextArea">Message</label>
-                                <textarea className="form-control" id="inputTextArea" rows="3" name="message"></textarea>
-                            </div>
-
-
-                            <button type="submit" className="btn btn-primary">Submit</button>
-                        </form> */}
                     </Col>
                 </Row>
             </Container>

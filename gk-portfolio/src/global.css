@@ -12,11 +12,6 @@ body {
   /* height: 100%; */
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
-
 header {
   text-align: center;
   padding: 130px 0;
@@ -99,8 +94,9 @@ p {
 /* Form */
 .form-control {
   background-color: #353535;
+  color: aliceblue;
   border: 1px #202020 solid;
-  margin-bottom: 30px;
+  /* margin-bottom: 30px; */
   height: 50px;
   padding: 15px;
 }
@@ -115,6 +111,10 @@ label {
   color: #bac2c5;
 }
 
+.invalid-feedback {
+  display: block;
+}
+
 
 /* Line Block */
 hr {
@@ -122,10 +122,21 @@ hr {
   width: 210px;  
 }
 
+/* Buttons */
+
 .btn-primary {
   background-color: #00628A;
   width: 130px;
 }
+
+.btn-primary, 
+.btn, 
+.contact__submit-btn {
+    border-color: none;
+    border: none;
+}
+
+
 
 
 /* Flex */
@@ -167,6 +178,10 @@ hr {
 
 .projects-container {
     margin-top: -170px;
+}
+
+.hidden {
+  display: none;
 }
 
 

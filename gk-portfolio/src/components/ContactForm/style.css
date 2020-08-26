@@ -1,13 +1,19 @@
-.hidden {
-    display: none;
-}
 
-.form-control {
-    background-color: #353535;
-}
 
-.btn-primary, .btn {
-    border-color: none;
-    border: none;
+
+.contact__submit-btn {
+    background-color: #00628A;
+    max-width: 200px;
+    display: inline-block;
+    font-weight: 600;
+    color: white;
+    text-align: center;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    user-select: none;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: .25rem;
 }
 

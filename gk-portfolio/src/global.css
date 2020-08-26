@@ -319,6 +319,7 @@ hr {
 
   .design-project__card-slide {
     top: 93px;
+    border-radius: 23px;
   }
 
   .design-project__meta-container {

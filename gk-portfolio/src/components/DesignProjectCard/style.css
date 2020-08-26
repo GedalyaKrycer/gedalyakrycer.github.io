@@ -24,3 +24,12 @@
     margin-right: 15px;
 }
 
+.design-project__project-img {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border-radius: 23px;
+    transition: ease .5s;
+    top: 5px;
+    z-index: 3000;
+  }

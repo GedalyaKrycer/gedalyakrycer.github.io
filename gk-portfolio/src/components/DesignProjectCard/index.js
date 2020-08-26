@@ -1,6 +1,8 @@
 import React from 'react';
 import './style.css';
 import { FaArrowRight } from 'react-icons/fa';
+import videoMp4 from '../../motion-design-web.mp4';
+import videoWebp from '../../motion-design-web.webp';
 
 
 // This is static top section of the page and gives it semantic value.
@@ -14,7 +16,10 @@ function DesignPortfolio() {
                 target="_blank"
                 rel="noopener noreferrer" >
                 <div className="g_card-slide  design-project__card-slide">
-                    <img src="https://raw.githubusercontent.com/GedalyaKrycer/gedalyakrycer.github.io/react/gk-portfolio/public/assets/images/img-links/portfolio/motion-design-web.gif" alt="Design animations" className="g_project-img" />
+                    <video autoplay="true" loop="true" muted="true" playsInline="true" className="design-project__project-img">
+                        <source src={videoWebp} type="video/webm" />
+                        <source src={videoMp4} type="video/mp4" />
+                    </video>
                 </div>
 
                 <div className="g_meta-container design-project__meta-container">

@@ -284,12 +284,12 @@ function ContactForm() {
                                     </div>
                                     {renderButton(isSubmitting, executing, verified)}
                                     {errMsg ? <div className="text-primary m-1">{errMsg}</div> : null}
-                                    {(errMsg) && (
+                                    {(msgSent || errMsg) && (
                                         <button className="contact__reset-btn"
 
                                             onClick={() => resetEverything(resetForm)}
                                         >
-                                            Reset form
+                                            Send A New Email
                                         </button>
                                     )}
                                 </Form>

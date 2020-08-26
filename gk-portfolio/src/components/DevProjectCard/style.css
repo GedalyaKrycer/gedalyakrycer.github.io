@@ -1,30 +1,16 @@
-/* Project Thumbnail */
-.project-img {
-    width: 100%;
-    height: 100%;
-    border-radius: 18px;
-    transition: ease .5s;
-    z-index: 3000;
-}
-
-/* Meta container */
-.meta-container {
-    background: #007CBA;
-    height: 252px;
-    border-radius: 18px;
-    z-index: 1;
-    padding: 125px 30px 0;
-    margin-bottom: 7rem;
-}
-
-.project-links {
+.dev-project__links {
     margin-bottom: 25px;
     display: flex;
     justify-content: space-between;
 
 }
 
-.button {
+.dev-project__meta-container {
+    padding: 125px 30px 0;
+}
+
+/* Bootstrap .button Class Overide */
+.dev-project__button {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -37,49 +23,16 @@
     transition: ease .7s;
 }
 
-.button:hover {
+.dev-project__button:hover {
     color: #076492;
     background-color: aliceblue;
     transition: ease .7s;
 }
 
-.button h5 {
+.dev-project__button h5 {
     margin-top: 7px;
     margin-left: 5px;
 }
 
 
 
-/* Animation Classes */
-.cardSlide {
-    position: relative;
-    top: 178px;
-    z-index: 2;
-    transition: ease .5s;
-    color: none;
-    padding: 0;
-    border-radius: 23px;
-    border: none;
-    display: inline-block;
-    -webkit-box-shadow: 0px 4px 23px 0px rgba(0,0,0,0.65);
-       -moz-box-shadow: 0px 4px 23px 0px rgba(0,0,0,0.65);
-            box-shadow: 0px 4px 23px 0px rgba(0,0,0,0.65);
-}
-
-.cardSlide:hover {
-    -webkit-box-shadow: 0px 10px 30px 0px rgba(0,0,0,0.75);
-    -moz-box-shadow: 0px 10px 30px 0px rgba(0,0,0,0.75);
-         box-shadow: 0px 10px 30px 0px rgba(0,0,0,0.75);
-    transition: ease .5s;
-}
-
-.cardSlide:focus {
-    border: none;
-    outline: none;
-}
-
-.cardSlideUp {
-    top: 90px;
-    z-index: 2;
-    transition: ease .5s;
-}

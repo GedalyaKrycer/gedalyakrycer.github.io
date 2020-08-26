@@ -12,7 +12,7 @@ function DevPortfolio() {
             <Container>
                 <h2>Development</h2>
 
-                <Row className="justify-content-around negative-margin">
+                <Row className="justify-content-around g_negative-margin">
 
                     {projects.map(project => (
                         <DevProjectCard

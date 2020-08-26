@@ -5,10 +5,10 @@ import './style.css';
 function Header({title, subTitleOne, subTitleTwo}) {
     return (
         <header>
-            <h1 className="white-color">{title}</h1>
+            <h1 className="g_white-color">{title}</h1>
             <hr />
-            <h3 className="white-color">{subTitleOne}</h3>
-            <h3 className="white-color">{subTitleTwo}</h3>
+            <h3 className="g_white-color">{subTitleOne}</h3>
+            <h3 className="g_white-color">{subTitleTwo}</h3>
         </header>
     )
 }

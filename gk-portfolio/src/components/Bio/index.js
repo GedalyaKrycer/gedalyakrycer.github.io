@@ -11,8 +11,8 @@ function Bio() {
             <Container>
                 <h2>Bio</h2>
 
-                <Row className="justify-content-md-center negative-margin">
-                    <Col className="white-color" lg={8}>
+                <Row className="justify-content-md-center g_negative-margin">
+                    <Col className="g_white-color" lg={8}>
                         <p>
                             I am a Vegas-based front-end developer and creative. I obsess over the details and love learning new technologies. (I also obsess over movies and love everything from superhero blockbusters to romcoms.)
                         </p>

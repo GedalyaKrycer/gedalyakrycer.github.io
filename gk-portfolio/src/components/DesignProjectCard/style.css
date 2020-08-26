@@ -1,36 +1,26 @@
-.design__contain {
+.design-portfolio__section {
+    margin-top: 6rem;
+  }
+
+
+.design-project__container {
+    margin-top: -170px;
+}
+
+.design-project__meta-container {
     padding-top: 200px;
     display: flex;
     justify-content: center;
 }
 
-.design-projects-container {
-    margin-top: -170px;
-}
-
-.design__icon {
+.design-project__icon {
     margin-top: 3px;
     font-size: 20px;
     
 }
 
-.design__text {
+.design-project__text {
     font-size: 20px;
     margin-right: 15px;
 }
 
-@media only screen and (max-width: 767px) {
-    .designCardSlide {
-        top: 104px;
-    }
-
-    .design__contain {
-        padding-top: 125px;
-        height: 170px;
-    }
-
-    .design-projects-container {
-        margin-top: -90px;
-    }
-
-}

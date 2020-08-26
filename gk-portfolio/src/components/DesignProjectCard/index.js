@@ -9,18 +9,18 @@ function DesignPortfolio() {
 
 
     return (
-        <div className="design-projects-container">
+        <div className="design-project__container ">
             <a href="http://gedalya.myportfolio.com/"
                 target="_blank"
                 rel="noopener noreferrer" >
-                <div className="cardSlide designCardSlide">
-                    <img src="https://raw.githubusercontent.com/GedalyaKrycer/gedalyakrycer.github.io/react/gk-portfolio/public/assets/images/img-links/portfolio/motion-design-web.gif" alt="Design animations" className="project-img" />
+                <div className="g_card-slide  design-project__card-slide">
+                    <img src="https://raw.githubusercontent.com/GedalyaKrycer/gedalyakrycer.github.io/react/gk-portfolio/public/assets/images/img-links/portfolio/motion-design-web.gif" alt="Design animations" className="g_project-img" />
                 </div>
 
-                <div className="meta-container white-color design__contain">
+                <div className="g_meta-container design-project__meta-container">
 
-                    <h4 className="design__text">View Design Projects</h4>
-                    <FaArrowRight className="design__icon" />
+                    <h4 className="design-project__text">View Design Projects</h4>
+                    <FaArrowRight className="design-project__icon" />
                 </div>
             </a>
         </div>

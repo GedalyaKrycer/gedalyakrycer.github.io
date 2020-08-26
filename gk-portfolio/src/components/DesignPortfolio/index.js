@@ -8,11 +8,11 @@ import DesignProjectCard from '../../components/DesignProjectCard';
 // This is static top section of the page and gives it semantic value.
 function DevPortfolio() {
     return (
-        <section className="section-margin">
+        <section className="design-portfolio__section">
             <Container>
                 <h2>Design</h2>
 
-                <Row className="justify-content-around negative-margin">
+                <Row className="justify-content-around g_negative-margin">
                     <DesignProjectCard />
                 </Row>
 

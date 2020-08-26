@@ -1,44 +1,78 @@
-img {
-    height: 32px;
-}
 
 footer {
     padding: 30px 20px;
-    -webkit-box-shadow: inset 0px 8px 20px 5px rgba(0, 0, 0, 0.4);
-       -moz-box-shadow: inset 0px 8px 20px 5px rgba(0, 0, 0, 0.4);
-            box-shadow: inset 0px 8px 20px 5px rgba(0, 0, 0, 0.4);
+    -webkit-box-shadow: inset 0px 15px 20px 0px rgba(0, 0, 0, 0.20);
+    -moz-box-shadow: inset 0px 15px 20px 0px rgba(0, 0, 0, 0.20);
+    box-shadow: inset 0px 15px 20px 0px rgba(0, 0, 0, 0.20);
+    background: #191a19;
     position:relative;
     left:0;
     bottom:0;
     right:0;
-    margin-top: 10rem;
+    margin-top: 5rem;
+
 }
 
 
-.resume {
+
+ 
+
+.footer__logo {
+    height: 32px;
+    margin-right: 10px;
+}
+
+.footer__emoji {
+    margin-right: 2px;
+}
+
+.footer__react {
+    font-size: 23px;
+    margin-top: -5px;
+    color: #61dafb;
+}
+
+.footer__built-with {
+    margin-top: 30px;
+    border-top: solid 1px #545657;
+    padding: 30px 50px 0 0;
+    color: white;
+    opacity: .4;
+    text-align: center;
+    display: block;
+}
+
+.footer__resume {
     margin-top: 5px;
     text-decoration: underline;
+    color: white;
+    text-align: center;
 }
 
-.social {
+.footer__social-icons {
     margin-left: 16px;
     color: white;
     transition: ease .5s;
+    font-size: 18px;
 } 
 
-.social:focus, 
-.social:hover,
-.resume:hover,
-.resume:focus{
+.footer__social-icons:focus, 
+.footer__social-icons:hover,
+.footer__built-with:hover,
+.footer__social-icons:focus,
+.footer__resume:hover,
+.footer__resume:focus{
     color: white;
     opacity: .5;
     transition: ease .5s;
   }
   
-  .social:active,
-  .social:visited,
-  .resume:active,
-  .resume:visited {
+  .footer__social-icons:active,
+  .footer__social-icons:visited,
+  .footer__built-with:visited,
+  .footer__built-with:active,
+  .footer__resume:active,
+  .footer__resume:visited {
     color: white;
     transition: ease .5s;
   }

@@ -1,6 +1,6 @@
 import React from 'react';
 import { LinkContainer } from "react-router-bootstrap";
-import { FaGithub, FaLinkedinIn, FaBehance, FaReact } from 'react-icons/fa';
+import { FaGithub, FaLinkedinIn, FaBehance, FaReact, FaFigma } from 'react-icons/fa';
 import './style.css';
 
 // This is static top section of the page and gives it semantic value.
@@ -25,7 +25,7 @@ function TopNavbar() {
             </div>
 
 
-            <a href="https://github.com/GedalyaKrycer/gedalyakrycer.github.io" target="_blank" rel="noopener noreferrer" className="footer__built-with"><h6>Built with <span role="img" className="footer__emoji" aria-label="Sparkling Heart">💖</span> and <FaReact className="footer__react" /></h6></a>
+            <a href="https://github.com/GedalyaKrycer/gedalyakrycer.github.io" target="_blank" rel="noopener noreferrer" className="footer__built-with"><h6>Built with <span role="img" className="footer__emoji" aria-label="Sparkling Heart">💖</span> and <FaReact className="footer__react" /> and <FaFigma className="footer__figma" /> </h6></a>
 
 
 

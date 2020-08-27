@@ -1,7 +1,7 @@
 [
     {
         "id": 1,
-        "img": "https://raw.githubusercontent.com/GedalyaKrycer/gedalyakrycer.github.io/react/gk-portfolio/public/assets/images/img-links/portfolio/Card/directory-thumbnail.jpg",
+        "img": "/assets/images/img-links/portfolio/Card/directory-thumbnail.jpg",
         "title": "DigiBit Team Directory",
         "tech": "React.js",
         "deployLink": "https://unit-19-react-homework-employee-directory.netlify.app/",
@@ -9,7 +9,7 @@
     },
     {
         "id": 2,
-        "img": "https://raw.githubusercontent.com/GedalyaKrycer/gedalyakrycer.github.io/react/gk-portfolio/public/assets/images/img-links/portfolio/Card/webdev-thumbnail.jpg",
+        "img": "/assets/images/img-links/portfolio/Card/webdev-thumbnail.jpg",
         "title": "WebDev Challenge Quiz",
         "tech": "Bootstrap / JS",
         "deployLink": "https://gedalyakrycer.github.io/04-web-api-code-quiz/",
@@ -17,7 +17,7 @@
     },
     {
         "id": 3,
-        "img": "https://raw.githubusercontent.com/GedalyaKrycer/gedalyakrycer.github.io/react/gk-portfolio/public/assets/images/img-links/portfolio/Card/wellyes-thumbnail.jpg",
+        "img": "/assets/images/img-links/portfolio/Card/wellyes-thumbnail.jpg",
         "title": "wellyes. Goal Tracker",
         "tech": "Bootstrap / MySQL / Express / JS",
         "deployLink": "https://glacial-meadow-97517.herokuapp.com/",
@@ -25,7 +25,7 @@
     },
     {
         "id": 4,
-        "img": "https://raw.githubusercontent.com/GedalyaKrycer/gedalyakrycer.github.io/react/gk-portfolio/public/assets/images/img-links/portfolio/Card/weather-thumbnail.jpg",
+        "img": "/assets/images/img-links/portfolio/Card/weather-thumbnail.jpg",
         "title": "Weather Forcaster",
         "tech": "Bootstrap / OpenWeather.js / JS",
         "deployLink": "https://gedalyakrycer.github.io/hw-6-weather-dashboard/",
@@ -33,7 +33,7 @@
     },
     {
         "id": 5,
-        "img": "https://raw.githubusercontent.com/GedalyaKrycer/gedalyakrycer.github.io/react/gk-portfolio/public/assets/images/img-links/portfolio/Card/vegg-thumbnail.jpg",
+        "img": "/assets/images/img-links/portfolio/Card/vegg-thumbnail.jpg",
         "title": "Vegg-in-Place",
         "tech": "Bulma / JS",
         "deployLink": "https://dpayton92.github.io/Vegg_In_Place_Survival_Kit/",
@@ -41,7 +41,7 @@
     },
     {
         "id": 6,
-        "img": "https://raw.githubusercontent.com/GedalyaKrycer/gedalyakrycer.github.io/react/gk-portfolio/public/assets/images/img-links/portfolio/Card/cli-thumbnail.jpg",
+        "img": "/assets/images/img-links/portfolio/Card/cli-thumbnail.jpg",
         "title": "CLI README Generator",
         "tech": "Node.js",
         "deployLink": "https://github.com/GedalyaKrycer/hw-10-employee-summary",

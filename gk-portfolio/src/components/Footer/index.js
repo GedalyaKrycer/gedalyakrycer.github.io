@@ -25,7 +25,7 @@ function TopNavbar() {
             </div>
 
 
-            <a href="https://github.com/GedalyaKrycer/gedalyakrycer.github.io" target="_blank" rel="noopener noreferrer" className="footer__built-with"><h6>Built with <span role="img" className="footer__emoji" aria-label="Sparkling Heart">💖</span> and <FaReact className="footer__react" /> and <FaFigma className="footer__figma" /> </h6></a>
+            <a href="https://github.com/GedalyaKrycer/gedalyakrycer.github.io" target="_blank" rel="noopener noreferrer" className="footer__built-with"><h6>Built with <span role="img" className="footer__emoji" aria-label="Sparkling Heart">💖</span> <FaReact className="footer__react" /><FaFigma className="footer__figma" /> </h6></a>
 
 
 

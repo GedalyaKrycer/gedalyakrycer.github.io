@@ -126,6 +126,7 @@ hr {
   width: 210px;  
 }
 
+
 /* Buttons */
 
 .btn-primary {
@@ -146,11 +147,14 @@ hr {
   justify-content: flex-end;    
 }
 
-/* Hidden Util */
 
+
+/* Hidden Util */
 .hidden {
   display: none;
 }
+
+
 
 /* Navbar Bootstrap Overides */
 .navbar-light .navbar-nav .nav-link{

@@ -141,8 +141,7 @@ function ContactForm() {
             <Container>
                 <Row className="justify-content-md-center mt-5">
                     <Col className="white-color" lg={6}>
-                        {/* // END Code Copied From https://github.com/kimfucious/netlify-forms-formik/blob/master/src/FormikForm.js#L7
-    // */}
+                        
                         <Formik
                             initialValues={{
                                 "bot-field": "",
@@ -297,6 +296,11 @@ function ContactForm() {
                         </Formik>
                     </Col>
                 </Row>
+
+                <div className="contact__email-container">
+                    <h2>or</h2>
+                    <a href="mailto:gedalya@krycer.com">gedalya@krycer.com</a>
+                </div>
             </Container>
 
         </section>

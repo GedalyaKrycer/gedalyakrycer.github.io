@@ -141,7 +141,7 @@ function ContactForm() {
             <Container>
                 <Row className="justify-content-md-center mt-5">
                     <Col className="white-color" lg={6}>
-                        
+
                         <Formik
                             initialValues={{
                                 "bot-field": "",
@@ -299,11 +299,20 @@ function ContactForm() {
 
                 <div className="contact__email-container">
                     <h2>or</h2>
-                    <a href="mailto:gedalya@krycer.com">gedalya@krycer.com</a>
+                    <div className="contact__email-txt">
+                        <p>You can email me at</p>
+
+                        <p>
+                            <a href="mailto:gedalya@krycer.com">
+                                gedalya@krycer.com
+                        </a>
+                        </p>
+                    </div>
+
                 </div>
             </Container>
 
-        </section>
+        </section >
     )
 }
 

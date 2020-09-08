@@ -34,5 +34,44 @@
 .contact__email-container {
     margin-top: 80px;
     text-align: center;
+    color: white;
 }
 
+.contact__email-txt {
+    position: relative;
+    top: -100px;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.contact__email-txt p {
+   margin: 0;
+}
+
+
+
+
+@media only screen and (max-width: 993px) {
+  
+    .contact__email-txt {
+        top: -70px;
+    }
+  
+}
+  
+@media only screen and (max-width: 767px) {
+    .contact__email-txt {
+        top: -30px;
+    }
+
+    .contact__submit-btn,
+    .contact__reset-btn {
+        max-width: 100%;
+    }
+}
+
+@media only screen and (max-width: 439px) {
+    .contact__email-txt {
+        top: -30px;
+    }
+}

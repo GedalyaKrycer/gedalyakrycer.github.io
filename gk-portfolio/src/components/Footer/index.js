@@ -7,7 +7,7 @@ import './style.css';
 function TopNavbar() {
     return (
         <footer >
-            <div className="d-flex justify-content-between">
+            <div className="footer__content-container">
                 <LinkContainer to="/">
                     <img src="https://raw.githubusercontent.com/GedalyaKrycer/gedalyakrycer.github.io/46e78fe53858d535b8db1d9e7e42455fa0a8b090/gk-portfolio/public/assets/images/img-links/gk-logo.svg" alt="GK Logo" className="footer__logo" />
                 </LinkContainer>
@@ -16,7 +16,7 @@ function TopNavbar() {
                 <a href="https://raw.githubusercontent.com/GedalyaKrycer/gedalyakrycer.github.io/react/gk-portfolio/public/assets/pdfs/Gedalya%20Krycer%20Resume.pdf" target="_blank" rel="noopener noreferrer" className="footer__resume "><h6>Download Resume</h6></a>
 
 
-                <div className="d-flex justify-content-md-between">
+                <div className="footer__social-icons-container">
                     <a href="https://www.linkedin.com/in/gedalyakrycer/" target="_blank" rel="noopener noreferrer" className="footer__social-icons"><FaLinkedinIn /></a>
                     <a href="https://github.com/GedalyaKrycer" target="_blank" rel="noopener noreferrer" className="footer__social-icons"><FaGithub /></a>
                     <a href="https://www.behance.net/gedalyakrycer" target="_blank" rel="noopener noreferrer" className="footer__social-icons"><FaBehance /></a>

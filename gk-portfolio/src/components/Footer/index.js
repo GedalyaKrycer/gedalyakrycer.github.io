@@ -13,7 +13,7 @@ function TopNavbar() {
                 </LinkContainer>
 
 
-                <a href="https://raw.githubusercontent.com/GedalyaKrycer/gedalyakrycer.github.io/react/gk-portfolio/public/assets/pdfs/Gedalya%20Krycer%20Resume.pdf" target="_blank" rel="noopener noreferrer" className="footer__resume "><h6>Download Resume</h6></a>
+                <a href="https://raw.githubusercontent.com/GedalyaKrycer/gedalyakrycer.github.io/react/gk-portfolio/public/assets/pdfs/Gedalya_Krycer_Resume.pdf" target="_blank" rel="noopener noreferrer" className="footer__resume "><h6>Download Resume</h6></a>
 
 
                 <div className="footer__social-icons-container">

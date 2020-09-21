@@ -138,8 +138,9 @@ function ContactForm() {
 
     return (
         <section>
-            <Container>
-                <Row className="justify-content-md-center mt-5">
+            <Container className="contact__form-container">
+                <h2>Contact</h2>
+                <Row className="justify-content-md-center g_negative-margin">
                     <Col className="white-color" lg={8}>
                         <div className="contact__form-bg">
 

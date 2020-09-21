@@ -1,10 +1,16 @@
+.contact__form-container {
+    margin-top: 8rem;
+
+
+}
 
 .contact__form-bg {
-    -webkit-box-shadow: 6px 6px 16px #111111, -6px -6px 20px #2d2d30;
-    -moz-box-shadow: 6px 6px 16px #111111, -6px -6px 20px #2d2d30;
-    box-shadow: 6px 6px 16px #111111, -6px -6px 20px #2d2d30;
+    -webkit-box-shadow:  0px 14px 41px rgba(0, 0, 0, 0.35), 0px 4px 13px rgba(0, 0, 0, 0.35), 0px 10px 60px 10px rgba(0, 0, 0, 0.25);
+    -moz-box-shadow:  0px 14px 41px rgba(0, 0, 0, 0.35), 0px 4px 13px rgba(0, 0, 0, 0.35), 0px 10px 60px 10px rgba(0, 0, 0, 0.25);
+    box-shadow:  0px 14px 41px rgba(0, 0, 0, 0.35), 0px 4px 13px rgba(0, 0, 0, 0.35), 0px 10px 60px 10px rgba(0, 0, 0, 0.25);
     padding: 80px;
     border-radius: 30px;
+    background-color: #202120;
 
 
 }

@@ -1,3 +1,14 @@
+
+.contact__form-bg {
+    -webkit-box-shadow: 6px 6px 16px #111111, -6px -6px 20px #2d2d30;
+    -moz-box-shadow: 6px 6px 16px #111111, -6px -6px 20px #2d2d30;
+    box-shadow: 6px 6px 16px #111111, -6px -6px 20px #2d2d30;
+    padding: 80px;
+    border-radius: 30px;
+
+
+}
+
 .contact__submit-btn {
     background-color: #00628A;
     max-width: 200px;

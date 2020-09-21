@@ -19,10 +19,11 @@
     vertical-align: middle;
     -webkit-user-select: none;
     user-select: none;
-    padding: .375rem .75rem;
+    padding: .75rem .75rem;
     font-size: 1rem;
     line-height: 1.5;
     border-radius: .25rem;
+    transition: ease-in-out .2s;
 }
 
 .contact__reset-btn {
@@ -40,6 +41,14 @@
     line-height: 1.5;
     border-radius: .25rem;
     margin-top: 20px;
+}
+
+.contact__submit-btn:hover {
+    background-color: #015779;
+    color: #0992c8;
+    transition: ease-in-out .2s;
+
+
 }
 
 .contact__email-container {

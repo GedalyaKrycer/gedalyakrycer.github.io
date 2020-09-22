@@ -45,7 +45,6 @@ function DevProjectCard({ img, title, tech, deployLink, repoLink }) {
 
 
     return (
-        <>
             <div className="g_projects-container">
                 <Accordion>
                     <Card>
@@ -97,41 +96,9 @@ function DevProjectCard({ img, title, tech, deployLink, repoLink }) {
 
             </div>
 
-        </>
+        
     )
 }
 
 
 export default DevProjectCard;
-
-
-
-
-
-{/* <button tabIndex="0" className={`g_card-slide ${cardSlide ? "g_card-slide-up" : ""}`} onClick={cardSlider}>
-
-<img src={img} alt={title} className="g_project-img" />
-
-</button>
-
-<div className="g_meta-container dev-project__meta-container">
-<div className="dev-project__links">
-    <a href={deployLink}
-        target="_blank"
-        rel="noopener noreferrer" className="dev-project__button">
-        <FaDesktop />
-        <h5>View Deployed</h5>
-    </a>
-    <a href={repoLink}
-        target="_blank"
-        rel="noopener noreferrer" className="dev-project__button">
-        <FaGithub />
-        <h5>View Repo</h5>
-    </a>
-</div>
-<h4 className="dev-project__title">{title}</h4>
-<div className="dev-project__info">
-    
-    {techStyler}
-</div>
-</div> */}

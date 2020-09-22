@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import './style.css';
 import { FaGithub, FaDesktop } from 'react-icons/fa';
+import { v4 as uuidv4 } from 'uuid';
 
 
 // This is static top section of the page and gives it semantic value.
@@ -10,11 +11,11 @@ function DevProjectCard({ img, title, tech, deployLink, repoLink }) {
 
     const cardSlider = () => !cardSlide ? setCardSlide(true) : setCardSlide(false);
 
-    // Styles text to be separates words in pill shapes
+    // Styles tech text to be separates words in pill shapes
     const techStyler = []
     const styledTech = tech.split(", ")
     styledTech.forEach(element => {
-        techStyler.push(<h5 className="dev-project__tech ">{element}</h5>)
+        techStyler.push(<h5 key={uuidv4()} className="dev-project__tech ">{element}</h5>)
 
     });
 
@@ -44,7 +45,7 @@ function DevProjectCard({ img, title, tech, deployLink, repoLink }) {
                     </a>
                 </div>
                 <div className="dev-project__info">
-                    <h4>{title}</h4>
+                    <h4 className="dev-project__title">{title}</h4>
                     {techStyler}
                 </div>
             </div>

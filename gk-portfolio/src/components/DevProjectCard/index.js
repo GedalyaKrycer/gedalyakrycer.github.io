@@ -10,6 +10,16 @@ function DevProjectCard({ img, title, tech, deployLink, repoLink }) {
 
     const cardSlider = () => !cardSlide ? setCardSlide(true) : setCardSlide(false);
 
+    // Styles text to be separates words in pill shapes
+    const techStyler = []
+    const styledTech = tech.split(", ")
+    styledTech.forEach(element => {
+        techStyler.push(<h5 className="dev-project__tech ">{element}</h5>)
+
+    });
+
+
+
     return (
         <div className="g_projects-container">
             <button tabIndex="0" className={`g_card-slide ${cardSlide ? "g_card-slide-up" : ""}`} onClick={cardSlider}>
@@ -33,9 +43,9 @@ function DevProjectCard({ img, title, tech, deployLink, repoLink }) {
                         <h5>View Repo</h5>
                     </a>
                 </div>
-                <div>
+                <div className="dev-project__info">
                     <h4>{title}</h4>
-                    <h5>{tech}</h5>
+                    {techStyler}
                 </div>
             </div>
 

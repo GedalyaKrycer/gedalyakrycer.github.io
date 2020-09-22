@@ -6,7 +6,7 @@
 }
 
 .dev-project__meta-container {
-    padding: 125px 30px 0;
+    padding: 125px 30px 15px;
 }
 
 /* Bootstrap .button Class Overide */
@@ -16,7 +16,7 @@
     align-items: center;
     width: 45%;
     background-color: #076492;
-    padding: 10px;
+    padding: 5px;
     border-radius: 23px;
     color: aliceblue;
     font-weight: 600;
@@ -29,10 +29,21 @@
     transition: ease .7s;
 }
 
+
 .dev-project__button h5 {
     margin-top: 7px;
     margin-left: 5px;
 }
 
+.dev-project__info {
+    max-width: 350px;
+}
 
-
+.dev-project__tech {
+    border: 1px solid #2391c8;
+    color: #89d8ff;
+    border-radius: 30px;
+    margin-right: 5px;
+    padding: 0 10px;
+    display: inline-block;
+}

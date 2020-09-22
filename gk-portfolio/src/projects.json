@@ -1,14 +1,6 @@
 [
     {
         "id": 1,
-        "img": "/assets/images/img-links/portfolio/Card/directory-thumbnail.jpg",
-        "title": "DigiBit Team Directory",
-        "tech": "React.js",
-        "deployLink": "https://unit-19-react-homework-employee-directory.netlify.app/",
-        "repoLink": "https://github.com/GedalyaKrycer/unit-19-react-homework-employee-directory"
-    },
-    {
-        "id": 2,
         "img": "/assets/images/img-links/portfolio/Card/webdev-thumbnail.jpg",
         "title": "WebDev Challenge Quiz",
         "tech": "Bootstrap / JS",
@@ -16,20 +8,28 @@
         "repoLink": "https://github.com/GedalyaKrycer/04-web-api-code-quiz"
     },
     {
+        "id": 2,
+        "img": "/assets/images/img-links/portfolio/Card/directory-thumbnail.jpg",
+        "title": "DigiBit Team Directory",
+        "tech": "React.js, Hooks, Figma, JSON, react-bootstrap, react-lazyload, react-icons",
+        "deployLink": "https://unit-19-react-homework-employee-directory.netlify.app/",
+        "repoLink": "https://github.com/GedalyaKrycer/unit-19-react-homework-employee-directory"
+    },
+    {
         "id": 3,
-        "img": "/assets/images/img-links/portfolio/Card/wellyes-thumbnail.jpg",
-        "title": "wellyes. Goal Tracker",
-        "tech": "Bootstrap / MySQL / Express / JS",
-        "deployLink": "https://glacial-meadow-97517.herokuapp.com/",
-        "repoLink": "https://github.com/jtcravey1991/the-a-team-project-2"
+        "img": "/assets/images/img-links/portfolio/Card/weather-thumbnail.jpg",
+        "title": "Weather Forcaster",
+        "tech": "Bulma / OpenWeather.js / JS",
+        "deployLink": "https://gedalyakrycer.github.io/hw-6-weather-dashboard/",
+        "repoLink": "https://github.com/GedalyaKrycer/hw-6-weather-dashboard"
     },
     {
         "id": 4,
-        "img": "/assets/images/img-links/portfolio/Card/weather-thumbnail.jpg",
-        "title": "Weather Forcaster",
-        "tech": "Bootstrap / OpenWeather.js / JS",
-        "deployLink": "https://gedalyakrycer.github.io/hw-6-weather-dashboard/",
-        "repoLink": "https://github.com/GedalyaKrycer/hw-6-weather-dashboard"
+        "img": "/assets/images/img-links/portfolio/Card/webdev-thumbnail.jpg",
+        "title": "WebDev Challenge Quiz",
+        "tech": "JavaScript, Local Storage, HTML, CSS Bootstrap",
+        "deployLink": "https://gedalyakrycer.github.io/04-web-api-code-quiz/",
+        "repoLink": "https://github.com/GedalyaKrycer/04-web-api-code-quiz"
     },
     {
         "id": 5,

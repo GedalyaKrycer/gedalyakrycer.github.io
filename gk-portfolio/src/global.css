@@ -74,7 +74,7 @@ h4 {
 h5 {
   font-weight: 400;
   font-size: 14px;
-  line-height: 70%;
+  line-height: 22px;
 }
 
 h6 {
@@ -221,11 +221,12 @@ Project Styles
 
   .g_meta-container {
   background: #007CBA;
-  height: 252px;
+  min-height: 252px;
   border-radius: 18px;
   z-index: 1;
   margin-bottom: 7rem;
   color: white;
+  
 }
 
 .g_project-img {

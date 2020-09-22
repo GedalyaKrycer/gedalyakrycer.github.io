@@ -6,6 +6,28 @@
 /* ————————————————————————————————————————————————
 Base Styles 
 ————————————————————————————————————————————————— */
+
+html {
+  --scrollbarBG: #202120;
+  --thumbBG: #007CBA;
+}
+body::-webkit-scrollbar {
+  width: 10px;
+}
+body {
+  scrollbar-width: thin;
+  scrollbar-color: var(--thumbBG) var(--scrollbarBG);
+}
+body::-webkit-scrollbar-track {
+  background: var(--scrollbarBG);
+}
+body::-webkit-scrollbar-thumb {
+  background-color: var(--thumbBG) ;
+  border-radius: 6px;
+  border: 3px solid var(--scrollbarBG);
+}
+
+
 body {
   margin: 0;
   font-family: 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -34,6 +56,10 @@ a {
 
 a:hover {
   color: white;
+}
+
+.g__footer-pin {
+  min-height: calc(100vh - 315px);
 }
 
 
@@ -427,7 +453,7 @@ Mobile Styles
   }
 
   .g_projects-container {
-    margin-top: -200px;
+    margin-top: -185px;
 }
 
 
@@ -436,9 +462,6 @@ Mobile Styles
 @media only screen and (max-width: 350px) {
   
 
-  /* .g_card-slide {
-    top: 196px;
-  } */
 
   .design-project__card-slide {
     top: 93px;

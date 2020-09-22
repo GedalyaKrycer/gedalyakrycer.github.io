@@ -13,6 +13,7 @@ function CustomToggle({ children, eventKey }) {
 
 
     // Expands Accordion and Reveals Thumbnail
+    // ==================================================================
     const decoratedOnClick = useAccordionToggle(eventKey, () => {
         !cardSlide ? setCardSlide(true) : setCardSlide(false);
     });
@@ -45,58 +46,58 @@ function DevProjectCard({ img, title, tech, deployLink, repoLink }) {
 
 
     return (
-            <div className="g_projects-container">
-                <Accordion>
-                    <Card>
+        <div className="g_projects-container">
+            <Accordion>
+                <Card>
 
-                        <CustomToggle eventKey="0">
-
-
-                            <img src={img} alt={title} className="g_project-img" />
-                        </CustomToggle>
-
-                        <div className="g_meta-container dev-project__meta-container">
+                    <CustomToggle eventKey="0">
 
 
-                            <Accordion.Collapse eventKey="0">
-                                <Card.Body>
-                                    <h4 className="dev-project__title">{title}</h4>
-                                    <div className="dev-project__links">
-                                        <a href={deployLink}
-                                            target="_blank"
-                                            rel="noopener noreferrer" className="dev-project__button">
-                                            <FaDesktop />
-                                            <h5>View Deployed</h5>
-                                        </a>
-                                        <a href={repoLink}
-                                            target="_blank"
-                                            rel="noopener noreferrer" className="dev-project__button">
-                                            <FaGithub />
-                                            <h5>View Repo</h5>
-                                        </a>
-                                    </div>
+                        <img src={img} alt={title} className="g_project-img" />
+                    </CustomToggle>
 
-                                    <div className="dev-project__info">
-                                        {techStyler}
-                                    </div>
-                                </Card.Body>
-                            </Accordion.Collapse>
-                        </div>
+                    <div className="g_meta-container dev-project__meta-container">
 
 
-                    </Card>
+                        <Accordion.Collapse eventKey="0">
+                            <Card.Body>
+                                <h4 className="dev-project__title">{title}</h4>
+                                <div className="dev-project__links">
+                                    <a href={deployLink}
+                                        target="_blank"
+                                        rel="noopener noreferrer" className="dev-project__button">
+                                        <FaDesktop />
+                                        <h5>View Deployed</h5>
+                                    </a>
+                                    <a href={repoLink}
+                                        target="_blank"
+                                        rel="noopener noreferrer" className="dev-project__button">
+                                        <FaGithub />
+                                        <h5>View Repo</h5>
+                                    </a>
+                                </div>
 
-                </Accordion>
+                                <div className="dev-project__info">
+                                    {techStyler}
+                                </div>
+                            </Card.Body>
+                        </Accordion.Collapse>
+                    </div>
 
 
+                </Card>
+
+            </Accordion>
 
 
 
 
 
-            </div>
 
-        
+
+        </div>
+
+
     )
 }
 

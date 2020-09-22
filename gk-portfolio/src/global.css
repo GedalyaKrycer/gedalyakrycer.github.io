@@ -158,6 +158,10 @@ Buttons
     border: none;
 }
 
+button {
+  background: none;
+}
+
 
 /* ————————————————————————————————————————————————
 Flex Utils
@@ -431,9 +435,9 @@ Mobile Styles
 @media only screen and (max-width: 350px) {
   
 
-  .g_card-slide {
+  /* .g_card-slide {
     top: 196px;
-  }
+  } */
 
   .design-project__card-slide {
     top: 93px;

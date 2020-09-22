@@ -18,7 +18,7 @@
     {
         "id": 3,
         "img": "/assets/images/img-links/portfolio/Card/weather-thumbnail.jpg",
-        "title": "Weather Forcaster",
+        "title": "Weather Forecaster",
         "tech": "Bulma, OpenWeather.js, JavaScript, HTML, CSS",
         "deployLink": "https://gedalyakrycer.github.io/hw-6-weather-dashboard/",
         "repoLink": "https://github.com/GedalyaKrycer/hw-6-weather-dashboard"

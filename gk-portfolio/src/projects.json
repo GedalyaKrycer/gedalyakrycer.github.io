@@ -1,7 +1,7 @@
 [
     {
         "id": 1,
-        "img": "/assets/images/img-links/portfolio/Card/webdev-thumbnail.jpg",
+        "img": "/assets/images/img-links/portfolio/Card/driverkick-thumbnail.jpg",
         "title": "Driver Kick Car Maintenance Tracker",
         "tech": "React.js, Hooks, Figma, MongoDB, Mongoose, Express, Passport, NHTSA Vehical API, axios, react-bootstrap, react-contenteditable, react-ga, react-moment, bcryptjs, Heroku",
         "deployLink": "https://driverkick.herokuapp.com/",

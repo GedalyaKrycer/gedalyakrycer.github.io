@@ -6,7 +6,8 @@
 }
 
 .dev-project__meta-container {
-    padding: 125px 30px 15px;
+    padding: 125px 30px 1px;
+    
 }
 
 /* Bootstrap .button Class Overide */
@@ -37,6 +38,7 @@
 
 .dev-project__info {
     max-width: 350px;
+    margin-bottom: 15px;
 }
 
 .dev-project__tech {

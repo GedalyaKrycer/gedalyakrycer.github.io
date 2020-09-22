@@ -221,7 +221,7 @@ Project Styles
 
   .g_meta-container {
   background: #007CBA;
-  min-height: 252px;
+  /* min-height: 252px; */
   border-radius: 18px;
   z-index: 1;
   margin-bottom: 7rem;
@@ -268,6 +268,42 @@ Project Styles
   top: 90px;
   z-index: 2;
   transition: ease .5s;
+}
+
+.design-project__meta-container {
+  padding-bottom: 20px; 
+}
+
+
+
+/* ————————————————————————————————————————————————
+Accordion Overrides 
+————————————————————————————————————————————————— */
+
+.accordion>.card {
+  overflow: visible;
+}
+
+.card {
+  position: initial;
+  display: block; 
+  min-width: none; 
+  word-wrap: break-word;
+  background: none;
+  background-clip: border-box; 
+  border: none;
+  border-radius: none;
+}
+
+.card-header {
+  padding: 0;
+    margin-bottom: 0;
+    background: none;
+    border-bottom: none;
+}
+
+.card-body {
+  padding: 0;
 }
 
 
@@ -370,7 +406,7 @@ Mobile Styles
 
 @media only screen and (max-width: 439px) {
   h2 {
-    font-size: 50px;
+    font-size: 80px;
     line-height: 90%;
     margin-top: 2rem;
   }
@@ -383,6 +419,25 @@ Mobile Styles
 
   .design-portfolio__section {
     margin-bottom: -2rem;
+  }
+
+  .g_projects-container {
+    margin-top: -200px;
+}
+
+
+}
+
+@media only screen and (max-width: 350px) {
+  
+
+  .g_card-slide {
+    top: 196px;
+  }
+
+  .design-project__card-slide {
+    top: 93px;
+    border-radius: 23px;
   }
 
 

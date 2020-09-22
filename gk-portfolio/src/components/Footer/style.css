@@ -62,14 +62,14 @@ footer {
     max-width: 200px;
     padding: .375rem .75rem;
     border-radius: .25rem;
-    margin-left: 50px;
+    margin-left: 60px;
 }
 
 .footer__social-icons {
     margin-left: 16px;
     color: white;
     transition: ease .5s;
-    font-size: 18px;
+    font-size: 20px;
 } 
 
 .footer__social-icons:focus, 

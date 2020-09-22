@@ -74,7 +74,7 @@ h4 {
 h5 {
   font-weight: 400;
   font-size: 14px;
-  line-height: 70%;
+  line-height: 22px;
 }
 
 h6 {
@@ -158,6 +158,11 @@ Buttons
     border: none;
 }
 
+button {
+  background: none;
+  border: none;
+}
+
 
 /* ————————————————————————————————————————————————
 Flex Utils
@@ -218,14 +223,16 @@ Project Styles
   .g_projects-container {
       margin-top: -170px;
   }
+  
 
   .g_meta-container {
   background: #007CBA;
-  height: 252px;
+  /* min-height: 252px; */
   border-radius: 18px;
   z-index: 1;
-  margin-bottom: 7rem;
+  margin-bottom: 10rem;
   color: white;
+  
 }
 
 .g_project-img {
@@ -240,22 +247,21 @@ Project Styles
   position: relative;
   top: 176px;
   z-index: 2;
-  transition: ease .5s;
   color: none;
   padding: 0;
   border-radius: 23px;
-  border: none;
   display: inline-block;
   -webkit-box-shadow: 0px 4px 23px 0px rgba(0,0,0,0.65);
      -moz-box-shadow: 0px 4px 23px 0px rgba(0,0,0,0.65);
           box-shadow: 0px 4px 23px 0px rgba(0,0,0,0.65);
+          transition: ease .5s;
 }
 
 .g_card-slide:hover {
-  -webkit-box-shadow: 0px 10px 30px 0px rgba(0,0,0,0.75);
-  -moz-box-shadow: 0px 10px 30px 0px rgba(0,0,0,0.75);
-       box-shadow: 0px 10px 30px 0px rgba(0,0,0,0.75);
-  transition: ease .5s;
+  -webkit-box-shadow: 0px 20px 50px 0px rgba(0,0,0,0.95);
+  -moz-box-shadow: 0px 20px 50px 0px rgba(0,0,0,0.95);
+       box-shadow: 0px 20px 50px 0px rgba(0,0,0,0.95);
+       transition: ease .5s;
 }
 
 .g_card-slide:focus {
@@ -267,6 +273,42 @@ Project Styles
   top: 90px;
   z-index: 2;
   transition: ease .5s;
+}
+
+.design-project__meta-container {
+  padding-bottom: 20px; 
+}
+
+
+
+/* ————————————————————————————————————————————————
+Accordion Overrides 
+————————————————————————————————————————————————— */
+
+.accordion>.card {
+  overflow: visible;
+}
+
+.card {
+  position: initial;
+  display: block; 
+  min-width: none; 
+  word-wrap: break-word;
+  background: none;
+  background-clip: border-box; 
+  border: none;
+  border-radius: none;
+}
+
+.card-header {
+  padding: 0;
+    margin-bottom: 0;
+    background: none;
+    border-bottom: none;
+}
+
+.card-body {
+  padding: 0;
 }
 
 
@@ -369,7 +411,7 @@ Mobile Styles
 
 @media only screen and (max-width: 439px) {
   h2 {
-    font-size: 50px;
+    font-size: 80px;
     line-height: 90%;
     margin-top: 2rem;
   }
@@ -382,6 +424,25 @@ Mobile Styles
 
   .design-portfolio__section {
     margin-bottom: -2rem;
+  }
+
+  .g_projects-container {
+    margin-top: -200px;
+}
+
+
+}
+
+@media only screen and (max-width: 350px) {
+  
+
+  /* .g_card-slide {
+    top: 196px;
+  } */
+
+  .design-project__card-slide {
+    top: 93px;
+    border-radius: 23px;
   }
 
 

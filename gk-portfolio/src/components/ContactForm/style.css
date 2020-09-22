@@ -1,3 +1,16 @@
+.contact__form-container {
+    margin-top: 8rem;
+}
+
+.contact__form-bg {
+    -webkit-box-shadow:  0px 14px 41px rgba(0, 0, 0, 0.35), 0px 4px 13px rgba(0, 0, 0, 0.35), 0px 10px 60px 10px rgba(0, 0, 0, 0.25);
+    -moz-box-shadow:  0px 14px 41px rgba(0, 0, 0, 0.35), 0px 4px 13px rgba(0, 0, 0, 0.35), 0px 10px 60px 10px rgba(0, 0, 0, 0.25);
+    box-shadow:  0px 14px 41px rgba(0, 0, 0, 0.35), 0px 4px 13px rgba(0, 0, 0, 0.35), 0px 10px 60px 10px rgba(0, 0, 0, 0.25);
+    padding: 80px;
+    border-radius: 30px;
+    background-color: #202120;
+}
+
 .contact__submit-btn {
     background-color: #00628A;
     max-width: 200px;
@@ -8,10 +21,11 @@
     vertical-align: middle;
     -webkit-user-select: none;
     user-select: none;
-    padding: .375rem .75rem;
+    padding: .75rem .75rem;
     font-size: 1rem;
     line-height: 1.5;
     border-radius: .25rem;
+    transition: ease-in-out .2s;
 }
 
 .contact__reset-btn {
@@ -29,6 +43,14 @@
     line-height: 1.5;
     border-radius: .25rem;
     margin-top: 20px;
+}
+
+.contact__submit-btn:hover {
+    background-color: #015779;
+    color: #0992c8;
+    transition: ease-in-out .2s;
+
+
 }
 
 .contact__email-container {
@@ -68,10 +90,17 @@
     .contact__reset-btn {
         max-width: 100%;
     }
+    
 }
 
 @media only screen and (max-width: 439px) {
     .contact__email-txt {
         top: -30px;
+    }
+
+    .contact__form-bg {
+        padding: 20px 25px 30px;
+        border-radius: 10px;
+
     }
 }

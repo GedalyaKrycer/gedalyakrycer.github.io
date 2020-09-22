@@ -1,31 +1,35 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "c9bfbb6a8015f0174fab2ec109939333",
+    "revision": "2a670ec7093d85ffe2208a386f37ddfc",
     "url": "/index.html"
   },
   {
-    "revision": "5fe0e8e2dabfbce47f65",
+    "revision": "4aaa9a8cbb414d967352",
     "url": "/static/css/2.11829350.chunk.css"
   },
   {
-    "revision": "74a47a4c41ed28670d8f",
-    "url": "/static/css/main.a091ef7b.chunk.css"
+    "revision": "0d448cf68aa958f2e75e",
+    "url": "/static/css/main.e7e80c5b.chunk.css"
   },
   {
-    "revision": "5fe0e8e2dabfbce47f65",
-    "url": "/static/js/2.4981c9b1.chunk.js"
+    "revision": "4aaa9a8cbb414d967352",
+    "url": "/static/js/2.a9858705.chunk.js"
   },
   {
     "revision": "cacaf3f01dd3bd8237006f7c58951c1c",
-    "url": "/static/js/2.4981c9b1.chunk.js.LICENSE.txt"
+    "url": "/static/js/2.a9858705.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "74a47a4c41ed28670d8f",
-    "url": "/static/js/main.dbc5c7a1.chunk.js"
+    "revision": "0d448cf68aa958f2e75e",
+    "url": "/static/js/main.a4dcb129.chunk.js"
   },
   {
     "revision": "82c2a412192a33a84097",
     "url": "/static/js/runtime-main.14188556.js"
+  },
+  {
+    "revision": "3c5c4abd3e1a95de3a4c707c49f5bf71",
+    "url": "/static/media/gedalya-krycer-resume.3c5c4abd.pdf"
   },
   {
     "revision": "ad28a9aabd4b96f66fa01cb01ecef255",

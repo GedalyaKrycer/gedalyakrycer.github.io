@@ -1,5 +1,5 @@
 .nav__logo-desktop {
-    margin-right: 65px;
+    margin-right: 52px;
     height: 40px;
 }
 
@@ -10,7 +10,7 @@
 /* Many Navbar Overrides Are Located on the "global.css" files To Solve Specificity */
 
 .nav__social {
-    font-size: 17px;
+    font-size: 20px;
 }
 
 /* Toggle Button */

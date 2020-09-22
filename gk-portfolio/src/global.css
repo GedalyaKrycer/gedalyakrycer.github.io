@@ -36,6 +36,10 @@ a:hover {
   color: white;
 }
 
+.g__footer-pin {
+  min-height: calc(100vh - 315px);
+}
+
 
 
 /* ————————————————————————————————————————————————

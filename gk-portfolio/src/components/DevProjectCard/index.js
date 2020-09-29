@@ -49,29 +49,34 @@ function DevProjectCard({ img, title, tech, deployLink, repoLink }) {
         <div className="g_projects-container">
             <Accordion>
                 <Card>
+                    <div className="neumorphism">
+                        <CustomToggle eventKey="0">
 
-                    <CustomToggle eventKey="0">
 
-
-                        <img src={img} alt={title} className="g_project-img" />
-                    </CustomToggle>
-
+                            <img src={img} alt={title} className="g_project-img" />
+                        </CustomToggle>
+                    </div>
                     <div className="g_meta-container dev-project__meta-container">
 
 
                         <Accordion.Collapse eventKey="0">
                             <Card.Body>
                                 <h4 className="dev-project__title">{title}</h4>
+
+
+
                                 <div className="dev-project__links">
-                                    <a href={deployLink}
+                                    {!deployLink ? null : <a href={deployLink}
                                         target="_blank"
-                                        rel="noopener noreferrer" className="dev-project__button">
+                                        rel="noopener noreferrer" className="dev-project__button dev-project__button--half">
                                         <FaDesktop />
                                         <h5>View Deployed</h5>
-                                    </a>
+                                    </a>}
+
                                     <a href={repoLink}
                                         target="_blank"
-                                        rel="noopener noreferrer" className="dev-project__button">
+                                        rel="noopener noreferrer" className={!deployLink ?
+                                            "dev-project__button dev-project__button--full" : "dev-project__button dev-project__button--half"}>
                                         <FaGithub />
                                         <h5>View Repo</h5>
                                     </a>

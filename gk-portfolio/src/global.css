@@ -247,16 +247,19 @@ Section Margins
 Project Styles
 ————————————————————————————————————————————————— */
   .g_projects-container {
-      margin-top: -170px;
+      /* margin-top: -170px; */
+      
   }
   
 
   .g_meta-container {
   background: #007CBA;
+  position: relative;
+  top: -126px;
   /* min-height: 252px; */
   border-radius: 18px;
   z-index: 1;
-  margin-bottom: 10rem;
+  margin-bottom: 1rem;
   color: white;
   
 }
@@ -271,7 +274,7 @@ Project Styles
 
 .g_card-slide {
   position: relative;
-  top: 176px;
+  top: 0;
   z-index: 2;
   color: none;
   padding: 0;
@@ -296,9 +299,10 @@ Project Styles
 }
 
 .g_card-slide-up {
-  top: 90px;
+  top: -30px;
   z-index: 2;
   transition: ease .5s;
+  /* top: 176px; */
 }
 
 .design-project__meta-container {
@@ -452,9 +456,9 @@ Mobile Styles
     margin-bottom: -2rem;
   }
 
-  .g_projects-container {
+  /* .g_projects-container {
     margin-top: -185px;
-}
+} */
 
 
 }

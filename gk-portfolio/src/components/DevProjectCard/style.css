@@ -16,13 +16,20 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 45%;
     background-color: #076492;
     padding: 5px;
     border-radius: 5px;
     color: aliceblue;
     font-weight: 600;
     transition: ease .7s;
+}
+
+.dev-project__button--half {
+    width: 45%;
+}
+
+.dev-project__button--full {
+    width: 100%;
 }
 
 .dev-project__button:hover {
@@ -66,7 +73,7 @@
      flex-direction: column;
     }
 
-    .dev-project__button {
+    .dev-project__button--half {
         margin-bottom: 10px;
         width: 100%;
     }

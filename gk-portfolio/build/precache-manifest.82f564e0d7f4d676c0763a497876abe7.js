@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "cf3979f1f913c4fc6b79f1873ad69d89",
+    "revision": "dfae9c802ced387ac14b9a07ab4d428c",
     "url": "/index.html"
   },
   {
@@ -8,8 +8,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/css/2.11829350.chunk.css"
   },
   {
-    "revision": "c80040e35a1e7f3f03e3",
-    "url": "/static/css/main.4ff450e3.chunk.css"
+    "revision": "dc79cded7d99f3eb3aa2",
+    "url": "/static/css/main.fdc9d920.chunk.css"
   },
   {
     "revision": "695b49c0d261d7e95692",
@@ -20,16 +20,16 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/js/2.43eca173.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "c80040e35a1e7f3f03e3",
-    "url": "/static/js/main.e12bc147.chunk.js"
+    "revision": "dc79cded7d99f3eb3aa2",
+    "url": "/static/js/main.67129c91.chunk.js"
   },
   {
     "revision": "82c2a412192a33a84097",
     "url": "/static/js/runtime-main.14188556.js"
   },
   {
-    "revision": "3c5c4abd3e1a95de3a4c707c49f5bf71",
-    "url": "/static/media/gedalya-krycer-resume.3c5c4abd.pdf"
+    "revision": "a24317c3a2fff2463754c3516a4cfaf1",
+    "url": "/static/media/gedalya-krycer-resume.a24317c3.pdf"
   },
   {
     "revision": "ad28a9aabd4b96f66fa01cb01ecef255",

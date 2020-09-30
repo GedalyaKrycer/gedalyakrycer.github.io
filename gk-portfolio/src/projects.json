@@ -20,7 +20,7 @@
         "img": "/assets/images/img-links/portfolio/Card/weather-thumbnail.jpg",
         "title": "Weather Forecaster",
         "tech": "Bulma, OpenWeather.js API, Unsplash API, Axios, JavaScript, HTML, CSS",
-        "deployLink": "https://gedalyakrycer.github.io/weather-forecaster/",
+        "deployLink": "https://weatherforecastreact.netlify.app",
         "repoLink": "https://github.com/GedalyaKrycer/weather-forecaster"
     },
     {

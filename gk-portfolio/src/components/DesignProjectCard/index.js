@@ -36,7 +36,7 @@ function DesignPortfolio() {
                 target="_blank"
                 rel="noopener noreferrer" >
                 <div className="g__design-project__card-slide">
-                    <img src={figmaThumbnail} alt="Figma image" className="design-project__project-img" />
+                    <img src={figmaThumbnail} alt="From a Figment to Figma." className="design-project__project-img" />
                    
                 </div>
 

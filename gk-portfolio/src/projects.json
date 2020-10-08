@@ -9,19 +9,19 @@
     },
     {
         "id": 2,
-        "img": "/assets/images/img-links/portfolio/Card/directory-thumbnail.jpg",
-        "title": "DigiBit Team Directory",
-        "tech": "React.js, Hooks, Figma, JSON, react-bootstrap, react-lazyload, react-icons, Heroku",
-        "deployLink": "https://unit-19-react-homework-employee-directory.netlify.app/",
-        "repoLink": "https://github.com/GedalyaKrycer/digibit-employee-directory"
-    },
-    {
-        "id": 3,
         "img": "/assets/images/img-links/portfolio/Card/weather-thumbnail.jpg",
         "title": "Weather Forecaster",
         "tech": "Bulma, OpenWeather.js API, Unsplash API, Axios, JavaScript, HTML, CSS",
         "deployLink": "https://weatherforecastreact.netlify.app",
         "repoLink": "https://github.com/GedalyaKrycer/weather-forecaster"
+    },
+    {
+        "id": 3,
+        "img": "/assets/images/img-links/portfolio/Card/directory-thumbnail.jpg",
+        "title": "DigiBit Team Directory",
+        "tech": "React.js, Hooks, Figma, JSON, react-bootstrap, react-lazyload, react-icons, Heroku",
+        "deployLink": "https://unit-19-react-homework-employee-directory.netlify.app/",
+        "repoLink": "https://github.com/GedalyaKrycer/digibit-employee-directory"
     },
     {
         "id": 4,

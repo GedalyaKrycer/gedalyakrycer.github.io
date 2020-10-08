@@ -26,7 +26,7 @@ function DesignPortfolio() {
 
                 <div className="design-project__meta-container">
 
-                    <h4 className="design-project__text">View Design Projects</h4>
+                    <h4 className="design-project__text">View design projects</h4>
                     <FaArrowRight className="design-project__icon" />
                 </div>
             </a>

@@ -427,7 +427,7 @@ Mobile Styles
     font-size: 19px;
   }
 
-  ..g__design-project__card-slide {
+  .g__design-project__card-slide {
     top: 93px;
     border-radius: 23px;
   }

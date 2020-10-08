@@ -84,13 +84,7 @@ h2 {
   margin-top: -5rem;
 }
 
-h3 {
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 140%;
-  max-width: 210px;
-  margin: 0 auto;
-}
+/* h3 is given several unique styles in the areas it is used. */
 
 h4 {
   font-weight: 900;
@@ -128,7 +122,7 @@ Colors
   background: #202120;
 }
 .g_bg-lighter-color {
-  background: #545657;
+  background: #c6cccf;
 }
 .g_secondary-blue-color {
   background: #00628A;
@@ -346,6 +340,12 @@ Accordion Overrides
 }
 
 
+/* ————————————————————————————————————————————————
+Global About Page 
+————————————————————————————————————————————————— */
+.g__about-sections {
+  margin-top: 13rem;
+}
 
 
 

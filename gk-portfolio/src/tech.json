@@ -1,0 +1,23 @@
+[
+    {
+        "fav": [
+            {
+                "id": 1,
+                "name": "HTML 5",
+                "link": "https://github.com/GedalyaKrycer/trust4leaders-website",
+                "svg": "/assets/images/html5.svg"
+            }
+        ]
+    },
+    {
+        "learning": [
+            {
+                "id": 1,
+                "name": "",
+                "svg": "",
+                "link": ""
+            }
+        ]
+    }
+
+]

@@ -2,6 +2,7 @@ import React from 'react';
 import './style.css';
 import Header from '../../components/Header';
 import Bio from '../../components/Bio';
+import Skills from '../../components/Skills';
 import ContactForm from '../../components/ContactForm';
 
 // This is static top section of the page and gives it semantic value.
@@ -14,6 +15,7 @@ function About() {
                 subTitleTwo="Him/He"
             />
             <Bio />
+            <Skills />
             <ContactForm />
         </>
     )

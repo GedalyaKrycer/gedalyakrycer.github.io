@@ -8,9 +8,9 @@
     },
     {
         "id": 2,
-        "name": "HTML 5",
-        "link": "https://github.com/GedalyaKrycer/trust4leaders-website",
-        "svg": "/assets/images/html-tech-icon.svg",
+        "name": "CSS",
+        "link": "https://github.com/NinaRocket/DRIVERkick",
+        "svg": "/assets/images/css-tech-icon.svg",
         "type": "dev"
     }
 ]

@@ -8,7 +8,7 @@ import tech from '../../tech.json';
 // This is static top section of the page and gives it semantic value.
 function Skills() {
 
-    console.log(tech[0].fav[0].name);
+    // console.log(tech[0].fav[0].name);
 
     return (
         <section>

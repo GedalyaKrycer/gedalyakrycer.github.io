@@ -24,16 +24,16 @@ function Skills() {
 
         // Checks if nav is already active 
         if (devFilterActive === false) {
-            setDevFilterActive(true);
+
+            // Sets Dev State to Active and turns the other's off
             setDesignFilterActive(false);
             setLearnFilterActive(false);
+            setDevFilterActive(true);
 
             // Filters out all buttons excepts the dev type
             setTechArray([...techArray].filter(techType =>
                 techType.type.includes("dev")
             ))
-
-
 
         } else {
 
@@ -50,16 +50,16 @@ function Skills() {
 
         // Checks if nav is already active 
         if (designFilterActive === false) {
-            setDesignFilterActive(true);
+
+            // Sets Design State to Active and turns the other's off
             setDevFilterActive(false);
             setLearnFilterActive(false);
+            setDesignFilterActive(true);
 
             // Filters out all buttons excepts the design type
             setTechArray([...techArray].filter(techType =>
                 techType.type.includes("design")
             ))
-
-
 
         } else {
 
@@ -73,8 +73,11 @@ function Skills() {
 
     // Function to show just the Learn tool buttons
     const handleLearnFilter = () => {
+        
         // Checks if nav is already active 
         if (learnFilterActive === false) {
+
+            // Sets Learn State to Active and turns the other's off
             setLearnFilterActive(true);
             setDesignFilterActive(false);
             setDevFilterActive(false);
@@ -83,8 +86,6 @@ function Skills() {
             setTechArray([...techArray].filter(techType =>
                 techType.type.includes("learn")
             ))
-
-
 
         } else {
 

@@ -9,6 +9,18 @@ This is an experimental Bootstrap 4 portfolio site. The goal is to grow this web
 
 * Site rebuilt in React.js and react-bootstrap
 
+* Added Google Analytics 
+
+* Pointed custom domain `gedalyakrycer.com` to Netlify hosting
+
+* Redesigned development projects to feature an accordion that reveals technologies used. 
+
+* Added hero button to design portfolio site
+
+* Added hero button to Figma Workshop 
+
+* Added skills and linked them to either related projects or courses I am taking to level up in them.
+
 
 ---
 

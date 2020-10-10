@@ -19,7 +19,9 @@ This is an experimental Bootstrap 4 portfolio site. The goal is to grow this web
 
 * Added hero button to Figma Workshop 
 
-* Added skills and linked them to either related projects or courses I am taking to level up in them.
+* Added skills, with filtering system and linked each skill to either related projects or courses I am taking to level up in them.
+
+
 
 
 ---

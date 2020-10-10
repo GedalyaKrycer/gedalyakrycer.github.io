@@ -17,12 +17,12 @@ function Skills() {
 
                 <Row className="justify-content-md-center g_negative-margin">
                     <Col lg={8}>
-                        <p className="skills__intro-text">These are some of the technologies and tools I enjoy creating with.</p>
+                        <p className="skills__intro-text">These are some of the tools I enjoy creating with or am currently learning.</p>
                     </Col>
                 </Row>
                 <Row className="justify-content-md-center">
                     <Col lg={8} className="skills__tech-container">
-                    <h3 className="skills__tech-title">Favorites</h3>
+                    <h3 className="skills__tech-title">Coming Soon</h3>
                     {/* {tech.map(technology => (
                         <DevProjectCard
                             key={tech[0].fav.technology.id}

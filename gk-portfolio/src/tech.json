@@ -1,23 +1,16 @@
 [
     {
-        "fav": [
-            {
-                "id": 1,
-                "name": "HTML 5",
-                "link": "https://github.com/GedalyaKrycer/trust4leaders-website",
-                "svg": "/assets/images/html5.svg"
-            }
-        ]
+        "id": 1,
+        "name": "HTML",
+        "link": "https://github.com/GedalyaKrycer/trust4leaders-website",
+        "svg": "/assets/images/html-tech-icon.svg",
+        "type": "dev"
     },
     {
-        "learning": [
-            {
-                "id": 1,
-                "name": "",
-                "svg": "",
-                "link": ""
-            }
-        ]
+        "id": 2,
+        "name": "HTML 5",
+        "link": "https://github.com/GedalyaKrycer/trust4leaders-website",
+        "svg": "/assets/images/html-tech-icon.svg",
+        "type": "dev"
     }
-
 ]

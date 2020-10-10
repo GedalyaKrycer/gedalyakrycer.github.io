@@ -17,19 +17,23 @@ function Skills() {
     const [designFilterActive, setDesignFilterActive] = useState(false);
     const [learnFilterActive, setLearnFilterActive] = useState(false);
 
+
+
     // Function to show just the developer tool buttons
     const handleDevFilter = () => {
 
         // Checks if nav is already active 
         if (devFilterActive === false) {
+            setDevFilterActive(true);
+            setDesignFilterActive(false);
+            setLearnFilterActive(false);
 
             // Filters out all buttons excepts the dev type
             setTechArray([...techArray].filter(techType =>
                 techType.type.includes("dev")
             ))
 
-            // Sets the filter to active which controls styling
-            setDevFilterActive(true);
+
 
         } else {
 
@@ -46,14 +50,16 @@ function Skills() {
 
         // Checks if nav is already active 
         if (designFilterActive === false) {
+            setDesignFilterActive(true);
+            setDevFilterActive(false);
+            setLearnFilterActive(false);
 
             // Filters out all buttons excepts the design type
             setTechArray([...techArray].filter(techType =>
                 techType.type.includes("design")
             ))
 
-            // Sets the filter to active which controls styling
-            setDesignFilterActive(true);
+
 
         } else {
 
@@ -67,8 +73,54 @@ function Skills() {
 
     // Function to show just the Learn tool buttons
     const handleLearnFilter = () => {
+        // Checks if nav is already active 
+        if (learnFilterActive === false) {
+            setLearnFilterActive(true);
+            setDesignFilterActive(false);
+            setDevFilterActive(false);
 
+            // Filters out all buttons excepts the learn type
+            setTechArray([...techArray].filter(techType =>
+                techType.type.includes("learn")
+            ))
+
+
+
+        } else {
+
+            // Replaces array with the original selection of buttons
+            setTechArray(tech);
+
+            // Removes active styling
+            setLearnFilterActive(false);
+        }
     }
+
+    // Helper function to make setting the active states DRYer
+    // const activeSelector = (selector) => {
+    //     switch (selector) {
+    //         case selector === "dev":
+    //             setDevFilterActive(true);
+    //             setDesignFilterActive(false);
+    //             setLearnFilterActive(false);
+    //             break;
+    //         case selector === "design":
+    //             setDevFilterActive(false);
+    //             setDesignFilterActive(true);
+    //             setLearnFilterActive(false);
+    //             break;
+    //         case selector === "learn":
+    //             setDevFilterActive(false);
+    //             setDesignFilterActive(false);
+    //             setLearnFilterActive(true);
+    //             break;
+    //         default:
+    //             setDevFilterActive(false);
+    //             setDesignFilterActive(false);
+    //             setLearnFilterActive(false);
+    //     }
+    // }
+
 
     return (
         <section>

@@ -22,8 +22,9 @@ function Skills() {
                 </Row>
                 <Row className="justify-content-md-center">
                     <Col lg={12} className="skills__tech-container">
-                        <h3 className="skills__tech-title">Coming Soon</h3>
-
+                        
+                        {/* <TechFilter /> */}
+                        
                         <div className="skills__tech-btn-container">
                             {tech.map(technology => (
                                 <TechButton

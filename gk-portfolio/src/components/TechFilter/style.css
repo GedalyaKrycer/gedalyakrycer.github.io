@@ -13,7 +13,6 @@
 .tech-filter__nav-dev,
 .tech-filter__nav-design,
 .tech-filter__nav-learn {
-    /* padding-bottom: 10px; */
     color: var(--nav-filter-links);
     transition: ease .5s;
     height: 50px;
@@ -45,3 +44,9 @@
 }
 
 
+.tech-filter__nav-dev:focus,
+.tech-filter__nav-design:focus,
+.tech-filter__nav-learn:focus {
+    outline: solid 1px var(--section-headlines); 
+    
+}

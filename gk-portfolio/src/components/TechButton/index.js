@@ -4,6 +4,8 @@ import './style.css';
 
 // This is static top section of the page and gives it semantic value.
 function TechButton({ name, link, svg, type }) {
+
+    // State to determine the css class type
     const [classType, setClassType ] = useState("hello");
 
     useEffect(() => {

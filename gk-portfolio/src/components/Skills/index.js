@@ -1,14 +1,16 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './style.css';
 import TechButton from '../TechButton';
+import TechFilter from '../TechFilter';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import tech from '../../tech.json';
 
-// This is static top section of the page and gives it semantic value.
 function Skills() {
 
+    // State to hold which buttons to show
+    const [techArray, setTechArray ] = useState(tech);   
 
     return (
         <section>
@@ -23,10 +25,10 @@ function Skills() {
                 <Row className="justify-content-md-center">
                     <Col lg={12} className="skills__tech-container">
                         
-                        {/* <TechFilter /> */}
+                        <TechFilter />
                         
                         <div className="skills__tech-btn-container">
-                            {tech.map(technology => (
+                            {techArray.map(technology => (
                                 <TechButton
                                     key={technology.id}
                                     name={technology.name}

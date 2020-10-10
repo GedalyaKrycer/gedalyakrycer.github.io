@@ -12,5 +12,19 @@
         "link": "https://github.com/NinaRocket/DRIVERkick",
         "svg": "/assets/images/css-tech-icon.svg",
         "type": "dev"
-    }
+    },
+    {
+        "id": 3,
+        "name": "Bootstrap",
+        "link": "https://github.com/GedalyaKrycer/trust4leaders-website",
+        "svg": "/assets/images/bootstrap-tech-icon.svg",
+        "type": "dev"
+    },
+    {
+        "id": 4,
+        "name": "Bulma",
+        "link": "https://github.com/GedalyaKrycer/weather-forecaster",
+        "svg": "/assets/images/bulma-tech-icon.svg",
+        "type": "dev"
+    },
 ]

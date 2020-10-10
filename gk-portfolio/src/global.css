@@ -19,6 +19,8 @@ Colors Variables
   --light-grey: #c6cccf;
 }
 
+
+
 .g_bg-color {
   background: var(--dark-gray);
 }

@@ -21,7 +21,7 @@ Colors Variables
   background: #c6cccf;
 }
 .g_secondary-blue-color {
-  background: #00628A;
+  background: var(--primary-blue-light);
 }
 .g_section-headlines-color {
   color: #353535;
@@ -72,7 +72,7 @@ header {
 }
 
 hr {
-  border-top: solid #007CBA 9px;
+  border-top: solid var(--primary-blue) 9px;
   width: 210px;  
 }
 
@@ -155,7 +155,7 @@ Forms Overrides
 .form-control:focus {
   background-color: rgb(29, 29, 29);
   color: rgb(223, 223, 223);
-  border-color: #00628A;
+  border-color: var(--primary-blue-light);
 }
 
 label {
@@ -172,7 +172,7 @@ Buttons
 ————————————————————————————————————————————————— */
 
 .btn-primary {
-  background-color: #00628A;
+  background-color: var(--primary-blue-light);
   width: 130px;
 }
 
@@ -252,7 +252,7 @@ Project Styles
   
 
   .g_meta-container {
-  background: #007CBA;
+  background: var(--primary-blue);
   position: relative;
   top: -126px;
   /* min-height: 252px; */

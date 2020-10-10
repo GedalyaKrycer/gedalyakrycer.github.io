@@ -8,7 +8,7 @@
 }
 
 .contact__submit-btn {
-    background-color: #00628A;
+    background-color: var(--primary-blue-light);
     max-width: 200px;
     display: inline-block;
     font-weight: 600;

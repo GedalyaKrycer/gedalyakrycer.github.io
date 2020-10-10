@@ -12,7 +12,7 @@
     padding-bottom: 20px; 
     display: flex;
     justify-content: center;
-    background: #007CBA;
+    background: var(--primary-blue);
     position: relative;
     top: -126px;
     border-radius: 18px;

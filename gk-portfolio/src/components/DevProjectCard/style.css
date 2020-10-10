@@ -16,7 +16,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #076492;
+    background-color: var(--primary-blue-dark);
     padding: 5px;
     border-radius: 5px;
     color: aliceblue;
@@ -33,7 +33,7 @@
 }
 
 .dev-project__button:hover {
-    color: #076492;
+    color: var(--primary-blue-dark);
     background-color: aliceblue;
     transition: ease .7s;
 }
@@ -47,13 +47,13 @@
 .dev-project__info {
     max-width: 350px;
     margin: 30px 0 15px;
-    border-top: 2px solid #2391c8;
+    border-top: 2px solid var(--primary-blue-light);
     padding-top: 30px;
 }
 
 .dev-project__tech {
-    border: 1px solid #2391c8;
-    color: #89d8ff;
+    border: 1px solid var(--primary-blue-light);
+    color: var(--primary-blue-lighter);
     border-radius: 30px;
     margin-right: 5px;
     padding: 0 10px;

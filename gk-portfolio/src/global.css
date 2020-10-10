@@ -5,26 +5,31 @@ Colors Variables
 ————————————————————————————————————————————————— */
 :root {
   --primary-blue: #007CBA;
-  --primary-blue-light: #00628A;
+  --primary-blue-light: #2391c8;
+  --primary-blue-lighter: #89d8ff;
+  --primary-blue-dark: #00628A;
+  --primary-blue-darker: #015779;
   --secondary-design: #B12851;
   --secondary-learn: #37A168;
   --dark-gray: #202120;
+  --darker-gray: #191a19;
   --section-headlines: #353535;
-  --light-grey: #c6cccf;
+  --mid-grey: #545657;
   --nav-filter-links: #6C6C6C;
+  --light-grey: #c6cccf;
 }
 
 .g_bg-color {
-  background: #202120;
+  background: var(--dark-gray);
 }
 .g_bg-lighter-color {
-  background: #c6cccf;
+  background: var(--light-grey);
 }
 .g_secondary-blue-color {
-  background: var(--primary-blue-light);
+  background: var(--primary-blue-dark);
 }
 .g_section-headlines-color {
-  color: #353535;
+  color: var(--section-headlines);
 }
 .g_white-color {
   color: white;
@@ -42,13 +47,13 @@ body::-webkit-scrollbar {
 }
 body {
   scrollbar-width: thin;
-  scrollbar-color: var(--primary-blue-light) var(--dark-gray);
+  scrollbar-color: var(--primary-blue-dark) var(--dark-gray);
 }
 body::-webkit-scrollbar-track {
   background: var(--dark-gray);
 }
 body::-webkit-scrollbar-thumb {
-  background-color: var(--primary-blue-light) ;
+  background-color: var(--primary-blue-dark) ;
   border-radius: 6px;
   border: 3px solid var(--dark-gray);
 }
@@ -61,7 +66,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: #202120;
+  background: var(--dark-gray);
   font-weight: 600;
   font-size: 16px;
 }
@@ -106,7 +111,7 @@ h2 {
   font-size: 180px;
   line-height: 140%;
   text-align: center;
-  color: #353535;
+  color: var(--section-headlines);
   margin-top: -5rem;
 }
 
@@ -144,9 +149,9 @@ p {
 Forms Overrides
 ————————————————————————————————————————————————— */
 .form-control {
-  background-color: #353535;
+  background-color: var(--section-headlines);
   color: aliceblue;
-  border: 1px #202020 solid;
+  border: 1px var(--dark-grey) solid;
   /* margin-bottom: 30px; */
   height: 50px;
   padding: 15px;
@@ -155,11 +160,11 @@ Forms Overrides
 .form-control:focus {
   background-color: rgb(29, 29, 29);
   color: rgb(223, 223, 223);
-  border-color: var(--primary-blue-light);
+  border-color: var(--primary-blue-dark);
 }
 
 label {
-  color: #bac2c5;
+  color: var(--light-grey);
 }
 
 .invalid-feedback {
@@ -172,7 +177,7 @@ Buttons
 ————————————————————————————————————————————————— */
 
 .btn-primary {
-  background-color: var(--primary-blue-light);
+  background-color: var(--primary-blue-dark);
   width: 130px;
 }
 
@@ -397,7 +402,7 @@ Mobile Styles
 @media only screen and (max-width: 767px) {
   .navbar-collapse {
     margin-top: 10px;
-    background: #353535;
+    background: var(--section-headlines);
     padding: 10px;
     text-align: center;
   }

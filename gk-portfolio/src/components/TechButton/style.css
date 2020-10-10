@@ -1,5 +1,5 @@
 .tech-btn__btn {
-    background: #202120;
+    background: var(--dark-gray);
     border-radius: 70px;
     margin: 15px;
     padding: 10px 30px;

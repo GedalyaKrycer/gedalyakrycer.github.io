@@ -15,7 +15,7 @@
 
 .skills__tech-title {
     font-weight: bold;
-    color: #c6cccf;
+    color: var(--light-grey);
 }
 
 .skills__tech-btn-container {

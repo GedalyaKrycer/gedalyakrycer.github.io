@@ -1,14 +1,14 @@
 import React from 'react';
 import './style.css';
+import TechButton from '../TechButton';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-// import tech from '../../tech.json';
+import tech from '../../tech.json';
 
 // This is static top section of the page and gives it semantic value.
 function Skills() {
 
-    // console.log(tech[0].fav[0].name);
 
     return (
         <section>
@@ -21,17 +21,22 @@ function Skills() {
                     </Col>
                 </Row>
                 <Row className="justify-content-md-center">
-                    <Col lg={8} className="skills__tech-container">
-                    <h3 className="skills__tech-title">Coming Soon</h3>
-                    {/* {tech.map(technology => (
-                        <DevProjectCard
-                            key={tech[0].fav.technology.id}
-                            name={tech[0].fav.technology.name}
-                            link={tech[0].fav.technology.link}
-                            svg={tech[0].fav.technology.svg}
-                            
-                        />
-                    ))} */}
+                    <Col lg={12} className="skills__tech-container">
+                        <h3 className="skills__tech-title">Coming Soon</h3>
+
+                        <div className="skills__tech-btn-container">
+                            {tech.map(technology => (
+                                <TechButton
+                                    key={technology.id}
+                                    name={technology.name}
+                                    link={technology.link}
+                                    svg={technology.svg}
+                                    type={technology.type}
+
+                                />
+                            ))}
+                        </div>
+
                     </Col>
                 </Row>
 

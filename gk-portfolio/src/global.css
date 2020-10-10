@@ -1,5 +1,34 @@
 @import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;900&display=swap');
 
+/* ————————————————————————————————————————————————
+Colors Variables 
+————————————————————————————————————————————————— */
+:root {
+  --primary-blue: #00628A;
+  --primary-blue-light: #00628A;
+  --secondary-design: #B12851;
+  --secondary-learn: #37A168;
+  --dark-gray: #202120;
+  --section-headlines: #353535;
+  --light-grey: #c6cccf;
+  --nav-filter-links: #6C6C6C;
+}
+
+.g_bg-color {
+  background: #202120;
+}
+.g_bg-lighter-color {
+  background: #c6cccf;
+}
+.g_secondary-blue-color {
+  background: #00628A;
+}
+.g_section-headlines-color {
+  color: #353535;
+}
+.g_white-color {
+  color: white;
+}
 
 /* Any class pre-pended with "g_" is a custom class that is applied globally */
 
@@ -7,24 +36,21 @@
 Base Styles 
 ————————————————————————————————————————————————— */
 
-html {
-  --scrollbarBG: #202120;
-  --thumbBG: #007CBA;
-}
+
 body::-webkit-scrollbar {
   width: 10px;
 }
 body {
   scrollbar-width: thin;
-  scrollbar-color: var(--thumbBG) var(--scrollbarBG);
+  scrollbar-color: var(--primary-blue-light) var(--dark-gray);
 }
 body::-webkit-scrollbar-track {
-  background: var(--scrollbarBG);
+  background: var(--dark-gray);
 }
 body::-webkit-scrollbar-thumb {
-  background-color: var(--thumbBG) ;
+  background-color: var(--primary-blue-light) ;
   border-radius: 6px;
-  border: 3px solid var(--scrollbarBG);
+  border: 3px solid var(--dark-gray);
 }
 
 
@@ -111,27 +137,6 @@ p {
 
 .g_txt-bold {
   font-weight: 900;
-}
-
-
-
-/* ————————————————————————————————————————————————
-Colors 
-————————————————————————————————————————————————— */
-.g_bg-color {
-  background: #202120;
-}
-.g_bg-lighter-color {
-  background: #c6cccf;
-}
-.g_secondary-blue-color {
-  background: #00628A;
-}
-.g_section-headlines-color {
-  color: #353535;
-}
-.g_white-color {
-  color: white;
 }
 
 

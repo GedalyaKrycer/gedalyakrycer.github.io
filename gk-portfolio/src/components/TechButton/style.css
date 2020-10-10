@@ -1,0 +1,29 @@
+.tech-btn__btn {
+    background: #202120;
+    box-shadow: -4px -4px 8px rgba(52, 51, 51, 0.25), 4px 4px 8px rgba(0, 0, 0, 0.25);
+    border-radius: 70px;
+    margin: 15px;
+    padding: 10px 30px;
+    transition: ease .5s;
+    display: block;
+    font-weight: bold;
+}
+
+
+.tech-btn__btn:hover {
+    box-shadow: 
+    inset -4px -4px 8px rgba(52, 51, 51, 0.25), 
+    inset 4px 4px 8px rgba(0, 0, 0, 0.25);
+    text-decoration: none;
+    transition: ease .5s;
+
+}
+
+.tech-btn__btn--dev {
+   color: var(--primary-blue);
+}
+
+
+.tech-btn__icon {
+    margin-right: 10px;
+}

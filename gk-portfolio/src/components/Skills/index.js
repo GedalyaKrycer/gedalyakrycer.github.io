@@ -19,15 +19,24 @@ function Skills() {
 
     // Function to show just the developer tool buttons
     const handleDevFilter = () => {
+
+        // Checks if nav is already active 
         if (devFilterActive === false) {
+
+            // Filters out all buttons excepts the dev type
             setTechArray([...techArray].filter(techType =>
                 techType.type.includes("dev")
-              ))
-            
-              setDevFilterActive(true);
+            ))
+
+            // Sets the filter to active which controls styling
+            setDevFilterActive(true);
 
         } else {
+
+            // Replaces array with the original selection of buttons
             setTechArray(tech);
+
+            // Removes active styling
             setDevFilterActive(false);
         }
     }
@@ -35,6 +44,25 @@ function Skills() {
     // Function to show just the Design tool buttons
     const handleDesignFilter = () => {
 
+        // Checks if nav is already active 
+        if (designFilterActive === false) {
+
+            // Filters out all buttons excepts the design type
+            setTechArray([...techArray].filter(techType =>
+                techType.type.includes("design")
+            ))
+
+            // Sets the filter to active which controls styling
+            setDesignFilterActive(true);
+
+        } else {
+
+            // Replaces array with the original selection of buttons
+            setTechArray(tech);
+
+            // Removes active styling
+            setDesignFilterActive(false);
+        }
     }
 
     // Function to show just the Learn tool buttons

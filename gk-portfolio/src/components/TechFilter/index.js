@@ -2,7 +2,7 @@ import React from 'react';
 import './style.css';
 
 
-function TechFilter({ handleDevFilter, handleDesignFilter, handleLearnFilter, devFilterActive, designFilterActive, learnFilterActive }) {
+function TechFilter({ handleDevFilter, handleDesignFilter, handleLearnFilter, devFilterActive, designFilterActive, learnFilterActive, handleResetFilter, resetFilterActive }) {
 
 
   return (
@@ -11,7 +11,7 @@ function TechFilter({ handleDevFilter, handleDesignFilter, handleLearnFilter, de
       <div className="tech-filter__nav">
         <button className={`tech-filter__nav-dev ${devFilterActive ? "tech-filter__nav-dev--active" : null}`}
           onClick={handleDevFilter}>
-          Development
+          Coding
         </button>
         <button className={`tech-filter__nav-design ${designFilterActive ? "tech-filter__nav-design--active" : null}`}
           onClick={handleDesignFilter}>
@@ -21,6 +21,14 @@ function TechFilter({ handleDevFilter, handleDesignFilter, handleLearnFilter, de
           onClick={handleLearnFilter}>
           Learning
         </button>
+        {
+          resetFilterActive ? <button className="tech-filter__nav-reset"
+          onClick={handleResetFilter}>
+          Reset
+        </button> :
+        null
+        }
+        
       </div>
     </div>
 

@@ -16,6 +16,7 @@ function Skills() {
     const [devFilterActive, setDevFilterActive] = useState(false);
     const [designFilterActive, setDesignFilterActive] = useState(false);
     const [learnFilterActive, setLearnFilterActive] = useState(false);
+    const [resetFilterActive, setResetFilterActive] = useState(false);
 
 
 
@@ -25,10 +26,13 @@ function Skills() {
         // Checks if nav is already active 
         if (devFilterActive === false) {
 
+            // Show Reset Link
+            setResetFilterActive(true);
+
             // Sets Dev State to Active and turns the other's off
+            setDevFilterActive(true);
             setDesignFilterActive(false);
             setLearnFilterActive(false);
-            setDevFilterActive(true);
 
             // Filters out all buttons excepts the dev type
             setTechArray([...techArray].filter(techType =>
@@ -50,6 +54,10 @@ function Skills() {
 
         // Checks if nav is already active 
         if (designFilterActive === false) {
+
+            // Show Reset Link
+            setResetFilterActive(true);
+
 
             // Sets Design State to Active and turns the other's off
             setDevFilterActive(false);
@@ -73,9 +81,12 @@ function Skills() {
 
     // Function to show just the Learn tool buttons
     const handleLearnFilter = () => {
-        
+
         // Checks if nav is already active 
         if (learnFilterActive === false) {
+
+            // Show Reset Link
+            setResetFilterActive(true);
 
             // Sets Learn State to Active and turns the other's off
             setLearnFilterActive(true);
@@ -95,6 +106,23 @@ function Skills() {
             // Removes active styling
             setLearnFilterActive(false);
         }
+    }
+
+
+    // Function to show just the Learn tool buttons
+    const handleResetFilter = () => {
+        // Replaces array with the original selection of buttons
+        setTechArray(tech);
+
+        if (resetFilterActive === true) {
+            setResetFilterActive(false);
+            setLearnFilterActive(false);
+            setDesignFilterActive(false);
+            setDevFilterActive(false);
+        }
+
+    
+
     }
 
     // Helper function to make setting the active states DRYer
@@ -140,9 +168,11 @@ function Skills() {
                             devFilterActive={devFilterActive}
                             designFilterActive={designFilterActive}
                             learnFilterActive={learnFilterActive}
+                            resetFilterActive={resetFilterActive}
                             handleDevFilter={handleDevFilter}
                             handleDesignFilter={handleDesignFilter}
                             handleLearnFilter={handleLearnFilter}
+                            handleResetFilter={handleResetFilter}
                         />
 
                         <div className="skills__tech-btn-container">

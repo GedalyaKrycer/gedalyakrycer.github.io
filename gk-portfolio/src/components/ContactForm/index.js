@@ -138,7 +138,7 @@ function ContactForm() {
 
     return (
         <section>
-            <Container className="g__about-sections">
+            <Container className="g__about-sections" id="contact">
                 <h2>Contact</h2>
                 <Row className="justify-content-md-center g_negative-margin">
                     <Col className="white-color" lg={8}>

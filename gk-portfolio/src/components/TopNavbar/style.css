@@ -29,9 +29,11 @@
 }
 
 .nav__resume {
+    margin-top: 10px;
     background-color: var(--section-headlines);
-    padding: .375rem 1.2rem;
+    padding: .5rem 1.2rem;
     border-radius: 50px;
+    display: block;
 }
 
 .nav__resume:hover,
@@ -54,4 +56,11 @@
     .nav__social--display {
         display: none;
     }
-  }
+}
+
+@media screen and (max-width: 767px) { 
+    .nav__resume {
+        padding: .75rem 1.2rem;
+        margin: 10px 0 20px;
+    }
+}

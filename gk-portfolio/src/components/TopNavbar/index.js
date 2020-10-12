@@ -44,7 +44,7 @@ function TopNavbar() {
 
 
                 </Nav>
-                <a href={resumeFile} download={true} className="footer__resume "><h6>View Resume</h6></a>
+                <a href={resumeFile} download={true} className="nav__resume"><h6>View Resume</h6></a>
             </Navbar.Collapse>
 
 

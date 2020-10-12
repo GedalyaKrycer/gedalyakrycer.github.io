@@ -1,7 +1,17 @@
 .nav__logo-desktop {
-    margin-right: -18px;
+    margin-right: 35px;
+    margin-top: 5px;
     height: 40px;
+    transition: ease .5s;
 }
+
+.nav__logo-desktop:hover,
+.nav__logo-desktop:focus{
+    opacity: .5;
+    transform: scale(.95);
+    transition: ease .5s;
+
+  }
 
 .nav__logo-mobile {
     height: 32px;
@@ -16,6 +26,27 @@
 /* Toggle Button */
 .navbar-light .navbar-toggler {
     background: none;
+}
+
+.nav__resume {
+    background-color: var(--section-headlines);
+    padding: .375rem 1.2rem;
+    border-radius: 50px;
+}
+
+.nav__resume:hover,
+.nav__resume:focus{
+    color: white;
+    opacity: .5;
+    text-decoration: none;
+    transition: ease .5s;
+
+  }
+
+.nav__resume:active,
+.nav__resume:visited {
+  color: white;
+  transition: ease .5s;
 }
 
 

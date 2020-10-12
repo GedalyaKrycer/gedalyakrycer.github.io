@@ -56,7 +56,6 @@ footer {
 
 .footer__resume {
     color: rgb(233, 233, 233);
-    border-radius: 10px;
     text-align: center;
     background-color: var(--section-headlines);
     max-width: 200px;

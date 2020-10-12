@@ -3,6 +3,7 @@
     color: white;
     top: calc(50% + 30px);
     right: 0;
+    margin-right: -12px;
     position: fixed;
     text-align: center;
 }

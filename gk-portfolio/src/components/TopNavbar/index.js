@@ -27,6 +27,9 @@ function TopNavbar() {
                     <LinkContainer to="/about">
                         <Nav.Link>About</Nav.Link>
                     </LinkContainer>
+                    <LinkContainer to="/about#contact" className="nav__contact">
+                        <Nav.Link>Contact</Nav.Link>
+                    </LinkContainer>
                 </Nav>
             </Navbar.Collapse>
             <LinkContainer to="/" className="d-none d-md-block">

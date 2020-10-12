@@ -11,7 +11,11 @@
     transform: scale(.95);
     transition: ease .5s;
 
-  }
+}
+
+.nav__contact {
+    display: none !important;
+}
 
 .nav__logo-mobile {
     height: 32px;
@@ -62,5 +66,9 @@
     .nav__resume {
         padding: .75rem 1.2rem;
         margin: 10px 0 20px;
+    }
+
+    .nav__contact {
+        display: block !important;
     }
 }

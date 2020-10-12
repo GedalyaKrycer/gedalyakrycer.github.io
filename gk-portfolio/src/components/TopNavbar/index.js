@@ -1,16 +1,17 @@
 import React from 'react';
+import './style.css';
 import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
 import { LinkContainer } from "react-router-bootstrap";
 import { FaGithub, FaLinkedinIn, FaBehance } from 'react-icons/fa';
 import { FiArrowUpRight } from 'react-icons/fi';
-import './style.css';
+import resumeFile from "../../gedalya-krycer-resume.pdf";
 
 // This is static top section of the page and gives it semantic value.
 function TopNavbar() {
     return (
         <Navbar collapseOnSelect expand="md">
-            
+
             <LinkContainer to="/" className="d-md-none">
                 <Navbar.Brand>
                     <img src="https://raw.githubusercontent.com/GedalyaKrycer/gedalyakrycer.github.io/46e78fe53858d535b8db1d9e7e42455fa0a8b090/gk-portfolio/public/assets/images/img-links/gk-logo-white.svg" alt="GK Logo" className="nav__logo-mobile" />
@@ -24,7 +25,7 @@ function TopNavbar() {
                     </LinkContainer>
                     <Nav.Link href="http://gedalya.myportfolio.com/" target="_blank" rel="noopener noreferrer">Design <FiArrowUpRight /> </Nav.Link>
                     <LinkContainer to="/about">
-                    <Nav.Link>About</Nav.Link>
+                        <Nav.Link>About</Nav.Link>
                     </LinkContainer>
                 </Nav>
             </Navbar.Collapse>
@@ -35,13 +36,17 @@ function TopNavbar() {
             </LinkContainer>
             <Navbar.Collapse className="g_justify-end">
                 <Nav className="nav__social">
-                    <Nav.Link href="https://www.linkedin.com/in/gedalyakrycer/" target="_blank" rel="noopener noreferrer"><FaLinkedinIn/></Nav.Link>
-                    <Nav.Link href="https://github.com/GedalyaKrycer" target="_blank" rel="noopener noreferrer" ><FaGithub /></Nav.Link>
-                    <Nav.Link href="https://www.behance.net/gedalyakrycer" target="_blank" rel="noopener noreferrer"><FaBehance /></Nav.Link>
+                    <div className="nav__social--display">
+                        <Nav.Link href="https://www.linkedin.com/in/gedalyakrycer/" target="_blank" rel="noopener noreferrer"><FaLinkedinIn /></Nav.Link>
+                        <Nav.Link href="https://github.com/GedalyaKrycer" target="_blank" rel="noopener noreferrer" ><FaGithub /></Nav.Link>
+                        <Nav.Link href="https://www.behance.net/gedalyakrycer" target="_blank" rel="noopener noreferrer"><FaBehance /></Nav.Link>
+                    </div>
+
 
                 </Nav>
+                <a href={resumeFile} download={true} className="footer__resume "><h6>View Resume</h6></a>
             </Navbar.Collapse>
-            
+
 
 
         </Navbar>

@@ -2,7 +2,7 @@ import React from 'react';
 import { LinkContainer } from "react-router-bootstrap";
 import { FaGithub, FaLinkedinIn, FaBehance, FaReact, FaFigma } from 'react-icons/fa';
 import './style.css';
-import resumeFile from "../../gedalya-krycer-resume.pdf"
+import resumeFile from "../../gedalya-krycer-resume.pdf";
 
 // This is static top section of the page and gives it semantic value.
 function TopNavbar() {

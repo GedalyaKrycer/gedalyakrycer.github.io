@@ -60,8 +60,8 @@ footer {
     text-align: center;
     background-color: var(--section-headlines);
     max-width: 200px;
-    padding: .375rem .75rem;
-    border-radius: .25rem;
+    padding: .375rem 1rem;
+    border-radius: 50px;
     margin-left: 60px;
 }
 

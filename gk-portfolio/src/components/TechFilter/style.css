@@ -7,7 +7,7 @@
     margin: 0 auto;
     max-width: 300px;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
 }
 
 .tech-filter__nav-dev,

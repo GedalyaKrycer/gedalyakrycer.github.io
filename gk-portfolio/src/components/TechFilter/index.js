@@ -9,26 +9,52 @@ function TechFilter({ handleDevFilter, handleDesignFilter, handleLearnFilter, de
 
     <div className="tech-filter__container">
       <div className="tech-filter__nav">
-        <button className={`tech-filter__nav-dev ${devFilterActive ? "tech-filter__nav-dev--active" : null}`}
-          onClick={handleDevFilter}>
-          Coding
+
+        {/* Button shows if the other buttons are not active */}
+        {learnFilterActive === true ||
+          designFilterActive === true ?
+          null :
+          <button className={`tech-filter__nav-dev ${devFilterActive ? "tech-filter__nav-dev--active" : null}`}
+            onClick={handleDevFilter}>
+            Coding
         </button>
-        <button className={`tech-filter__nav-design ${designFilterActive ? "tech-filter__nav-design--active" : null}`}
-          onClick={handleDesignFilter}>
-          Design
+        }
+
+
+
+
+        {/* Button shows if the other buttons are not active */}
+        {learnFilterActive === true ||
+          devFilterActive === true ?
+          null :
+          <button className={`tech-filter__nav-design ${designFilterActive ? "tech-filter__nav-design--active" : null}`}
+            onClick={handleDesignFilter}>
+            Design
         </button>
-        <button className={`tech-filter__nav-learn ${learnFilterActive ? "tech-filter__nav-learn--active" : null}`}
-          onClick={handleLearnFilter}>
-          Learning
-        </button>
+        }
+
+
+
+
+
+        {/* Button shows if the other buttons are not active */}
+        {devFilterActive === true ||
+          designFilterActive === true ?
+          null :
+          <button className={`tech-filter__nav-learn ${learnFilterActive ? "tech-filter__nav-learn--active" : null}`}
+            onClick={handleLearnFilter}>
+            Learning
+          </button>
+        }
+
         {
           resetFilterActive ? <button className="tech-filter__nav-reset"
-          onClick={handleResetFilter}>
-          Reset
+            onClick={handleResetFilter}>
+            Show All
         </button> :
-        null
+            null
         }
-        
+
       </div>
     </div>
 

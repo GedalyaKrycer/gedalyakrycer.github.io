@@ -75,7 +75,7 @@ body {
 
 header {
   text-align: center;
-  padding: 130px 0;
+  padding: 170px 0 190px;
 }
 
 hr {
@@ -375,7 +375,7 @@ Accordion Overrides
 Global About Page 
 ————————————————————————————————————————————————— */
 .g__about-sections {
-  margin-top: 13rem;
+  margin-top: 10rem;
 }
 
 .g__frame-left {
@@ -461,7 +461,7 @@ Mobile Styles
   }
 
   header {
-    padding: 50px 0;
+    padding: 80px 0;
   }
   
   h2 {

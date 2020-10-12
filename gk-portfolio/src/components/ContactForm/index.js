@@ -301,10 +301,11 @@ function ContactForm() {
                 <div className="contact__email-container">
                     <h2>or</h2>
                     <div className="contact__email-txt">
-                        <p>You can email me at</p>
+                        <p className="g__body-lg">You can email me at</p>
 
                         <p>
-                            <a href="mailto:gedalya@krycer.com">
+                            <a href="mailto:gedalya@krycer.com" 
+                            className="g__body-lg">
                                 gedalya@krycer.com
                         </a>
                         </p>

@@ -1,4 +1,4 @@
-import React, {useEffect} from "react";
+import React, { useEffect } from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Home from "./pages/Home";
 import GithubPin from "./components/GithubPin";
@@ -19,16 +19,19 @@ function App() {
   return (
     <Router>
       <TopNavbar />
-        <GithubPin />
-        <ContactPin />
+      <div className="g__frame-left"></div>
+      <GithubPin />
+      <div className="g__frame-right"></div>
+      <ContactPin />
       <Switch>
+
         <Route exact path="/" component={Home} />
         <Route exact path="/about" component={About} />
         <NotFound />
       </Switch>
 
       <Footer />
-     
+
     </Router>
   );
 }

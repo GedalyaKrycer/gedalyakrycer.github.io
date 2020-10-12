@@ -158,7 +158,7 @@ function Skills() {
 
                 <Row className="justify-content-md-center g_negative-margin">
                     <Col lg={8}>
-                        <p className="skills__intro-text">These are some of the tools I use on projects or currently learning.</p>
+                        <p className="skills__intro-text g__body-lg">These are some of the tools I use on projects or currently learning.</p>
                     </Col>
                 </Row>
                 <Row className="justify-content-md-center">

@@ -138,12 +138,19 @@ h6 {
 
 p {
   font-weight: 400;
-  font-size: 22px;
+  font-size: 18px;
   line-height: 1.5;
+  color: var(--light-grey);
 }
 
 .g_txt-bold {
   font-weight: 900;
+}
+
+.g__body-lg {
+  font-size: 22px;
+  /* margin-bottom: 30px; */
+  color: white;
 }
 
 
@@ -237,6 +244,18 @@ Nav Bar Bootstrap Overrides
 .navbar-light .navbar-toggler-icon {
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, .9%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
 }
+
+
+
+.navbar {
+  border-bottom: 1px solid #353535;
+  padding: .5rem 1rem 1.2rem;
+}
+
+.nav-link {
+  margin-top: 10px;
+}
+
 
 
 /* ————————————————————————————————————————————————
@@ -359,6 +378,23 @@ Global About Page
   margin-top: 13rem;
 }
 
+.g__frame-left {
+  position: fixed;
+  left: 40px;
+  width: 20px;
+  height: 100vh;
+  border-right: 1px solid #353535;
+}
+
+.g__frame-right {
+  position: fixed;
+  right: 45px;
+  width: 20px;
+  height: 100vh;
+  border-right: 1px solid #353535;
+}
+
+
 
 
 /* ————————————————————————————————————————————————
@@ -368,6 +404,8 @@ Mobile Styles
 
 ///////////////////////////////////////////////////
 ————————————————————————————————————————————————— */
+
+/* 1201px — Breakpoint */
 @media only screen and (max-width: 1201px) {
   
   h2 {
@@ -382,6 +420,8 @@ Mobile Styles
   
 }
 
+
+/* 993px — Breakpoint */
 @media only screen and (max-width: 993px) {
   
   h2 {
@@ -401,6 +441,17 @@ Mobile Styles
 
 }
 
+
+/* 809px — Breakpoint */
+@media screen and (max-width: 809px) {
+  .g__frame-left,
+  .g__frame-right {
+  display: none;
+  }
+}
+
+
+/* 767px — Breakpoint */
 @media only screen and (max-width: 767px) {
   .navbar-collapse {
     margin-top: 10px;
@@ -424,11 +475,20 @@ Mobile Styles
     transition: ease 1s;
   }
 
+  .nav-link {
+    margin-top: 0;
+  }
 
-  .g_project-img,
+  .navbar {
+    border-bottom: 1px solid #353535;
+    padding: .5rem 1rem;
+  }
+
+
+  /* .g_project-img,
   .g_meta-container {
       border-radius: 20px;
-  }
+  } */
 
   nav,
   .social {
@@ -440,7 +500,6 @@ Mobile Styles
   }
 
   .g__design-project__card-slide {
-    top: 93px;
     border-radius: 23px;
   }
 
@@ -455,6 +514,9 @@ Mobile Styles
   }
 }
 
+
+
+/* 439px — Breakpoint */
 @media only screen and (max-width: 439px) {
   h2 {
     font-size: 80px;
@@ -473,14 +535,12 @@ Mobile Styles
   }
 
 
-
-
 }
 
+
+/* 350px — Breakpoint */
 @media only screen and (max-width: 350px) {
   
-
-
   .design-project__card-slide {
     top: 93px;
     border-radius: 23px;

@@ -1,5 +1,4 @@
 .githubPin {
-    transform: rotate(90deg);
     color: white;
     top: calc(50%);
     left: 0;
@@ -8,7 +7,15 @@
     text-align: center;
 }
 
-@media screen and (max-width: 767px) {
+.githubPin_link {
+    display: block;
+    margin-bottom: 20px;
+    color: var(--nav-filter-links);
+    transition: ease .5s;
+    font-size: 20px;
+}
+
+@media screen and (max-width: 809px) {
     .githubPin {
         display: none;
     }

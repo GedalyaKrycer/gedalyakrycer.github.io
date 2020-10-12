@@ -2,6 +2,7 @@ import React, {useEffect} from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Home from "./pages/Home";
 import GithubPin from "./components/GithubPin";
+import ContactPin from "./components/ContactPin";
 import About from "./pages/About";
 import NotFound from "./pages/NotFound";
 import TopNavbar from "./components/TopNavbar";
@@ -19,6 +20,7 @@ function App() {
     <Router>
       <TopNavbar />
         <GithubPin />
+        <ContactPin />
       <Switch>
         <Route exact path="/" component={Home} />
         <Route exact path="/about" component={About} />

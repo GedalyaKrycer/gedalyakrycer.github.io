@@ -2,6 +2,7 @@ import React from 'react';
 import { LinkContainer } from "react-router-bootstrap";
 import { FaGithub, FaLinkedinIn, FaBehance, FaReact, FaFigma } from 'react-icons/fa';
 import './style.css';
+import resumeFile from "../../gedalya-krycer-resume.pdf"
 
 // This is static top section of the page and gives it semantic value.
 function TopNavbar() {
@@ -13,7 +14,7 @@ function TopNavbar() {
                 </LinkContainer>
 
 
-                <a href="https://www.dropbox.com/sh/8gth3n1elam3kh9/AAA-J3qJSIF4ZLIX_xHvF-tLa?dl=0" target="_blank" rel="noopener noreferrer" className="footer__resume "><h6>View Resume</h6></a>
+                <a href={resumeFile} download={true} className="footer__resume "><h6>View Resume</h6></a>
 
 
                 <div className="footer__social-icons-container">

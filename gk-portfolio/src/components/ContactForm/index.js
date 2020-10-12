@@ -138,162 +138,163 @@ function ContactForm() {
 
     return (
         <section>
-            <Container>
-                <Row className="justify-content-md-center mt-5">
-                    <Col className="white-color" lg={6}>
+            <Container className="g__about-sections">
+                <h2>Contact</h2>
+                <Row className="justify-content-md-center g_negative-margin">
+                    <Col className="white-color" lg={8}>
+                        <div className="contact__form-bg">
 
-                        <Formik
-                            initialValues={{
-                                "bot-field": "",
-                                "form-name": "contact",
-                                email: "",
-                                name: "",
-                                message: ""
-                            }}
-                            validate={values => {
-                                let errors = {};
-                                if (!values.email) {
-                                    errors.email = "Required";
-                                } else if (
-                                    !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(values.email)
-                                ) {
-                                    errors.email = "Invalid email address";
-                                }
-                                if (!values.name) {
-                                    errors.name = "Required";
-                                }
-                                if (!values.message) {
-                                    errors.message = "Required";
-                                }
-                                return errors;
-                            }}
-                            onSubmit={values => {
-                                setIsSubmitting(true);
-                                setFormValues({ ...values });
-                                setExecuting(true);
-                                rcRef.current.execute();
-                            }}
-                        >
-                            {({ resetForm }) => (
-                                <Form
-                                    data-netlify="true"
-                                    data-netlify-honeypot="bot-field"
-                                    data-netlify-recaptcha="true"
-                                    className="d-flex flex-column"
-                                    name="contact"
-                                    noValidate
-                                >
-                                    <Field type="hidden" name="form-name" />
-                                    <Field type="hidden" name="bot-field" />
-                                    <div className="form-group">
-                                        <label
-                                            className="col-form-label col-form-label-lg"
-                                            htmlFor="name"
-                                        >
-                                            Name
-                                        </label>
-                                        <Field
-                                            className="form-control form-control-lg"
-                                            name="name"
-                                            type="text"
-                                        />
-                                        <ErrorMessage
-                                            className="invalid-feedback"
-                                            name="name"
-                                            component="div"
-                                        />
-                                    </div>
-                                    <div className="form-group">
-                                        <label
-                                            className="col-form-label col-form-label-lg"
-                                            htmlFor="email"
-                                        >
-                                            Email
-                                        </label>
-                                        <Field
-                                            className="form-control form-control-lg"
-                                            name="email"
-                                            type="email"
-                                        />
-                                        <ErrorMessage
-                                            className="invalid-feedback"
-                                            name="email"
-                                            component="div"
-                                        />
-                                    </div>
-                                    <div className="form-group">
-                                        <label
-                                            className="col-form-label col-form-label-lg"
-                                            htmlFor="message"
-                                        >
-                                            Message
-                                        </label>
-                                        <Field
-                                            className="form-control form-control-lg"
-                                            name="message"
-                                            component="textarea"
-                                        />
-                                        <ErrorMessage
-                                            className="invalid-feedback"
-                                            name="message"
-                                            component="div"
-                                        />
-                                    </div>
-                                    <Reaptcha
-                                        ref={rcRef}
-                                        sitekey="6LdZTMMZAAAAAGJy0j2AyImgkQ33Mv4juhtQElid"
+                            <Formik
+                                initialValues={{
+                                    "bot-field": "",
+                                    "form-name": "contact",
+                                    email: "",
+                                    name: "",
+                                    message: ""
+                                }}
+                                validate={values => {
+                                    let errors = {};
+                                    if (!values.email) {
+                                        errors.email = "Required";
+                                    } else if (
+                                        !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(values.email)
+                                    ) {
+                                        errors.email = "Invalid email address";
+                                    }
+                                    if (!values.name) {
+                                        errors.name = "Required";
+                                    }
+                                    if (!values.message) {
+                                        errors.message = "Required";
+                                    }
+                                    return errors;
+                                }}
+                                onSubmit={values => {
+                                    setIsSubmitting(true);
+                                    setFormValues({ ...values });
+                                    setExecuting(true);
+                                    rcRef.current.execute();
+                                }}
+                            >
+                                {({ resetForm }) => (
+                                    <Form
+                                        data-netlify="true"
+                                        data-netlify-honeypot="bot-field"
                                         data-netlify-recaptcha="true"
-                                        onError={onError}
-                                        onExpire={onExpire}
-                                        onVerify={onVerify}
-                                        onLoad={() => onLoad(() => resetForm)}
-                                        size="invisible"
-                                    />
-                                    <div className="m-2 col-form-label col-form-label-lg hidden">
-                                        <span
-                                            className={`badge badge-${
-                                                loaded ? "success" : "primary"
-                                                } mx-2 p-2`}
-                                        >
-                                            loaded
+                                        className="d-flex flex-column"
+                                        name="contact"
+                                        noValidate
+                                    >
+                                        <Field type="hidden" name="form-name" />
+                                        <Field type="hidden" name="bot-field" />
+                                        <div className="form-group">
+                                            <label
+                                                className="col-form-label col-form-label-lg"
+                                                htmlFor="name"
+                                            >
+                                                Name
+                                        </label>
+                                            <Field
+                                                className="form-control form-control-lg"
+                                                name="name"
+                                                type="text"
+                                            />
+                                            <ErrorMessage
+                                                className="invalid-feedback"
+                                                name="name"
+                                                component="div"
+                                            />
+                                        </div>
+                                        <div className="form-group">
+                                            <label
+                                                className="col-form-label col-form-label-lg"
+                                                htmlFor="email"
+                                            >
+                                                Email
+                                        </label>
+                                            <Field
+                                                className="form-control form-control-lg"
+                                                name="email"
+                                                type="email"
+                                            />
+                                            <ErrorMessage
+                                                className="invalid-feedback"
+                                                name="email"
+                                                component="div"
+                                            />
+                                        </div>
+                                        <div className="form-group">
+                                            <label
+                                                className="col-form-label col-form-label-lg"
+                                                htmlFor="message"
+                                            >
+                                                Message
+                                        </label>
+                                            <Field
+                                                className="form-control form-control-lg"
+                                                name="message"
+                                                component="textarea"
+                                            />
+                                            <ErrorMessage
+                                                className="invalid-feedback"
+                                                name="message"
+                                                component="div"
+                                            />
+                                        </div>
+                                        <Reaptcha
+                                            ref={rcRef}
+                                            sitekey="6LdZTMMZAAAAAGJy0j2AyImgkQ33Mv4juhtQElid"
+                                            data-netlify-recaptcha="true"
+                                            onError={onError}
+                                            onExpire={onExpire}
+                                            onVerify={onVerify}
+                                            onLoad={() => onLoad(() => resetForm)}
+                                            size="invisible"
+                                        />
+                                        <div className="m-2 col-form-label col-form-label-lg hidden">
+                                            <span
+                                                className={`badge badge-${loaded ? "success" : "primary"
+                                                    } mx-2 p-2`}
+                                            >
+                                                loaded
               </span>
-                                        <span
-                                            className={`badge badge-${
-                                                verified ? "success" : "primary"
-                                                } mx-2 p-2`}
-                                        >
-                                            verified
+                                            <span
+                                                className={`badge badge-${verified ? "success" : "primary"
+                                                    } mx-2 p-2`}
+                                            >
+                                                verified
               </span>
-                                        {executing && (
-                                            <span className={`badge badge-primary mx-2 p-2`}>
-                                                executing
-                                            </span>
-                                        )}
-                                        {rcError && (
-                                            <span className={`badge badge-primary mx-2 p-2`}>error</span>
-                                        )}
-                                        {rcError && (
-                                            <button
-                                                className="btn btn-link text-dark"
+                                            {executing && (
+                                                <span className={`badge badge-primary mx-2 p-2`}>
+                                                    executing
+                                                </span>
+                                            )}
+                                            {rcError && (
+                                                <span className={`badge badge-primary mx-2 p-2`}>error</span>
+                                            )}
+                                            {rcError && (
+                                                <button
+                                                    className="btn btn-link text-dark"
+                                                    onClick={() => resetEverything(resetForm)}
+                                                >
+                                                    reset
+                                                </button>
+                                            )}
+                                        </div>
+                                        {renderButton(isSubmitting, executing, verified)}
+                                        {errMsg ? <div className="text-primary m-1">{errMsg}</div> : null}
+                                        {(msgSent || errMsg) && (
+                                            <button className="contact__reset-btn"
+
                                                 onClick={() => resetEverything(resetForm)}
                                             >
-                                                reset
+                                                Send A New Email
                                             </button>
                                         )}
-                                    </div>
-                                    {renderButton(isSubmitting, executing, verified)}
-                                    {errMsg ? <div className="text-primary m-1">{errMsg}</div> : null}
-                                    {(msgSent || errMsg) && (
-                                        <button className="contact__reset-btn"
-
-                                            onClick={() => resetEverything(resetForm)}
-                                        >
-                                            Send A New Email
-                                        </button>
-                                    )}
-                                </Form>
-                            )}
-                        </Formik>
+                                    </Form>
+                                )}
+                            </Formik>
+                        </div>
                     </Col>
                 </Row>
 

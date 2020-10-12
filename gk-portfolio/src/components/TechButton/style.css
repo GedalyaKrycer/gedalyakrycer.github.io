@@ -1,0 +1,38 @@
+.tech-btn__btn {
+    background: var(--dark-gray);
+    border-radius: 70px;
+    margin: 15px;
+    padding: 10px 30px;
+    display: block;
+    font-weight: bold;
+    box-shadow: -4px -4px 8px rgba(52, 51, 51, 0.25), 4px 4px 8px rgba(0, 0, 0, 0.25);
+}
+
+
+.tech-btn__btn:hover {
+    box-shadow: 
+    inset -4px -4px 8px rgba(52, 51, 51, 0.25), 
+    inset 4px 4px 8px rgba(0, 0, 0, 0.25);
+    text-decoration: none;
+}
+
+.tech-btn__btn--dev,
+.tech-btn__btn--dev:hover {
+   color: var(--primary-blue);
+}
+
+
+.tech-btn__btn--design,
+.tech-btn__btn--design:hover {
+   color: var(--secondary-design);
+}
+
+.tech-btn__btn--learn,
+.tech-btn__btn--learn:hover {
+   color: var(--secondary-learn);
+}
+
+
+.tech-btn__icon {
+    margin-right: 10px;
+}

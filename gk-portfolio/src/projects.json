@@ -1,41 +1,41 @@
 [
     {
         "id": 1,
-        "img": "/assets/images/img-links/portfolio/Card/directory-thumbnail.jpg",
-        "title": "DigiBit Team Directory",
-        "tech": "React.js",
-        "deployLink": "https://unit-19-react-homework-employee-directory.netlify.app/",
-        "repoLink": "https://github.com/GedalyaKrycer/unit-19-react-homework-employee-directory"
+        "img": "/assets/images/img-links/portfolio/Card/driverkick-thumbnail.jpg",
+        "title": "Driver Kick Car Maintenance Tracker",
+        "tech": "React.js, Hooks, Figma, MongoDB, Mongoose, Express, Passport, NHTSA Vehical API, axios, react-bootstrap, react-contenteditable, react-ga, react-moment, bcryptjs, Heroku",
+        "deployLink": "https://driverkick.herokuapp.com/",
+        "repoLink": "https://github.com/NinaRocket/DRIVERkick"
     },
     {
         "id": 2,
-        "img": "/assets/images/img-links/portfolio/Card/webdev-thumbnail.jpg",
-        "title": "WebDev Challenge Quiz",
-        "tech": "Bootstrap / JS",
-        "deployLink": "https://gedalyakrycer.github.io/04-web-api-code-quiz/",
-        "repoLink": "https://github.com/GedalyaKrycer/04-web-api-code-quiz"
+        "img": "/assets/images/img-links/portfolio/Card/weather-thumbnail.jpg",
+        "title": "Weather Forecaster",
+        "tech": "Bulma, OpenWeather.js API, Unsplash API, Axios, JavaScript, HTML, CSS",
+        "deployLink": "https://weatherforecastreact.netlify.app",
+        "repoLink": "https://github.com/GedalyaKrycer/weather-forecaster"
     },
     {
         "id": 3,
-        "img": "/assets/images/img-links/portfolio/Card/wellyes-thumbnail.jpg",
-        "title": "wellyes. Goal Tracker",
-        "tech": "Bootstrap / MySQL / Express / JS",
-        "deployLink": "https://glacial-meadow-97517.herokuapp.com/",
-        "repoLink": "https://github.com/jtcravey1991/the-a-team-project-2"
+        "img": "/assets/images/img-links/portfolio/Card/directory-thumbnail.jpg",
+        "title": "DigiBit Team Directory",
+        "tech": "React.js, Hooks, Figma, JSON, react-bootstrap, react-lazyload, react-icons, Heroku",
+        "deployLink": "https://unit-19-react-homework-employee-directory.netlify.app/",
+        "repoLink": "https://github.com/GedalyaKrycer/digibit-employee-directory"
     },
     {
         "id": 4,
-        "img": "/assets/images/img-links/portfolio/Card/weather-thumbnail.jpg",
-        "title": "Weather Forcaster",
-        "tech": "Bootstrap / OpenWeather.js / JS",
-        "deployLink": "https://gedalyakrycer.github.io/hw-6-weather-dashboard/",
-        "repoLink": "https://github.com/GedalyaKrycer/hw-6-weather-dashboard"
+        "img": "/assets/images/img-links/portfolio/Card/webdev-thumbnail.jpg",
+        "title": "WebDev Challenge Quiz",
+        "tech": "JavaScript, jQuery, HTML, CSS, Bootstrap",
+        "deployLink": "https://gedalyakrycer.github.io/web-dev-challenge-quiz/",
+        "repoLink": "https://github.com/GedalyaKrycer/web-dev-challenge-quiz"
     },
     {
         "id": 5,
         "img": "/assets/images/img-links/portfolio/Card/vegg-thumbnail.jpg",
         "title": "Vegg-in-Place",
-        "tech": "Bulma / JS",
+        "tech": "Bulma, Figma, JavaScript, HTML, CSS, jQuery, Listen Notes API, TMDB API, RAWG API, Official Joke API",
         "deployLink": "https://dpayton92.github.io/Vegg_In_Place_Survival_Kit/",
         "repoLink": "https://github.com/dpayton92/Vegg_In_Place_Survival_Kit"
     },
@@ -43,8 +43,8 @@
         "id": 6,
         "img": "/assets/images/img-links/portfolio/Card/cli-thumbnail.jpg",
         "title": "CLI README Generator",
-        "tech": "Node.js",
-        "deployLink": "https://github.com/GedalyaKrycer/hw-10-employee-summary",
+        "tech": "Node.js, OOP, Inquire, JavaScript",
+        "deployLink": "",
         "repoLink": "https://github.com/GedalyaKrycer/hw-10-employee-summary"
     }
 ]

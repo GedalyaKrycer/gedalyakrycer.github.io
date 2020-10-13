@@ -39,7 +39,7 @@ function TopNavbar() {
                         <img src="https://raw.githubusercontent.com/GedalyaKrycer/gedalyakrycer.github.io/46e78fe53858d535b8db1d9e7e42455fa0a8b090/gk-portfolio/public/assets/images/img-links/gk-logo-white.svg" alt="GK Logo" className="nav__logo-desktop" />
                     </Navbar.Brand>
                 </LinkContainer>
-                <Navbar.Collapse className="g_justify-end">
+                <Navbar.Collapse className="g_justify-end nav__dropdown-vh">
                     <Nav className="nav__social">
                         <div className="nav__social--display">
                             <Nav.Link href="https://www.linkedin.com/in/gedalyakrycer/" target="_blank" rel="noopener noreferrer"><FaLinkedinIn /></Nav.Link>

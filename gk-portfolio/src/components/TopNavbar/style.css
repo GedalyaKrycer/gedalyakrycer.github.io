@@ -18,6 +18,7 @@
 
 }
 
+
 .nav__contact {
     display: none !important;
 }
@@ -71,6 +72,10 @@
     .nav__resume {
         padding: .75rem 1.2rem;
         margin: 10px 0 20px;
+    }
+
+    .nav__dropdown-vh {
+        height: 100vh;
     }
 
     .nav__contact {

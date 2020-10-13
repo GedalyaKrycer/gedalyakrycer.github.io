@@ -1,6 +1,7 @@
 .nav__container {
     background: var(--dark-gray);
-    box-shadow: 0px 7px 14px #202120;
+    -webkit-box-shadow: 0px 2px 15px #202120;
+    box-shadow: 0px 2px 15px #202120;
 }
 
 .nav__logo-desktop {

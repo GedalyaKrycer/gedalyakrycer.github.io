@@ -19,7 +19,7 @@
         "id": 3,
         "img": "/assets/images/img-links/portfolio/Card/directory-thumbnail.jpg",
         "title": "DigiBit Team Directory",
-        "tech": "React.js, Hooks, Figma, JSON, react-bootstrap, react-lazyload, react-icons, Heroku",
+        "tech": "React.js, Hooks, Figma, JSON, react-bootstrap, react-lazyload, react-icons",
         "deployLink": "https://unit-19-react-homework-employee-directory.netlify.app/",
         "repoLink": "https://github.com/GedalyaKrycer/digibit-employee-directory"
     },

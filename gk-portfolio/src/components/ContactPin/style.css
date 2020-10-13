@@ -6,6 +6,7 @@
     margin-right: -7px;
     position: fixed;
     text-align: center;
+    z-index: 3;
 }
 
 .contactPin__link {
@@ -13,8 +14,12 @@
     color: var(--nav-filter-links);
     transition: ease .5s;
     font-size: 18px;
-    
+
 }
+.contactPin__link:hover {
+    text-decoration: none;
+}
+        
 
 @media screen and (max-width: 809px) {
     .contactPin {

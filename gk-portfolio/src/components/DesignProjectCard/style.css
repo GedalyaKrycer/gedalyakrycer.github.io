@@ -8,17 +8,16 @@
 }
 
 .design-project__meta-container {
-    padding-top: 200px;
+    padding-top: 80px;
     padding-bottom: 20px; 
     display: flex;
     justify-content: center;
     background: var(--primary-blue);
     position: relative;
-    top: -126px;
     border-radius: 18px;
     z-index: 1;
-    margin-bottom: 1rem;
     color: white;
+    margin-bottom: 7rem;
 }
 
 .design-project__icon {
@@ -40,4 +39,19 @@
     transition: ease .5s;
     top: 5px;
     z-index: 3000;
+  }
+
+
+  /* 767px — Breakpoint */
+@media only screen and (max-width: 767px) {
+ 
+    .design-project__meta-container {
+      padding-top: 105px;
+      height: 145px;
+      top: -40px;
+    }
+  
+    .design-project__container {
+      margin-top: -40px;
+    }
   }

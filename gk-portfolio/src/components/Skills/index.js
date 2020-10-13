@@ -46,6 +46,7 @@ function Skills() {
 
             // Removes active styling
             setDevFilterActive(false);
+            setResetFilterActive(false);
         }
     }
 
@@ -76,6 +77,7 @@ function Skills() {
 
             // Removes active styling
             setDesignFilterActive(false);
+            setResetFilterActive(false);
         }
     }
 
@@ -105,6 +107,7 @@ function Skills() {
 
             // Removes active styling
             setLearnFilterActive(false);
+            setResetFilterActive(false);
         }
     }
 

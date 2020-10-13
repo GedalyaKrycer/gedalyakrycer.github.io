@@ -19,16 +19,19 @@ function App() {
   return (
     <Router>
       <TopNavbar />
+
+      <main>
       <div className="g__frame-left"></div>
       <GithubPin />
       <div className="g__frame-right"></div>
       <ContactPin />
-      <Switch>
+        <Switch>
 
-        <Route exact path="/" component={Home} />
-        <Route exact path="/about" component={About} />
-        <NotFound />
-      </Switch>
+          <Route exact path="/" component={Home} />
+          <Route exact path="/about" component={About} />
+          <NotFound />
+        </Switch>
+      </main>
 
       <Footer />
 

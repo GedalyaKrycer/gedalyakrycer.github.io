@@ -49,6 +49,7 @@ footer {
     border-top: solid 1px var(--mid-grey);
     padding: 30px 0 0 0;
     color: white;
+    text-decoration: underline;
     opacity: .4;
     text-align: center;
     display: block;
@@ -63,6 +64,7 @@ footer {
     border-radius: 50px;
     margin-left: 60px;
 }
+
 
 .footer__social-icons {
     margin-left: 16px;
@@ -79,7 +81,9 @@ footer {
 .footer__resume:focus{
     color: white;
     opacity: .5;
+    text-decoration: none;
     transition: ease .5s;
+
   }
   
   .footer__social-icons:active,

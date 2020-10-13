@@ -388,7 +388,7 @@ Global About Page
 
 .g__frame-right {
   position: fixed;
-  right: 45px;
+  right: 50px;
   width: 20px;
   height: 100vh;
   border-right: 1px solid #353535;
@@ -477,6 +477,7 @@ Mobile Styles
 
   .nav-link {
     margin-top: 0;
+    padding: 1rem;
   }
 
   .navbar {

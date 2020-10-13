@@ -5,6 +5,7 @@
     width: 53px;
     position: fixed;
     text-align: center;
+    z-index: 3;
 }
 
 .githubPin_link {

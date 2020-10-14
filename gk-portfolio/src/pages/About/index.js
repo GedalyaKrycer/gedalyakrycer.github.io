@@ -5,8 +5,12 @@ import Bio from '../../components/Bio';
 import Skills from '../../components/Skills';
 import ContactForm from '../../components/ContactForm';
 
-// This is static top section of the page and gives it semantic value.
+
+
+
 function About() {
+
+
     return (
         <>
             <Header

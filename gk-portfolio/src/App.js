@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { PortfolioProvider } from './utils/PortfolioContext';
 import Home from "./pages/Home";
 import GithubPin from "./components/GithubPin";
 import ContactPin from "./components/ContactPin";
@@ -18,23 +19,24 @@ function App() {
   }, [])
   return (
     <Router>
-      <TopNavbar />
+      <PortfolioProvider>
+        <TopNavbar />
 
-      <main>
-      <div className="g__frame-left"></div>
-      <GithubPin />
-      <div className="g__frame-right"></div>
-      <ContactPin />
-        <Switch>
+        <main>
+          <div className="g__frame-left"></div>
+          <GithubPin />
+          <div className="g__frame-right"></div>
+          <ContactPin />
+          <Switch>
 
-          <Route exact path="/" component={Home} />
-          <Route exact path="/about" component={About} />
-          <NotFound />
-        </Switch>
-      </main>
+            <Route exact path="/" component={Home} />
+            <Route exact path="/about" component={About} />
+            <NotFound />
+          </Switch>
+        </main>
 
-      <Footer />
-
+        <Footer />
+      </PortfolioProvider>
     </Router>
   );
 }

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './style.css';
 import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
@@ -6,15 +6,25 @@ import { LinkContainer } from "react-router-bootstrap";
 import { FaGithub, FaLinkedinIn, FaBehance } from 'react-icons/fa';
 import { FiArrowUpRight } from 'react-icons/fi';
 import resumeFile from "../../gedalya-krycer-resume.pdf";
+import { usePortfolioContext } from '../../utils/PortfolioContext';
 
 // This is static top section of the page and gives it semantic value.
 function TopNavbar() {
+    // Imports states from context
+    const { toggleBurgerMenu, setToggleBurgerMenu } = usePortfolioContext();
 
-    const [toggleBurgerMenu, setToggleBurgerMenu] = useState(true);
-
+    // Toggles if the nav button is open or closes animation
     const handleBurgerMenu = () => {
         toggleBurgerMenu ? setToggleBurgerMenu(false) : setToggleBurgerMenu(true);
     }
+
+
+    // Closes the nav button if a link is clicked 
+    const handleLinkClick = (e) => {
+        setToggleBurgerMenu(true)
+    }
+
+
     return (
         <div className="sticky-top nav__container">
 
@@ -38,15 +48,12 @@ function TopNavbar() {
 
                 <Navbar.Collapse id="responsive-navbar-nav">
                     <Nav className="mr-auto">
-                        <LinkContainer to="/">
-                            <Nav.Link >Dev</Nav.Link>
+                        <LinkContainer to="/" onClick={handleLinkClick}>
+                            <Nav.Link>Dev</Nav.Link>
                         </LinkContainer>
                         <Nav.Link href="http://gedalya.myportfolio.com/" target="_blank" rel="noopener noreferrer">Design <FiArrowUpRight /> </Nav.Link>
-                        <LinkContainer to="/about">
+                        <LinkContainer to="/about" onClick={handleLinkClick}>
                             <Nav.Link>About</Nav.Link>
-                        </LinkContainer>
-                        <LinkContainer to="/about#contact" className="nav__contact">
-                            <Nav.Link>Contact</Nav.Link>
                         </LinkContainer>
                     </Nav>
                 </Navbar.Collapse>

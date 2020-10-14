@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './style.css';
 import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
@@ -9,13 +9,16 @@ import resumeFile from "../../gedalya-krycer-resume.pdf";
 
 // This is static top section of the page and gives it semantic value.
 function TopNavbar() {
+
+    const [toggleBurgerMenu, setToggleBurgerMenu] = useState(true);
+
+    const handleBurgerMenu = () => {
+        toggleBurgerMenu ? setToggleBurgerMenu(false) : setToggleBurgerMenu(true);
+    }
     return (
         <div className="sticky-top nav__container">
 
-                {/* <div className="menu-btn">
-                    <div className="menu-btn__burger">
-                    </div>
-                </div> */}
+
             <Navbar collapseOnSelect expand="md">
 
                 <LinkContainer to="/" className="d-md-none">
@@ -23,7 +26,16 @@ function TopNavbar() {
                         <img src="https://raw.githubusercontent.com/GedalyaKrycer/gedalyakrycer.github.io/46e78fe53858d535b8db1d9e7e42455fa0a8b090/gk-portfolio/public/assets/images/img-links/gk-logo-white.svg" alt="GK Logo" className="nav__logo-mobile" />
                     </Navbar.Brand>
                 </LinkContainer>
-                <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+                <Navbar.Toggle aria-controls="responsive-navbar-nav" >
+                    <div onClick={handleBurgerMenu}
+                        className={`menu-btn ${!toggleBurgerMenu ? "open" : null}`}>
+                        <div className="menu-btn__burger">
+                        </div>
+                    </div>
+                </Navbar.Toggle>
+
+
+
                 <Navbar.Collapse id="responsive-navbar-nav">
                     <Nav className="mr-auto">
                         <LinkContainer to="/">

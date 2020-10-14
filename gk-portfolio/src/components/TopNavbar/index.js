@@ -28,8 +28,8 @@ function TopNavbar() {
                 </LinkContainer>
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" >
                     <div onClick={handleBurgerMenu}
-                        className={`menu-btn ${!toggleBurgerMenu ? "open" : null}`}>
-                        <div className="menu-btn__burger">
+                        className={`nav__toggle-btn ${!toggleBurgerMenu ? "open" : null}`}>
+                        <div className="nav__toggle-btn__burger">
                         </div>
                     </div>
                 </Navbar.Toggle>

@@ -62,29 +62,37 @@
 }
 
 
-
-
-.menu-btn {
+.nav__toggle-btn {
     position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     width: 30px;
     height: 30px;
     cursor: pointer;
+    -webkit-transition: all .5s cubic-bezier(0.175, 0.785, 0.12, 1.275);
+    -o-transition: all .5s cubic-bezier(0.175, 0.785, 0.12, 1.275);
     transition: all .5s cubic-bezier(0.175, 0.785, 0.12, 1.275);
 } 
 
-.menu-btn__burger {
+.nav__toggle-btn__burger {
     width: 30px;
     height: 2px;
     background: transparent;
     border-radius: 5px;
+    -webkit-transition: all .5s cubic-bezier(0.175, 0.785, 0.12, 1.275);
+    -o-transition: all .5s cubic-bezier(0.175, 0.785, 0.12, 1.275);
     transition: all .5s cubic-bezier(0.175, 0.785, 0.12, 1.275);
 }
 
-.menu-btn__burger::before,
-.menu-btn__burger::after {
+.nav__toggle-btn__burger::before,
+.nav__toggle-btn__burger::after {
     content: '';
     position: absolute;
     width: 30px;
@@ -92,30 +100,42 @@
     background: white;
     border-radius: 5px;
     left: 0;
+    -webkit-transition: all .5s cubic-bezier(0.175, 0.785, 0.12, 1.275);
+    -o-transition: all .5s cubic-bezier(0.175, 0.785, 0.12, 1.275);
     transition: all .5s cubic-bezier(0.175, 0.785, 0.12, 1.275);
 }
 
-.menu-btn__burger::before {
-    transform: translateY(-6px);
+.nav__toggle-btn__burger::before {
+    -webkit-transform: translateY(-6px);
+        -ms-transform: translateY(-6px);
+            transform: translateY(-6px);
 }
 
-.menu-btn__burger::after {
-    transform: translateY(6px);
+.nav__toggle-btn__burger::after {
+    -webkit-transform: translateY(6px);
+        -ms-transform: translateY(6px);
+            transform: translateY(6px);
 }
 
-.menu-btn.open .menu-btn__burger {
+.nav__toggle-btn.open .nav__toggle-btn__burger {
     background: transparent;
 }
 
-.menu-btn.open .menu-btn__burger::before {
-    transform: rotate(45deg);
+.nav__toggle-btn.open .nav__toggle-btn__burger::before {
+    -webkit-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+            transform: rotate(45deg);
     background: var(--primary-blue);
 }
 
-.menu-btn.open .menu-btn__burger::after {
-    transform: rotate(-45deg);
+.nav__toggle-btn.open .nav__toggle-btn__burger::after {
+    -webkit-transform: rotate(-45deg);
+        -ms-transform: rotate(-45deg);
+            transform: rotate(-45deg);
     background: var(--primary-blue);
 }
+
+
 
 .nav__show {
     display: block;

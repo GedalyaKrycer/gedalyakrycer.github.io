@@ -16,8 +16,33 @@ function Skills() {
     const [devFilterActive, setDevFilterActive] = useState(false);
     const [designFilterActive, setDesignFilterActive] = useState(false);
     const [learnFilterActive, setLearnFilterActive] = useState(false);
-    const [resetFilterActive, setResetFilterActive] = useState(false);
 
+
+
+    // Helper function to make setting the active states DRYer
+    const activeSelector = (selector) => {
+        switch (selector) {
+            case "dev":
+                setDevFilterActive(true);
+                setDesignFilterActive(false);
+                setLearnFilterActive(false);
+                break;
+            case "design":
+                setDevFilterActive(false);
+                setDesignFilterActive(true);
+                setLearnFilterActive(false);
+                break;
+            case "learn":
+                setDevFilterActive(false);
+                setDesignFilterActive(false);
+                setLearnFilterActive(true);
+                break;
+            default:
+                setDevFilterActive(false);
+                setDesignFilterActive(false);
+                setLearnFilterActive(false);
+        }
+    }
 
 
     // Function to show just the developer tool buttons
@@ -26,16 +51,11 @@ function Skills() {
         // Checks if nav is already active 
         if (devFilterActive === false) {
 
-            // Show Reset Link
-            setResetFilterActive(true);
-
             // Sets Dev State to Active and turns the other's off
-            setDevFilterActive(true);
-            setDesignFilterActive(false);
-            setLearnFilterActive(false);
+            activeSelector("dev")
 
             // Filters out all buttons excepts the dev type
-            setTechArray([...techArray].filter(techType =>
+            setTechArray([...tech].filter(techType =>
                 techType.type.includes("dev")
             ))
 
@@ -46,9 +66,10 @@ function Skills() {
 
             // Removes active styling
             setDevFilterActive(false);
-            setResetFilterActive(false);
         }
     }
+
+
 
     // Function to show just the Design tool buttons
     const handleDesignFilter = () => {
@@ -56,17 +77,11 @@ function Skills() {
         // Checks if nav is already active 
         if (designFilterActive === false) {
 
-            // Show Reset Link
-            setResetFilterActive(true);
-
-
             // Sets Design State to Active and turns the other's off
-            setDevFilterActive(false);
-            setLearnFilterActive(false);
-            setDesignFilterActive(true);
+            activeSelector("design")
 
             // Filters out all buttons excepts the design type
-            setTechArray([...techArray].filter(techType =>
+            setTechArray([...tech].filter(techType =>
                 techType.type.includes("design")
             ))
 
@@ -77,9 +92,10 @@ function Skills() {
 
             // Removes active styling
             setDesignFilterActive(false);
-            setResetFilterActive(false);
         }
     }
+
+
 
     // Function to show just the Learn tool buttons
     const handleLearnFilter = () => {
@@ -87,16 +103,12 @@ function Skills() {
         // Checks if nav is already active 
         if (learnFilterActive === false) {
 
-            // Show Reset Link
-            setResetFilterActive(true);
+            // // Sets Learn State to Active and turns the other's off
+            activeSelector("learn")
 
-            // Sets Learn State to Active and turns the other's off
-            setLearnFilterActive(true);
-            setDesignFilterActive(false);
-            setDevFilterActive(false);
 
             // Filters out all buttons excepts the learn type
-            setTechArray([...techArray].filter(techType =>
+            setTechArray([...tech].filter(techType =>
                 techType.type.includes("learn")
             ))
 
@@ -107,51 +119,11 @@ function Skills() {
 
             // Removes active styling
             setLearnFilterActive(false);
-            setResetFilterActive(false);
         }
     }
 
 
-    // Function to show just the Learn tool buttons
-    const handleResetFilter = () => {
-        // Replaces array with the original selection of buttons
-        setTechArray(tech);
 
-        if (resetFilterActive === true) {
-            setResetFilterActive(false);
-            setLearnFilterActive(false);
-            setDesignFilterActive(false);
-            setDevFilterActive(false);
-        }
-
-    
-
-    }
-
-    // Helper function to make setting the active states DRYer
-    // const activeSelector = (selector) => {
-    //     switch (selector) {
-    //         case selector === "dev":
-    //             setDevFilterActive(true);
-    //             setDesignFilterActive(false);
-    //             setLearnFilterActive(false);
-    //             break;
-    //         case selector === "design":
-    //             setDevFilterActive(false);
-    //             setDesignFilterActive(true);
-    //             setLearnFilterActive(false);
-    //             break;
-    //         case selector === "learn":
-    //             setDevFilterActive(false);
-    //             setDesignFilterActive(false);
-    //             setLearnFilterActive(true);
-    //             break;
-    //         default:
-    //             setDevFilterActive(false);
-    //             setDesignFilterActive(false);
-    //             setLearnFilterActive(false);
-    //     }
-    // }
 
 
     return (
@@ -171,11 +143,10 @@ function Skills() {
                             devFilterActive={devFilterActive}
                             designFilterActive={designFilterActive}
                             learnFilterActive={learnFilterActive}
-                            resetFilterActive={resetFilterActive}
                             handleDevFilter={handleDevFilter}
                             handleDesignFilter={handleDesignFilter}
                             handleLearnFilter={handleLearnFilter}
-                            handleResetFilter={handleResetFilter}
+
                         />
 
                         <div className="skills__tech-btn-container">

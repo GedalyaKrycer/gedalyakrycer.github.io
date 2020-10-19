@@ -4,7 +4,7 @@ import Header from '../../components/Header';
 import Bio from '../../components/Bio';
 import Skills from '../../components/Skills';
 import ContactForm from '../../components/ContactForm';
-import FavoriteThings from '../../components/FavoriteThings';
+// import FavoriteThings from '../../components/FavoriteThings';
 
 
 

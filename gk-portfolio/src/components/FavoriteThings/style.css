@@ -1,0 +1,44 @@
+.fav__card-container {
+    background: #202120;
+    box-shadow: 0px 14px 30px rgba(0, 0, 0, 0.25), 0px 4px 8px rgba(0, 0, 0, 0.45), 0px 10px 40px 10px rgba(0, 0, 0, 0.15);
+    border-radius: 30px;
+    position: relative;
+    overflow: hidden;
+    padding: 0 20px 2rem;
+    min-height: 200px;
+    
+}
+
+.fav__section-title {
+    text-align: center;
+    color: var(--light-grey);
+    margin-top: 4rem;
+    margin-bottom: 2rem;
+    
+}
+
+.fav__card-img {
+    margin-bottom: 2rem;
+}
+
+.fav__card-title {
+    color: var(--primary-blue);
+    text-align: center;
+}
+
+.fav__hidden-text {
+    position: absolute;
+    bottom: -50px;
+    font-size: 10px;
+    transition: ease-in .3s;
+}
+
+.fav__card-container:hover .fav__card-title {
+    color: green;
+}
+
+
+.fav__card-container:hover .fav__hidden-text {
+    transition: ease-in .3s;
+    bottom: 0;
+}

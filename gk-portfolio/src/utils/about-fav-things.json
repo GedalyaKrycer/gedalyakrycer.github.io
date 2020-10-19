@@ -1,0 +1,20 @@
+[
+    {
+        "id": 1,
+        "name": "Volunteering",
+        "img": "/assets/images/fav-imgs/volunteering.jpg",
+        "things": "I love serving as both a 12-Step recovery sponsor and a CG Tech for Celebrate Recovery."
+    },
+    {
+        "id": 2,
+        "name": "Fitness",
+        "img": "/assets/images/fav-imgs/excersize.jpg",
+        "things": "Be it an Insanity Max30 session, gym workout or long hike — the recharge works wonders!"
+    },
+    {
+        "id": 3,
+        "name": "Movies",
+        "img": "/assets/images/fav-imgs/movies.jpg",
+        "things": "Favorite genre? From Saving Private Ryan to Devil Wears Prada to the Avengers… I enjoy it all!"
+    }
+]

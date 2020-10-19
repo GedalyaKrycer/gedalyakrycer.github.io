@@ -2,7 +2,7 @@
     {
         "id": 1,
         "name": "HTML",
-        "link": "https://github.com/GedalyaKrycer/trust4leaders-website",
+        "link": "https://www.trust4leaders.com/",
         "svg": "/assets/images/tech-icons/html-tech-icon.svg",
         "type": "dev"
     },
@@ -16,7 +16,7 @@
     {
         "id": 3,
         "name": "Bootstrap",
-        "link": "https://github.com/GedalyaKrycer/trust4leaders-website",
+        "link": "https://www.trust4leaders.com/",
         "svg": "/assets/images/tech-icons/bootstrap-tech-icon.svg",
         "type": "dev"
     },
@@ -30,7 +30,7 @@
     {
         "id": 5,
         "name": "SASS",
-        "link": "https://github.com/GedalyaKrycer/trust4leaders-website",
+        "link": "https://www.trust4leaders.com/",
         "svg": "/assets/images/tech-icons/sass-tech-icon.svg",
         "type": "dev"
     },

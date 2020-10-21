@@ -5,7 +5,7 @@ import TechFilter from '../TechFilter';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-import tech from '../../tech.json';
+import tech from '../../utils/tech.json';
 
 function Skills() {
 

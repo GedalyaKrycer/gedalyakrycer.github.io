@@ -3,7 +3,7 @@ import './style.css';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import DevProjectCard from '../../components/DevProjectCard';
-import projects from '../../projects.json';
+import projects from '../../utils/projects.json';
 
 // This is static top section of the page and gives it semantic value.
 function DevPortfolio() {

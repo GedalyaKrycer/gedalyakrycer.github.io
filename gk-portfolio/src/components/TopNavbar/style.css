@@ -1,5 +1,7 @@
 .nav__container {
-    background: var(--dark-gray);
+    background: rgb(32 33 32 / 85%);
+    -webkit-backdrop-filter: saturate(180%) blur(20px);
+    backdrop-filter: saturate(180%) blur(20px);
     -webkit-box-shadow: 0px 4px 15px #202120;
     box-shadow: 0px 4px 15px #202120;
 }

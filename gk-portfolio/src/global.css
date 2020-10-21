@@ -80,7 +80,10 @@ header {
 
 hr {
   border-top: solid var(--primary-blue) 9px;
-  width: 210px;  
+  
+  /* width: 210px;   */
+  border-radius: 20px;
+  width: 9px;  
 }
 
 a {

@@ -1,16 +1,40 @@
-import React from 'react';
+import React, { useEffect, useRef } from "react";
 import './style.css';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import DevProjectCard from '../../components/DevProjectCard';
 import projects from '../../utils/projects.json';
+import { gsap } from "gsap";
+
 
 // This is static top section of the page and gives it semantic value.
 function DevPortfolio() {
+
+    // GSAP ANIMATIONS
+    const tl = gsap.timeline();
+
+    // Ref for title pin border
+    const devTitleRef = useRef(null);
+
+
+    useEffect(() => {
+
+        tl.from(devTitleRef.current, {
+            duration: 1,
+            autoAlpha: 0,
+            y: 50,
+            ease: "expo.out",
+            delay: 1
+        })
+
+
+    }, [tl])
+
+
     return (
         <section>
             <Container>
-                <h2>Dev Work</h2>
+                <h2 ref={devTitleRef}>Dev Work</h2>
 
                 <Row className="justify-content-around g_negative-margin">
 

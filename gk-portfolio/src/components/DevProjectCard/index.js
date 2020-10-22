@@ -1,10 +1,13 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import './style.css';
 import { FaGithub, FaDesktop } from 'react-icons/fa';
 import { v4 as uuidv4 } from 'uuid';
 import Accordion from 'react-bootstrap/Accordion'
 import Card from 'react-bootstrap/Card'
 import { useAccordionToggle } from 'react-bootstrap/AccordionToggle';
+import { gsap } from "gsap";
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+gsap.registerPlugin(ScrollTrigger);
 
 function CustomToggle({ children, eventKey }) {
 
@@ -30,7 +33,7 @@ function CustomToggle({ children, eventKey }) {
 
 
 
-// This is static top section of the page and gives it semantic value.
+// Dev Project Component.
 // ==================================================================
 function DevProjectCard({ img, title, tech, deployLink, repoLink }) {
 
@@ -45,8 +48,32 @@ function DevProjectCard({ img, title, tech, deployLink, repoLink }) {
 
 
 
+    // GSAP ANIMATIONS
+    const tl = gsap.timeline();
+
+    // Ref for title pin border
+    const devCardsRef = useRef(null);
+
+    useEffect(() => {
+        gsap.from(devCardsRef.current, {
+            duration: 2,
+            autoAlpha: 0,
+            y: 100,
+            ease: 'back.out(2)',
+            scrollTrigger: {
+                trigger: devCardsRef.current,
+                start: 'top bottom',
+                end: '400',
+                toggleActions: 'play none none reverse',
+                markers: true
+            }
+        });
+    }, [tl])
+
+
+
     return (
-        <div className="g_projects-container">
+        <div className="g_projects-container" ref={devCardsRef}>
             <Accordion>
                 <Card>
                     <div className="neumorphism">

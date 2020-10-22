@@ -59,7 +59,7 @@ function DevProjectCard({ img, title, tech, deployLink, repoLink }) {
             duration: 2,
             autoAlpha: 0,
             y: 100,
-            ease: 'back.out(2)',
+            ease: 'power4.out',
             scrollTrigger: {
                 trigger: devCardsRef.current,
                 start: 'top bottom',

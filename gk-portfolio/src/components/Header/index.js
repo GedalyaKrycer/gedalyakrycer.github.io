@@ -21,10 +21,10 @@ function Header({ title, subTitleOne, subTitleTwo }) {
     useEffect(() => {
 
         tl.from(ruleRef.current, {
-            duration: .5,
+            duration: .7,
             autoAlpha: 0,
-            scale: 4,
-            ease: 'back.out(3)'
+            scale: 40,
+            ease: 'back.out(1)'
             
         })
             .to(ruleRef.current, {

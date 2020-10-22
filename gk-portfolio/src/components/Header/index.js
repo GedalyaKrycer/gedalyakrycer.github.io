@@ -21,7 +21,7 @@ function Header({ title, subTitleOne, subTitleTwo }) {
     useEffect(() => {
 
         tl.from(ruleRef.current, {
-            duration: 1,
+            duration: .5,
             autoAlpha: 0,
             scale: 4,
             ease: 'back.out(3)'
@@ -47,8 +47,6 @@ function Header({ title, subTitleOne, subTitleTwo }) {
             y: -20,
             ease: 'back.out(3)'
         }, '-=1')
-
-
 
     }, [tl])
 

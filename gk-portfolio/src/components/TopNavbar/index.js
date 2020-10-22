@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import './style.css';
+import { gsap } from "gsap";
 import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
 import { LinkContainer } from "react-router-bootstrap";
@@ -25,6 +26,50 @@ function TopNavbar() {
     }
 
 
+
+    // GSAP ANIMATIONS
+    const tl = gsap.timeline();
+
+    // Ref for logo
+    const logoRef = useRef(null);
+
+    // Ref for left links
+    const leftLinksRef = useRef(null);
+
+    // Ref for resume button
+    const resumeButtonRef = useRef(null);
+
+
+    useEffect(() => {
+
+        tl.from(logoRef.current, {
+            duration: 1,
+            autoAlpha: 0,
+            y: 20,
+            ease: 'back.out(2)',
+            delay: .5     
+        })
+
+        
+
+        tl.from(leftLinksRef.current, {
+            duration: 1,
+            autoAlpha: 0,
+            y: 20,
+            ease: 'back.out(2)',
+        }, '-=.7')
+
+        tl.from(resumeButtonRef.current, {
+            duration: 1,
+            autoAlpha: 0,
+            y: 20,
+            ease: 'back.out(2)',
+        }, '-=.8')
+
+
+    }, [tl])
+
+
     return (
         <div className="sticky-top nav__container">
 
@@ -47,7 +92,7 @@ function TopNavbar() {
 
 
                 <Navbar.Collapse id="responsive-navbar-nav">
-                    <Nav className="mr-auto">
+                    <Nav className="mr-auto" ref={leftLinksRef}>
                         <LinkContainer to="/" onClick={handleLinkClick}>
                             <Nav.Link>Dev</Nav.Link>
                         </LinkContainer>
@@ -57,9 +102,11 @@ function TopNavbar() {
                         </LinkContainer>
                     </Nav>
                 </Navbar.Collapse>
-                <LinkContainer to="/" className="d-none d-md-block">
+                <LinkContainer
+                    to="/"
+                    className="d-none d-md-block">
                     <Navbar.Brand>
-                        <img src="https://raw.githubusercontent.com/GedalyaKrycer/gedalyakrycer.github.io/46e78fe53858d535b8db1d9e7e42455fa0a8b090/gk-portfolio/public/assets/images/img-links/gk-logo-white.svg" alt="GK Logo" className="nav__logo-desktop" />
+                        <img ref={logoRef} src="https://raw.githubusercontent.com/GedalyaKrycer/gedalyakrycer.github.io/46e78fe53858d535b8db1d9e7e42455fa0a8b090/gk-portfolio/public/assets/images/img-links/gk-logo-white.svg" alt="GK Logo" className="nav__logo-desktop" />
                     </Navbar.Brand>
                 </LinkContainer>
                 <Navbar.Collapse className="g_justify-end nav__dropdown-vh">
@@ -72,7 +119,10 @@ function TopNavbar() {
 
 
                     </Nav>
-                    <a href={resumeFile} download={true} className="nav__resume"><h6>View Resume</h6></a>
+                    <a ref={resumeButtonRef}
+                    href={resumeFile} 
+                    download={true} 
+                    className="nav__resume"><h6>View Resume</h6></a>
                 </Navbar.Collapse>
 
 

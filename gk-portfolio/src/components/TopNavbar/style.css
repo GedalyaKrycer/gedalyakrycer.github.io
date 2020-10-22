@@ -10,13 +10,13 @@
     margin-right: 35px;
     margin-top: 5px;
     height: 40px;
-    transition: ease .5s;
+    /* transition: ease .5s; */
 }
 
 .nav__logo-desktop:hover,
 .nav__logo-desktop:focus{
-    opacity: .5;
-    transform: scale(.95);
+    /* opacity: .5;
+    transform: scale(.95); */
     transition: ease .5s;
 }
 

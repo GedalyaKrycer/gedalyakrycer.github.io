@@ -31,6 +31,9 @@ function TopNavbar() {
     const tl = gsap.timeline();
 
     // Ref for logo
+    const navContainerRef = useRef(null);
+
+    // Ref for logo
     const logoRef = useRef(null);
 
     // Ref for left links
@@ -39,30 +42,44 @@ function TopNavbar() {
     // Ref for resume button
     const resumeButtonRef = useRef(null);
 
+    // Ref for mobile social links
+    const mobileSocialRef = useRef(null);
+
 
     useEffect(() => {
+
+        tl.from(navContainerRef.current, {
+            duration: 1,
+            autoAlpha: 0,
+            y: -20,
+            ease: 'back.out(2)'
+        })
 
         tl.from(logoRef.current, {
             duration: 1,
             autoAlpha: 0,
-            y: 20,
-            ease: 'back.out(2)',
-            delay: .5     
-        })
-
-        
+            y: -20,
+            ease: 'back.out(2)'
+        }, '-=.7')
 
         tl.from(leftLinksRef.current, {
-            duration: 1,
+            duration: .5,
             autoAlpha: 0,
-            y: 20,
+            y: -20,
             ease: 'back.out(2)',
         }, '-=.7')
 
         tl.from(resumeButtonRef.current, {
-            duration: 1,
+            duration: .5,
             autoAlpha: 0,
-            y: 20,
+            y: -20,
+            ease: 'back.out(2)',
+        }, '-=.8')
+
+        tl.from(mobileSocialRef.current, {
+            duration: .5,
+            autoAlpha: 0,
+            y: -20,
             ease: 'back.out(2)',
         }, '-=.8')
 
@@ -71,7 +88,7 @@ function TopNavbar() {
 
 
     return (
-        <div className="sticky-top nav__container">
+        <div className="sticky-top nav__container" ref={navContainerRef}>
 
 
             <Navbar collapseOnSelect expand="md">
@@ -91,8 +108,8 @@ function TopNavbar() {
 
 
 
-                <Navbar.Collapse id="responsive-navbar-nav">
-                    <Nav className="mr-auto" ref={leftLinksRef}>
+                <Navbar.Collapse id="responsive-navbar-nav" ref={leftLinksRef}>
+                    <Nav className="mr-auto" >
                         <LinkContainer to="/" onClick={handleLinkClick}>
                             <Nav.Link>Dev</Nav.Link>
                         </LinkContainer>
@@ -110,7 +127,7 @@ function TopNavbar() {
                     </Navbar.Brand>
                 </LinkContainer>
                 <Navbar.Collapse className="g_justify-end nav__dropdown-vh">
-                    <Nav className="nav__social">
+                    <Nav className="nav__social" ref={mobileSocialRef}>
                         <div className="nav__social--display">
                             <Nav.Link href="https://www.linkedin.com/in/gedalyakrycer/" target="_blank" rel="noopener noreferrer"><FaLinkedinIn /></Nav.Link>
                             <Nav.Link href="https://github.com/GedalyaKrycer" target="_blank" rel="noopener noreferrer" ><FaGithub /></Nav.Link>
@@ -120,9 +137,9 @@ function TopNavbar() {
 
                     </Nav>
                     <a ref={resumeButtonRef}
-                    href={resumeFile} 
-                    download={true} 
-                    className="nav__resume"><h6>View Resume</h6></a>
+                        href={resumeFile}
+                        download={true}
+                        className="nav__resume"><h6>View Resume</h6></a>
                 </Navbar.Collapse>
 
 

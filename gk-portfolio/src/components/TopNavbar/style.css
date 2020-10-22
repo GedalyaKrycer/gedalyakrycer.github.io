@@ -13,13 +13,6 @@
     /* transition: ease .5s; */
 }
 
-.nav__logo-desktop:hover,
-.nav__logo-desktop:focus{
-    /* opacity: .5;
-    transform: scale(.95); */
-    transition: ease .5s;
-}
-
 
 .nav__contact {
     display: none !important;

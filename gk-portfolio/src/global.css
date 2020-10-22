@@ -462,7 +462,7 @@ Mobile Styles
 @media only screen and (max-width: 767px) {
   .navbar-collapse {
     margin-top: 10px;
-    background: var(--darker-gray);
+    background: var(--dark-gray);
     padding: 10px;
     text-align: center;
   }

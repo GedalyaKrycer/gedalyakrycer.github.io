@@ -12,7 +12,7 @@ function FavoriteThings() {
 
     favThings.forEach((e) => {
         populatedCards.push(
-            <Col lg={3} id={e.id}>
+            <Col lg={3} key={e.id}>
 
                 <div className="fav__card-container">
                     <img className="fav__card-img" src={e.img} alt={`${e.name}`} />

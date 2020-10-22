@@ -1,11 +1,31 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
+import { gsap } from "gsap";
 import './style.css';
 import { FaGithub, FaLinkedinIn, FaBehance } from 'react-icons/fa';
 
 
 function GithubPin() {
+
+      // GSAP ANIMATIONS
+      const tl = gsap.timeline();
+
+      // Ref for github icons
+      const githubContainerRef = useRef(null);
+  
+      useEffect(() => {
+  
+          tl.from(githubContainerRef.current, {
+              duration: 1,
+              autoAlpha: 0,
+              x: -20,
+              ease: 'back.out(2)',
+              delay: 1.3
+          })
+  
+  
+      }, [tl])
     return (
-        <div className="githubPin">
+        <div className="githubPin" ref={githubContainerRef}>
             <a
                 href="https://www.linkedin.com/in/gedalyakrycer/"
                 target="_blank"

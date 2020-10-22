@@ -63,9 +63,9 @@ function DevProjectCard({ img, title, tech, deployLink, repoLink }) {
             scrollTrigger: {
                 trigger: devCardsRef.current,
                 start: 'top bottom',
-                end: '400',
+                end: '-=50',
+                scrub: true,
                 toggleActions: 'play none none reverse'
-                // markers: true
             }
         });
     }, [tl])

@@ -64,8 +64,8 @@ function DevProjectCard({ img, title, tech, deployLink, repoLink }) {
                 trigger: devCardsRef.current,
                 start: 'top bottom',
                 end: '400',
-                toggleActions: 'play none none reverse',
-                markers: true
+                toggleActions: 'play none none reverse'
+                // markers: true
             }
         });
     }, [tl])

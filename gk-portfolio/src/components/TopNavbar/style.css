@@ -44,7 +44,7 @@
 .nav__resume:hover,
 .nav__resume:focus{
     color: white;
-    opacity: .5;
+    background-color: var(--mid-grey);
     text-decoration: none;
     transition: ease .5s;
 

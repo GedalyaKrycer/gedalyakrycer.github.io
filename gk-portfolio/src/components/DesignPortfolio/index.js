@@ -19,6 +19,7 @@ function DevPortfolio() {
         gsap.from(designTitleRef.current, {
             duration: 1,
             autoAlpha: 0,
+            y: -100,
             scrollTrigger: {
                 trigger: designTitleRef.current,
                 start: 'top bottom',

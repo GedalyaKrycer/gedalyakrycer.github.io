@@ -85,12 +85,6 @@ function Bio() {
                     pTxt3Ref.current,
                     pTxt4Ref.current,
                 ], {
-                    scrollTrigger: {
-                        trigger: leadTxtRef.current,
-                        toggleActions: 'play none none none',
-                        start: 'top bottom',
-                        end: '-=50'
-                    },
                     duration: 1,
                     autoAlpha: 0,
                     y: 150,

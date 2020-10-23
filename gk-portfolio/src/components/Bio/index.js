@@ -44,19 +44,27 @@ function Bio() {
             delay: 1
         })
 
+        tl.from(leadTxtRef.current, {
+            duration: 1,
+            autoAlpha: 0,
+            y: -30,
+            ease: 'power4.out',
+            stagger: .1
+
+        }, '-=1');
+
         ScrollTrigger.matchMedia({
 
             "(min-width: 768px)": function () {
 
                 tl.from([
-                    leadTxtRef.current,
                     pTxt1Ref.current,
                     pTxt2Ref.current,
                     pTxt3Ref.current,
                     pTxt4Ref.current,
                 ], {
                     scrollTrigger: {
-                        trigger: leadTxtRef.current,
+                        trigger: pTxt1Ref.current,
                         toggleActions: 'play none none none',
                         start: 'top bottom',
                         end: '-=50',

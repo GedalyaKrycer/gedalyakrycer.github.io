@@ -31,8 +31,8 @@ function Bio() {
     // GSAP ANIMATIONS
     const tl = gsap.timeline();
 
-        // Save Initial Styles
-        ScrollTrigger.saveStyles(".g__body-lg");
+    // Save Initial Styles
+    ScrollTrigger.saveStyles(".g__body-lg");
 
     useEffect(() => {
 
@@ -101,7 +101,7 @@ function Bio() {
 
         });
 
-    }, [tl])
+    }, [tl]);
 
 
     return (

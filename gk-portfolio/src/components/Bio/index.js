@@ -31,6 +31,9 @@ function Bio() {
     // GSAP ANIMATIONS
     const tl = gsap.timeline();
 
+        // Save Initial Styles
+        ScrollTrigger.saveStyles(".g__body-lg");
+
     useEffect(() => {
 
         tl.from(bioTitleRef.current, {
@@ -41,29 +44,68 @@ function Bio() {
             delay: 1
         })
 
-        tl.from([
-            leadTxtRef.current,
-            pTxt1Ref.current,
-            pTxt2Ref.current,
-            pTxt3Ref.current,
-            pTxt4Ref.current,
-        ], {
-            scrollTrigger: {
-                trigger: leadTxtRef.current,
-                toggleActions: 'play none none none',
-                start: 'top bottom',
-                end: '-=50',
-                scrub: true
-            },
-            duration: 1,
-            autoAlpha: 0,
-            y: 150,
-            ease: 'power4.out',
-            stagger: .1
+        ScrollTrigger.matchMedia({
+
+            "(min-width: 768px)": function () {
+
+                tl.from([
+                    leadTxtRef.current,
+                    pTxt1Ref.current,
+                    pTxt2Ref.current,
+                    pTxt3Ref.current,
+                    pTxt4Ref.current,
+                ], {
+                    scrollTrigger: {
+                        trigger: leadTxtRef.current,
+                        toggleActions: 'play none none none',
+                        start: 'top bottom',
+                        end: '-=50',
+                        scrub: true
+                    },
+                    duration: 1,
+                    autoAlpha: 0,
+                    y: 150,
+                    ease: 'power4.out',
+                    stagger: .1
+
+                });
+
+                // Kill animations 
+                return function () {
+                    tl.kill();
+                };
+             },
+
+             "(max-width: 767px)": function () {
+
+                tl.from([
+                    leadTxtRef.current,
+                    pTxt1Ref.current,
+                    pTxt2Ref.current,
+                    pTxt3Ref.current,
+                    pTxt4Ref.current,
+                ], {
+                    scrollTrigger: {
+                        trigger: leadTxtRef.current,
+                        toggleActions: 'play none none none',
+                        start: 'top bottom',
+                        end: '-=50'
+                    },
+                    duration: 1,
+                    autoAlpha: 0,
+                    y: 150,
+                    ease: 'power4.out',
+                    stagger: .1
+
+                }, '-=.8');
+
+                // Kill animations 
+                return function () {
+                    tl.kill();
+                };
+             }
 
         });
-
-
 
     }, [tl])
 

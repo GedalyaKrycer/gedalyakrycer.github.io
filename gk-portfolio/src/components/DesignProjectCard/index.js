@@ -13,6 +13,7 @@ gsap.registerPlugin(ScrollTrigger);
 function DesignPortfolio() {
 
     // GSAP ANIMATIONS
+    const tl = gsap.timeline();
 
     // Ref for design card
     const designCard1Ref = useRef(null);
@@ -20,38 +21,61 @@ function DesignPortfolio() {
     // Ref for design card
     const designCard2Ref = useRef(null);
 
+    // Save Initial Styles
+    ScrollTrigger.saveStyles(".design-project__container");
+
+
     useEffect(() => {
-        gsap.from(designCard1Ref.current, {
-            scrollTrigger: {
-                trigger: designCard1Ref.current,
-                toggleActions: 'play none none none',
-                start: 'top bottom',
-                end: '-=50',
-                scrub: true
-            },
-            duration: 2,
-            autoAlpha: 0,
-            y: 100,
-            scale: .8,
-            ease: 'power4.out'
+
+        // Media Query Animation
+        ScrollTrigger.matchMedia({
+
+            "(min-width: 768px)": function () {
+
+
+                gsap.from(designCard1Ref.current, {
+                    scrollTrigger: {
+                        trigger: designCard1Ref.current,
+                        toggleActions: 'play none none none',
+                        start: 'top bottom',
+                        end: '-=50',
+                        scrub: true
+                    },
+                    duration: 2,
+                    autoAlpha: 0,
+                    y: 100,
+                    scale: .8,
+                    ease: 'power4.out'
+
+                });
+
+                gsap.from(designCard2Ref.current, {
+                    scrollTrigger: {
+                        trigger: designCard2Ref.current,
+                        toggleActions: 'play none none none',
+                        start: 'top bottom',
+                        end: '-=50',
+                        scrub: true
+                    },
+                    duration: 2,
+                    autoAlpha: 0,
+                    y: 100,
+                    scale: .8,
+                    ease: 'power4.out'
+                });
+
+                // Kill animations 
+                return function () {
+                    tl.kill();
+                };
+            }
+
 
         });
 
-        gsap.from(designCard2Ref.current, {
-            scrollTrigger: {
-                trigger: designCard2Ref.current,
-                toggleActions: 'play none none none',
-                start: 'top bottom',
-                end: '-=50',
-                scrub: true
-            },
-            duration: 2,
-            autoAlpha: 0,
-            y: 100,
-            scale: .8,
-            ease: 'power4.out'
-        });
-    }, [])
+    }, [tl])
+
+
 
 
 

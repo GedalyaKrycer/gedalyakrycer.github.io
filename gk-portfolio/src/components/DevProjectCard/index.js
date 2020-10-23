@@ -54,20 +54,59 @@ function DevProjectCard({ img, title, tech, deployLink, repoLink }) {
     // Ref for title pin border
     const devCardsRef = useRef(null);
 
+    // Save Initial Styles
+    ScrollTrigger.saveStyles(".g_projects-container");
+
     useEffect(() => {
-        gsap.from(devCardsRef.current, {
-            duration: 2,
-            autoAlpha: 0,
-            y: 100,
-            ease: 'power4.out',
-            scrollTrigger: {
-                trigger: devCardsRef.current,
-                start: 'top bottom',
-                end: '-=50',
-                scrub: true,
-                toggleActions: 'play none none reverse'
+
+        // Media Query Animation
+        ScrollTrigger.matchMedia({
+
+            "(min-width: 768px)": function () {
+
+                gsap.from(devCardsRef.current, {
+                    duration: 2,
+                    opacity: 0,
+                    y: 100,
+                    scale: .8,
+                    ease: 'power4.out',
+                    scrollTrigger: {
+                        trigger: devCardsRef.current,
+                        start: 'top bottom',
+                        end: '-=50',
+                        scrub: true,
+                        toggleActions: 'play none none reverse'
+                    }
+                });
+
+
+                // Kill animations 
+                return function () {
+                    tl.kill();
+                };
+            },
+
+            "(max-width: 767px)": function () {
+
+                gsap.from(devCardsRef.current, {
+                    delay: 1.2,
+                    duration: 2,
+                    opacity: 0,
+                    y: 100,
+                    scale: .8,
+                    ease: 'power4.out'
+                });
+
+
+                // Kill animations 
+                return function () {
+                    tl.kill();
+                };
             }
+
+
         });
+
     }, [tl])
 
 

@@ -48,6 +48,7 @@
         "type": "dev"
     },
     {
+        "name": "GSAP 3",
         "link": "https://github.com/GedalyaKrycer/gedalyakrycer.github.io",
         "svg": "/assets/images/tech-icons/gsap3-tech-icon.svg",
         "type": "dev"

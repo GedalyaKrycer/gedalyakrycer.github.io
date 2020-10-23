@@ -152,7 +152,7 @@ function Skills() {
                         <div className="skills__tech-btn-container">
                             {techArray.map(technology => (
                                 <TechButton
-                                    key={technology.id}
+                                    key={technology.name}
                                     name={technology.name}
                                     link={technology.link}
                                     svg={technology.svg}

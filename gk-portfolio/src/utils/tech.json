@@ -1,244 +1,214 @@
 [
     {
-        "id": 1,
         "name": "HTML",
         "link": "https://www.trust4leaders.com/",
         "svg": "/assets/images/tech-icons/html-tech-icon.svg",
         "type": "dev"
     },
     {
-        "id": 2,
         "name": "CSS",
         "link": "https://github.com/NinaRocket/DRIVERkick",
         "svg": "/assets/images/tech-icons/css-tech-icon.svg",
         "type": "dev"
     },
     {
-        "id": 3,
         "name": "Bootstrap",
         "link": "https://www.trust4leaders.com/",
         "svg": "/assets/images/tech-icons/bootstrap-tech-icon.svg",
         "type": "dev"
     },
     {
-        "id": 4,
         "name": "Bulma",
         "link": "https://github.com/GedalyaKrycer/weather-forecaster",
         "svg": "/assets/images/tech-icons/bulma-tech-icon.svg",
         "type": "dev"
     },
     {
-        "id": 5,
         "name": "SASS",
         "link": "https://www.trust4leaders.com/",
         "svg": "/assets/images/tech-icons/sass-tech-icon.svg",
         "type": "dev"
     },
     {
-        "id": 6,
         "name": "React.js",
         "link": "https://github.com/GedalyaKrycer/digibit-employee-directory",
         "svg": "/assets/images/tech-icons/react-tech-icon.svg",
         "type": "dev"
     },
     {
-        "id": 7,
         "name": "JavaScript",
         "link": "https://github.com/GedalyaKrycer/hw-10-employee-summary",
         "svg": "/assets/images/tech-icons/js-tech-icon.svg",
         "type": "dev"
     },
     {
-        "id": 8,
         "name": "jQuery",
         "link": "https://github.com/dpayton92/Vegg_In_Place_Survival_Kit",
         "svg": "/assets/images/tech-icons/jquery-tech-icon.svg",
         "type": "dev"
     },
     {
-        "id": 9,
+        "link": "https://github.com/GedalyaKrycer/gedalyakrycer.github.io",
+        "svg": "/assets/images/tech-icons/gsap3-tech-icon.svg",
+        "type": "dev"
+    },
+    {
         "name": "Node.js",
         "link": "https://github.com/GedalyaKrycer/hw-10-employee-summary",
         "svg": "/assets/images/tech-icons/node-tech-icon.svg",
         "type": "dev"
     },
     {
-        "id": 10,
         "name": "API",
         "link": "https://github.com/GedalyaKrycer/weather-forecaster",
         "svg": "/assets/images/tech-icons/api-tech-icon.svg",
         "type": "dev"
     },
     {
-        "id": 11,
         "name": "Axios",
         "link": "https://github.com/GedalyaKrycer/weather-forecaster",
         "svg": "/assets/images/tech-icons/axios-tech-icon.svg",
         "type": "dev"
     },
     {
-        "id": 12,
         "name": "JSON",
         "link": "https://github.com/GedalyaKrycer/digibit-employee-directory",
         "svg": "/assets/images/tech-icons/json-tech-icon.svg",
         "type": "dev"
     },
     {
-        "id": 13,
         "name": "Git (GitHub)",
         "link": "https://github.com/GedalyaKrycer",
         "svg": "/assets/images/tech-icons/git-tech-icon.svg",
         "type": "dev"
     },
     {
-        "id": 14,
         "name": "Visual Studio Code",
         "link": "https://github.com/GedalyaKrycer",
         "svg": "/assets/images/tech-icons/vs-code-tech-icon.svg",
         "type": "dev"
     },
     {
-        "id": 15,
         "name": "Google Search Console",
         "link": "https://github.com/GedalyaKrycer/gedalyakrycer.github.io",
         "svg": "/assets/images/tech-icons/search-console-tech-icon.svg",
         "type": "dev"
     },
     {
-        "id": 16,
         "name": "Google Analytics",
         "link": "https://github.com/GedalyaKrycer/gedalyakrycer.github.io",
         "svg": "/assets/images/tech-icons/analytics-tech-icon.svg",
         "type": "dev"
     },
     {
-        "id": 17,
         "name": "Netlify",
         "link": "https://github.com/GedalyaKrycer/gedalyakrycer.github.io",
         "svg": "/assets/images/tech-icons/netlify-tech-icon.svg",
         "type": "dev"
     },
     {
-        "id": 18,
         "name": "WP Engine",
         "link": "https://github.com/GedalyaKrycer",
         "svg": "/assets/images/tech-icons/wp-engine-tech-icon.svg",
         "type": "dev"
     },
     {
-        "id": 19,
         "name": "Trello",
         "link": "https://github.com/GedalyaKrycer",
         "svg": "/assets/images/tech-icons/trello-tech-icon.svg",
         "type": "design"
     },
     {
-        "id": 20,
         "name": "Figma",
         "link": "https://www.figma.com/file/EHbfwBaOA1QPQggMB3rZby/A-Team-%E2%80%94-Car-Maintainence-Tracker?node-id=448%3A435",
         "svg": "/assets/images/tech-icons/figma-tech-icon.svg",
         "type": "design"
     },
     {
-        "id": 21,
         "name": "Sketch",
         "link": "https://gedalya.myportfolio.com/web-design-variety",
         "svg": "/assets/images/tech-icons/sketch-tech-icon.svg",
         "type": "design"
     },
     {
-        "id": 22,
         "name": "Adobe XD",
         "link": "https://gedalya.myportfolio.com/web-design-variety",
         "svg": "/assets/images/tech-icons/xd-tech-icon.svg",
         "type": "design"
     },
     {
-        "id": 23,
         "name": "Premier Pro",
         "link": "https://gedalya.myportfolio.com/motion-graphics",
         "svg": "/assets/images/tech-icons/pr-tech-icon.svg",
         "type": "design"
     },
     {
-        "id": 24,
         "name": "After Effects",
         "link": "https://gedalya.myportfolio.com/motion-graphics",
         "svg": "/assets/images/tech-icons/ae-tech-icon.svg",
         "type": "design"
     },
     {
-        "id": 25,
         "name": "Photoshop",
         "link": "https://gedalya.myportfolio.com/poster-variety",
         "svg": "/assets/images/tech-icons/ps-tech-icon.svg",
         "type": "design"
     },
     {
-        "id": 26,
         "name": "Illustrator",
         "link": "https://gedalya.myportfolio.com/logo-variety",
         "svg": "/assets/images/tech-icons/ai-tech-icon.svg",
         "type": "design"
     },
     {
-        "id": 27,
         "name": "InDesign",
         "link": "https://gedalya.myportfolio.com/print-variety",
         "svg": "/assets/images/tech-icons/id-tech-icon.svg",
         "type": "design"
     },
     {
-        "id": 28,
         "name": "Lightroom",
         "link": "https://gedalya.myportfolio.com/photography",
         "svg": "/assets/images/tech-icons/lr-tech-icon.svg",
         "type": "design"
     },
     {
-        "id": 29,
         "name": "Wordpress",
         "link": "https://www.youtube.com/playlist?list=PLriKzYyLb28nUFbe0Y9d-19uVkOnhYxFE",
         "svg": "/assets/images/tech-icons/wp-tech-icon.svg",
         "type": "learning"
     },
     {
-        "id": 30,
         "name": "Express",
         "link": "https://www.udemy.com/course/mern-stack-front-to-back/",
         "svg": "/assets/images/tech-icons/code-tech-icon.svg",
         "type": "learning"
     },
     {
-        "id": 31,
         "name": "Mongoose",
         "link": "https://www.udemy.com/course/mern-stack-front-to-back/",
         "svg": "/assets/images/tech-icons/code-tech-icon.svg",
         "type": "learning"
     },
     {
-        "id": 32,
         "name": "Compass",
         "link": "https://www.udemy.com/course/mern-stack-front-to-back/",
         "svg": "/assets/images/tech-icons/compass-tech-icon.svg",
         "type": "learning"
     },
     {
-        "id": 33,
         "name": "MongoDB",
         "link": "https://www.udemy.com/course/mern-stack-front-to-back/",
         "svg": "/assets/images/tech-icons/compass-tech-icon.svg",
         "type": "learning"
     },
     {
-        "id": 34,
         "name": "Postman",
         "link": "https://www.udemy.com/course/mern-stack-front-to-back/",
         "svg": "/assets/images/tech-icons/postman-tech-icon.svg",
         "type": "learning"
     },
     {
-        "id": 35,
         "name": "Mailchimp",
         "link": "https://www.youtube.com/playlist?list=PLR_ZJO3q73HalAe5sRs7ByjHvptmbflsL",
         "svg": "/assets/images/tech-icons/mailchimp-tech-icon.svg",

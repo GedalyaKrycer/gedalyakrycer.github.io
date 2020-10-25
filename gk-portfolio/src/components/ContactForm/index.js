@@ -7,7 +7,9 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import './style.css';
-
+import { gsap } from "gsap";
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+gsap.registerPlugin(ScrollTrigger);
 
 
 
@@ -136,10 +138,56 @@ function ContactForm() {
     // END Code Copied From https://github.com/kimfucious/netlify-forms-formik/blob/master/src/FormikForm.js#L7
     //
 
+
+    // GSAP ANIMATIONS
+    const tl = gsap.timeline();
+
+    // Ref for design card
+    const contactTitle1Ref = useRef(null);
+
+
+    // Save Initial Styles
+    ScrollTrigger.saveStyles("h2 .contact__form-bg");
+
+    useEffect(() => {
+
+        // Media Query Animation
+        ScrollTrigger.matchMedia({
+
+            "(min-width: 768px)": function () {
+
+
+                gsap.from(contactTitle1Ref.current, {
+                    scrollTrigger: {
+                        trigger: contactTitle1Ref.current,
+                        toggleActions: 'play none none none',
+                        start: 'top bottom',
+                        scrub: true
+                    },
+                    duration: 2,
+                    autoAlpha: 0,
+                    y: 120,
+                    ease: 'power4.out'
+
+                });
+
+                // Kill animations 
+                return function () {
+                    tl.kill();
+                };
+            }
+
+
+        });
+
+    }, [tl])
+
+
+
     return (
         <section>
             <Container className="g__about-sections" id="contact">
-                <h2>Contact</h2>
+                <h2 ref={contactTitle1Ref}>Contact</h2>
                 <Row className="justify-content-md-center g_negative-margin">
                     <Col className="white-color" lg={8}>
                         <div className="contact__form-bg">
@@ -304,8 +352,8 @@ function ContactForm() {
                         <p className="g__body-lg">You can email me at</p>
 
                         <p>
-                            <a href="mailto:gedalya@krycer.com" 
-                            className="g__body-lg">
+                            <a href="mailto:gedalya@krycer.com"
+                                className="g__body-lg">
                                 gedalya@krycer.com
                         </a>
                         </p>

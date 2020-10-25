@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import './style.css';
 import TechButton from '../TechButton';
 import TechFilter from '../TechFilter';
@@ -6,6 +6,9 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import tech from '../../utils/tech.json';
+import { gsap } from "gsap";
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+gsap.registerPlugin(ScrollTrigger);
 
 function Skills() {
 
@@ -123,21 +126,82 @@ function Skills() {
     }
 
 
+    // Ref for Skill Title
+    const skillTitleRef = useRef(null);
 
+    // Ref for Lead Text
+    const introTxtRef = useRef(null);
+
+
+
+    // GSAP ANIMATIONS
+    const tl = gsap.timeline();
+
+    // Save Initial Styles
+    ScrollTrigger.saveStyles("h2 .skills__intro-text .skills__tech-container");
+
+
+    useEffect(() => {
+
+
+        ScrollTrigger.matchMedia({
+
+            "(min-width: 768px)": function () {
+
+                tl.from(skillTitleRef.current, {
+                    duration: 1,
+                    autoAlpha: 0,
+                    y: 50,
+                    ease: "expo.out",
+                    scrollTrigger: {
+                        trigger: skillTitleRef.current,
+                        toggleActions: 'play none none none',
+                        start: 'top bottom',
+                        end: '-=50',
+                        scrub: true
+                    },
+                })
+
+                tl.from(introTxtRef.current, {
+                    duration: 1,
+                    autoAlpha: 0,
+                    y: -30,
+                    ease: 'power4.out',
+                    scrollTrigger: {
+                        trigger: introTxtRef.current,
+                        toggleActions: 'play none none none',
+                        start: 'top bottom',
+                        end: '-=50',
+                        scrub: true
+                    },
+
+                });
+
+
+
+                // Kill animations 
+                return function () {
+                    tl.kill();
+                };
+            }
+        });
+
+    }, [tl]);
 
 
     return (
         <section>
             <Container className="g__about-sections">
-                <h2>Skills</h2>
+                <h2 ref={skillTitleRef}>Skills</h2>
 
                 <Row className="justify-content-md-center g_negative-margin">
                     <Col lg={8}>
-                        <p className="skills__intro-text g__body-lg">These are some of the tools I use on projects or currently learning.</p>
+                        <p className="skills__intro-text g__body-lg"
+                            ref={introTxtRef}>These are some of the tools I use on projects or currently learning.</p>
                     </Col>
                 </Row>
                 <Row className="justify-content-md-center">
-                    <Col lg={12} className="skills__tech-container">
+                    <Col lg={12} className="skills__tech-container" >
 
                         <TechFilter
                             devFilterActive={devFilterActive}
@@ -149,7 +213,7 @@ function Skills() {
 
                         />
 
-                        <div className="skills__tech-btn-container">
+                        <div className="skills__tech-btn-container" >
                             {techArray.map(technology => (
                                 <TechButton
                                     key={technology.name}
@@ -157,6 +221,7 @@ function Skills() {
                                     link={technology.link}
                                     svg={technology.svg}
                                     type={technology.type}
+
 
                                 />
                             ))}

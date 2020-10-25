@@ -15,23 +15,43 @@ function DevPortfolio() {
     // Ref for title pin border
     const designTitleRef = useRef(null);
 
+    // GSAP ANIMATIONS
+    const tl = gsap.timeline();
+
+    // Save Initial Styles
+    ScrollTrigger.saveStyles("h2");
+
 
     useEffect(() => {
 
-        gsap.from(designTitleRef.current, {
-            duration: 1,
-            autoAlpha: 0,
-            y: -100,
-            scrollTrigger: {
-                trigger: designTitleRef.current,
-                start: 'top bottom',
-                end: '-=50',
-                scrub: true,
-                toggleActions: 'play none none reverse'
-            }
-        })
+        // Media Query Animation
+        ScrollTrigger.matchMedia({
 
-    }, [])
+            "(min-width: 768px)": function () {
+
+                tl.from(designTitleRef.current, {
+                    duration: 1,
+                    autoAlpha: 0,
+                    y: -100,
+                    scrollTrigger: {
+                        trigger: designTitleRef.current,
+                        start: 'top bottom',
+                        end: '-=50',
+                        scrub: true,
+                        toggleActions: 'play none none reverse'
+                    }
+                })
+
+                // Kill animations 
+                return function () {
+                    tl.kill();
+                };
+            }
+
+
+        });
+
+    }, [tl])
 
     return (
         <section className="design-portfolio__section">

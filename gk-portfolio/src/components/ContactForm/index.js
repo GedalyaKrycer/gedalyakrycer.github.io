@@ -140,7 +140,7 @@ function ContactForm() {
 
 
     // GSAP ANIMATIONS
-    const tl = gsap.timeline();
+    // const tl = gsap.timeline();
 
     // Ref for Contact title 
     const contactTitle1Ref = useRef(null);
@@ -153,73 +153,77 @@ function ContactForm() {
 
 
     // Save Initial Styles
-    ScrollTrigger.saveStyles("h2, .contact__form-bg, .contact__email-txt");
+    ScrollTrigger.saveStyles(".contact__title, .contact__or-title .contact__email-txt");
 
-    useEffect(() => {
+    // useEffect(() => {
 
-        // Media Query Animation
-        ScrollTrigger.matchMedia({
+    //     // Media Query Animation
+    //     ScrollTrigger.matchMedia({
 
-            "(min-width: 768px)": function () {
-
-
-                tl.from(contactTitle1Ref.current, {
-                    scrollTrigger: {
-                        trigger: contactTitle1Ref.current,
-                        toggleActions: 'play none none none',
-                        start: 'top bottom',
-                        scrub: true
-                    },
-                    duration: 2,
-                    y: 120,
-                    ease: 'power4.out'
-
-                });
-
-                tl.from(orTitleRef.current, {
-                    duration: 1,
-                    y: 50,
-                    ease: "expo.out",
-                    scrollTrigger: {
-                        trigger: orTitleRef.current,
-                        toggleActions: 'play none none none',
-                        start: 'top bottom',
-                        end: '-=50',
-                        scrub: true
-                    },
-                })
-
-                tl.from(emailTxtRef.current, {
-                    duration: 1,
-                    y: -30,
-                    ease: 'power4.out',
-                    scrollTrigger: {
-                        trigger: emailTxtRef.current,
-                        toggleActions: 'play none none none',
-                        start: 'top bottom',
-                        end: '-=50',
-                        scrub: true
-                    },
-
-                });
-
-                // Kill animations 
-                return function () {
-                    tl.kill();
-                };
-            }
+    //         "(min-width: 768px)": function () {
 
 
-        });
+    //             tl.from(contactTitle1Ref.current, {
+    //                 scrollTrigger: {
+    //                     trigger: contactTitle1Ref.current,
+    //                     toggleActions: 'play none none none',
+    //                     start: 'top bottom',
+    //                     scrub: true,
+    //                     markers: true
+    //                 },
+    //                 duration: 2,
+    //                 y: 120,
+    //                 ease: 'power4.out'
 
-    }, [tl])
+    //             });
+
+    //             tl.from(orTitleRef.current, {
+    //                 duration: 1,
+    //                 y: 50,
+    //                 ease: "expo.out",
+    //                 scrollTrigger: {
+    //                     trigger: orTitleRef.current,
+    //                     toggleActions: 'play none none none',
+    //                     start: 'top bottom',
+    //                     // end: '-=50',
+    //                     scrub: true,
+    //                     markers: true
+    //                 },
+    //             })
+
+    //             tl.from(emailTxtRef.current, {
+    //                 duration: 1,
+    //                 y: -30,
+    //                 ease: 'power4.out',
+    //                 scrollTrigger: {
+    //                     trigger: emailTxtRef.current,
+    //                     toggleActions: 'play none none none',
+    //                     start: 'top bottom',
+    //                     // end: '-=50',
+    //                     scrub: true,
+    //                     markers: true
+
+    //                 },
+
+    //             });
+
+    //             // Kill animations 
+    //             return function () {
+    //                 tl.kill();
+    //             };
+    //         }
+
+
+    //     });
+
+    // }, [tl])
 
 
 
     return (
         <section>
             <Container className="g__about-sections" id="contact">
-                <h2 ref={contactTitle1Ref}>Contact</h2>
+                <h2 className="contact__title" ref={contactTitle1Ref}>Contact</h2>
                 <Row className="justify-content-md-center g_negative-margin">
                     <Col className="white-color" lg={8}>
                         <div className="contact__form-bg">
@@ -379,7 +383,7 @@ function ContactForm() {
                 </Row>
 
                 <div className="contact__email-container">
-                    <h2 ref={orTitleRef}>or</h2>
+                    <h2 className="contact__or-title" ref={orTitleRef}>or</h2>
                     <div className="contact__email-txt" ref={emailTxtRef}>
                         <p className="g__body-lg">You can email me at</p>
 

@@ -36,26 +36,28 @@ function Bio() {
 
     useEffect(() => {
 
-        tl.from(bioTitleRef.current, {
-            duration: 1,
-            autoAlpha: 0,
-            y: 50,
-            ease: "expo.out",
-            delay: 1
-        })
-
-        tl.from(leadTxtRef.current, {
-            duration: 1,
-            autoAlpha: 0,
-            y: -30,
-            ease: 'power4.out',
-            stagger: .1
-
-        }, '-=1');
+     
 
         ScrollTrigger.matchMedia({
 
             "(min-width: 768px)": function () {
+
+                tl.from(bioTitleRef.current, {
+                    duration: 1,
+                    autoAlpha: 0,
+                    y: 50,
+                    ease: "expo.out",
+                    delay: 1
+                })
+        
+                tl.from(leadTxtRef.current, {
+                    duration: 1,
+                    autoAlpha: 0,
+                    y: -30,
+                    ease: 'power4.out',
+                    stagger: .1
+        
+                }, '-=1');
 
                 tl.from([
                     pTxt1Ref.current,

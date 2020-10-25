@@ -142,12 +142,18 @@ function ContactForm() {
     // GSAP ANIMATIONS
     const tl = gsap.timeline();
 
-    // Ref for design card
+    // Ref for Contact title 
     const contactTitle1Ref = useRef(null);
+
+    // Ref for Or title
+    const orTitleRef = useRef(null);
+
+    // Ref for email text
+    const emailTxtRef = useRef(null);
 
 
     // Save Initial Styles
-    ScrollTrigger.saveStyles("h2 .contact__form-bg");
+    ScrollTrigger.saveStyles("h2, .contact__form-bg, .contact__email-txt");
 
     useEffect(() => {
 
@@ -168,6 +174,35 @@ function ContactForm() {
                     autoAlpha: 0,
                     y: 120,
                     ease: 'power4.out'
+
+                });
+
+                tl.from(orTitleRef.current, {
+                    duration: 1,
+                    autoAlpha: 0,
+                    y: 50,
+                    ease: "expo.out",
+                    scrollTrigger: {
+                        trigger: orTitleRef.current,
+                        toggleActions: 'play none none none',
+                        start: 'top bottom',
+                        end: '-=50',
+                        scrub: true
+                    },
+                })
+
+                tl.from(emailTxtRef.current, {
+                    duration: 1,
+                    autoAlpha: 0,
+                    y: -30,
+                    ease: 'power4.out',
+                    scrollTrigger: {
+                        trigger: emailTxtRef.current,
+                        toggleActions: 'play none none none',
+                        start: 'top bottom',
+                        end: '-=50',
+                        scrub: true
+                    },
 
                 });
 
@@ -347,8 +382,8 @@ function ContactForm() {
                 </Row>
 
                 <div className="contact__email-container">
-                    <h2>or</h2>
-                    <div className="contact__email-txt">
+                    <h2 ref={orTitleRef}>or</h2>
+                    <div className="contact__email-txt" ref={emailTxtRef}>
                         <p className="g__body-lg">You can email me at</p>
 
                         <p>

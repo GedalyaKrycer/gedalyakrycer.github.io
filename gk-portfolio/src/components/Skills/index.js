@@ -138,7 +138,7 @@ function Skills() {
     const tl = gsap.timeline();
 
     // Save Initial Styles
-    ScrollTrigger.saveStyles("h2 .skills__intro-text .skills__tech-container");
+    ScrollTrigger.saveStyles("h2, .skills__intro-text, .skills__tech-container");
 
 
     useEffect(() => {

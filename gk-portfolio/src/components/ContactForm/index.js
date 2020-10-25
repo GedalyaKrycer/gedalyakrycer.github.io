@@ -163,7 +163,7 @@ function ContactForm() {
             "(min-width: 768px)": function () {
 
 
-                gsap.from(contactTitle1Ref.current, {
+                tl.from(contactTitle1Ref.current, {
                     scrollTrigger: {
                         trigger: contactTitle1Ref.current,
                         toggleActions: 'play none none none',
@@ -171,7 +171,6 @@ function ContactForm() {
                         scrub: true
                     },
                     duration: 2,
-                    autoAlpha: 0,
                     y: 120,
                     ease: 'power4.out'
 
@@ -179,7 +178,6 @@ function ContactForm() {
 
                 tl.from(orTitleRef.current, {
                     duration: 1,
-                    autoAlpha: 0,
                     y: 50,
                     ease: "expo.out",
                     scrollTrigger: {
@@ -193,7 +191,6 @@ function ContactForm() {
 
                 tl.from(emailTxtRef.current, {
                     duration: 1,
-                    autoAlpha: 0,
                     y: -30,
                     ease: 'power4.out',
                     scrollTrigger: {

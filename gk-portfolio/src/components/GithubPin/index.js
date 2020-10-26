@@ -6,13 +6,14 @@ import { FaGithub, FaLinkedinIn, FaBehance } from 'react-icons/fa';
 
 function GithubPin() {
 
-      // GSAP ANIMATIONS
-      const tl = gsap.timeline();
-
       // Ref for github icons
       const githubContainerRef = useRef(null);
-  
+
+      
+      // GSAP ANIMATIONS
       useEffect(() => {
+
+      const tl = gsap.timeline();
   
           tl.from(githubContainerRef.current, {
               duration: 1,
@@ -23,7 +24,9 @@ function GithubPin() {
           })
   
   
-      }, [tl])
+      }, [])
+
+      
     return (
         <div className="githubPin" ref={githubContainerRef}>
             <a

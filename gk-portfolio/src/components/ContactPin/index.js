@@ -6,14 +6,16 @@ import { gsap } from "gsap";
 
 function ContactPin() {
 
-    // GSAP ANIMATIONS
-    const tl = gsap.timeline();
+
 
     // Ref for contact link
     const contactContainerRef = useRef(null);
 
     useEffect(() => {
 
+        // GSAP ANIMATIONS
+        const tl = gsap.timeline();
+        
         tl.from(contactContainerRef.current, {
             duration: 1,
             autoAlpha: 0,
@@ -23,7 +25,7 @@ function ContactPin() {
         })
 
 
-    }, [tl])
+    }, [])
 
     return (
         <div className="contactPin" ref={contactContainerRef}>

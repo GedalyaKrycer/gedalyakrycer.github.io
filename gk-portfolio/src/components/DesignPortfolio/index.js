@@ -15,14 +15,16 @@ function DevPortfolio() {
     // Ref for title pin border
     const designTitleRef = useRef(null);
 
-    // GSAP ANIMATIONS
-    const tl = gsap.timeline();
 
     // Save Initial Styles
     ScrollTrigger.saveStyles("h2");
 
 
+    // GSAP ANIMATIONS
     useEffect(() => {
+
+
+        const tl = gsap.timeline();
 
         // Media Query Animation
         ScrollTrigger.matchMedia({
@@ -51,7 +53,7 @@ function DevPortfolio() {
 
         });
 
-    }, [tl])
+    }, [])
 
     return (
         <section className="design-portfolio__section">

@@ -48,8 +48,6 @@ function DevProjectCard({ img, title, tech, deployLink, repoLink }) {
 
 
 
-    // GSAP ANIMATIONS
-    const tl = gsap.timeline();
 
     // Ref for title pin border
     const devCardsRef = useRef(null);
@@ -57,7 +55,11 @@ function DevProjectCard({ img, title, tech, deployLink, repoLink }) {
     // Save Initial Styles
     ScrollTrigger.saveStyles(".g_projects-container");
 
+    // GSAP ANIMATIONS
     useEffect(() => {
+
+
+        const tl = gsap.timeline();
 
         // Media Query Animation
         ScrollTrigger.matchMedia({
@@ -107,7 +109,7 @@ function DevProjectCard({ img, title, tech, deployLink, repoLink }) {
 
         });
 
-    }, [tl])
+    }, [])
 
 
 

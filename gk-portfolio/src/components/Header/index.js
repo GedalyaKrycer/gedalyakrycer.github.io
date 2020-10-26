@@ -5,8 +5,6 @@ import './style.css';
 // This is static top section of the page and gives it semantic value.
 function Header({ title, subTitleOne, subTitleTwo }) {
 
-    // GSAP ANIMATIONS
-    const tl = gsap.timeline();
 
     // Ref for blue line
     const ruleRef = useRef(null);
@@ -18,14 +16,16 @@ function Header({ title, subTitleOne, subTitleTwo }) {
     const h3Ref = useRef(null);
 
 
+    // GSAP ANIMATIONS
     useEffect(() => {
+        const tl = gsap.timeline();
 
         tl.from(ruleRef.current, {
             duration: .7,
             autoAlpha: 0,
             scale: 40,
             ease: 'back.out(1)'
-            
+
         })
             .to(ruleRef.current, {
                 duration: 1,
@@ -35,20 +35,20 @@ function Header({ title, subTitleOne, subTitleTwo }) {
             })
 
         tl.from(h1Ref.current, {
-            duration: 1, 
+            duration: 1,
             autoAlpha: 0,
             y: 20,
             ease: 'back.out(3)'
         }, '-=1')
 
         tl.from(h3Ref.current, {
-            duration: 1, 
+            duration: 1,
             autoAlpha: 0,
             y: -20,
             ease: 'back.out(3)'
         }, '-=1')
 
-    }, [tl])
+    }, [])
 
 
     return (

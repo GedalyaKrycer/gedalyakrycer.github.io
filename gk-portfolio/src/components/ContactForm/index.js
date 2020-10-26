@@ -139,8 +139,7 @@ function ContactForm() {
     //
 
 
-    // GSAP ANIMATIONS
-    // const tl = gsap.timeline();
+    // GSAP —————————————————————————————————————————————————————————————————
 
     // Ref for Contact title 
     const contactTitle1Ref = useRef(null);
@@ -153,70 +152,67 @@ function ContactForm() {
 
 
     // Save Initial Styles
-    ScrollTrigger.saveStyles(".contact__title, .contact__or-title .contact__email-txt");
+    ScrollTrigger.saveStyles(".contact__title, .contact__or-title, .contact__email-txt");
 
-    // useEffect(() => {
+    useEffect(() => {
 
-    //     // Media Query Animation
-    //     ScrollTrigger.matchMedia({
+        const tl = gsap.timeline();
 
-    //         "(min-width: 768px)": function () {
+        // Media Query Animation
+        ScrollTrigger.matchMedia({
 
-
-    //             tl.from(contactTitle1Ref.current, {
-    //                 scrollTrigger: {
-    //                     trigger: contactTitle1Ref.current,
-    //                     toggleActions: 'play none none none',
-    //                     start: 'top bottom',
-    //                     scrub: true,
-    //                     markers: true
-    //                 },
-    //                 duration: 2,
-    //                 y: 120,
-    //                 ease: 'power4.out'
-
-    //             });
-
-    //             tl.from(orTitleRef.current, {
-    //                 duration: 1,
-    //                 y: 50,
-    //                 ease: "expo.out",
-    //                 scrollTrigger: {
-    //                     trigger: orTitleRef.current,
-    //                     toggleActions: 'play none none none',
-    //                     start: 'top bottom',
-    //                     // end: '-=50',
-    //                     scrub: true,
-    //                     markers: true
-    //                 },
-    //             })
-
-    //             tl.from(emailTxtRef.current, {
-    //                 duration: 1,
-    //                 y: -30,
-    //                 ease: 'power4.out',
-    //                 scrollTrigger: {
-    //                     trigger: emailTxtRef.current,
-    //                     toggleActions: 'play none none none',
-    //                     start: 'top bottom',
-    //                     // end: '-=50',
-    //                     scrub: true,
-    //                     markers: true
-
-    //                 },
-
-    //             });
-
-    //             // Kill animations 
-    //             return function () {
-    //                 tl.kill();
-    //             };
-    //         }
+            "(min-width: 768px)": function () {
 
 
-    //     });
+                tl.from(contactTitle1Ref.current, {
+                    scrollTrigger: {
+                        trigger: contactTitle1Ref.current,
+                        toggleActions: 'play none none none',
+                        start: 'top bottom',
+                        scrub: true
+                    },
+                    duration: 2,
+                    y: 120,
+                    ease: 'power4.out'
 
-    // }, [tl])
+                });
+
+                tl.from(orTitleRef.current, {
+                    duration: 1,
+                    y: 50,
+                    ease: "expo.out",
+                    scrollTrigger: {
+                        trigger: orTitleRef.current,
+                        toggleActions: 'play none none none',
+                        start: 'top bottom',
+                        scrub: true
+                    },
+                })
+
+                tl.from(emailTxtRef.current, {
+                    duration: 1,
+                    y: -30,
+                    ease: 'power4.out',
+                    scrollTrigger: {
+                        trigger: emailTxtRef.current,
+                        toggleActions: 'play none none none',
+                        start: 'top bottom',
+                        scrub: true
+
+                    },
+
+                });
+
+                // Kill animations 
+                return function () {
+                    tl.kill();
+                };
+            }
+
+
+        });
+
+    }, [])
 
 
 

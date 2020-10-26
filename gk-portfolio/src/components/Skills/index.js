@@ -134,15 +134,17 @@ function Skills() {
 
 
 
-    // GSAP ANIMATIONS
-    const tl = gsap.timeline();
+
 
     // Save Initial Styles
     ScrollTrigger.saveStyles("h2, .skills__intro-text, .skills__tech-container");
 
 
+    // GSAP ANIMATIONS
     useEffect(() => {
 
+
+        const tl = gsap.timeline();
 
         ScrollTrigger.matchMedia({
 
@@ -186,7 +188,7 @@ function Skills() {
             }
         });
 
-    }, [tl]);
+    }, []);
 
 
     return (

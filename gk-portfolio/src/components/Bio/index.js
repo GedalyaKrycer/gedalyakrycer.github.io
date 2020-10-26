@@ -28,14 +28,15 @@ function Bio() {
     // Ref for Paragraph Text 4
     const pTxt4Ref = useRef(null);
 
-    // GSAP ANIMATIONS
-    const tl = gsap.timeline();
-
+  
     // Save Initial Styles
     ScrollTrigger.saveStyles(".g__body-lg");
 
+    // GSAP ANIMATIONS
     useEffect(() => {
 
+
+    const tl = gsap.timeline();
      
 
         ScrollTrigger.matchMedia({
@@ -111,7 +112,7 @@ function Bio() {
 
         });
 
-    }, [tl]);
+    }, []);
 
 
     return (

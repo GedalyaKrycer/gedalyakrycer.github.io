@@ -17,13 +17,16 @@ function FavoriteThings() {
     // Ref for Fav Things Section Title
     const favCardRef = useRef(null);
 
-    // GSAP ANIMATIONS
-    const tl = gsap.timeline();
 
     // Save Initial Styles
     ScrollTrigger.saveStyles(".fav__section-title");
 
+
+    // GSAP ANIMATIONS
     useEffect(() => {
+
+
+        const tl = gsap.timeline();
 
         ScrollTrigger.matchMedia({
 
@@ -56,7 +59,7 @@ function FavoriteThings() {
 
         });
 
-    }, [tl]);
+    }, []);
 
     const populatedCards = []
 

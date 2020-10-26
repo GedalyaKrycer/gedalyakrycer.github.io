@@ -12,9 +12,6 @@ gsap.registerPlugin(ScrollTrigger);
 // This is static top section of the page and gives it semantic value.
 function DesignPortfolio() {
 
-    // GSAP ANIMATIONS
-    const tl = gsap.timeline();
-
     // Ref for design card
     const designCard1Ref = useRef(null);
 
@@ -25,7 +22,10 @@ function DesignPortfolio() {
     ScrollTrigger.saveStyles(".design-project__container");
 
 
+    // GSAP ANIMATIONS
     useEffect(() => {
+
+        const tl = gsap.timeline();
 
         // Media Query Animation
         ScrollTrigger.matchMedia({
@@ -73,7 +73,7 @@ function DesignPortfolio() {
 
         });
 
-    }, [tl])
+    }, [])
 
 
 

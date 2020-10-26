@@ -27,8 +27,7 @@ function TopNavbar() {
 
 
 
-    // GSAP ANIMATIONS
-    const tl = gsap.timeline();
+
 
     // Ref for logo
     const navContainerRef = useRef(null);
@@ -47,6 +46,9 @@ function TopNavbar() {
 
 
     useEffect(() => {
+
+            // GSAP ANIMATIONS
+    const tl = gsap.timeline();
 
         tl.from(navContainerRef.current, {
             duration: 1,
@@ -84,7 +86,7 @@ function TopNavbar() {
         }, '-=.8')
 
 
-    }, [tl])
+    }, [])
 
 
     return (

@@ -10,14 +10,15 @@ import { gsap } from "gsap";
 // This is static top section of the page and gives it semantic value.
 function DevPortfolio() {
 
-    // GSAP ANIMATIONS
-    const tl = gsap.timeline();
+
 
     // Ref for title pin border
     const devTitleRef = useRef(null);
 
-
+    // GSAP ANIMATIONS
     useEffect(() => {
+
+        const tl = gsap.timeline();
 
         tl.from(devTitleRef.current, {
             duration: 1,
@@ -28,7 +29,7 @@ function DevPortfolio() {
         })
 
 
-    }, [tl])
+    }, [])
 
 
     return (

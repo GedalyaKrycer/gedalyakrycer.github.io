@@ -5,7 +5,6 @@ import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
 import { LinkContainer } from "react-router-bootstrap";
 import { FaGithub, FaLinkedinIn, FaBehance } from 'react-icons/fa';
-import { FiArrowUpRight } from 'react-icons/fi';
 import resumeFile from "../../gedalya-krycer-resume.pdf";
 import { usePortfolioContext } from '../../utils/PortfolioContext';
 
@@ -113,9 +112,8 @@ function TopNavbar() {
                 <Navbar.Collapse id="responsive-navbar-nav" ref={leftLinksRef}>
                     <Nav className="mr-auto" >
                         <LinkContainer to="/" onClick={handleLinkClick}>
-                            <Nav.Link>Dev</Nav.Link>
+                            <Nav.Link>Portfolio</Nav.Link>
                         </LinkContainer>
-                        <Nav.Link href="http://gedalya.myportfolio.com/" target="_blank" rel="noopener noreferrer">Design <FiArrowUpRight /> </Nav.Link>
                         <LinkContainer to="/about" onClick={handleLinkClick}>
                             <Nav.Link>About</Nav.Link>
                         </LinkContainer>

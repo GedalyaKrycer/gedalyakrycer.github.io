@@ -23,6 +23,8 @@ This is an experimental Bootstrap 4 portfolio site. The goal is to grow this web
 
 * Added GSAP Animations 
 
+* Added lazy loading with React Suspense and React Lazy
+
 
 
 

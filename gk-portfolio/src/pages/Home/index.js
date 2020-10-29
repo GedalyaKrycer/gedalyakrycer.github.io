@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {Suspense, lazy } from 'react';
 import './style.css';
 import Header from '../../components/Header';
 import DevPortfolio from '../../components/DevPortfolio';

@@ -12,6 +12,18 @@
         "type": "dev"
     },
     {
+        "name": "SASS",
+        "link": "https://www.trust4leaders.com/",
+        "svg": "/assets/images/tech-icons/sass-tech-icon.svg",
+        "type": "dev"
+    },
+    {
+        "name": "CSS Grids",
+        "link": "https://github.com/GedalyaKrycer/css-grids-wes-bos",
+        "svg": "/assets/images/tech-icons/css-grids-tech-icon.svg",
+        "type": "dev"
+    },
+    {
         "name": "Bootstrap",
         "link": "https://www.trust4leaders.com/",
         "svg": "/assets/images/tech-icons/bootstrap-tech-icon.svg",
@@ -21,12 +33,6 @@
         "name": "Bulma",
         "link": "https://github.com/GedalyaKrycer/weather-forecaster",
         "svg": "/assets/images/tech-icons/bulma-tech-icon.svg",
-        "type": "dev"
-    },
-    {
-        "name": "SASS",
-        "link": "https://www.trust4leaders.com/",
-        "svg": "/assets/images/tech-icons/sass-tech-icon.svg",
         "type": "dev"
     },
     {

@@ -1,8 +1,6 @@
 import React, { Suspense, lazy } from 'react';
 import './style.css';
 import Header from '../../components/Header';
-// import DevPortfolio from '../../components/DevPortfolio';
-// import DesignPortfolio from '../../components/DesignPortfolio';
 
 // Lazy loads these components in
 const DevPortfolio = lazy(() => import('../../components/DevPortfolio'));

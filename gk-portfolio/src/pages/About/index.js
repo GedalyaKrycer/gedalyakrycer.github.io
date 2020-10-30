@@ -2,9 +2,6 @@ import React, { Suspense, lazy } from 'react';
 import './style.css';
 import Header from '../../components/Header';
 import Bio from '../../components/Bio';
-// import FavoriteThings from '../../components/FavoriteThings';
-// import Skills from '../../components/Skills';
-// import ContactForm from '../../components/ContactForm';
 
 // Lazy loads these components in
 const FavoriteThings = lazy(() => import('../../components/FavoriteThings'));

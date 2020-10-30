@@ -3,7 +3,7 @@
         "id": 1,
         "img": "/assets/images/img-links/portfolio/Card/driverkick-thumbnail.jpg",
         "title": "Driver Kick Car Maintenance Tracker",
-        "tech": "React.js, Hooks, Figma, Node.js, MongoDB, Mongoose, Express, Passport, NHTSA Vehical API, axios, react-bootstrap, react-contenteditable, react-ga, react-moment, bcrypt.js, Heroku",
+        "tech": "React.js, JSX, Hooks, CSS, Figma, Node.js, MongoDB, Mongoose, Express, Passport, NHTSA Vehical API, Axios, react-bootstrap, react-contenteditable, react-ga, react-moment, bcrypt.js, Heroku",
         "deployLink": "https://driverkick.herokuapp.com/",
         "repoLink": "https://github.com/NinaRocket/DRIVERkick"
     },
@@ -11,7 +11,7 @@
         "id": 2,
         "img": "/assets/images/img-links/portfolio/Card/weather-thumbnail.jpg",
         "title": "Weather Forecaster",
-        "tech": "Bulma, OpenWeather.js API, Unsplash API, Axios, JavaScript, HTML, CSS",
+        "tech": "React.js, JSX, Hooks, CSS, Bulma, OpenWeather.js API, Unsplash API, Axios, JavaScript",
         "deployLink": "https://weatherforecastreact.netlify.app",
         "repoLink": "https://github.com/GedalyaKrycer/weather-forecaster"
     },
@@ -19,7 +19,7 @@
         "id": 3,
         "img": "/assets/images/img-links/portfolio/Card/directory-thumbnail.jpg",
         "title": "DigiBit Team Directory",
-        "tech": "React.js, Hooks, Figma, JSON, react-bootstrap, react-lazyload, react-icons",
+        "tech": "React.js, JSX, Hooks, CSS, Figma, JSON, react-bootstrap, react-lazyload, react-icons",
         "deployLink": "https://unit-19-react-homework-employee-directory.netlify.app/",
         "repoLink": "https://github.com/GedalyaKrycer/digibit-employee-directory"
     },

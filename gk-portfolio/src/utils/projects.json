@@ -3,7 +3,7 @@
         "id": 1,
         "img": "/assets/images/img-links/portfolio/Card/driverkick-thumbnail.jpg",
         "title": "Driver Kick Car Maintenance Tracker",
-        "tech": "React.js, Hooks, Figma, MongoDB, Mongoose, Express, Passport, NHTSA Vehical API, axios, react-bootstrap, react-contenteditable, react-ga, react-moment, bcryptjs, Heroku",
+        "tech": "React.js, Hooks, Figma, Node.js, MongoDB, Mongoose, Express, Passport, NHTSA Vehical API, axios, react-bootstrap, react-contenteditable, react-ga, react-moment, bcrypt.js, Heroku",
         "deployLink": "https://driverkick.herokuapp.com/",
         "repoLink": "https://github.com/NinaRocket/DRIVERkick"
     },
@@ -25,26 +25,11 @@
     },
     {
         "id": 4,
-        "img": "/assets/images/img-links/portfolio/Card/webdev-thumbnail.jpg",
-        "title": "WebDev Challenge Quiz",
-        "tech": "JavaScript, jQuery, HTML, CSS, Bootstrap",
-        "deployLink": "https://gedalyakrycer.github.io/web-dev-challenge-quiz/",
-        "repoLink": "https://github.com/GedalyaKrycer/web-dev-challenge-quiz"
-    },
-    {
-        "id": 5,
-        "img": "/assets/images/img-links/portfolio/Card/vegg-thumbnail.jpg",
-        "title": "Vegg-in-Place",
-        "tech": "Bulma, Figma, JavaScript, HTML, CSS, jQuery, Listen Notes API, TMDB API, RAWG API, Official Joke API",
-        "deployLink": "https://dpayton92.github.io/Vegg_In_Place_Survival_Kit/",
-        "repoLink": "https://github.com/dpayton92/Vegg_In_Place_Survival_Kit"
-    },
-    {
-        "id": 6,
         "img": "/assets/images/img-links/portfolio/Card/cli-thumbnail.jpg",
         "title": "CLI README Generator",
         "tech": "Node.js, OOP, Inquire, JavaScript",
         "deployLink": "",
         "repoLink": "https://github.com/GedalyaKrycer/hw-10-employee-summary"
     }
+ 
 ]

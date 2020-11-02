@@ -18,6 +18,12 @@
         "type": "dev"
     },
     {
+        "name": "GULP",
+        "link": "https://www.trust4leaders.com/",
+        "svg": "/assets/images/tech-icons/gulp-tech-icon.svg",
+        "type": "dev"
+    },
+    {
         "name": "CSS Grids",
         "link": "https://github.com/GedalyaKrycer/css-grids-wes-bos",
         "svg": "/assets/images/tech-icons/css-grids-tech-icon.svg",

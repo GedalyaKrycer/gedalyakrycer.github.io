@@ -82,9 +82,9 @@ function Bio() {
                 });
 
                 // Kill animations 
-                return function () {
-                    tl.kill();
-                };
+                // return function () {
+                //     tl.kill();
+                // };
              },
 
              "(max-width: 767px)": function () {
@@ -105,9 +105,9 @@ function Bio() {
                 }, '-=.8');
 
                 // Kill animations 
-                return function () {
-                    tl.kill();
-                };
+                // return function () {
+                //     tl.kill();
+                // };
              }
 
         });

@@ -6,7 +6,7 @@ import './style.css';
 function TechButton({ name, link, svg, type }) {
 
     // State to determine the css class type
-    const [classType, setClassType ] = useState("hello");
+    const [classType, setClassType ] = useState("");
 
     useEffect(() => {
       if(type === "dev") {

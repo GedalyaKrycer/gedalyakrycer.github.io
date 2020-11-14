@@ -60,7 +60,7 @@
         "type": "dev"
     },
     {
-        "name": "GSAP 3",
+        "name": "GSAP3",
         "link": "https://github.com/GedalyaKrycer/gedalyakrycer.github.io",
         "svg": "/assets/images/tech-icons/gsap3-tech-icon.svg",
         "type": "dev"
@@ -87,6 +87,12 @@
         "name": "JSON",
         "link": "https://github.com/GedalyaKrycer/digibit-employee-directory",
         "svg": "/assets/images/tech-icons/json-tech-icon.svg",
+        "type": "dev"
+    },
+    {
+        "name": "Wordpress",
+        "link": "https://www.trust4leaders.com/",
+        "svg": "/assets/images/tech-icons/wp-tech-icon.svg",
         "type": "dev"
     },
     {
@@ -184,12 +190,6 @@
         "link": "https://gedalya.myportfolio.com/photography",
         "svg": "/assets/images/tech-icons/lr-tech-icon.svg",
         "type": "design"
-    },
-    {
-        "name": "Wordpress",
-        "link": "https://www.youtube.com/playlist?list=PLriKzYyLb28nUFbe0Y9d-19uVkOnhYxFE",
-        "svg": "/assets/images/tech-icons/wp-tech-icon.svg",
-        "type": "learning"
     },
     {
         "name": "Express",

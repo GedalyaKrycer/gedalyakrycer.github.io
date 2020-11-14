@@ -136,18 +136,19 @@ function DevProjectCard({ img, title, tech, deployLink, repoLink }) {
                                 <div className="dev-project__links">
                                     {!deployLink ? null : <a href={deployLink}
                                         target="_blank"
-                                        rel="noopener noreferrer" className="dev-project__button dev-project__button--half">
+                                        rel="noopener noreferrer" className={!repoLink ?
+                                            "dev-project__button dev-project__button--full" : "dev-project__button dev-project__button--half"}>
                                         <FaDesktop />
                                         <h5>View Deployed</h5>
                                     </a>}
 
-                                    <a href={repoLink}
+                                    {!repoLink ? null : <a href={repoLink}
                                         target="_blank"
                                         rel="noopener noreferrer" className={!deployLink ?
                                             "dev-project__button dev-project__button--full" : "dev-project__button dev-project__button--half"}>
                                         <FaGithub />
                                         <h5>View Repo</h5>
-                                    </a>
+                                    </a>}
                                 </div>
 
                                 <div className="dev-project__info">

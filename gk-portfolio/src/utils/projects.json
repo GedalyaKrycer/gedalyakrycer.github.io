@@ -12,8 +12,7 @@
         "img": "/assets/images/img-links/portfolio/Card/t4l-thumbnail.jpg",
         "title": "Trust4Leaders",
         "tech": "Wordpress, Custom Theme, PHP, HTML, Bootstrap, Gulp, SASS, JavaScript, jQuery, ACF, Contact Form 7, Yoast, Sucuri Security, GSAP3, GDPR Cookie Banner, GoDaddy, Google Analytics",
-        "deployLink": "https://trust4leaders.com/",
-        "repoLink": ""
+        "deployLink": "https://trust4leaders.com/"
     },
     {
         "id": 3,

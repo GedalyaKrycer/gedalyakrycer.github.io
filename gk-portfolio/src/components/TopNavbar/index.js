@@ -46,8 +46,8 @@ function TopNavbar() {
 
     useEffect(() => {
 
-            // GSAP ANIMATIONS
-    const tl = gsap.timeline();
+        // GSAP ANIMATIONS
+        const tl = gsap.timeline();
 
         tl.from(navContainerRef.current, {
             duration: 1,

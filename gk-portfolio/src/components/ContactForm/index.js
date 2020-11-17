@@ -7,9 +7,9 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import './style.css';
-import { gsap } from "gsap";
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
-gsap.registerPlugin(ScrollTrigger);
+// import { gsap } from "gsap";
+// import { ScrollTrigger } from 'gsap/ScrollTrigger';
+// gsap.registerPlugin(ScrollTrigger);
 
 
 
@@ -152,67 +152,67 @@ function ContactForm() {
 
 
     // Save Initial Styles
-    ScrollTrigger.saveStyles(".contact__title, .contact__or-title, .contact__email-txt");
+    // ScrollTrigger.saveStyles(".contact__title, .contact__or-title, .contact__email-txt");
 
-    useEffect(() => {
+    // useEffect(() => {
 
-        const tl = gsap.timeline();
+    //     const tl = gsap.timeline();
 
-        // Media Query Animation
-        ScrollTrigger.matchMedia({
+    //     // Media Query Animation
+    //     ScrollTrigger.matchMedia({
 
-            "(min-width: 768px)": function () {
-
-
-                tl.from(contactTitle1Ref.current, {
-                    scrollTrigger: {
-                        trigger: contactTitle1Ref.current,
-                        toggleActions: 'play none none none',
-                        start: 'top bottom',
-                        scrub: true
-                    },
-                    duration: 2,
-                    y: 120,
-                    ease: 'power4.out'
-
-                });
-
-                tl.from(orTitleRef.current, {
-                    duration: 1,
-                    y: 50,
-                    ease: "expo.out",
-                    scrollTrigger: {
-                        trigger: orTitleRef.current,
-                        toggleActions: 'play none none none',
-                        start: 'top bottom',
-                        scrub: true
-                    },
-                })
-
-                tl.from(emailTxtRef.current, {
-                    duration: 1,
-                    y: -30,
-                    ease: 'power4.out',
-                    scrollTrigger: {
-                        trigger: emailTxtRef.current,
-                        toggleActions: 'play none none none',
-                        start: 'top bottom',
-                        scrub: true
-
-                    },
-
-                });
-
-                // Kill animations 
-                return function () {
-                    tl.kill();
-                };
-            }
+    //         "(min-width: 768px)": function () {
 
 
-        });
+    //             tl.from(contactTitle1Ref.current, {
+    //                 scrollTrigger: {
+    //                     trigger: contactTitle1Ref.current,
+    //                     toggleActions: 'play none none none',
+    //                     start: 'top bottom',
+    //                     scrub: true
+    //                 },
+    //                 duration: 2,
+    //                 y: 120,
+    //                 ease: 'power4.out'
 
-    }, [])
+    //             });
+
+    //             tl.from(orTitleRef.current, {
+    //                 duration: 1,
+    //                 y: 50,
+    //                 ease: "expo.out",
+    //                 scrollTrigger: {
+    //                     trigger: orTitleRef.current,
+    //                     toggleActions: 'play none none none',
+    //                     start: 'top bottom',
+    //                     scrub: true
+    //                 },
+    //             })
+
+    //             tl.from(emailTxtRef.current, {
+    //                 duration: 1,
+    //                 y: -30,
+    //                 ease: 'power4.out',
+    //                 scrollTrigger: {
+    //                     trigger: emailTxtRef.current,
+    //                     toggleActions: 'play none none none',
+    //                     start: 'top bottom',
+    //                     scrub: true
+
+    //                 },
+
+    //             });
+
+    //             // Kill animations 
+    //             return function () {
+    //                 tl.kill();
+    //             };
+    //         }
+
+
+    //     });
+
+    // }, [])
 
 
 

@@ -1,11 +1,11 @@
-import React, { useEffect, useRef } from "react";
+import React, { useRef } from "react";
 import './style.css';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-import { gsap } from "gsap";
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
-gsap.registerPlugin(ScrollTrigger);
+// import { gsap } from "gsap";
+// import { ScrollTrigger } from 'gsap/ScrollTrigger';
+// gsap.registerPlugin(ScrollTrigger);
 
 // This is static top section of the page and gives it semantic value.
 function Bio() {
@@ -30,89 +30,110 @@ function Bio() {
 
   
     // Save Initial Styles
-    ScrollTrigger.saveStyles(".g__body-lg");
+    // ScrollTrigger.saveStyles(".g__body-lg");
+
 
     // GSAP ANIMATIONS
-    useEffect(() => {
+    // useEffect(() => {
+
+    //     console.log(`
+    //     top————
+    //     bioTitleRef: ${bioTitleRef},
+    //     leadTxtRef: ${leadTxtRef},
+    //     pTxt1Ref: ${pTxt1Ref},
+    //     pTxt2Ref: ${pTxt2Ref},
+    //     pTxt3Ref: ${pTxt3Ref},
+    //     pTxt4Ref: ${pTxt4Ref},
+    //     `);
 
 
-    const tl = gsap.timeline();
+    // const tl = gsap.timeline();
      
 
-        ScrollTrigger.matchMedia({
+    //     ScrollTrigger.matchMedia({
 
-            "(min-width: 768px)": function () {
+    //         "(min-width: 768px)": function () {
 
-                tl.from(bioTitleRef.current, {
-                    duration: 1,
-                    autoAlpha: 0,
-                    y: 50,
-                    ease: "expo.out",
-                    delay: 1
-                })
+    //             tl.from(bioTitleRef.current, {
+    //                 duration: 1,
+    //                 autoAlpha: 0,
+    //                 y: 50,
+    //                 ease: "expo.out",
+    //                 delay: 1
+    //             })
         
-                tl.from(leadTxtRef.current, {
-                    duration: 1,
-                    autoAlpha: 0,
-                    y: -30,
-                    ease: 'power4.out',
-                    stagger: .1
+    //             tl.from(leadTxtRef.current, {
+    //                 duration: 1,
+    //                 autoAlpha: 0,
+    //                 y: -30,
+    //                 ease: 'power4.out',
+    //                 stagger: .1
         
-                }, '-=1');
+    //             }, '-=1');
 
-                tl.from([
-                    pTxt1Ref.current,
-                    pTxt2Ref.current,
-                    pTxt3Ref.current,
-                    pTxt4Ref.current,
-                ], {
-                    scrollTrigger: {
-                        trigger: pTxt1Ref.current,
-                        toggleActions: 'play none none none',
-                        start: 'top bottom',
-                        end: '-=50',
-                        scrub: true
-                    },
-                    duration: 1,
-                    autoAlpha: 0,
-                    y: 150,
-                    ease: 'power4.out',
-                    stagger: .1
+    //             tl.from([
+    //                 pTxt1Ref.current,
+    //                 pTxt2Ref.current,
+    //                 pTxt3Ref.current,
+    //                 pTxt4Ref.current,
+    //             ], {
+    //                 scrollTrigger: {
+    //                     trigger: pTxt1Ref.current,
+    //                     toggleActions: 'play none none none',
+    //                     start: 'top bottom',
+    //                     end: '-=50',
+    //                     scrub: true
+    //                 },
+    //                 duration: 1,
+    //                 autoAlpha: 0,
+    //                 y: 150,
+    //                 ease: 'power4.out',
+    //                 stagger: .1
 
-                });
+    //             });
 
-                // Kill animations 
-                return function () {
-                    tl.kill();
-                };
-             },
+    //             // Kill animations 
+    //             return function () {
+    //                 tl.kill();
+    //             };
+    //          },
 
-             "(max-width: 767px)": function () {
+    //          "(max-width: 767px)": function () {
 
-                tl.from([
-                    leadTxtRef.current,
-                    pTxt1Ref.current,
-                    pTxt2Ref.current,
-                    pTxt3Ref.current,
-                    pTxt4Ref.current,
-                ], {
-                    duration: 1,
-                    autoAlpha: 0,
-                    y: 150,
-                    ease: 'power4.out',
-                    stagger: .1
+    //             tl.from([
+    //                 leadTxtRef.current,
+    //                 pTxt1Ref.current,
+    //                 pTxt2Ref.current,
+    //                 pTxt3Ref.current,
+    //                 pTxt4Ref.current,
+    //             ], {
+    //                 duration: 1,
+    //                 autoAlpha: 0,
+    //                 y: 150,
+    //                 ease: 'power4.out',
+    //                 stagger: .1
 
-                }, '-=.8');
+    //             }, '-=.8');
 
-                // Kill animations 
-                return function () {
-                    tl.kill();
-                };
-             }
+    //             // Kill animations 
+    //             return function () {
+    //                 tl.kill();
+    //             };
+    //          }
 
-        });
+    //     });
 
-    }, []);
+    //     console.log(`
+    //     bottom————
+    //     bioTitleRef: ${bioTitleRef},
+    //     leadTxtRef: ${leadTxtRef},
+    //     pTxt1Ref: ${pTxt1Ref},
+    //     pTxt2Ref: ${pTxt2Ref},
+    //     pTxt3Ref: ${pTxt3Ref},
+    //     pTxt4Ref: ${pTxt4Ref},
+    //     `);
+
+    // }, []);
 
 
     return (

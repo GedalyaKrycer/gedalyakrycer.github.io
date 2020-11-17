@@ -1,12 +1,12 @@
-import React, { useEffect, useRef } from "react";
+import React, { useRef } from "react";
 import './style.css';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import favThings from '../../utils/about-fav-things.json';
-import { gsap } from "gsap";
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
-gsap.registerPlugin(ScrollTrigger);
+// import { gsap } from "gsap";
+// import { ScrollTrigger } from 'gsap/ScrollTrigger';
+// gsap.registerPlugin(ScrollTrigger);
 
 
 function FavoriteThings() {
@@ -19,47 +19,47 @@ function FavoriteThings() {
 
 
     // Save Initial Styles
-    ScrollTrigger.saveStyles(".fav__section-title");
+    // ScrollTrigger.saveStyles(".fav__section-title");
 
 
     // GSAP ANIMATIONS
-    useEffect(() => {
+    // useEffect(() => {
 
 
-        const tl = gsap.timeline();
+    // const tl = gsap.timeline();
 
-        ScrollTrigger.matchMedia({
+    // ScrollTrigger.matchMedia({
 
-            "(min-width: 768px)": function () {
+    //     "(min-width: 768px)": function () {
 
-                tl.from([
-                    favThingsTitleRef.current,
-                    favCardRef.current
-                ], {
-                    scrollTrigger: {
-                        trigger: favThingsTitleRef.current,
-                        toggleActions: 'play none none none',
-                        start: 'top bottom',
-                        end: '-=50',
-                        scrub: true
-                    },
-                    duration: 2,
-                    autoAlpha: 0,
-                    y: 100,
-                    ease: 'power4.out',
-                    stagger: .3
+    //         tl.from([
+    //             favThingsTitleRef.current,
+    //             favCardRef.current
+    //         ], {
+    //             scrollTrigger: {
+    //                 trigger: favThingsTitleRef.current,
+    //                 toggleActions: 'play none none none',
+    //                 start: 'top bottom',
+    //                 end: '-=50',
+    //                 scrub: true
+    //             },
+    //             duration: 2,
+    //             autoAlpha: 0,
+    //             y: 100,
+    //             ease: 'power4.out',
+    //             stagger: .3
 
-                });
+    //         });
 
-                // Kill animations 
-                return function () {
-                    tl.kill();
-                };
-            }
+    //         // Kill animations 
+    //         return function () {
+    //             tl.kill();
+    //         };
+    //     }
 
-        });
+    // });
 
-    }, []);
+    // }, []);
 
     const populatedCards = []
 

@@ -58,7 +58,7 @@ function App() {
           <div className="g__frame-left" ref={leftPinRef}></div>
           <GithubPin />
           <div className="g__frame-right" ref={rightPinRef}></div>
-          <ContactPin  />
+          <ContactPin />
           <Switch>
 
             <Route exact path="/" component={Home} />

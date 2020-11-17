@@ -6,27 +6,27 @@ import { FaGithub, FaLinkedinIn, FaBehance } from 'react-icons/fa';
 
 function GithubPin() {
 
-      // Ref for github icons
-      const githubContainerRef = useRef(null);
+    // Ref for github icons
+    const githubContainerRef = useRef(null);
 
-      
-      // GSAP ANIMATIONS
-      useEffect(() => {
 
-      const tl = gsap.timeline();
-  
-          tl.from(githubContainerRef.current, {
-              duration: 1,
-              autoAlpha: 0,
-              x: -20,
-              ease: 'back.out(2)',
-              delay: 1.3
-          })
-  
-  
-      }, [])
+    // GSAP ANIMATIONS
+    useEffect(() => {
 
-      
+        const tl = gsap.timeline();
+
+        tl.from(githubContainerRef.current, {
+            duration: 1,
+            autoAlpha: 0,
+            x: -20,
+            ease: 'back.out(2)',
+            delay: 1.3
+        })
+
+
+    }, [])
+
+
     return (
         <div className="githubPin" ref={githubContainerRef}>
             <a

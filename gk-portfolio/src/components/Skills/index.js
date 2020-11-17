@@ -144,49 +144,49 @@ function Skills() {
     useEffect(() => {
 
 
-        const tl = gsap.timeline();
+        // const tl = gsap.timeline();
 
-        ScrollTrigger.matchMedia({
+        // ScrollTrigger.matchMedia({
 
-            "(min-width: 768px)": function () {
+        //     "(min-width: 768px)": function () {
 
-                tl.from(skillTitleRef.current, {
-                    duration: 1,
-                    autoAlpha: 0,
-                    y: 50,
-                    ease: "expo.out",
-                    scrollTrigger: {
-                        trigger: skillTitleRef.current,
-                        toggleActions: 'play none none none',
-                        start: 'top bottom',
-                        end: '-=50',
-                        scrub: true
-                    },
-                })
+        //         tl.from(skillTitleRef.current, {
+        //             duration: 1,
+        //             autoAlpha: 0,
+        //             y: 50,
+        //             ease: "expo.out",
+        //             scrollTrigger: {
+        //                 trigger: skillTitleRef.current,
+        //                 toggleActions: 'play none none none',
+        //                 start: 'top bottom',
+        //                 end: '-=50',
+        //                 scrub: true
+        //             },
+        //         })
 
-                tl.from(introTxtRef.current, {
-                    duration: 1,
-                    autoAlpha: 0,
-                    y: -30,
-                    ease: 'power4.out',
-                    scrollTrigger: {
-                        trigger: introTxtRef.current,
-                        toggleActions: 'play none none none',
-                        start: 'top bottom',
-                        end: '-=50',
-                        scrub: true
-                    },
+        //         tl.from(introTxtRef.current, {
+        //             duration: 1,
+        //             autoAlpha: 0,
+        //             y: -30,
+        //             ease: 'power4.out',
+        //             scrollTrigger: {
+        //                 trigger: introTxtRef.current,
+        //                 toggleActions: 'play none none none',
+        //                 start: 'top bottom',
+        //                 end: '-=50',
+        //                 scrub: true
+        //             },
 
-                });
+        //         });
 
 
 
-                // Kill animations 
-                return function () {
-                    tl.kill();
-                };
-            }
-        });
+        //         // Kill animations 
+        //         return function () {
+        //             tl.kill();
+        //         };
+        //     }
+        // });
 
     }, []);
 

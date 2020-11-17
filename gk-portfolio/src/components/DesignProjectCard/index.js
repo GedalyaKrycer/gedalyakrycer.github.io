@@ -1,12 +1,12 @@
-import React, { useRef } from 'react';
+import React, { useEffect, useRef } from 'react';
 import './style.css';
 import { FaArrowRight } from 'react-icons/fa';
 import videoMp4 from '../../motion-design-web.mp4';
 import videoWebp from '../../motion-design-web.webp';
 import figmaThumbnail from '../../figma-thumbnail.jpg';
-// import { gsap } from "gsap";
-// import { ScrollTrigger } from 'gsap/ScrollTrigger';
-// gsap.registerPlugin(ScrollTrigger);
+import { gsap } from "gsap";
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+gsap.registerPlugin(ScrollTrigger);
 
 
 // This is static top section of the page and gives it semantic value.
@@ -19,61 +19,61 @@ function DesignPortfolio() {
     const designCard2Ref = useRef(null);
 
     // Save Initial Styles
-    // ScrollTrigger.saveStyles(".design-project__container");
+    ScrollTrigger.saveStyles(".design-project__container");
 
 
     // GSAP ANIMATIONS
-    // useEffect(() => {
+    useEffect(() => {
 
-    // const tl = gsap.timeline();
+        const tl = gsap.timeline();
 
-    // // Media Query Animation
-    // ScrollTrigger.matchMedia({
+        // Media Query Animation
+        ScrollTrigger.matchMedia({
 
-    //     "(min-width: 768px)": function () {
-
-
-    //         gsap.from(designCard1Ref.current, {
-    //             scrollTrigger: {
-    //                 trigger: designCard1Ref.current,
-    //                 toggleActions: 'play none none none',
-    //                 start: 'top bottom',
-    //                 end: '-=50',
-    //                 scrub: true
-    //             },
-    //             duration: 2,
-    //             autoAlpha: 0,
-    //             y: 100,
-    //             scale: .8,
-    //             ease: 'power4.out'
-
-    //         });
-
-    //         gsap.from(designCard2Ref.current, {
-    //             scrollTrigger: {
-    //                 trigger: designCard2Ref.current,
-    //                 toggleActions: 'play none none none',
-    //                 start: 'top bottom',
-    //                 end: '-=50',
-    //                 scrub: true
-    //             },
-    //             duration: 2,
-    //             autoAlpha: 0,
-    //             y: 100,
-    //             scale: .8,
-    //             ease: 'power4.out'
-    //         });
-
-    //         // Kill animations 
-    //         return function () {
-    //             tl.kill();
-    //         };
-    //     }
+            "(min-width: 768px)": function () {
 
 
-    // });
+                gsap.from(designCard1Ref.current, {
+                    scrollTrigger: {
+                        trigger: designCard1Ref.current,
+                        toggleActions: 'play none none none',
+                        start: 'top bottom',
+                        end: '-=50',
+                        scrub: true
+                    },
+                    duration: 2,
+                    autoAlpha: 0,
+                    y: 100,
+                    scale: .8,
+                    ease: 'power4.out'
 
-    // }, [])
+                });
+
+                gsap.from(designCard2Ref.current, {
+                    scrollTrigger: {
+                        trigger: designCard2Ref.current,
+                        toggleActions: 'play none none none',
+                        start: 'top bottom',
+                        end: '-=50',
+                        scrub: true
+                    },
+                    duration: 2,
+                    autoAlpha: 0,
+                    y: 100,
+                    scale: .8,
+                    ease: 'power4.out'
+                });
+
+                // Kill animations 
+                return function () {
+                    tl.kill();
+                };
+            }
+
+
+        });
+
+    }, [])
 
 
 

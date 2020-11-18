@@ -73,7 +73,6 @@ function Skills() {
     }
 
 
-
     // Function to show just the Design tool buttons
     const handleDesignFilter = () => {
 
@@ -141,7 +140,7 @@ function Skills() {
         ScrollTrigger.saveStyles([skillTitleRef.current, introTxtRef.current]);
 
 
-        var animateIn = gsap.timeline({
+        let animateIn = gsap.timeline({
             scrollTrigger: {
                 trigger: skillTitleRef.current,
                 toggleActions: 'play none none none',

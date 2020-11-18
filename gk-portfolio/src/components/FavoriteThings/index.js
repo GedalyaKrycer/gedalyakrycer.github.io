@@ -27,7 +27,7 @@ function FavoriteThings() {
         // Save Initial Styles
         ScrollTrigger.saveStyles(favThingsTitleRef.current);
 
-        var animateIn = gsap.timeline({
+        let animateIn = gsap.timeline({
             scrollTrigger: {
                 trigger: favThingsTitleRef.current,
                 toggleActions: 'play none none reverse',

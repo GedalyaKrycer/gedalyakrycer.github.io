@@ -144,73 +144,32 @@ function ContactForm() {
     // Ref for Contact title 
     const contactTitle1Ref = useRef(null);
 
-    // Ref for Or title
-    const orTitleRef = useRef(null);
 
-    // Ref for email text
-    const emailTxtRef = useRef(null);
-
-
-    // Save Initial Styles
-    ScrollTrigger.saveStyles(".contact__title, .contact__or-title, .contact__email-txt");
-
+    // GSAP Specific useEffect
     useEffect(() => {
 
-        const tl = gsap.timeline();
+        // Save Initial Styles
+        ScrollTrigger.saveStyles(contactTitle1Ref.current);
 
-        // Media Query Animation
-        ScrollTrigger.matchMedia({
+        let animateIn = gsap.timeline({
+            scrollTrigger: {
+                trigger: contactTitle1Ref.current,
+                toggleActions: 'play none none reverse',
+                start: 'top 70%',
+                end: '-=50'
+            }
+        });
 
-            "(min-width: 768px)": function () {
+        animateIn.fromTo(contactTitle1Ref.current, {
+            y: 50
 
+        },
+            {
+                y: 0
 
-                tl.from(contactTitle1Ref.current, {
-                    scrollTrigger: {
-                        trigger: contactTitle1Ref.current,
-                        toggleActions: 'play none none none',
-                        start: 'top bottom',
-                        scrub: true
-                    },
-                    duration: 2,
-                    y: 120,
-                    ease: 'power4.out'
-
-                });
-
-                tl.from(orTitleRef.current, {
-                    duration: 1,
-                    y: 50,
-                    ease: "expo.out",
-                    scrollTrigger: {
-                        trigger: orTitleRef.current,
-                        toggleActions: 'play none none none',
-                        start: 'top bottom',
-                        scrub: true
-                    },
-                })
-
-                tl.from(emailTxtRef.current, {
-                    duration: 1,
-                    y: -30,
-                    ease: 'power4.out',
-                    scrollTrigger: {
-                        trigger: emailTxtRef.current,
-                        toggleActions: 'play none none none',
-                        start: 'top bottom',
-                        scrub: true
-
-                    },
-
-                });
-
-                // Kill animations 
-                return function () {
-                    tl.kill();
-                };
             }
 
-
-        });
+        );
 
     }, [])
 
@@ -379,8 +338,8 @@ function ContactForm() {
                 </Row>
 
                 <div className="contact__email-container">
-                    <h2 className="contact__or-title" ref={orTitleRef}>or</h2>
-                    <div className="contact__email-txt" ref={emailTxtRef}>
+                    <h2 className="contact__or-title">or</h2>
+                    <div className="contact__email-txt">
                         <p className="g__body-lg">You can email me at</p>
 
                         <p>

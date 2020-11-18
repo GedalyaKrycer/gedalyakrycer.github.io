@@ -52,45 +52,49 @@ function DevProjectCard({ img, title, tech, deployLink, repoLink }) {
     // Ref for title pin border
     const devCardsRef = useRef(null);
 
-    // Save Initial Styles
-    ScrollTrigger.saveStyles(".g_projects-container");
 
     // GSAP ANIMATIONS
     useEffect(() => {
 
+        // Save Initial Styles
+        ScrollTrigger.saveStyles(devCardsRef.current);
 
-        const tl = gsap.timeline();
+        let animateIn = gsap.timeline({
+            scrollTrigger: {
+                trigger: devCardsRef.current,
+                start: 'top bottom',
+                end: '-=50',
+                scrub: true,
+                toggleActions: 'play none none reverse'
+            }
+        });
+
 
         // Media Query Animation
         ScrollTrigger.matchMedia({
 
             "(min-width: 768px)": function () {
+                animateIn.clear();
 
-                gsap.from(devCardsRef.current, {
+                animateIn.from(devCardsRef.current, {
                     duration: 2,
                     opacity: 0,
                     y: 100,
                     scale: .8,
-                    ease: 'power4.out',
-                    scrollTrigger: {
-                        trigger: devCardsRef.current,
-                        start: 'top bottom',
-                        end: '-=50',
-                        scrub: true,
-                        toggleActions: 'play none none reverse'
-                    }
+                    ease: 'power4.out'
                 });
 
 
                 // Kill animations 
                 return function () {
-                    tl.kill();
+                    animateIn.kill();
                 };
             },
 
             "(max-width: 767px)": function () {
+                animateIn.clear();
 
-                gsap.from(devCardsRef.current, {
+                animateIn.from(devCardsRef.current, {
                     delay: 1.2,
                     duration: 2,
                     opacity: 0,
@@ -102,7 +106,7 @@ function DevProjectCard({ img, title, tech, deployLink, repoLink }) {
 
                 // Kill animations 
                 return function () {
-                    tl.kill();
+                    animateIn.kill();
                 };
             }
 

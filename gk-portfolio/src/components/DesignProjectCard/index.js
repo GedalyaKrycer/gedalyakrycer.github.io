@@ -32,7 +32,7 @@ function DesignPortfolio() {
             scrollTrigger: {
                 trigger: designCard1Ref.current,
                 toggleActions: 'play none none none',
-                start: 'top center',
+                start: 'top bottom',
                 // end: '-=100',
                 scrub: true
             },
@@ -48,7 +48,7 @@ function DesignPortfolio() {
             scrollTrigger: {
                 trigger: designCard2Ref.current,
                 toggleActions: 'play none none none',
-                start: 'top center',
+                start: 'top bottom',
                 // end: '-=100',
                 scrub: true
             },

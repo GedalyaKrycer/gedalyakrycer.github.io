@@ -31,7 +31,7 @@ function FavoriteThings() {
             scrollTrigger: {
                 trigger: favThingsTitleRef.current,
                 toggleActions: 'play none none reverse',
-                start: 'top 70%',
+                start: 'top bottom',
                 end: '-=50'
             }
         });
@@ -43,7 +43,6 @@ function FavoriteThings() {
 
             autoAlpha: 0,
             y: 200,
-            ease: 'power4.out'
 
         }, {
             duration: 3,

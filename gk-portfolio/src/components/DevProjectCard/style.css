@@ -4,11 +4,14 @@
     justify-content: space-between;
 }
 
+.dev-project__min-width {
+    min-width: 280px;
+    min-height: 190px;
+}
+
 .dev-project__meta-container {
     padding: 125px 30px 1px;
     max-width: 415px;
-    
-    
 }
 
 /* Bootstrap .button Class Overide */

@@ -14,7 +14,7 @@ function Bio() {
     const bioTitleRef = useRef(null);
 
     // Ref for Lead Text
-    const TxtContainerRef = useRef(null);
+    const txtContainerRef = useRef(null);
 
     // Ref for Lead Text
     const leadTxtRef = useRef(null);
@@ -40,7 +40,7 @@ function Bio() {
         // Save Initial Styles
         ScrollTrigger.saveStyles([
             bioTitleRef.current,
-            TxtContainerRef.current,
+            txtContainerRef.current,
             leadTxtRef.current,
             pTxt1Ref.current,
             pTxt2Ref.current,
@@ -69,7 +69,7 @@ function Bio() {
                 ease: "expo"
             }, 1);
 
-            tl.from(TxtContainerRef.current, {
+            tl.from(txtContainerRef.current, {
                 autoAlpha: 0,
                 y: 50,
                 ease: "expo"
@@ -101,7 +101,7 @@ function Bio() {
         "(max-width: 767px)": function () {
             gsap.from(
             [
-                TxtContainerRef.current,
+                txtContainerRef.current,
                 leadTxtRef.current,
                 pTxt1Ref.current,
                 pTxt2Ref.current,
@@ -127,7 +127,7 @@ function Bio() {
 
                 <Row 
                     className="justify-content-md-center g_negative-margin"
-                    ref={TxtContainerRef}
+                    ref={txtContainerRef}
                 >
                     <Col className="g_white-color" lg={8}>
                         <p 

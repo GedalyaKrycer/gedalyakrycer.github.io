@@ -48,32 +48,35 @@ function Bio() {
             pTxt4Ref.current
         ]);
 
+        gsap.fromTo(
+            bioTitleRef.current,
+        {
+            autoAlpha: 0,
+            y: 50,
+            ease: "expo"
+        }, 
+        {
+            autoAlpha: 1,
+            y: 0,
+            ease: "expo"
+        },
+        1.5);
+
         ScrollTrigger.matchMedia({
         "(min-width: 768px)": function () {
-            
-            
-            const tl = gsap.timeline({
-            defaults: {
-                duration: 1,
-                ease: "power4"
-            }
-            });
 
 
-
-            tl.from(
-                bioTitleRef.current,
+            gsap.fromTo(txtContainerRef.current, {
+                autoAlpha: 0,
+                y: 50,
+                ease: "expo"
+            }, 
             {
-                autoAlpha: 0,
-                y: 50,
+                autoAlpha: 1,
+                y: 0,
                 ease: "expo"
-            }, 1);
-
-            tl.from(txtContainerRef.current, {
-                autoAlpha: 0,
-                y: 50,
-                ease: "expo"
-            }, 1.5)
+            },
+            1.5)
 
 
             gsap.from(
@@ -96,9 +99,12 @@ function Bio() {
                 stagger: 0.1
             }
             );
+
         },
 
         "(max-width: 767px)": function () {
+
+             
             gsap.from(
             [
                 txtContainerRef.current,
@@ -116,6 +122,7 @@ function Bio() {
                 stagger: 0.1
             }
             );
+
         }
         });
     }, []);

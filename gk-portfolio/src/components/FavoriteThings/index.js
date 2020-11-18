@@ -27,37 +27,30 @@ function FavoriteThings() {
         // Save Initial Styles
         ScrollTrigger.saveStyles(favThingsTitleRef.current);
 
-        ScrollTrigger.matchMedia({
-
-            "(min-width: 768px)": function () {
-
-                const tl = gsap.timeline();
-
-                tl.from([
-                    favThingsTitleRef.current,
-                    favCardRef.current
-                ], {
-                    scrollTrigger: {
-                        trigger: favThingsTitleRef.current,
-                        toggleActions: 'play none none none',
-                        start: 'top bottom',
-                        // end: '-=50',
-                        scrub: true
-                    },
-                    duration: 2,
-                    autoAlpha: 0,
-                    y: 200,
-                    ease: 'power4.out',
-                    stagger: .3
-
-                });
-
-                // Kill animations 
-                return function () {
-                    tl.kill();
-                };
+        var animateIn = gsap.timeline({
+            scrollTrigger: {
+                trigger: favThingsTitleRef.current,
+                toggleActions: 'play none none reverse',
+                start: 'top 70%',
+                end: '-=50'
             }
+        });
 
+        animateIn.fromTo([
+            favThingsTitleRef.current,
+            favCardRef.current
+        ], {
+
+            autoAlpha: 0,
+            y: 200,
+            ease: 'power4.out'
+
+        }, {
+            duration: 3,
+            autoAlpha: 1,
+            y: 0,
+            ease: 'power4.out',
+            stagger: .3
         });
 
     }, []);

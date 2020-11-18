@@ -39,7 +39,6 @@ function Bio() {
         
         // Save Initial Styles
         ScrollTrigger.saveStyles([
-            bioTitleRef.current,
             txtContainerRef.current,
             leadTxtRef.current,
             pTxt1Ref.current,
@@ -52,15 +51,14 @@ function Bio() {
             bioTitleRef.current,
         {
             autoAlpha: 0,
-            y: 50,
-            ease: "expo"
+            y: 50
         }, 
         {
             autoAlpha: 1,
             y: 0,
-            ease: "expo"
-        },
-        1.5);
+            ease: "expo",
+            delay: 1
+        });
 
         ScrollTrigger.matchMedia({
 

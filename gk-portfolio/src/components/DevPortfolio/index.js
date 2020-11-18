@@ -18,15 +18,18 @@ function DevPortfolio() {
     // GSAP ANIMATIONS
     useEffect(() => {
 
-        const tl = gsap.timeline();
-
-        tl.from(devTitleRef.current, {
-            duration: 1,
-            autoAlpha: 0,
-            y: 50,
-            ease: "expo.out",
-            delay: 1
-        })
+        gsap.fromTo(
+            devTitleRef.current,
+            {
+                autoAlpha: 0,
+                y: 50
+            },
+            {
+                autoAlpha: 1,
+                y: 0,
+                ease: "expo",
+                delay: 1
+            });
 
 
     }, [])

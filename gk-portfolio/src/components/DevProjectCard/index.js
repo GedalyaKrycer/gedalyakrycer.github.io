@@ -94,7 +94,7 @@ function DevProjectCard({ img, title, tech, deployLink, repoLink }) {
             "(max-width: 767px)": function () {
                 animateIn.clear();
 
-                animateIn.from(devCardsRef.current, {
+                gsap.from(devCardsRef.current, {
                     delay: 1.2,
                     duration: 2,
                     opacity: 0,

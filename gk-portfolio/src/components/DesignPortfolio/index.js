@@ -16,41 +16,30 @@ function DevPortfolio() {
     const designTitleRef = useRef(null);
 
 
-    // Save Initial Styles
-    ScrollTrigger.saveStyles("h2");
+
 
 
     // GSAP ANIMATIONS
     useEffect(() => {
 
+        // Save Initial Styles
+        ScrollTrigger.saveStyles(designTitleRef.current);
+
+
 
         const tl = gsap.timeline();
 
-        // Media Query Animation
-        ScrollTrigger.matchMedia({
-
-            "(min-width: 768px)": function () {
-
-                tl.from(designTitleRef.current, {
-                    duration: 1,
-                    autoAlpha: 0,
-                    y: -100,
-                    scrollTrigger: {
-                        trigger: designTitleRef.current,
-                        start: 'top bottom',
-                        end: '-=50',
-                        scrub: true,
-                        toggleActions: 'play none none reverse'
-                    }
-                })
-
-                // Kill animations 
-                return function () {
-                    tl.kill();
-                };
+        tl.from(designTitleRef.current, {
+            duration: 1,
+            autoAlpha: 0,
+            y: -100,
+            scrollTrigger: {
+                trigger: designTitleRef.current,
+                start: 'top bottom',
+                end: '-=50',
+                scrub: true,
+                toggleActions: 'play none none reverse'
             }
-
-
         });
 
     }, [])

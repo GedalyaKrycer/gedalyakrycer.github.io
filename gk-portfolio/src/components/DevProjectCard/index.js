@@ -65,7 +65,7 @@ function DevProjectCard({ img, title, tech, deployLink, repoLink }) {
                 start: 'top bottom',
                 end: '-=50',
                 scrub: true,
-                toggleActions: 'play none none reverse'
+                toggleActions: 'play none none none'
             }
         });
 

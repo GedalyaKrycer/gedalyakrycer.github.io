@@ -26,7 +26,6 @@ function DevPortfolio() {
         ScrollTrigger.saveStyles(designTitleRef.current);
 
 
-
         const tl = gsap.timeline();
 
         tl.from(designTitleRef.current, {

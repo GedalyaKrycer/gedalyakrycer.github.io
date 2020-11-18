@@ -134,59 +134,45 @@ function Skills() {
 
 
 
-
-
-    // Save Initial Styles
-    ScrollTrigger.saveStyles("h2, .skills__intro-text, .skills__tech-container");
-
-
     // GSAP ANIMATIONS
     useEffect(() => {
 
-
-        const tl = gsap.timeline();
-
-        ScrollTrigger.matchMedia({
-
-            "(min-width: 768px)": function () {
-
-                tl.from(skillTitleRef.current, {
-                    duration: 1,
-                    autoAlpha: 0,
-                    y: 50,
-                    ease: "expo.out",
-                    scrollTrigger: {
-                        trigger: skillTitleRef.current,
-                        toggleActions: 'play none none none',
-                        start: 'top bottom',
-                        end: '-=50',
-                        scrub: true
-                    },
-                })
-
-                tl.from(introTxtRef.current, {
-                    duration: 1,
-                    autoAlpha: 0,
-                    y: -30,
-                    ease: 'power4.out',
-                    scrollTrigger: {
-                        trigger: introTxtRef.current,
-                        toggleActions: 'play none none none',
-                        start: 'top bottom',
-                        end: '-=50',
-                        scrub: true
-                    },
-
-                });
+        // Save Initial Styles
+        ScrollTrigger.saveStyles([skillTitleRef.current, introTxtRef.current]);
 
 
-
-                // Kill animations 
-                return function () {
-                    tl.kill();
-                };
+        var animateIn = gsap.timeline({
+            scrollTrigger: {
+                trigger: skillTitleRef.current,
+                toggleActions: 'play none none none',
+                start: 'top bottom',
+                end: '-=50',
+                scrub: true
             }
         });
+
+        animateIn.fromTo(skillTitleRef.current, {
+            autoAlpha: 0,
+            y: 50
+        },
+            {
+                autoAlpha: 1,
+                y: 0,
+                ease: "expo.out"
+            })
+
+        animateIn.fromTo(introTxtRef.current, {
+            autoAlpha: 0,
+            y: 0
+
+        },
+            {
+                autoAlpha: 1,
+                y: -30,
+                ease: 'power4.out'
+            }
+
+        );
 
     }, []);
 

@@ -63,68 +63,71 @@ function Bio() {
         1.5);
 
         ScrollTrigger.matchMedia({
-        "(min-width: 768px)": function () {
+
+            // Full animation on desktop 
+            "(min-width: 768px)": function () {
 
 
-            gsap.fromTo(txtContainerRef.current, {
-                autoAlpha: 0,
-                y: 50,
-                ease: "expo"
-            }, 
-            {
-                autoAlpha: 1,
-                y: 0,
-                ease: "expo"
-            },
-            1.5)
-
-
-            gsap.from(
-            [
-                leadTxtRef.current,
-                pTxt1Ref.current,
-                pTxt2Ref.current,
-                pTxt3Ref.current,
-                pTxt4Ref.current
-            ],
-            {
-                scrollTrigger: {
-                    trigger: bioTitleRef.current,
-                    start: "top center",
-                    end: "-=50",
-                    scrub: true
+                gsap.fromTo(txtContainerRef.current, {
+                    autoAlpha: 0,
+                    y: 50,
+                    ease: "expo"
+                }, 
+                {
+                    autoAlpha: 1,
+                    y: 0,
+                    ease: "expo"
                 },
-                autoAlpha: 0,
-                y: 180,
-                stagger: 0.1
+                1.5)
+
+
+                gsap.from(
+                [
+                    leadTxtRef.current,
+                    pTxt1Ref.current,
+                    pTxt2Ref.current,
+                    pTxt3Ref.current,
+                    pTxt4Ref.current
+                ],
+                {
+                    scrollTrigger: {
+                        trigger: bioTitleRef.current,
+                        start: "top center",
+                        end: "-=50",
+                        scrub: true
+                    },
+                    autoAlpha: 0,
+                    y: 180,
+                    stagger: 0.1
+                }
+                );
+
+            },
+
+            // Simplifies animation on mobile 
+            "(max-width: 767px)": function () {
+
+                gsap.from(
+                [
+                    txtContainerRef.current,
+                    leadTxtRef.current,
+                    pTxt1Ref.current,
+                    pTxt2Ref.current,
+                    pTxt3Ref.current,
+                    pTxt4Ref.current
+                ],
+                {
+                    duration: 1,
+                    autoAlpha: 0,
+                    y: 150,
+                    ease: "power4",
+                    stagger: 0.1
+                }
+                );
+
             }
-            );
-
-        },
-
-        "(max-width: 767px)": function () {
-
-             
-            gsap.from(
-            [
-                txtContainerRef.current,
-                leadTxtRef.current,
-                pTxt1Ref.current,
-                pTxt2Ref.current,
-                pTxt3Ref.current,
-                pTxt4Ref.current
-            ],
-            {
-                duration: 1,
-                autoAlpha: 0,
-                y: 150,
-                ease: "power4",
-                stagger: 0.1
-            }
-            );
-
-        }
         });
+        
     }, []);
 
     return (

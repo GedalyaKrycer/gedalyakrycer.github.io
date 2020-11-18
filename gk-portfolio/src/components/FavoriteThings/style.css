@@ -1,8 +1,12 @@
+.fav__section-container {
+    margin-top: 10rem;
+    
+}
+
 .fav__section-title {
     position: relative;
     text-align: center;
     color: var(--light-grey);
-    margin-top: 4rem;
     margin-bottom: 3rem;
     font-size: 22px;
     

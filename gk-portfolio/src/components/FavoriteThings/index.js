@@ -18,19 +18,20 @@ function FavoriteThings() {
     const favCardRef = useRef(null);
 
 
-    // Save Initial Styles
-    ScrollTrigger.saveStyles(".fav__section-title");
+
 
 
     // GSAP ANIMATIONS
     useEffect(() => {
 
-
-        const tl = gsap.timeline();
+        // Save Initial Styles
+        ScrollTrigger.saveStyles(favThingsTitleRef.current);
 
         ScrollTrigger.matchMedia({
 
             "(min-width: 768px)": function () {
+
+                const tl = gsap.timeline();
 
                 tl.from([
                     favThingsTitleRef.current,
@@ -40,12 +41,12 @@ function FavoriteThings() {
                         trigger: favThingsTitleRef.current,
                         toggleActions: 'play none none none',
                         start: 'top bottom',
-                        end: '-=50',
+                        // end: '-=50',
                         scrub: true
                     },
                     duration: 2,
                     autoAlpha: 0,
-                    y: 100,
+                    y: 200,
                     ease: 'power4.out',
                     stagger: .3
 
@@ -86,7 +87,7 @@ function FavoriteThings() {
 
     return (
         <section>
-            <Container>
+            <Container className="fav__section-container">
 
                 <h3 className="fav__section-title" ref={favThingsTitleRef}>Things I enjoy when not coding…</h3>
                 <Row className="justify-content-md-center" ref={favCardRef}>

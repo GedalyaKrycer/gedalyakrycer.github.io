@@ -14,6 +14,9 @@ function Bio() {
     const bioTitleRef = useRef(null);
 
     // Ref for Lead Text
+    const TxtContainerRef = useRef(null);
+
+    // Ref for Lead Text
     const leadTxtRef = useRef(null);
 
     // Ref for Paragraph Text 1 
@@ -28,122 +31,108 @@ function Bio() {
     // Ref for Paragraph Text 4
     const pTxt4Ref = useRef(null);
 
-  
-    // Save Initial Styles
-    ScrollTrigger.saveStyles(".g__body-lg");
 
 
-    // GSAP ANIMATIONS
+
+     // GSAP ANIMATIONS
     useEffect(() => {
-
-        console.log(`
-        top————
-        bioTitleRef: ${bioTitleRef},
-        leadTxtRef: ${leadTxtRef},
-        pTxt1Ref: ${pTxt1Ref},
-        pTxt2Ref: ${pTxt2Ref},
-        pTxt3Ref: ${pTxt3Ref},
-        pTxt4Ref: ${pTxt4Ref},
-        `);
-
-
-    const tl = gsap.timeline();
-     
+        
+        // Save Initial Styles
+        ScrollTrigger.saveStyles([
+            bioTitleRef.current,
+            TxtContainerRef.current,
+            leadTxtRef.current,
+            pTxt1Ref.current,
+            pTxt2Ref.current,
+            pTxt3Ref.current,
+            pTxt4Ref.current
+        ]);
 
         ScrollTrigger.matchMedia({
+        "(min-width: 768px)": function () {
+            
+            
+            const tl = gsap.timeline({
+            defaults: {
+                duration: 1,
+                ease: "power4"
+            }
+            });
 
-            "(min-width: 768px)": function () {
 
-                tl.from(bioTitleRef.current, {
-                    duration: 1,
-                    autoAlpha: 0,
-                    y: 50,
-                    ease: "expo.out",
-                    delay: 1
-                })
-        
-                tl.from(leadTxtRef.current, {
-                    duration: 1,
-                    autoAlpha: 0,
-                    y: -30,
-                    ease: 'power4.out',
-                    stagger: .1
-        
-                }, '-=1');
 
-                tl.from([
-                    pTxt1Ref.current,
-                    pTxt2Ref.current,
-                    pTxt3Ref.current,
-                    pTxt4Ref.current,
-                ], {
-                    scrollTrigger: {
-                        trigger: pTxt1Ref.current,
-                        toggleActions: 'play none none none',
-                        start: 'top bottom',
-                        end: '-=50',
-                        scrub: true
-                    },
-                    duration: 1,
-                    autoAlpha: 0,
-                    y: 150,
-                    ease: 'power4.out',
-                    stagger: .1
+            tl.from(
+                bioTitleRef.current,
+            {
+                autoAlpha: 0,
+                y: 50,
+                ease: "expo"
+            }, 1);
 
-                });
+            tl.from(TxtContainerRef.current, {
+                autoAlpha: 0,
+                y: 50,
+                ease: "expo"
+            }, 1.5)
 
-                // Kill animations 
-                return function () {
-                    tl.kill();
-                };
-             },
 
-             "(max-width: 767px)": function () {
+            gsap.from(
+            [
+                leadTxtRef.current,
+                pTxt1Ref.current,
+                pTxt2Ref.current,
+                pTxt3Ref.current,
+                pTxt4Ref.current
+            ],
+            {
+                scrollTrigger: {
+                    trigger: bioTitleRef.current,
+                    start: "top center",
+                    end: "-=50",
+                    scrub: true
+                },
+                autoAlpha: 0,
+                y: 180,
+                stagger: 0.1
+            }
+            );
+        },
 
-                tl.from([
-                    leadTxtRef.current,
-                    pTxt1Ref.current,
-                    pTxt2Ref.current,
-                    pTxt3Ref.current,
-                    pTxt4Ref.current,
-                ], {
-                    duration: 1,
-                    autoAlpha: 0,
-                    y: 150,
-                    ease: 'power4.out',
-                    stagger: .1
-
-                }, '-=.8');
-
-                // Kill animations 
-                return function () {
-                    tl.kill();
-                };
-             }
-
+        "(max-width: 767px)": function () {
+            gsap.from(
+            [
+                TxtContainerRef.current,
+                leadTxtRef.current,
+                pTxt1Ref.current,
+                pTxt2Ref.current,
+                pTxt3Ref.current,
+                pTxt4Ref.current
+            ],
+            {
+                duration: 1,
+                autoAlpha: 0,
+                y: 150,
+                ease: "power4",
+                stagger: 0.1
+            }
+            );
+        }
         });
-
-        console.log(`
-        bottom————
-        bioTitleRef: ${bioTitleRef},
-        leadTxtRef: ${leadTxtRef},
-        pTxt1Ref: ${pTxt1Ref},
-        pTxt2Ref: ${pTxt2Ref},
-        pTxt3Ref: ${pTxt3Ref},
-        pTxt4Ref: ${pTxt4Ref},
-        `);
-
     }, []);
-
 
     return (
         <section>
             <Container>
                 <h2 ref={bioTitleRef}>Bio</h2>
 
-                <Row className="justify-content-md-center g_negative-margin">
+                <Row 
+                    className="justify-content-md-center g_negative-margin"
+                    ref={TxtContainerRef}
+                >
                     <Col className="g_white-color" lg={8}>
-                        <p className="g__body-lg" ref={leadTxtRef}>
+                        <p 
+                        className="g__body-lg" 
+                        ref={leadTxtRef}>
                             Hi there! I am a Vegas-based front-end developer and creative, who obsesses over the details and loves learning new technologies. 
                             
                         </p>

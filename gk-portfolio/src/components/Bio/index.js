@@ -1,17 +1,20 @@
-import React, { useRef } from "react";
+import React, { useEffect, useRef } from "react";
 import './style.css';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-// import { gsap } from "gsap";
-// import { ScrollTrigger } from 'gsap/ScrollTrigger';
-// gsap.registerPlugin(ScrollTrigger);
+import { gsap } from "gsap";
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+gsap.registerPlugin(ScrollTrigger);
 
 // This is static top section of the page and gives it semantic value.
 function Bio() {
 
     // Ref for Bio Title
     const bioTitleRef = useRef(null);
+
+    // Ref for Lead Text
+    const txtContainerRef = useRef(null);
 
     // Ref for Lead Text
     const leadTxtRef = useRef(null);
@@ -28,122 +31,116 @@ function Bio() {
     // Ref for Paragraph Text 4
     const pTxt4Ref = useRef(null);
 
-  
-    // Save Initial Styles
-    // ScrollTrigger.saveStyles(".g__body-lg");
 
 
-    // GSAP ANIMATIONS
-    // useEffect(() => {
 
-    //     console.log(`
-    //     top————
-    //     bioTitleRef: ${bioTitleRef},
-    //     leadTxtRef: ${leadTxtRef},
-    //     pTxt1Ref: ${pTxt1Ref},
-    //     pTxt2Ref: ${pTxt2Ref},
-    //     pTxt3Ref: ${pTxt3Ref},
-    //     pTxt4Ref: ${pTxt4Ref},
-    //     `);
-
-
-    // const tl = gsap.timeline();
-     
-
-    //     ScrollTrigger.matchMedia({
-
-    //         "(min-width: 768px)": function () {
-
-    //             tl.from(bioTitleRef.current, {
-    //                 duration: 1,
-    //                 autoAlpha: 0,
-    //                 y: 50,
-    //                 ease: "expo.out",
-    //                 delay: 1
-    //             })
+     // GSAP ANIMATIONS
+    useEffect(() => {
         
-    //             tl.from(leadTxtRef.current, {
-    //                 duration: 1,
-    //                 autoAlpha: 0,
-    //                 y: -30,
-    //                 ease: 'power4.out',
-    //                 stagger: .1
+        // Save Initial Styles
+        ScrollTrigger.saveStyles([
+            txtContainerRef.current,
+            leadTxtRef.current,
+            pTxt1Ref.current,
+            pTxt2Ref.current,
+            pTxt3Ref.current,
+            pTxt4Ref.current
+        ]);
+
+        gsap.fromTo(
+            bioTitleRef.current,
+        {
+            autoAlpha: 0,
+            y: 50
+        }, 
+        {
+            autoAlpha: 1,
+            y: 0,
+            ease: "expo",
+            delay: 1
+        });
+
+        ScrollTrigger.matchMedia({
+
+            // Full animation on desktop 
+            "(min-width: 768px)": function () {
+
+
+                gsap.fromTo(txtContainerRef.current, {
+                    autoAlpha: 0,
+                    y: 50,
+                    ease: "expo"
+                }, 
+                {
+                    autoAlpha: 1,
+                    y: 0,
+                    ease: "expo"
+                },
+                1.5)
+
+
+                gsap.from(
+                [
+                    leadTxtRef.current,
+                    pTxt1Ref.current,
+                    pTxt2Ref.current,
+                    pTxt3Ref.current,
+                    pTxt4Ref.current
+                ],
+                {
+                    scrollTrigger: {
+                        trigger: bioTitleRef.current,
+                        start: "top center",
+                        end: "-=50",
+                        scrub: true
+                    },
+                    autoAlpha: 0,
+                    y: 180,
+                    stagger: 0.1
+                }
+                );
+
+            },
+
+            // Simplifies animation on mobile 
+            "(max-width: 767px)": function () {
+
+                gsap.from(
+                [
+                    txtContainerRef.current,
+                    leadTxtRef.current,
+                    pTxt1Ref.current,
+                    pTxt2Ref.current,
+                    pTxt3Ref.current,
+                    pTxt4Ref.current
+                ],
+                {
+                    duration: 1,
+                    autoAlpha: 0,
+                    y: 150,
+                    ease: "power4",
+                    stagger: 0.1
+                }
+                );
+
+            }
+        });
         
-    //             }, '-=1');
-
-    //             tl.from([
-    //                 pTxt1Ref.current,
-    //                 pTxt2Ref.current,
-    //                 pTxt3Ref.current,
-    //                 pTxt4Ref.current,
-    //             ], {
-    //                 scrollTrigger: {
-    //                     trigger: pTxt1Ref.current,
-    //                     toggleActions: 'play none none none',
-    //                     start: 'top bottom',
-    //                     end: '-=50',
-    //                     scrub: true
-    //                 },
-    //                 duration: 1,
-    //                 autoAlpha: 0,
-    //                 y: 150,
-    //                 ease: 'power4.out',
-    //                 stagger: .1
-
-    //             });
-
-    //             // Kill animations 
-    //             return function () {
-    //                 tl.kill();
-    //             };
-    //          },
-
-    //          "(max-width: 767px)": function () {
-
-    //             tl.from([
-    //                 leadTxtRef.current,
-    //                 pTxt1Ref.current,
-    //                 pTxt2Ref.current,
-    //                 pTxt3Ref.current,
-    //                 pTxt4Ref.current,
-    //             ], {
-    //                 duration: 1,
-    //                 autoAlpha: 0,
-    //                 y: 150,
-    //                 ease: 'power4.out',
-    //                 stagger: .1
-
-    //             }, '-=.8');
-
-    //             // Kill animations 
-    //             return function () {
-    //                 tl.kill();
-    //             };
-    //          }
-
-    //     });
-
-    //     console.log(`
-    //     bottom————
-    //     bioTitleRef: ${bioTitleRef},
-    //     leadTxtRef: ${leadTxtRef},
-    //     pTxt1Ref: ${pTxt1Ref},
-    //     pTxt2Ref: ${pTxt2Ref},
-    //     pTxt3Ref: ${pTxt3Ref},
-    //     pTxt4Ref: ${pTxt4Ref},
-    //     `);
-
-    // }, []);
-
+    }, []);
 
     return (
         <section>
             <Container>
                 <h2 ref={bioTitleRef}>Bio</h2>
 
-                <Row className="justify-content-md-center g_negative-margin">
+                <Row 
+                    className="justify-content-md-center g_negative-margin"
+                    ref={txtContainerRef}
+                >
                     <Col className="g_white-color" lg={8}>
-                        <p className="g__body-lg" ref={leadTxtRef}>
+                        <p 
+                        className="g__body-lg" 
+                        ref={leadTxtRef}>
                             Hi there! I am a Vegas-based front-end developer and creative, who obsesses over the details and loves learning new technologies. 
                             
                         </p>

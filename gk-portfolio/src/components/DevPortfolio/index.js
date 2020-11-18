@@ -1,10 +1,10 @@
-import React, { useRef } from "react";
+import React, { useEffect, useRef } from "react";
 import './style.css';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import DevProjectCard from '../../components/DevProjectCard';
 import projects from '../../utils/projects.json';
-// import { gsap } from "gsap";
+import { gsap } from "gsap";
 
 
 // This is static top section of the page and gives it semantic value.
@@ -16,20 +16,23 @@ function DevPortfolio() {
     const devTitleRef = useRef(null);
 
     // GSAP ANIMATIONS
-    // useEffect(() => {
+    useEffect(() => {
 
-    // const tl = gsap.timeline();
+        gsap.fromTo(
+            devTitleRef.current,
+            {
+                autoAlpha: 0,
+                y: 50
+            },
+            {
+                autoAlpha: 1,
+                y: 0,
+                ease: "expo",
+                delay: 1
+            });
 
-    // tl.from(devTitleRef.current, {
-    //     duration: 1,
-    //     autoAlpha: 0,
-    //     y: 50,
-    //     ease: "expo.out",
-    //     delay: 1
-    // })
 
-
-    // }, [])
+    }, [])
 
 
     return (

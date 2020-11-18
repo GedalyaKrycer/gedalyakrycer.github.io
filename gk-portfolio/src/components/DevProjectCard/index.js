@@ -1,13 +1,13 @@
-import React, { useState, useRef } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 import './style.css';
 import { FaGithub, FaDesktop } from 'react-icons/fa';
 import { v4 as uuidv4 } from 'uuid';
 import Accordion from 'react-bootstrap/Accordion'
 import Card from 'react-bootstrap/Card'
 import { useAccordionToggle } from 'react-bootstrap/AccordionToggle';
-// import { gsap } from "gsap";
-// import { ScrollTrigger } from 'gsap/ScrollTrigger';
-// gsap.registerPlugin(ScrollTrigger);
+import { gsap } from "gsap";
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+gsap.registerPlugin(ScrollTrigger);
 
 function CustomToggle({ children, eventKey }) {
 
@@ -52,64 +52,68 @@ function DevProjectCard({ img, title, tech, deployLink, repoLink }) {
     // Ref for title pin border
     const devCardsRef = useRef(null);
 
-    // Save Initial Styles
-    // ScrollTrigger.saveStyles(".g_projects-container");
 
     // GSAP ANIMATIONS
-    // useEffect(() => {
+    useEffect(() => {
+
+        // Save Initial Styles
+        ScrollTrigger.saveStyles(devCardsRef.current);
+
+        let animateIn = gsap.timeline({
+            scrollTrigger: {
+                trigger: devCardsRef.current,
+                start: 'top bottom',
+                end: '-=50',
+                scrub: true,
+                toggleActions: 'play none none none'
+            }
+        });
 
 
-    // const tl = gsap.timeline();
+        // Media Query Animation
+        ScrollTrigger.matchMedia({
 
-    // // Media Query Animation
-    // ScrollTrigger.matchMedia({
+            "(min-width: 768px)": function () {
+                animateIn.clear();
 
-    //     "(min-width: 768px)": function () {
-
-    //         gsap.from(devCardsRef.current, {
-    //             duration: 2,
-    //             opacity: 0,
-    //             y: 100,
-    //             scale: .8,
-    //             ease: 'power4.out',
-    //             scrollTrigger: {
-    //                 trigger: devCardsRef.current,
-    //                 start: 'top bottom',
-    //                 end: '-=50',
-    //                 scrub: true,
-    //                 toggleActions: 'play none none reverse'
-    //             }
-    //         });
+                animateIn.from(devCardsRef.current, {
+                    duration: 2,
+                    opacity: 0,
+                    y: 100,
+                    scale: .8,
+                    ease: 'power4.out'
+                });
 
 
-    //         // Kill animations 
-    //         return function () {
-    //             tl.kill();
-    //         };
-    //     },
+                // Kill animations 
+                return function () {
+                    animateIn.kill();
+                };
+            },
 
-    //     "(max-width: 767px)": function () {
+            "(max-width: 767px)": function () {
+                animateIn.clear();
 
-    //         gsap.from(devCardsRef.current, {
-    //             delay: 1.2,
-    //             duration: 2,
-    //             opacity: 0,
-    //             y: 100,
-    //             scale: .8,
-    //             ease: 'power4.out'
-    //         });
-
-
-    //         // Kill animations 
-    //         return function () {
-    //             tl.kill();
-    //         };
-    //     }
+                animateIn.from(devCardsRef.current, {
+                    delay: 1.2,
+                    duration: 2,
+                    opacity: 0,
+                    y: 100,
+                    scale: .8,
+                    ease: 'power4.out'
+                });
 
 
-    // });
+                // Kill animations 
+                return function () {
+                    animateIn.kill();
+                };
+            }
 
-    // }, [])
+
+        });
+
+    }, [])
 
 
 

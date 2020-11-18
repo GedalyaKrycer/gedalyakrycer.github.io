@@ -73,6 +73,7 @@ function DevProjectCard({ img, title, tech, deployLink, repoLink }) {
         // Media Query Animation
         ScrollTrigger.matchMedia({
 
+            // Desktop animation only
             "(min-width: 768px)": function () {
                 animateIn.clear();
 
@@ -90,25 +91,6 @@ function DevProjectCard({ img, title, tech, deployLink, repoLink }) {
                     animateIn.kill();
                 };
             },
-
-            "(max-width: 767px)": function () {
-                animateIn.clear();
-
-                gsap.from(devCardsRef.current, {
-                    delay: 1.2,
-                    duration: 2,
-                    opacity: 0,
-                    y: 100,
-                    scale: .8,
-                    ease: 'power4.out'
-                });
-
-
-                // Kill animations 
-                return function () {
-                    animateIn.kill();
-                };
-            }
 
 
         });

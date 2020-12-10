@@ -100,7 +100,7 @@ function DevProjectCard({ img, title, tech, deployLink, repoLink }) {
 
 
     return (
-        <div className="g_projects-container" ref={devCardsRef}>
+        <div className="g_projects-container dev-project__min-width" ref={devCardsRef}>
             <Accordion>
                 <Card>
                     <div className="neumorphism">

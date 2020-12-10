@@ -1,5 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 import './style.css';
+import { HashLink as Link } from 'react-router-hash-link';
 import { gsap } from "gsap";
 
 
@@ -29,12 +30,11 @@ function ContactPin() {
 
     return (
         <div className="contactPin" ref={contactContainerRef}>
-            <a
-                href="/about#contact"
-                className="contactPin__link"
-            >
+            <Link
+                to="/about#contact"
+                className="contactPin__link">
                 Contact
-            </a>
+            </Link>
 
 
         </div>

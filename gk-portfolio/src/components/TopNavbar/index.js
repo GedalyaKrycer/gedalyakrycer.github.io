@@ -26,8 +26,6 @@ function TopNavbar() {
 
 
 
-
-
     // Ref for logo
     const navContainerRef = useRef(null);
 

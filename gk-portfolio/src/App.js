@@ -15,7 +15,7 @@ import { gsap } from "gsap";
 function App() {
   // Google Analytics Page Tracking
   useEffect(() => {
-    ReactGA.initialize('UA-122656834-1');
+    ReactGA.initialize('G-2ZT8T2BMCQ');
     ReactGA.pageview(window.location.pathname + window.location.search);
   }, [])
 

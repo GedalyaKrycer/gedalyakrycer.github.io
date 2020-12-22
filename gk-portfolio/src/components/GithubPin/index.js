@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 import { gsap } from "gsap";
 import './style.css';
-import { FaGithub, FaLinkedinIn, FaBehance } from 'react-icons/fa';
+import { FaGithub, FaLinkedinIn, FaDev } from 'react-icons/fa';
 
 
 function GithubPin() {
@@ -46,12 +46,12 @@ function GithubPin() {
                 <FaGithub />
             </a>
             <a
-                href="https://www.behance.net/gedalyakrycer"
+                href="https://dev.to/gedalyakrycer"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="githubPin_link"
             >
-                <FaBehance />
+                <FaDev />
             </a>
 
         </div>

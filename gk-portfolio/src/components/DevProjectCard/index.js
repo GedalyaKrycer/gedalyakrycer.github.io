@@ -24,7 +24,7 @@ function CustomToggle({ children, eventKey }) {
     return (
         <button
             onClick={decoratedOnClick}
-            className={`g_card-slide ${cardSlide ? "g_card-slide-up" : ""}`}
+            className={`g_card-slide dev-project--full-width ${cardSlide ? "g_card-slide-up" : ""}`}
         >
             {children}
         </button>
@@ -103,11 +103,11 @@ function DevProjectCard({ img, title, tech, deployLink, repoLink }) {
         <div className="g_projects-container dev-project__min-width" ref={devCardsRef}>
             <Accordion>
                 <Card>
-                    <div className="neumorphism">
+                    <div className="neumorphism force-width">
                         <CustomToggle eventKey="0">
 
 
-                            <img src={img} alt={title} className="g_project-img" />
+                            <img src={img} alt={title} className="g_project-img force-width" />
                         </CustomToggle>
                     </div>
                     <div className="g_meta-container dev-project__meta-container">

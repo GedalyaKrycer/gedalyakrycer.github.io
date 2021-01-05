@@ -44,7 +44,7 @@ function DevPortfolio() {
 
                     {projects.map(project => (
                         <DevProjectCard
-                            key={project.id}
+                            key={project.name + project.img}
                             img={project.img}
                             title={project.title}
                             tech={project.tech}

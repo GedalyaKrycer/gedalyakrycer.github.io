@@ -1,33 +1,43 @@
 [
     {
-        "id": 1,
         "img": "/assets/images/img-links/portfolio/Card/driverkick-thumbnail.jpg",
         "title": "Driver Kick Car Maintenance Tracker",
-        "tech": "React.js, JSX, Hooks, CSS, Figma, Node.js, MongoDB, Mongoose, Express, Passport, NHTSA Vehical API, Axios, react-bootstrap, react-contenteditable, react-ga, react-moment, bcrypt.js, Heroku",
+        "tech": "React.js, Hooks, CSS, Figma, Node.js, MongoDB, Mongoose, Express, Passport, NHTSA Vehical API, Axios, react-bootstrap, react-contenteditable, react-ga, react-moment, bcrypt.js, Heroku",
         "deployLink": "https://driverkick.herokuapp.com/",
         "repoLink": "https://github.com/NinaRocket/DRIVERkick"
     },
     {
-        "id": 2,
         "img": "/assets/images/img-links/portfolio/Card/t4l-thumbnail.jpg",
         "title": "Trust4Leaders",
         "tech": "Wordpress, Custom Theme, PHP, HTML, Bootstrap, Gulp, SASS, JavaScript, jQuery, ACF, Contact Form 7, Yoast, Sucuri Security, GSAP3, GDPR Cookie Banner, GoDaddy, Google Analytics",
         "deployLink": "https://trust4leaders.com/"
     },
     {
-        "id": 3,
+        "img": "/assets/images/img-links/portfolio/Card/dark-seeit-thumbnail.jpg",
+        "title": "Seeit Movie Tracker",
+        "tech": "React.js, Hooks, Redux, GSAP3, CSS Grids, Flexbox, CSS Animations, PWA, OMDB API, Axios, JavaScript, Figma",
+        "deployLink": "https://seeit.netlify.app/",
+        "repoLink": "https://github.com/GedalyaKrycer/screen-it"
+    },
+    {
         "img": "/assets/images/img-links/portfolio/Card/weather-thumbnail.jpg",
         "title": "Weather Forecaster",
-        "tech": "React.js, JSX, Hooks, CSS, Bulma, OpenWeather.js API, Unsplash API, Axios, JavaScript",
+        "tech": "React.js, Hooks, CSS, Bulma, OpenWeather.js API, Unsplash API, Axios, JavaScript",
         "deployLink": "https://weatherforecastreact.netlify.app",
         "repoLink": "https://github.com/GedalyaKrycer/weather-forecaster"
     },
     {
-        "id": 4,
         "img": "/assets/images/img-links/portfolio/Card/directory-thumbnail.jpg",
         "title": "DigiBit Team Directory",
-        "tech": "React.js, JSX, Hooks, CSS, Figma, JSON, react-bootstrap, react-lazyload, react-icons",
+        "tech": "React.js, Hooks, CSS, Figma, JSON, react-bootstrap, react-lazyload, react-icons",
         "deployLink": "https://unit-19-react-homework-employee-directory.netlify.app/",
         "repoLink": "https://github.com/GedalyaKrycer/digibit-employee-directory"
+    },
+    {
+        "img": "/assets/images/img-links/portfolio/Card/webdev-thumbnail.jpg",
+        "title": "WebDev Challenge Quiz",
+        "tech": "JavaScript, jQuery, HTML, CSS, Bootstrap",
+        "deployLink": "https://gedalyakrycer.github.io/web-dev-challenge-quiz/",
+        "repoLink": "https://github.com/GedalyaKrycer/web-dev-challenge-quiz"
     }
 ]

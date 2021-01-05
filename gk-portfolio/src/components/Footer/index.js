@@ -14,7 +14,12 @@ function TopNavbar() {
                 </LinkContainer>
 
 
-                <a href={resumeFile} download={true} className="footer__resume "><h6>View Resume</h6></a>
+                <a
+                    href={resumeFile}
+                    download={true}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="footer__resume "><h6>View Resume</h6></a>
 
 
                 <div className="footer__social-icons-container">

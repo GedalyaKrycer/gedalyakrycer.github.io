@@ -137,6 +137,7 @@ function TopNavbar() {
                     <a ref={resumeButtonRef}
                         href={resumeFile}
                         download={true}
+                        target="_blank" rel="noopener noreferrer"
                         className="nav__resume"><h6>View Resume</h6></a>
                 </Navbar.Collapse>
 

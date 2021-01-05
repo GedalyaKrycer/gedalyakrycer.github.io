@@ -48,6 +48,12 @@
         "type": "dev"
     },
     {
+        "name": "Redux",
+        "link": "https://seeit.netlify.app/",
+        "svg": "/assets/images/tech-icons/redux-tech-icon.svg",
+        "type": "dev"
+    },
+    {
         "name": "JavaScript",
         "link": "https://github.com/GedalyaKrycer/hw-10-employee-summary",
         "svg": "/assets/images/tech-icons/js-tech-icon.svg",

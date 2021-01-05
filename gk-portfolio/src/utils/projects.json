@@ -20,24 +20,10 @@
         "repoLink": "https://github.com/GedalyaKrycer/screen-it"
     },
     {
-        "img": "/assets/images/img-links/portfolio/Card/weather-thumbnail.jpg",
-        "title": "Weather Forecaster",
-        "tech": "React.js, Hooks, CSS, Bulma, OpenWeather.js API, Unsplash API, Axios, JavaScript",
-        "deployLink": "https://weatherforecastreact.netlify.app",
-        "repoLink": "https://github.com/GedalyaKrycer/weather-forecaster"
-    },
-    {
         "img": "/assets/images/img-links/portfolio/Card/directory-thumbnail.jpg",
         "title": "DigiBit Team Directory",
         "tech": "React.js, Hooks, CSS, Figma, JSON, react-bootstrap, react-lazyload, react-icons",
         "deployLink": "https://unit-19-react-homework-employee-directory.netlify.app/",
         "repoLink": "https://github.com/GedalyaKrycer/digibit-employee-directory"
-    },
-    {
-        "img": "/assets/images/img-links/portfolio/Card/webdev-thumbnail.jpg",
-        "title": "WebDev Challenge Quiz",
-        "tech": "JavaScript, jQuery, HTML, CSS, Bootstrap",
-        "deployLink": "https://gedalyakrycer.github.io/web-dev-challenge-quiz/",
-        "repoLink": "https://github.com/GedalyaKrycer/web-dev-challenge-quiz"
     }
 ]

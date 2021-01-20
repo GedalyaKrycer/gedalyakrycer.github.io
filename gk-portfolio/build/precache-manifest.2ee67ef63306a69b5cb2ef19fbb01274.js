@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "af0be901f4d88ecbe13e38029a42767b",
+    "revision": "0423b0b56859951fa3a545df99ef3ddd",
     "url": "/index.html"
   },
   {
@@ -12,11 +12,11 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/css/4.cb604739.chunk.css"
   },
   {
-    "revision": "5f70b8ff6a16137feed6",
+    "revision": "6df9ba26c78946ed6e07",
     "url": "/static/css/5.c41575e4.chunk.css"
   },
   {
-    "revision": "958de8a73f65545b0094",
+    "revision": "fb1b9ca4c793451d8743",
     "url": "/static/css/6.01e339e2.chunk.css"
   },
   {
@@ -24,11 +24,11 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/css/7.6b160784.chunk.css"
   },
   {
-    "revision": "4c3079658b7611886ea5",
+    "revision": "d7c86c41291327d9d240",
     "url": "/static/css/8.e40e9f39.chunk.css"
   },
   {
-    "revision": "28491867d0a60c2ba976",
+    "revision": "49719dc252f30f4fb12f",
     "url": "/static/css/main.de690bb0.chunk.css"
   },
   {
@@ -52,36 +52,36 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/js/4.cdb320a3.chunk.js"
   },
   {
-    "revision": "5f70b8ff6a16137feed6",
-    "url": "/static/js/5.ac2b60f9.chunk.js"
+    "revision": "6df9ba26c78946ed6e07",
+    "url": "/static/js/5.f0f351b3.chunk.js"
   },
   {
-    "revision": "958de8a73f65545b0094",
-    "url": "/static/js/6.8c8fe8c0.chunk.js"
+    "revision": "fb1b9ca4c793451d8743",
+    "url": "/static/js/6.80197c4b.chunk.js"
   },
   {
     "revision": "7feae5c10ca4ceef59ec",
     "url": "/static/js/7.4525bd8f.chunk.js"
   },
   {
-    "revision": "4c3079658b7611886ea5",
-    "url": "/static/js/8.7456f78f.chunk.js"
+    "revision": "d7c86c41291327d9d240",
+    "url": "/static/js/8.a64096c5.chunk.js"
   },
   {
-    "revision": "28491867d0a60c2ba976",
-    "url": "/static/js/main.8ee0d499.chunk.js"
+    "revision": "49719dc252f30f4fb12f",
+    "url": "/static/js/main.d3f82a55.chunk.js"
   },
   {
-    "revision": "5f87a5ce388e7ca275b6",
-    "url": "/static/js/runtime-main.694906f8.js"
+    "revision": "3c0385e7f7cd4e4249e3",
+    "url": "/static/js/runtime-main.a84758e2.js"
   },
   {
     "revision": "e4e4f43b6cc9f891359b348416abb87b",
     "url": "/static/media/figma-thumbnail.e4e4f43b.jpg"
   },
   {
-    "revision": "0400c10862d7eb0e7c50fb626d9cb930",
-    "url": "/static/media/gedalya-krycer-resume.0400c108.pdf"
+    "revision": "98a4a9f350fb56786e0cc87eaba4da4d",
+    "url": "/static/media/gedalya-krycer-resume.98a4a9f3.pdf"
   },
   {
     "revision": "ad28a9aabd4b96f66fa01cb01ecef255",

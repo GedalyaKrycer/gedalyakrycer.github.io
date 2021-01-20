@@ -7,6 +7,13 @@
         "repoLink": "https://github.com/NinaRocket/DRIVERkick"
     },
     {
+        "img": "/assets/images/img-links/portfolio/Card/shoppies-portfolio-thumbnail.jpg",
+        "title": "The Shoppies Movie Nominator",
+        "tech": "React.js, Hooks, SASS, CSS Grids, Flexbox, CSS Animations, Redux, Redux-Thunk, Axios, PWA, OMDB API, Javascript, Figma",
+        "deployLink": "https://the-shoppies-gyk.netlify.app/",
+        "repoLink": "https://github.com/GedalyaKrycer/the-shoppies"
+    },
+    {
         "img": "/assets/images/img-links/portfolio/Card/t4l-thumbnail.jpg",
         "title": "Trust4Leaders",
         "tech": "Wordpress, Custom Theme, PHP, HTML, Bootstrap, Gulp, SASS, JavaScript, jQuery, ACF, Contact Form 7, Yoast, Sucuri Security, GSAP3, GDPR Cookie Banner, GoDaddy, Google Analytics",
@@ -18,12 +25,5 @@
         "tech": "React.js, Hooks, Redux, GSAP3, CSS Grids, Flexbox, CSS Animations, PWA, OMDB API, Axios, JavaScript, Figma",
         "deployLink": "https://seeit.netlify.app/",
         "repoLink": "https://github.com/GedalyaKrycer/screen-it"
-    },
-    {
-        "img": "/assets/images/img-links/portfolio/Card/directory-thumbnail.jpg",
-        "title": "DigiBit Team Directory",
-        "tech": "React.js, Hooks, CSS, Figma, JSON, react-bootstrap, react-lazyload, react-icons",
-        "deployLink": "https://unit-19-react-homework-employee-directory.netlify.app/",
-        "repoLink": "https://github.com/GedalyaKrycer/digibit-employee-directory"
     }
 ]

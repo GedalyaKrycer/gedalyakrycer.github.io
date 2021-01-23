@@ -37,7 +37,7 @@ function DevPortfolio() {
     return (
         <section>
             <Container>
-                <h2 ref={devTitleRef}>Dev Work</h2>
+                <h2 ref={devTitleRef}>Coding</h2>
 
                 <Row className="justify-content-around g_negative-margin">
 

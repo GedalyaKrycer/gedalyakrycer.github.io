@@ -5,6 +5,8 @@ import Home from "./pages/Home/Home";
 import GithubPin from "./components/ui/LeftInfoPin/LeftInfoPin";
 import ContactPin from "./components/ui/RightInfoPin/RightInfoPin";
 import About from "./pages/About/About";
+import Articles from "./pages//Articles/Articles";
+import Contact from "./pages/Contact/Contact";
 import NotFound from "./pages/NotFound/NotFound";
 import TopNavbar from "./components/ui/TopNavbar/TopNavbar";
 import Footer from "./components/ui/Footer/Footer";
@@ -62,7 +64,9 @@ function App() {
           <Switch>
 
             <Route exact path="/" component={Home} />
+            <Route exact path="/articles" component={Articles} />
             <Route exact path="/about" component={About} />
+            <Route exact path="/contact" component={Contact} />
             <NotFound />
           </Switch>
         </main>

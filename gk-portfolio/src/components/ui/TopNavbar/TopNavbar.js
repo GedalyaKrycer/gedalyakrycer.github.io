@@ -1,17 +1,15 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import './topNavbar.css';
 import { gsap } from "gsap";
-import Navbar from 'react-bootstrap/Navbar';
-import Nav from 'react-bootstrap/Nav';
-import { LinkContainer } from "react-router-bootstrap";
+import { Link, NavLink } from 'react-router-dom';
 import { FaGithub, FaLinkedinIn, FaDev } from 'react-icons/fa';
 import resumeFile from "../../../gedalya-krycer-resume.pdf";
-import { usePortfolioContext } from '../../../utils/PortfolioContext';
 
-// This is static top section of the page and gives it semantic value.
+
+
 function TopNavbar() {
-    // Imports states from context
-    const { toggleBurgerMenu, setToggleBurgerMenu } = usePortfolioContext();
+
+    const [toggleBurgerMenu, setToggleBurgerMenu] = useState(true);
 
     // Toggles if the nav button is open or closes animation
     const handleBurgerMenu = () => {
@@ -20,7 +18,7 @@ function TopNavbar() {
 
 
     // Closes the nav button if a link is clicked 
-    const handleLinkClick = (e) => {
+    const handleLinkClick = () => {
         setToggleBurgerMenu(true)
     }
 
@@ -87,93 +85,142 @@ function TopNavbar() {
 
 
     return (
-        <div className="sticky-top nav__container" ref={navContainerRef}>
+        <nav
+            className="nav__container"
+            ref={navContainerRef}
+        >
+
+            {/* Mobile Logo */}
+            <Link
+                exact="true"
+                to="/"
+                className="nav__logo-container--mobile"
+            >
+
+                <img
+                    src="https://raw.githubusercontent.com/GedalyaKrycer/gedalyakrycer.github.io/46e78fe53858d535b8db1d9e7e42455fa0a8b090/gk-portfolio/public/assets/images/img-links/gk-logo-white.svg"
+                    alt="GK Logo"
+                    className="nav__logo-mobile"
+                />
+
+            </Link>
 
 
-            <Navbar collapseOnSelect expand="md">
-
-                <LinkContainer to="/" className="d-md-none">
-                    <Navbar.Brand>
-                        <img src="https://raw.githubusercontent.com/GedalyaKrycer/gedalyakrycer.github.io/46e78fe53858d535b8db1d9e7e42455fa0a8b090/gk-portfolio/public/assets/images/img-links/gk-logo-white.svg" alt="GK Logo" className="nav__logo-mobile" />
-                    </Navbar.Brand>
-                </LinkContainer>
-                <Navbar.Toggle aria-controls="responsive-navbar-nav" >
-                    <div onClick={handleBurgerMenu}
-                        className={`nav__toggle-btn ${!toggleBurgerMenu ? "open" : null}`}>
-                        <div className="nav__toggle-btn__burger">
-                        </div>
-                    </div>
-                </Navbar.Toggle>
+            {/* Toggle Menu Button */}
+            <button
+                aria-controls="responsive-navbar-nav"
+                onClick={handleBurgerMenu}
+                className={`nav__toggle-btn 
+                    ${!toggleBurgerMenu
+                        ? "open"
+                        : null}`}
+            >
+                <div className="nav__toggle-btn__burger">
+                </div>
+            </button>
 
 
+            {/* Left Page Link Menu */}
+            <ul className="nav__link-container"
+                ref={leftLinksRef} >
+                <li>
+                    <NavLink
+                        className="nav__link"
+                        activeClassName="nav__link--active"
+                        exact
+                        to="/"
+                        onClick={handleLinkClick}
+                    >Portfolio</NavLink>
+                </li>
+                <li>
+                    <NavLink
+                        className="nav__link"
+                        activeClassName="nav__link--active"
+                        to="/articles"
+                        onClick={handleLinkClick}
+                    >Articles</NavLink>
+                </li>
+            </ul>
 
-                <Navbar.Collapse id="responsive-navbar-nav" ref={leftLinksRef}>
-                    <Nav className="mr-auto" >
-                        <LinkContainer exact to="/" onClick={handleLinkClick}>
-                            <Nav.Link>Portfolio</Nav.Link>
-                        </LinkContainer>
-                        <LinkContainer to="/articles" onClick={handleLinkClick}>
-                            <Nav.Link>Articles</Nav.Link>
-                        </LinkContainer>
-                    </Nav>
-                </Navbar.Collapse>
+            {/* Desktop Logo */}
+            <Link
+                exact="true"
+                to="/"
+                className="nav__logo-container--desktop">
+                <img
+                    className="nav__logo-desktop"
+                    ref={logoRef}
+                    src="https://raw.githubusercontent.com/GedalyaKrycer/gedalyakrycer.github.io/46e78fe53858d535b8db1d9e7e42455fa0a8b090/gk-portfolio/public/assets/images/img-links/gk-logo-white.svg"
+                    alt="GK Logo"
+                />
 
-                <LinkContainer
-                    to="/"
-                    className="d-none d-md-block">
-                    <Navbar.Brand>
-                        <img ref={logoRef} src="https://raw.githubusercontent.com/GedalyaKrycer/gedalyakrycer.github.io/46e78fe53858d535b8db1d9e7e42455fa0a8b090/gk-portfolio/public/assets/images/img-links/gk-logo-white.svg" alt="GK Logo" className="nav__logo-desktop" />
-                    </Navbar.Brand>
-                </LinkContainer>
+            </Link>
 
-                <Navbar.Collapse className="g_justify-end nav__dropdown-vh">
-
-                    <Navbar.Collapse id="responsive-navbar-nav" ref={leftLinksRef}>
-                        <Nav className="ml-auto" >
-                            <LinkContainer to="/about" onClick={handleLinkClick}>
-                                <Nav.Link>About</Nav.Link>
-                            </LinkContainer>
-                            <LinkContainer to="/contact" onClick={handleLinkClick}>
-                                <Nav.Link>Contact</Nav.Link>
-                            </LinkContainer>
-
-                        </Nav>
-                    </Navbar.Collapse>
-
-
-
-                    <Nav className="nav__social" ref={mobileSocialRef}>
-
-                        <div className="nav__social--display">
-                            <Nav.Link
-                                href="https://www.linkedin.com/in/gedalyakrycer/"
-                                target="_blank"
-                                rel="noopener noreferrer"><FaLinkedinIn /></Nav.Link>
-                            <Nav.Link
-                                href="https://github.com/GedalyaKrycer"
-                                target="_blank"
-                                rel="noopener noreferrer" ><FaGithub /></Nav.Link>
-                            <Nav.Link
-                                href="https://dev.to/gedalyakrycer"
-                                target="_blank"
-                                rel="noopener noreferrer"><FaDev /></Nav.Link>
-                            <a ref={rightLinksRef}
-                                href={resumeFile}
-                                download={true}
-                                target="_blank" rel="noopener noreferrer"
-                                className="nav__resume"><h6>View Resume</h6></a>
-                        </div>
-
-
-                    </Nav>
-
-
-                </Navbar.Collapse>
+            {/* Right Page Link Menu */}
+            <ul className="nav__link-container nav__link-container--right"
+                ref={rightLinksRef} >
+                <li>
+                    <NavLink
+                        className="nav__link"
+                        activeClassName="nav__link--active"
+                        exact
+                        to="/about"
+                        onClick={handleLinkClick}
+                    >About</NavLink>
+                </li>
+                <li>
+                    <NavLink
+                        className="nav__link"
+                        activeClassName="nav__link--active"
+                        to="/contact"
+                        onClick={handleLinkClick}
+                    >Contact</NavLink>
+                </li>
+            </ul>
 
 
 
-            </Navbar>
-        </div>
+            <div className="nav__social" ref={mobileSocialRef}>
+
+                <ul className="nav__social--display">
+                    <li>
+                        <a
+                            className="nav__link"
+                            href="https://www.linkedin.com/in/gedalyakrycer/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        ><FaLinkedinIn /></a>
+                    </li>
+                    <li>
+                        <a
+                            className="nav__link"
+                            href="https://github.com/GedalyaKrycer"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        ><FaGithub /></a>
+                    </li>
+                    <li>
+                        <a
+                            className="nav__link"
+                            href="https://dev.to/gedalyakrycer"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        ><FaDev /></a>
+                    </li>
+                    <li>
+                        <a ref={rightLinksRef}
+                            href={resumeFile}
+                            download={true}
+                            target="_blank" rel="noopener noreferrer"
+                            className="nav__resume"><h6>View Resume</h6></a>
+                    </li>
+                </ul>
+
+            </div>
+
+        </nav>
+
+
     )
 }
 

@@ -4,25 +4,74 @@
     backdrop-filter: saturate(180%) blur(20px);
     -webkit-box-shadow: 0px 4px 15px #202120;
     box-shadow: 0px 4px 15px #202120;
+    position: sticky;
+    top: 0;
+    z-index: 1020;
+    display: grid;
+    grid-template-columns: 1fr 39px 1fr;
+    padding: 1rem 1.2rem 1.2rem;
+    border-bottom: 1px solid #353535;
 }
+
+.nav__logo-container--desktop {
+    display: block;
+}
+
 
 .nav__logo-desktop {
     margin-right: 5px;
     margin-top: 5px;
     height: 40px;
-    /* transition: ease .5s; */
 }
 
-
-.nav__contact {
-    display: none !important;
+.nav__logo-container--mobile {
+    display: block;
 }
 
 .nav__logo-mobile {
     height: 32px;
 }
 
-/* Many Navbar Overrides Are Located on the "global.css" files To Solve Specificity */
+.nav__link-container {
+    display: grid;
+    grid-template-columns: min-content min-content;
+    column-gap: 16px;
+    align-items: center;
+    list-style-type: none;
+    margin-block-start: 0;
+    margin-block-end: 0;
+    margin-inline-start: 0;
+    margin-inline-end: 0;
+    padding-inline-start: 0;
+}
+
+.nav__link-container--right {
+    justify-content: end;
+}
+
+.nav__link-container li {
+    list-style: none;
+}
+
+.nav__link {
+    color: white;
+    opacity: .5;
+    transition: ease .5s;
+}
+
+.nav__link:hover,
+.nav__link:focus {
+    color: white;
+    opacity: 1;
+    text-decoration: none;
+}
+
+  
+.nav__link--active {
+    color: white;
+    opacity: 1;
+}
+
 
 .nav__social {
     font-size: 20px;
@@ -131,17 +180,19 @@
 }
 
 
-
-.nav__show {
-    display: block;
-    transition: ease-in;
-}
-
-
 @media screen and (min-width: 768px) { 
     .nav__social--display {
         display: none;
     }
+    
+    .nav__toggle-btn {
+        display: none;
+    }
+
+    .nav__logo-container--mobile {
+        display: none;
+    }
+
 }
 
 @media screen and (max-width: 767px) { 
@@ -150,11 +201,14 @@
         margin: 10px 0 20px;
     }
 
-    .nav__dropdown-vh {
+    .nav__container {
         height: 100vh;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 33px 1fr;
     }
 
-    .nav__contact {
-        display: block !important;
+    .nav__logo-container--desktop {
+        display: none;
     }
+
 }

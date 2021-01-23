@@ -4,7 +4,7 @@ import { gsap } from "gsap";
 import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
 import { LinkContainer } from "react-router-bootstrap";
-import { FaGithub, FaLinkedinIn, FaBehance } from 'react-icons/fa';
+import { FaGithub, FaLinkedinIn, FaDev } from 'react-icons/fa';
 import resumeFile from "../../../gedalya-krycer-resume.pdf";
 import { usePortfolioContext } from '../../../utils/PortfolioContext';
 
@@ -36,7 +36,7 @@ function TopNavbar() {
     const leftLinksRef = useRef(null);
 
     // Ref for resume button
-    const resumeButtonRef = useRef(null);
+    const rightLinksRef = useRef(null);
 
     // Ref for mobile social links
     const mobileSocialRef = useRef(null);
@@ -68,7 +68,7 @@ function TopNavbar() {
             ease: 'back.out(2)',
         }, '-=.7')
 
-        tl.from(resumeButtonRef.current, {
+        tl.from(rightLinksRef.current, {
             duration: .5,
             autoAlpha: 0,
             y: -20,
@@ -109,14 +109,15 @@ function TopNavbar() {
 
                 <Navbar.Collapse id="responsive-navbar-nav" ref={leftLinksRef}>
                     <Nav className="mr-auto" >
-                        <LinkContainer to="/" onClick={handleLinkClick}>
+                        <LinkContainer exact to="/" onClick={handleLinkClick}>
                             <Nav.Link>Portfolio</Nav.Link>
                         </LinkContainer>
-                        <LinkContainer to="/about" onClick={handleLinkClick}>
-                            <Nav.Link>About</Nav.Link>
+                        <LinkContainer to="/articles" onClick={handleLinkClick}>
+                            <Nav.Link>Articles</Nav.Link>
                         </LinkContainer>
                     </Nav>
                 </Navbar.Collapse>
+
                 <LinkContainer
                     to="/"
                     className="d-none d-md-block">
@@ -124,21 +125,49 @@ function TopNavbar() {
                         <img ref={logoRef} src="https://raw.githubusercontent.com/GedalyaKrycer/gedalyakrycer.github.io/46e78fe53858d535b8db1d9e7e42455fa0a8b090/gk-portfolio/public/assets/images/img-links/gk-logo-white.svg" alt="GK Logo" className="nav__logo-desktop" />
                     </Navbar.Brand>
                 </LinkContainer>
+
                 <Navbar.Collapse className="g_justify-end nav__dropdown-vh">
+
+                    <Navbar.Collapse id="responsive-navbar-nav" ref={leftLinksRef}>
+                        <Nav className="ml-auto" >
+                            <LinkContainer to="/about" onClick={handleLinkClick}>
+                                <Nav.Link>About</Nav.Link>
+                            </LinkContainer>
+                            <LinkContainer to="/contact" onClick={handleLinkClick}>
+                                <Nav.Link>Contact</Nav.Link>
+                            </LinkContainer>
+
+                        </Nav>
+                    </Navbar.Collapse>
+
+
+
                     <Nav className="nav__social" ref={mobileSocialRef}>
+
                         <div className="nav__social--display">
-                            <Nav.Link href="https://www.linkedin.com/in/gedalyakrycer/" target="_blank" rel="noopener noreferrer"><FaLinkedinIn /></Nav.Link>
-                            <Nav.Link href="https://github.com/GedalyaKrycer" target="_blank" rel="noopener noreferrer" ><FaGithub /></Nav.Link>
-                            <Nav.Link href="https://www.behance.net/gedalyakrycer" target="_blank" rel="noopener noreferrer"><FaBehance /></Nav.Link>
+                            <Nav.Link
+                                href="https://www.linkedin.com/in/gedalyakrycer/"
+                                target="_blank"
+                                rel="noopener noreferrer"><FaLinkedinIn /></Nav.Link>
+                            <Nav.Link
+                                href="https://github.com/GedalyaKrycer"
+                                target="_blank"
+                                rel="noopener noreferrer" ><FaGithub /></Nav.Link>
+                            <Nav.Link
+                                href="https://dev.to/gedalyakrycer"
+                                target="_blank"
+                                rel="noopener noreferrer"><FaDev /></Nav.Link>
+                            <a ref={rightLinksRef}
+                                href={resumeFile}
+                                download={true}
+                                target="_blank" rel="noopener noreferrer"
+                                className="nav__resume"><h6>View Resume</h6></a>
                         </div>
 
 
                     </Nav>
-                    <a ref={resumeButtonRef}
-                        href={resumeFile}
-                        download={true}
-                        target="_blank" rel="noopener noreferrer"
-                        className="nav__resume"><h6>View Resume</h6></a>
+
+
                 </Navbar.Collapse>
 
 

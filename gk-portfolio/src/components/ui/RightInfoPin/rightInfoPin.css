@@ -1,5 +1,5 @@
 .rightInfoPin {
-    transform: rotate(-90deg);
+    transform: rotate(90deg);
     color: white;
     top: calc(50% + 30px);
     right: 0;

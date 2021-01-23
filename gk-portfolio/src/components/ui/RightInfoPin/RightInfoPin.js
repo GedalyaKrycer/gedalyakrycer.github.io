@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 import './rightInfoPin.css';
-import { HashLink as Link } from 'react-router-hash-link';
 import { gsap } from "gsap";
+import resumeFile from "../../../gedalya-krycer-resume.pdf";
 
 
 
@@ -30,11 +30,15 @@ function RightInfoPin() {
 
     return (
         <div className="rightInfoPin" ref={rightInfoPinContainerRef}>
-            <Link
-                to="/about#contact"
-                className="rightInfoPin__link">
-                Contact
-            </Link>
+            <a
+                download={true}
+                target="_blank"
+                rel="noopener noreferrer"
+                href={resumeFile}
+                className="rightInfoPin__link"
+            >
+                Resume
+            </a>
 
 
         </div>

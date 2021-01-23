@@ -1,6 +1,6 @@
 import React from 'react';
 import { LinkContainer } from "react-router-bootstrap";
-import { FaGithub, FaLinkedinIn, FaBehance, FaReact, FaFigma } from 'react-icons/fa';
+import { FaGithub, FaLinkedinIn, FaDev, FaReact, FaFigma } from 'react-icons/fa';
 import './footer.css';
 import resumeFile from "../../../gedalya-krycer-resume.pdf";
 
@@ -25,7 +25,7 @@ function Footer() {
                 <div className="footer__social-icons-container">
                     <a href="https://www.linkedin.com/in/gedalyakrycer/" target="_blank" rel="noopener noreferrer" className="footer__social-icons"><FaLinkedinIn /></a>
                     <a href="https://github.com/GedalyaKrycer" target="_blank" rel="noopener noreferrer" className="footer__social-icons"><FaGithub /></a>
-                    <a href="https://www.behance.net/gedalyakrycer" target="_blank" rel="noopener noreferrer" className="footer__social-icons"><FaBehance /></a>
+                    <a href="https://dev.to/gedalyakrycer" target="_blank" rel="noopener noreferrer" className="footer__social-icons"><FaDev /></a>
 
                 </div>
             </div>

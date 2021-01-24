@@ -88,6 +88,7 @@ hr {
 
 a {
   color: white;
+  transition: ease 0.3s;
 }
 
 a:hover {
@@ -96,6 +97,23 @@ a:hover {
 
 .g__footer-pin {
   min-height: calc(100vh - 315px);
+}
+
+s {
+  display: inline-block;
+  text-decoration: none;
+  position: relative;
+}
+
+s:after {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 63%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-bottom: 2px solid;
 }
 
 

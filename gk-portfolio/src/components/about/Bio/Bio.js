@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect } from "react";
 import './bio.css';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
@@ -10,155 +10,108 @@ gsap.registerPlugin(ScrollTrigger);
 // This is static top section of the page and gives it semantic value.
 function Bio() {
 
-    // Ref for Bio Title
-    const bioTitleRef = useRef(null);
-
-    // Ref for Lead Text
-    const txtContainerRef = useRef(null);
-
-    // Ref for Lead Text
-    const leadTxtRef = useRef(null);
-
-    // Ref for Paragraph Text 1 
-    const pTxt1Ref = useRef(null);
-
-    // Ref for Paragraph Text 2
-    const pTxt2Ref = useRef(null);
-
-    // Ref for Paragraph Text 3
-    const pTxt3Ref = useRef(null);
-
-    // Ref for Paragraph Text 4
-    const pTxt4Ref = useRef(null);
-
-
-
-
-     // GSAP ANIMATIONS
+    // GSAP ANIMATIONS
     useEffect(() => {
-        
+
+
         // Save Initial Styles
         ScrollTrigger.saveStyles([
-            txtContainerRef.current,
-            leadTxtRef.current,
-            pTxt1Ref.current,
-            pTxt2Ref.current,
-            pTxt3Ref.current,
-            pTxt4Ref.current
+            ".bioTitle",
+            ".bioContainer"
         ]);
 
+
         gsap.fromTo(
-            bioTitleRef.current,
-        {
-            autoAlpha: 0,
-            y: 50
-        }, 
-        {
-            autoAlpha: 1,
-            y: 0,
-            ease: "expo",
-            delay: 1
-        });
-
-        ScrollTrigger.matchMedia({
-
-            // Full animation on desktop 
-            "(min-width: 768px)": function () {
-
-
-                gsap.fromTo(txtContainerRef.current, {
-                    autoAlpha: 0,
-                    y: 50,
-                    ease: "expo"
-                }, 
-                {
-                    autoAlpha: 1,
-                    y: 0,
-                    ease: "expo"
-                },
-                1.5)
-
-
-                gsap.from(
-                [
-                    leadTxtRef.current,
-                    pTxt1Ref.current,
-                    pTxt2Ref.current,
-                    pTxt3Ref.current,
-                    pTxt4Ref.current
-                ],
-                {
-                    scrollTrigger: {
-                        trigger: bioTitleRef.current,
-                        start: "top center",
-                        end: "-=50",
-                        scrub: true
-                    },
-                    autoAlpha: 0,
-                    y: 180,
-                    stagger: 0.1
-                }
-                );
-
+            ".bioTitle",
+            {
+                autoAlpha: 0,
+                y: 50
             },
+            {
+                autoAlpha: 1,
+                y: 0,
+                ease: "expo",
+                delay: 1
+            });
 
-            // Simplifies animation on mobile 
-            "(max-width: 767px)": function () {
+        gsap.fromTo(
+            ".bioContainer",
+            {
+                autoAlpha: 0,
+                y: 180
+            },
+            {
+                scrollTrigger: {
+                    trigger: ".bioContainer",
+                    start: "top bottom",
+                    end: "-=50",
+                    scrub: true
+                },
+                autoAlpha: 1,
+                y: 0
+            });
 
-                gsap.from(
-                [
-                    txtContainerRef.current,
-                    leadTxtRef.current,
-                    pTxt1Ref.current,
-                    pTxt2Ref.current,
-                    pTxt3Ref.current,
-                    pTxt4Ref.current
-                ],
-                {
-                    duration: 1,
-                    autoAlpha: 0,
-                    y: 150,
-                    ease: "power4",
-                    stagger: 0.1
-                }
-                );
 
-            }
-        });
-        
+
     }, []);
 
     return (
         <section>
             <Container>
-                <h2 ref={bioTitleRef}>Bio</h2>
+                <h2
+                    id="bioTitle"
+                >Bio</h2>
 
-                <Row 
-                    className="justify-content-md-center g_negative-margin"
-                    ref={txtContainerRef}
+                <Row
+                    style={{ opacity: 0, transform: "translateY(180px)" }}
+                    className="bioContainer justify-content-md-center g_negative-margin"
                 >
                     <Col className="g_white-color" lg={8}>
-                        <p 
-                        className="g__body-lg" 
-                        ref={leadTxtRef}>
-                            Hi there! I am a Vegas-based front-end developer and creative, who obsesses over the details and loves learning new technologies. 
-                            
+                        <p className="g__body-lg">
+                            I am a Vegas-based front-end developer and creative. I obsess over the details and love learning new technologies.
                         </p>
-                         <p ref={pTxt1Ref}>   
-                            (I also obsess over movies and enjoy everything from superhero blockbusters to romcoms.)
+                        <p>
+                            (I also obsess over movies and love everything from superhero blockbusters to romcoms.)
                         </p>
-                        <p ref={pTxt2Ref}>
-                                I recently left my agency job as a Digital Design Director to follow my true passion—building websites from the ground up.
+                        <p>
+                            For over five years I have had the privilege to work remotely with a great team at a design agency in Brooklyn, starting as an intern and concluding as a Digital Design Director.
                         </p>
-                        <p ref={pTxt3Ref}>
-                                In September of 2020, I earned a certification in Full Stack Development, from the University of Arizona's 6 month coding bootcamp. It's a joy to not only design a great site, but code it into reality as well.
+                        <p>
+                            It provided the opportunity to serve some great clients, including; <a
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                href="https://www.elsevier.com/"
+                                className="bio__link">Elsevier</a>, <a
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    href="https://3dprint.com/"
+                                    className="bio__link">3DPrint</a>, <a
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        href="https://www.onewtc.com/"
+                                        className="bio__link">One World Trade Center</a>, <a
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            href="https://perfectbuilding.com/"
+                                            className="bio__link">PBM</a>, and <a
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                href="https://www.budlight.com/"
+                                                className="bio__link">Bud Light</a>.
                         </p>
 
-                         <p ref={pTxt4Ref}>
-                                With this deeper understanding of how to build quality sites, I look forward to changing careers to web development, built on a strong design foundation.
+                        <p>
+                            In 2020 I decided to <s>change</s> expand my career to follow my true passion—building websites from the ground up as a front-end web developer. I graduated from the University of Arizona's Coding Bootcamp, with a certification in Full Stack Development.
+                        </p>
+                        <p>
+                            These days I get the joy of building things with code and <a
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                href="https://dev.to/gedalyakrycer"
+                                className="bio__link">writing about code</a>. I am excited about this next stage in web development, built on a strong design foundation.
                         </p>
 
-                
+
                     </Col>
                 </Row>
 

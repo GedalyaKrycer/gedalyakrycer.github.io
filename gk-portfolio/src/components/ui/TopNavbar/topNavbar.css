@@ -9,34 +9,13 @@
     z-index: 1020;
     display: grid;
     grid-template-columns: 1fr 39px 1fr;
-    padding: 1rem 1.2rem 1.2rem;
+    padding: 20px 16px;
     border-bottom: 1px solid #353535;
+    height: min-content;
+    transition: all ease .5s;
 }
 
-.nav__logo-container--desktop {
-    display: block;
-}
-
-
-.nav__logo-desktop {
-    margin-right: 5px;
-    margin-top: 5px;
-    height: 40px;
-}
-
-.nav__logo-container--mobile {
-    display: block;
-}
-
-.nav__logo-mobile {
-    height: 32px;
-}
-
-.nav__link-container {
-    display: grid;
-    grid-template-columns: min-content min-content;
-    column-gap: 16px;
-    align-items: center;
+.nav__container ul {
     list-style-type: none;
     margin-block-start: 0;
     margin-block-end: 0;
@@ -45,7 +24,32 @@
     padding-inline-start: 0;
 }
 
-.nav__link-container--right {
+.nav__logo-container--desktop {
+    display: block;
+}
+
+
+.nav__logo--desktop {
+    margin-right: 5px;
+    height: 40px;
+}
+
+.nav__logo-container--mobile {
+    display: block;
+}
+
+.nav__logo--mobile {
+    height: 32px;
+}
+
+.nav__link-container {
+    display: grid;
+    grid-template-columns: min-content min-content;
+    column-gap: 16px;
+    align-items: center;
+}
+
+.nav__link-container--justify {
     justify-content: end;
 }
 
@@ -74,7 +78,18 @@
 
 
 .nav__social {
-    font-size: 20px;
+    font-size: 22px;
+    text-align: center;
+    display: grid;
+    grid-column: 1/-1;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 10px;
+    padding-top: 30px;
+}
+
+.nav__social li:nth-last-child(1) {
+    margin-top: 30px;
+    grid-column: 1/-1;
 }
 
 /* Toggle Button */
@@ -88,6 +103,7 @@
     padding: .5rem 1.2rem;
     border-radius: 50px;
     display: block;
+    grid-column: 1/-1;
 }
 
 .nav__resume:hover,
@@ -111,17 +127,11 @@
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    justify-content: center;
+    align-items: center;
+    justify-self: end;
     width: 30px;
-    height: 30px;
     cursor: pointer;
-    -webkit-transition: all .5s cubic-bezier(0.175, 0.785, 0.12, 1.275);
-    -o-transition: all .5s cubic-bezier(0.175, 0.785, 0.12, 1.275);
     transition: all .5s cubic-bezier(0.175, 0.785, 0.12, 1.275);
 } 
 
@@ -130,8 +140,6 @@
     height: 2px;
     background: transparent;
     border-radius: 5px;
-    -webkit-transition: all .5s cubic-bezier(0.175, 0.785, 0.12, 1.275);
-    -o-transition: all .5s cubic-bezier(0.175, 0.785, 0.12, 1.275);
     transition: all .5s cubic-bezier(0.175, 0.785, 0.12, 1.275);
 }
 
@@ -144,8 +152,6 @@
     background: white;
     border-radius: 5px;
     left: 0;
-    -webkit-transition: all .5s cubic-bezier(0.175, 0.785, 0.12, 1.275);
-    -o-transition: all .5s cubic-bezier(0.175, 0.785, 0.12, 1.275);
     transition: all .5s cubic-bezier(0.175, 0.785, 0.12, 1.275);
 }
 
@@ -181,7 +187,8 @@
 
 
 @media screen and (min-width: 768px) { 
-    .nav__social--display {
+
+    .nav__social {
         display: none;
     }
     
@@ -196,19 +203,46 @@
 }
 
 @media screen and (max-width: 767px) { 
-    .nav__resume {
-        padding: .75rem 1.2rem;
-        margin: 10px 0 20px;
-    }
 
     .nav__container {
-        height: 100vh;
+        height: 70px;
         grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: 33px 1fr;
+        grid-template-rows: 33px repeat(3, 20%);
+        
     }
+
+    .nav__container--mobile {
+        transition: all .5s ease;
+        height: 100vh;
+    }
+
+    .nav__link-container {
+        justify-content: center;
+        grid-column: 1/-1;
+        text-align: center;
+        grid-template-columns: 1fr;
+    }
+
+    .nav__social,
+    .nav__link-container {
+        display: none;
+    }
+
+    .open--grid {
+        display: grid;
+    }
+
+    .nav__link-container--justify {
+        justify-content: center;
+    }
+
 
     .nav__logo-container--desktop {
         display: none;
     }
 
+    .nav__resume {
+        padding: .75rem 1.2rem;
+        margin: 10px 0 20px;
+    }
 }

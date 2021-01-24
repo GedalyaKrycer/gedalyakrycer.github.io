@@ -4,7 +4,7 @@ import { gsap } from "gsap";
 import { Link, NavLink } from 'react-router-dom';
 import { FaGithub, FaLinkedinIn, FaDev } from 'react-icons/fa';
 import resumeFile from "../../../gedalya-krycer-resume.pdf";
-
+import Logo from '../../ui/Logo/Logo';
 
 
 function TopNavbar() {
@@ -86,8 +86,11 @@ function TopNavbar() {
 
     return (
         <nav
-            className="nav__container"
+            className={`nav__container ${toggleBurgerMenu
+                ? null
+                : "nav__container--mobile"}`}
             ref={navContainerRef}
+            aria-label="main navigation"
         >
 
             {/* Mobile Logo */}
@@ -96,11 +99,10 @@ function TopNavbar() {
                 to="/"
                 className="nav__logo-container--mobile"
             >
-
-                <img
-                    src="https://raw.githubusercontent.com/GedalyaKrycer/gedalyakrycer.github.io/46e78fe53858d535b8db1d9e7e42455fa0a8b090/gk-portfolio/public/assets/images/img-links/gk-logo-white.svg"
-                    alt="GK Logo"
-                    className="nav__logo-mobile"
+                <Logo
+                    cssClass="nav__logo--mobile"
+                    fillOne="white"
+                    fillTwo="white"
                 />
 
             </Link>
@@ -109,6 +111,7 @@ function TopNavbar() {
             {/* Toggle Menu Button */}
             <button
                 aria-controls="responsive-navbar-nav"
+                aria-label="Toggle navigation"
                 onClick={handleBurgerMenu}
                 className={`nav__toggle-btn 
                     ${!toggleBurgerMenu
@@ -121,8 +124,13 @@ function TopNavbar() {
 
 
             {/* Left Page Link Menu */}
-            <ul className="nav__link-container"
-                ref={leftLinksRef} >
+            <ul
+                className={`nav__link-container 
+                ${toggleBurgerMenu
+                        ? null
+                        : "open--grid"}`}
+                ref={leftLinksRef}
+            >
                 <li>
                     <NavLink
                         className="nav__link"
@@ -146,19 +154,25 @@ function TopNavbar() {
             <Link
                 exact="true"
                 to="/"
-                className="nav__logo-container--desktop">
-                <img
-                    className="nav__logo-desktop"
-                    ref={logoRef}
-                    src="https://raw.githubusercontent.com/GedalyaKrycer/gedalyakrycer.github.io/46e78fe53858d535b8db1d9e7e42455fa0a8b090/gk-portfolio/public/assets/images/img-links/gk-logo-white.svg"
-                    alt="GK Logo"
+                className="nav__logo-container--desktop"
+            >
+
+                <Logo
+                    cssClass="nav__logo--desktop"
+                    fillOne="white"
+                    fillTwo="white"
                 />
 
             </Link>
 
             {/* Right Page Link Menu */}
-            <ul className="nav__link-container nav__link-container--right"
-                ref={rightLinksRef} >
+            <ul
+                className={`nav__link-container nav__link-container--justify 
+                ${toggleBurgerMenu
+                        ? null
+                        : "open--grid"}`}
+                ref={rightLinksRef}
+            >
                 <li>
                     <NavLink
                         className="nav__link"
@@ -179,44 +193,45 @@ function TopNavbar() {
             </ul>
 
 
+            <ul
+                className={`nav__social ${toggleBurgerMenu
+                    ? null
+                    : "open--grid"}`}
+                ref={mobileSocialRef}
+            >
+                <li>
+                    <a
+                        className="nav__link"
+                        href="https://www.linkedin.com/in/gedalyakrycer/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    ><FaLinkedinIn /></a>
+                </li>
+                <li>
+                    <a
+                        className="nav__link"
+                        href="https://github.com/GedalyaKrycer"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    ><FaGithub /></a>
+                </li>
+                <li>
+                    <a
+                        className="nav__link"
+                        href="https://dev.to/gedalyakrycer"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    ><FaDev /></a>
+                </li>
+                <li>
+                    <a ref={rightLinksRef}
+                        href={resumeFile}
+                        download={true}
+                        target="_blank" rel="noopener noreferrer"
+                        className="nav__resume"><h6>View Resume</h6></a>
+                </li>
+            </ul>
 
-            <div className="nav__social" ref={mobileSocialRef}>
-
-                <ul className="nav__social--display">
-                    <li>
-                        <a
-                            className="nav__link"
-                            href="https://www.linkedin.com/in/gedalyakrycer/"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                        ><FaLinkedinIn /></a>
-                    </li>
-                    <li>
-                        <a
-                            className="nav__link"
-                            href="https://github.com/GedalyaKrycer"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                        ><FaGithub /></a>
-                    </li>
-                    <li>
-                        <a
-                            className="nav__link"
-                            href="https://dev.to/gedalyakrycer"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                        ><FaDev /></a>
-                    </li>
-                    <li>
-                        <a ref={rightLinksRef}
-                            href={resumeFile}
-                            download={true}
-                            target="_blank" rel="noopener noreferrer"
-                            className="nav__resume"><h6>View Resume</h6></a>
-                    </li>
-                </ul>
-
-            </div>
 
         </nav>
 

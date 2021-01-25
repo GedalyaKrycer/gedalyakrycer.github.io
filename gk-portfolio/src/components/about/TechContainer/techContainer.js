@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import './skills.css';
+import './techContainer.css';
 import TechButton from '../TechButton/TechButton';
 import TechFilter from '../TechFilter/TechFilter';
 import Container from 'react-bootstrap/Container';
@@ -10,7 +10,8 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 gsap.registerPlugin(ScrollTrigger);
 
-function Skills() {
+
+function TechContainer() {
 
     // State to hold which buttons to show
     const [techArray, setTechArray] = useState(tech);
@@ -125,11 +126,14 @@ function Skills() {
     }
 
 
-    // Ref for Skill Title
-    const skillTitleRef = useRef(null);
+    // Ref for Tech Title
+    const techTitleRef = useRef(null);
 
     // Ref for Lead Text
     const introTxtRef = useRef(null);
+
+    // Ref for Tech Buttons
+    const techButtonsRef = useRef(null);
 
 
 
@@ -137,22 +141,25 @@ function Skills() {
     useEffect(() => {
 
         // Save Initial Styles
-        ScrollTrigger.saveStyles([skillTitleRef.current, introTxtRef.current]);
+        ScrollTrigger.saveStyles([
+            techTitleRef.current,
+            introTxtRef.current,
+            techButtonsRef.current
+        ]);
 
 
         let animateIn = gsap.timeline({
             scrollTrigger: {
-                trigger: skillTitleRef.current,
+                trigger: techTitleRef.current,
                 toggleActions: 'play none none none',
-                start: 'top bottom',
-                end: '-=50',
-                scrub: true
+                start: 'bottom bottom',
+                end: '-=50'
             }
         });
 
-        animateIn.fromTo(skillTitleRef.current, {
+        animateIn.fromTo(techTitleRef.current, {
             autoAlpha: 0,
-            y: 50
+            y: 100
         },
             {
                 autoAlpha: 1,
@@ -167,8 +174,21 @@ function Skills() {
         },
             {
                 autoAlpha: 1,
-                y: -30,
-                ease: 'power4.out'
+                y: -20,
+                ease: "expo.out"
+            }
+
+        );
+
+        animateIn.fromTo(techButtonsRef.current, {
+            autoAlpha: 0,
+            y: 0
+
+        },
+            {
+                autoAlpha: 1,
+                y: -20,
+                ease: "expo.out"
             }
 
         );
@@ -179,16 +199,22 @@ function Skills() {
     return (
         <section>
             <Container className="g__about-sections">
-                <h2 ref={skillTitleRef}>Skills</h2>
+                <h2 ref={techTitleRef}>Tech</h2>
 
                 <Row className="justify-content-md-center g_negative-margin">
                     <Col lg={8}>
-                        <p className="skills__intro-text g__body-lg"
-                            ref={introTxtRef}>These are some of the tools I use on projects or currently learning.</p>
+                        <p className="techContainer__intro-text g__body-lg"
+                            ref={introTxtRef}
+                        >These are some of the tools I use on projects or currently learning.</p>
                     </Col>
                 </Row>
-                <Row className="justify-content-md-center">
-                    <Col lg={12} className="skills__tech-container" >
+                <Row
+                    ref={techButtonsRef}
+                    className="justify-content-md-center"
+                >
+                    <Col
+                        lg={12} className="techContainer__tech-wrapper"
+                    >
 
                         <TechFilter
                             devFilterActive={devFilterActive}
@@ -200,7 +226,7 @@ function Skills() {
 
                         />
 
-                        <div className="skills__tech-btn-container" >
+                        <div className="techContainer__tech-btn-container" >
                             {techArray.map(technology => (
                                 <TechButton
                                     key={technology.name}
@@ -224,4 +250,4 @@ function Skills() {
 }
 
 
-export default Skills;
+export default TechContainer;

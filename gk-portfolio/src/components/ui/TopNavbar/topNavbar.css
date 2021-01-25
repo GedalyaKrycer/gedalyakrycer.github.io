@@ -12,7 +12,6 @@
     padding: 20px 16px;
     border-bottom: 1px solid #353535;
     height: min-content;
-    transition: all ease .5s;
 }
 
 .nav__container ul {
@@ -208,7 +207,7 @@
         height: 70px;
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: 33px repeat(3, 20%);
-        
+        transition: all ease .5s;
     }
 
     .nav__container--mobile {

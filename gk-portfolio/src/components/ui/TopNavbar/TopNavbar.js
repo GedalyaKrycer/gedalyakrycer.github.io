@@ -24,7 +24,7 @@ function TopNavbar() {
 
 
 
-    // Ref for logo
+    // Ref for nav container
     const navContainerRef = useRef(null);
 
     // Ref for logo
@@ -33,11 +33,8 @@ function TopNavbar() {
     // Ref for left links
     const leftLinksRef = useRef(null);
 
-    // Ref for resume button
+    // Ref for right links
     const rightLinksRef = useRef(null);
-
-    // Ref for mobile social links
-    const mobileSocialRef = useRef(null);
 
 
     useEffect(() => {
@@ -71,14 +68,7 @@ function TopNavbar() {
             autoAlpha: 0,
             y: -20,
             ease: 'back.out(2)',
-        }, '-=.8')
-
-        tl.from(mobileSocialRef.current, {
-            duration: .5,
-            autoAlpha: 0,
-            y: -20,
-            ease: 'back.out(2)',
-        }, '-=.8')
+        }, '-=.6')
 
 
     }, [])
@@ -86,10 +76,11 @@ function TopNavbar() {
 
     return (
         <nav
+            ref={navContainerRef}
             className={`nav__container ${toggleBurgerMenu
                 ? null
                 : "nav__container--mobile"}`}
-            ref={navContainerRef}
+
             aria-label="main navigation"
         >
 
@@ -103,6 +94,7 @@ function TopNavbar() {
                     cssClass="nav__logo--mobile"
                     fillOne="white"
                     fillTwo="white"
+                    animation={logoRef}
                 />
 
             </Link>
@@ -161,6 +153,7 @@ function TopNavbar() {
                     cssClass="nav__logo--desktop"
                     fillOne="white"
                     fillTwo="white"
+                    animation={logoRef}
                 />
 
             </Link>
@@ -197,7 +190,7 @@ function TopNavbar() {
                 className={`nav__social ${toggleBurgerMenu
                     ? null
                     : "open--grid"}`}
-                ref={mobileSocialRef}
+
             >
                 <li>
                     <a
@@ -224,7 +217,7 @@ function TopNavbar() {
                     ><FaDev /></a>
                 </li>
                 <li>
-                    <a ref={rightLinksRef}
+                    <a
                         href={resumeFile}
                         download={true}
                         target="_blank" rel="noopener noreferrer"

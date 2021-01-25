@@ -2,7 +2,7 @@ import React from 'react';
 import './logo.css';
 
 // This is static top section of the page and gives it semantic value.
-function Header({ cssClass, fillOne, fillTwo }) {
+function Header({ cssClass, fillOne, fillTwo, animation }) {
 
 
 
@@ -10,6 +10,7 @@ function Header({ cssClass, fillOne, fillTwo }) {
     return (
         <svg
             className={cssClass}
+            ref={animation}
             viewBox="0 0 38 42"
             fill="none"
             xmlns="http://www.w3.org/2000/svg">

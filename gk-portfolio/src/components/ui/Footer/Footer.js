@@ -1,7 +1,8 @@
 import React from 'react';
-import { LinkContainer } from "react-router-bootstrap";
 import { FaGithub, FaLinkedinIn, FaDev, FaReact, FaFigma } from 'react-icons/fa';
 import './footer.css';
+import { Link } from 'react-router-dom';
+import Logo from '../Logo/Logo';
 import resumeFile from "../../../gedalya-krycer-resume.pdf";
 
 
@@ -9,9 +10,18 @@ function Footer() {
     return (
         <footer >
             <div className="footer__content-container">
-                <LinkContainer to="/">
-                    <img src="https://raw.githubusercontent.com/GedalyaKrycer/gedalyakrycer.github.io/46e78fe53858d535b8db1d9e7e42455fa0a8b090/gk-portfolio/public/assets/images/img-links/gk-logo.svg" alt="GK Logo" className="footer__logo" />
-                </LinkContainer>
+                <Link
+                    exact="true"
+                    to="/"
+                >
+                    <Logo
+                        cssClass="footer__logo"
+                        fillOne="white"
+                        fillTwo="white"
+                    />
+
+                </Link>
+
 
 
                 <a

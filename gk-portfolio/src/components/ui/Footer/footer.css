@@ -19,8 +19,9 @@ footer {
 }
 
 .footer__logo {
+    display: block;
     height: 32px;
-    margin-right: 10px;
+    margin: 0 auto;
 }
 
 .footer__social-icons-container {
@@ -99,11 +100,6 @@ footer {
   @media only screen and (max-width: 439px) { 
     .footer__content-container {
         flex-direction: column;
-    }
-
-    .footer__logo {
-        height: 32px;
-        margin: 0;
     }
 
     .footer__social-icons-container {

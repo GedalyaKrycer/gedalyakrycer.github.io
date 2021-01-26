@@ -21,7 +21,7 @@ function Home() {
 
             <Suspense fallback={<div>Loading…</div>}>
                 <DevPortfolio />
-                <ArticleThumbnail />
+
                 <DesignPortfolio />
             </Suspense>
         </>

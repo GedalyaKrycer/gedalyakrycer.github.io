@@ -11,7 +11,13 @@
     text-decoration: none;
 }
 
-
+.at__main-section {
+    padding: 15px;
+    height: 110px;
+    border-radius: 16px 16px 0 0;
+    overflow: hidden;
+    position: relative;
+}
 
 .at__title {
     color: white;
@@ -29,6 +35,7 @@
 
 .at__meta-left-group {
     padding: 7px 15px;
+    position: relative;
 }
 
 

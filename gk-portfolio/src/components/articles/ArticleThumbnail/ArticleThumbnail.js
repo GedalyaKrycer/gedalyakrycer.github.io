@@ -8,34 +8,64 @@ const ArticleThumbnail = ({ articleUrl }) => {
     const [isHovering, setIsHovering] = useState(false);
 
     // Styles For Elements Effected By Hover
-    const atMainSectionStyle = {
-        padding: 15,
-        height: 110,
-        backgroundImage:
-            isHovering
-                ? `linear-gradient(180deg, rgba(0, 0, 0, 0) 66.51%, rgba(0, 0, 0, 0.31) 100%), url(${bgImg})`
-                : "none",
+    const atMainSectionImgStyle = {
+        width: '100%',
+        height: '100%',
+        backgroundImage: `linear-gradient(180deg, rgba(0, 0, 0, 0) 66.51%, rgba(0, 0, 0, 0.31) 100%), url(${bgImg})`,
+        backgroundPosition: "center",
         backgroundSize: "cover",
-        position: "center",
-        borderRadius: '16px 16px 0 0'
+        backgroundRepeat: "no-repeat",
+        transform: isHovering ? "scale(1.1)" : "scale(1)",
+        opacity: isHovering ? 1 : 0,
+        // visibility: isHovering ? "visible" : "hidden",
+        position: 'absolute',
+        top: 0,
+        left: 0,
+        right: 0,
+        zIndex: 1,
+        transition: 'all 0.5s cubic-bezier(.8,.02,.52,1)'
     }
 
     const atTitle = {
-        visibility: isHovering ? "hidden" : "visible",
+        opacity: isHovering ? 0 : 1,
+        transform: isHovering ? "scale(1.1)" : "scale(1)",
         color: "white",
         fontWeight: 500,
-        lineHeight: "22px"
+        lineHeight: "22px",
+        position: 'absolute',
+        top: isHovering ? 20 : 15,
+        left: 18,
+        right: 18,
+        zIndex: 2,
+        transition: 'all 0.5s cubic-bezier(.8,.02,.52,1)'
     }
 
     const atCTASectionStyle = {
-        display: isHovering ? "flex" : "none",
+        display: "flex",
         visibility: isHovering ? "visible" : "hidden",
-        alignItems: 'center'
+        alignItems: 'center',
+        position: 'absolute',
+        left: 12,
+        top: 5
     }
 
     const atMetaTag = {
-        display: isHovering ? "none" : "block",
-        visibility: isHovering ? "hidden" : "visible"
+        // display: isHovering ? "none" : "block",
+        opacity: isHovering ? 0 : 1,
+        transform: isHovering ? "translateX(5px)" : "translateX(0)",
+        transition: 'all 0.5s cubic-bezier(.8,.02,.52,1)'
+    }
+
+    const atCtaText = {
+        opacity: isHovering ? 1 : 0,
+        transform: isHovering ? "translateX(5px)" : "translateX(0)",
+        transition: 'all 0.5s cubic-bezier(.8,.02,.52,1)'
+    }
+
+    const atCtaIcon = {
+        opacity: isHovering ? 1 : 0,
+        transform: isHovering ? "translateX(5px)" : "translateX(0)",
+        transition: 'all 0.7s cubic-bezier(.8,.02,.52,1)'
     }
 
     return (
@@ -47,8 +77,10 @@ const ArticleThumbnail = ({ articleUrl }) => {
             target="_blank"
             rel="noopener noreferrer"
         >
-            <div style={atMainSectionStyle}>
+            <div className="at__main-section">
                 <h4 style={atTitle}>5 Remarkable React Router Features (Anchor Links, Query Params & more)</h4>
+                <div style={atMainSectionImgStyle}></div>
+
             </div>
             <div className="at__meta-section">
                 <div className="at__meta-left-group">
@@ -56,8 +88,12 @@ const ArticleThumbnail = ({ articleUrl }) => {
                         style={atMetaTag}
                         className="at__meta-tag">todayilearned</p>
                     <div style={atCTASectionStyle}>
-                        <h5 className="at__cta-text">Read article</h5>
+                        <h5
+                            style={atCtaText}
+                            className="at__cta-text"
+                        >Read article</h5>
                         <svg
+                            style={atCtaIcon}
                             className="at__cta-icon"
                             viewBox="0 0 7 6"
                             xmlns="http://www.w3.org/2000/svg"

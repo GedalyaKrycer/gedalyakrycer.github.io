@@ -39,29 +39,11 @@
 }
 
 
-.at__meta-tag,
 .at__reaction-text,
 .at__publish-data {
     font-size: 12px;
     color: var(--nav-filter-links);
     margin: 0;
-}
-
-.at__meta-tag {
-    font-weight: bold;
-    margin: 0;
-}
-
-.at__cta-text {
-    color: var(--primary-blue);
-    margin: 0 8px 0 0;
-    line-height: 19px;
-}
-
-.at__cta-icon {
-    width: 7px;
-    height: 6px;
-    fill: var(--primary-blue);
 }
 
 

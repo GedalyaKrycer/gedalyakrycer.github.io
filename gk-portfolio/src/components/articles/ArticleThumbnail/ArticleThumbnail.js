@@ -50,7 +50,10 @@ const ArticleThumbnail = ({ articleUrl }) => {
     }
 
     const atMetaTag = {
-        // display: isHovering ? "none" : "block",
+        fontSize: 12,
+        color: 'var(--nav-filter-links)',
+        margin: 0,
+        fontWeight: 'bold',
         opacity: isHovering ? 0 : 1,
         transform: isHovering ? "translateX(5px)" : "translateX(0)",
         transition: 'all 0.5s cubic-bezier(.8,.02,.52,1)'
@@ -59,12 +62,18 @@ const ArticleThumbnail = ({ articleUrl }) => {
     const atCtaText = {
         opacity: isHovering ? 1 : 0,
         transform: isHovering ? "translateX(5px)" : "translateX(0)",
+        color: "var(--primary-blue)",
+        margin: "0 8px 0 0",
+        lineHeight: "19px",
         transition: 'all 0.5s cubic-bezier(.8,.02,.52,1)'
     }
 
     const atCtaIcon = {
         opacity: isHovering ? 1 : 0,
         transform: isHovering ? "translateX(5px)" : "translateX(0)",
+        width: 7,
+        height: 6,
+        fill: "var(--primary-blue)",
         transition: 'all 0.7s cubic-bezier(.8,.02,.52,1)'
     }
 
@@ -84,17 +93,11 @@ const ArticleThumbnail = ({ articleUrl }) => {
             </div>
             <div className="at__meta-section">
                 <div className="at__meta-left-group">
-                    <p
-                        style={atMetaTag}
-                        className="at__meta-tag">todayilearned</p>
+                    <p style={atMetaTag}>todayilearned</p>
                     <div style={atCTASectionStyle}>
-                        <h5
-                            style={atCtaText}
-                            className="at__cta-text"
-                        >Read article</h5>
+                        <h5 style={atCtaText} >Read article</h5>
                         <svg
                             style={atCtaIcon}
-                            className="at__cta-icon"
                             viewBox="0 0 7 6"
                             xmlns="http://www.w3.org/2000/svg"
                         >

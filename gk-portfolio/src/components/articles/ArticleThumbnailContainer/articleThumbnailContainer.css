@@ -1,0 +1,21 @@
+.articleThumbnailContainer {
+    border-top: var(--section-headlines) solid 1px;
+    border-bottom: var(--section-headlines) solid 1px;
+    padding: 80px 0 80px;
+    width: calc(100% - 120px);
+    margin: 0 auto 180px;
+}
+
+.atc__row {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(266px, 1fr));
+    column-gap: 30px;
+    row-gap: 30px;
+    justify-items: center;
+}
+
+@media screen and (max-width: 809px) {
+    .articleThumbnailContainer {
+        width: 100%;
+    }
+}

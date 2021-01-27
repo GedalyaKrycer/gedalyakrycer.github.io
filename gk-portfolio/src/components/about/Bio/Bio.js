@@ -16,13 +16,13 @@ function Bio() {
 
         // Save Initial Styles
         ScrollTrigger.saveStyles([
-            ".bioTitle",
+            "#bioTitle",
             ".bioContainer"
         ]);
 
 
         gsap.fromTo(
-            ".bioTitle",
+            "#bioTitle",
             {
                 autoAlpha: 0,
                 y: 50
@@ -42,8 +42,8 @@ function Bio() {
             },
             {
                 scrollTrigger: {
-                    trigger: ".bioContainer",
-                    start: "top bottom",
+                    trigger: "#bioTitle",
+                    start: "top center",
                     end: "-=50",
                     scrub: true
                 },

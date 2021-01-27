@@ -12,10 +12,8 @@ gsap.registerPlugin(ScrollTrigger);
 function FavoriteThings() {
 
     // Ref for Fav Things Section Title
-    const favThingsTitleRef = useRef(null);
+    const favThingsSection = useRef(null);
 
-    // Ref for Fav Things Section Title
-    const favCardRef = useRef(null);
 
 
 
@@ -23,31 +21,31 @@ function FavoriteThings() {
     useEffect(() => {
 
         // Save Initial Styles
-        ScrollTrigger.saveStyles(favThingsTitleRef.current);
+        ScrollTrigger.saveStyles(favThingsSection.current);
 
         let animateIn = gsap.timeline({
             scrollTrigger: {
-                trigger: favThingsTitleRef.current,
+                trigger: favThingsSection.current,
                 toggleActions: 'play none none reverse',
                 start: 'top bottom',
                 end: '-=50'
             }
         });
 
-        animateIn.fromTo([
-            favThingsTitleRef.current,
-            favCardRef.current
-        ], {
+        gsap.fromTo(favThingsSection.current, {
 
             autoAlpha: 0,
-            y: 200,
+            y: 150,
 
         }, {
-            duration: 3,
+            scrollTrigger: {
+                trigger: favThingsSection.current,
+                start: "top bottom",
+                end: "-=50",
+                scrub: true
+            },
             autoAlpha: 1,
-            y: 0,
-            ease: 'power4.out',
-            stagger: .3
+            y: 0
         });
 
     }, []);
@@ -56,19 +54,13 @@ function FavoriteThings() {
 
     favThings.forEach((e) => {
         populatedCards.push(
-            <Col lg={3} key={e.id}>
-
-                <div className="fav__card-container">
-                    <img className="fav__card-img" src={e.img} alt={`${e.name}`} />
-                    <h4 className="fav__card-title">{e.name}</h4>
-                    <div className="fav__hidden-text">
-                        <p>{e.things}</p>
-                    </div>
+            <div className="fav__card" key={e.id}>
+                <img className="fav__card-img" src={e.img} alt={`${e.name}`} />
+                <h4 className="fav__card-title">{e.name}</h4>
+                <div className="fav__hidden-text">
+                    <p>{e.things}</p>
                 </div>
-
-
-
-            </Col>
+            </div>
         )
     })
 
@@ -76,16 +68,16 @@ function FavoriteThings() {
 
 
     return (
-        <section>
-            <Container className="fav__section-container">
+        <section ref={favThingsSection}>
+            <div className="fav__section-container">
 
-                <h3 className="fav__section-title" ref={favThingsTitleRef}>Things I enjoy when not coding…</h3>
-                <Row className="justify-content-md-center" ref={favCardRef}>
+                <h3 className="fav__section-title">Things I enjoy when not coding…</h3>
+                <div className="fav__cards-wrapper">
                     {populatedCards}
 
-                </Row>
+                </div>
 
-            </Container>
+            </div>
 
         </section>
     )

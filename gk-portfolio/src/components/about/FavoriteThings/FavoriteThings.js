@@ -1,8 +1,5 @@
 import React, { useEffect, useRef } from "react";
 import './favoriteThings.css';
-import Container from 'react-bootstrap/Container';
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
 import favThings from '../../../utils/about-fav-things.json';
 import { gsap } from "gsap";
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
@@ -22,15 +19,6 @@ function FavoriteThings() {
 
         // Save Initial Styles
         ScrollTrigger.saveStyles(favThingsSection.current);
-
-        let animateIn = gsap.timeline({
-            scrollTrigger: {
-                trigger: favThingsSection.current,
-                toggleActions: 'play none none reverse',
-                start: 'top bottom',
-                end: '-=50'
-            }
-        });
 
         gsap.fromTo(favThingsSection.current, {
 

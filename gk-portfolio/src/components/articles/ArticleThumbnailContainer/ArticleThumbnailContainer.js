@@ -3,6 +3,7 @@ import { useHistory } from "react-router-dom";
 import './articleThumbnailContainer.css';
 import Container from 'react-bootstrap/Container';
 import { gsap } from "gsap";
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import ArticleThumbnail from '../ArticleThumbnail/ArticleThumbnail';
 
 
@@ -12,28 +13,32 @@ function ArticleThumbnailContainer() {
     // React Router
     const history = useHistory();
 
-
-    // Ref for title pin border
-    // const devTitleRef = useRef(null);
+    // Ref for Article Section
+    const articleSection = useRef(null);
 
     // GSAP ANIMATIONS
-    // useEffect(() => {
+    useEffect(() => {
 
-    //     gsap.fromTo(
-    //         devTitleRef.current,
-    //         {
-    //             autoAlpha: 0,
-    //             y: 50
-    //         },
-    //         {
-    //             autoAlpha: 1,
-    //             y: 0,
-    //             ease: "expo",
-    //             delay: 1
-    //         });
+        // Save Initial Styles
+        ScrollTrigger.saveStyles(articleSection.current);
 
+        gsap.fromTo(articleSection.current, {
 
-    // }, [])
+            autoAlpha: 0,
+            y: 150,
+
+        }, {
+            scrollTrigger: {
+                trigger: articleSection.current,
+                start: "top bottom",
+                end: "-=50",
+                scrub: true
+            },
+            autoAlpha: 1,
+            y: 0
+        });
+
+    }, []);
 
     const handleViewArticles = () => {
         history.push('/articles');
@@ -41,13 +46,15 @@ function ArticleThumbnailContainer() {
 
 
     return (
-        <section className="articleThumbnailContainer">
+        <section
+            ref={articleSection}
+            className="articleThumbnailContainer">
             <button
                 className="atc__article-btn"
                 onClick={handleViewArticles}
             >
                 <span className="atc__btn-cta">View</span>
-                <span className="atc__btn-article">Articles</span>
+                <span className="atc__btn-article">Dev Articles</span>
                 <svg
                     className="atc__btn-icon"
                     viewBox="0 0 9 11" fill="none" xmlns="http://www.w3.org/2000/svg">

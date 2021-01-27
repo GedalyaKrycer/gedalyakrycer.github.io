@@ -18,7 +18,7 @@
     border-left: 1px solid var(--section-headlines);
     border-right: 1px solid var(--section-headlines);
     border-bottom: 1px solid var(--section-headlines);
-    width: 86px;
+    width: 114px;
     height: 31px;
     transition: 0.3s cubic-bezier(.8,.02,.52,1);
 }
@@ -41,8 +41,8 @@
 .atc__btn-icon {
     opacity: 0;
     position: absolute;
-    margin-left: 8px;
-    height: 11px; 
+    margin-left: 7px;
+    height: 10px; 
     fill: var(--primary-blue);
     left: 50px;
     transition: all 0.3s cubic-bezier(.8,.02,.52,1);
@@ -50,12 +50,12 @@
 
 .atc__article-btn:hover {
     color: var(--primary-blue);
-    width: 135px;
+    width: 163px;
 }
 
 .atc__article-btn:hover > .atc__btn-article {
     color: var(--primary-blue);
-    left: 52px;
+    left: 50px;
 }
 
 .atc__article-btn:hover > .atc__btn-cta {
@@ -65,7 +65,7 @@
 
 .atc__article-btn:hover > .atc__btn-icon {
     opacity: 1;
-    left: 103px;
+    left: 130px;
 }
 
 

@@ -5,7 +5,6 @@ import Row from 'react-bootstrap/Row';
 import DevProjectCard from '../DevProjectCard/DevProjectCard';
 import projects from '../../../utils/projects.json';
 import { gsap } from "gsap";
-import ArticleThumbnail from '../../articles/ArticleThumbnail/ArticleThumbnail';
 
 
 // This is static top section of the page and gives it semantic value.

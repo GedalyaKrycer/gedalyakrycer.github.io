@@ -4,7 +4,7 @@ import Header from '../../components/ui/Header/Header';
 
 // Lazy loads these components in
 const DevPortfolio = lazy(() => import('../../components/home/DevPortfolio/DevPortfolio'));
-const ArticleThumbnailContainer = lazy(() => import('../../components/articles/ArticleThumbnailContainer/ArticleThumbnailContainer'));
+const HomeArticleContainer = lazy(() => import('../../components/home/HomeArticleContainer/HomeArticleContainer'));
 const DesignPortfolio = lazy(() => import('../../components/home/DesignPortfolio/DesignPortfolio'));
 
 
@@ -21,7 +21,7 @@ function Home() {
 
             <Suspense fallback={<div>Loading…</div>}>
                 <DevPortfolio />
-                <ArticleThumbnailContainer />
+                <HomeArticleContainer />
                 <DesignPortfolio />
             </Suspense>
         </>

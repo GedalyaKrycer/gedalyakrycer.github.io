@@ -50,7 +50,7 @@
 
 .atc__article-btn:hover {
     color: var(--primary-blue);
-    width: 163px;
+    width: 160px;
 }
 
 .atc__article-btn:hover > .atc__btn-article {

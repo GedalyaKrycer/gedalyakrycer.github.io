@@ -7,6 +7,10 @@
     cursor: pointer;
 }
 
+.articleThumbnail div {
+    cursor: pointer;
+}
+
 .articleThumbnail:hover {
     text-decoration: none;
 }

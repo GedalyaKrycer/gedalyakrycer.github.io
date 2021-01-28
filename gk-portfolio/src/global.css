@@ -49,15 +49,15 @@ body::-webkit-scrollbar {
 }
 body {
   scrollbar-width: thin;
-  scrollbar-color: var(--primary-blue-dark) var(--dark-gray);
+  scrollbar-color: var(--primary-blue-dark) var(--darker-gray);
 }
 body::-webkit-scrollbar-track {
-  background: var(--dark-gray);
+  background: var(--darker-gray);
 }
 body::-webkit-scrollbar-thumb {
   background-color: var(--primary-blue-dark) ;
   border-radius: 6px;
-  border: 3px solid var(--dark-gray);
+  border: 3px solid var(--darker-gray);
 }
 
 

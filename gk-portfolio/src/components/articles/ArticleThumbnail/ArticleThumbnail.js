@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
 import './articleThumbnail.css';
-import bgImg from './bg.jpeg'
 
-const ArticleThumbnail = ({ articleUrl }) => {
+const ArticleThumbnail = ({ url, img, title, reactions, tag, date }) => {
 
     // Intern States
     const [isHovering, setIsHovering] = useState(false);
@@ -11,18 +10,18 @@ const ArticleThumbnail = ({ articleUrl }) => {
     const atMainSectionImgStyle = {
         width: '100%',
         height: '100%',
-        backgroundImage: `linear-gradient(180deg, rgba(0, 0, 0, 0) 66.51%, rgba(0, 0, 0, 0.31) 100%), url(${bgImg})`,
+        backgroundImage: `linear-gradient(180deg, rgba(0, 0, 0, 0) 66.51%, rgba(0, 0, 0, 0.31) 100%), url(${img})`,
         backgroundPosition: "center",
         backgroundSize: "cover",
         backgroundRepeat: "no-repeat",
         transform: isHovering ? "scale(1.1)" : "scale(1)",
         opacity: isHovering ? 1 : 0,
-        // visibility: isHovering ? "visible" : "hidden",
         position: 'absolute',
         top: 0,
         left: 0,
         right: 0,
         zIndex: 1,
+        cursor: "pointer",
         transition: 'all 0.5s cubic-bezier(.8,.02,.52,1)'
     }
 
@@ -79,7 +78,7 @@ const ArticleThumbnail = ({ articleUrl }) => {
 
     return (
         <a
-            href={articleUrl}
+            href={url}
             onMouseEnter={() => setIsHovering(prevState => !prevState)}
             onMouseLeave={() => setIsHovering(prevState => !prevState)}
             className="articleThumbnail"
@@ -87,13 +86,13 @@ const ArticleThumbnail = ({ articleUrl }) => {
             rel="noopener noreferrer"
         >
             <div className="at__main-section">
-                <h4 style={atTitle}>5 Remarkable React Router Features (Anchor Links, Query Params & more)</h4>
+                <h4 style={atTitle}>{title}</h4>
                 <div style={atMainSectionImgStyle}></div>
 
             </div>
             <div className="at__meta-section">
                 <div className="at__meta-left-group">
-                    <p style={atMetaTag}>todayilearned</p>
+                    <p style={atMetaTag}>#{tag}</p>
                     <div style={atCTASectionStyle}>
                         <h5 style={atCtaText} >Read article</h5>
                         <svg
@@ -108,7 +107,7 @@ const ArticleThumbnail = ({ articleUrl }) => {
                 </div>
 
                 <div className="at__reaction-wrapper">
-                    <p className="at__reaction-text">500</p>
+                    <p className="at__reaction-text">{reactions}</p>
                     <svg
                         className="at__reaction-icon"
                         viewBox="0 0 11 11"
@@ -118,11 +117,11 @@ const ArticleThumbnail = ({ articleUrl }) => {
 
                 </div>
 
-                <p className="at__publish-data">1/24/21</p>
+                <p className="at__publish-data">{date}</p>
             </div>
 
         </a>
     )
 }
 
-export default ArticleThumbnail;
+export default React.memo(ArticleThumbnail);

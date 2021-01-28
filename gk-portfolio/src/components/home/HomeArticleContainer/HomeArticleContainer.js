@@ -1,14 +1,19 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { useHistory } from "react-router-dom";
-import './articleThumbnailContainer.css';
+import './homeArticleContainer.css';
 import Container from 'react-bootstrap/Container';
 import { gsap } from "gsap";
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import ArticleThumbnail from '../ArticleThumbnail/ArticleThumbnail';
+import ArticleThumbnail from '../../articles/ArticleThumbnail/ArticleThumbnail';
+import axios from 'axios';
 
 
 // This is static top section of the page and gives it semantic value.
-function ArticleThumbnailContainer() {
+function HomeArticleContainer() {
+
+    // Local State
+    const [articles, setArticles] = useState();
+
 
     // React Router
     const history = useHistory();
@@ -45,6 +50,26 @@ function ArticleThumbnailContainer() {
     }
 
 
+    useEffect(() => {
+
+        console.log("[HOME] Api Ran");
+
+        axios.get('https://dev.to/api/articles?username=gedalyakrycer&per_page=6')
+            .then(res => {
+                // console.log(res.data);
+                setArticles(res.data);
+            })
+            .catch(error => {
+                console.log(error)
+            })
+
+        return () => {
+
+        }
+
+    }, [])
+
+
     return (
         <section
             ref={articleSection}
@@ -64,12 +89,31 @@ function ArticleThumbnailContainer() {
             <Container>
 
                 <div className="atc__row">
-                    <ArticleThumbnail />
-                    <ArticleThumbnail />
-                    <ArticleThumbnail />
-                    <ArticleThumbnail />
-                    <ArticleThumbnail />
-                    <ArticleThumbnail />
+
+                    {articles && articles.map((article) => {
+
+                        console.log('MAP RAN')
+
+                        // Create Date
+                        let date = new Date(article.published_at);
+                        const day = date.getDate()
+                        const month = date.getMonth() + 1;
+                        let year = date.getFullYear().toString().split("").slice(2, 4).join("");
+
+                        return <ArticleThumbnail
+                            key={article.id}
+                            url={article.url}
+                            img={article.cover_image}
+                            title={article.title}
+                            reactions={article.positive_reactions_count}
+                            tag={article.tag_list.slice(0, 1)}
+                            date={`${month}/${day}/${year}`}
+
+
+
+                        />
+                    })}
+
                 </div>
 
             </Container>
@@ -79,4 +123,4 @@ function ArticleThumbnailContainer() {
 }
 
 
-export default ArticleThumbnailContainer;
+export default HomeArticleContainer;

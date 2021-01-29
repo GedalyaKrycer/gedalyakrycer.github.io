@@ -30,6 +30,16 @@ Colors Variables
 .g_secondary-blue-color {
   background: var(--primary-blue-dark);
 }
+
+.g_secondary-design-color {
+  background: var(--secondary-design);
+}
+
+.g_secondary-learn-color {
+  background: var(--secondary-learn);
+}
+
+
 .g_section-headlines-color {
   color: var(--section-headlines);
 }

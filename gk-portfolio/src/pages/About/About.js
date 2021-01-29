@@ -5,7 +5,8 @@ import Bio from '../../components/about/Bio/Bio';
 
 // Lazy loads these components in
 const FavoriteThings = lazy(() => import('../../components/about/FavoriteThings/FavoriteThings'));
-const TechContainer = lazy(() => import('../../components/about/TechContainer/techContainer'));
+const CareerContainer = lazy(() => import('../../components/about/CareerContainer/CareerContainer'));
+const TechContainer = lazy(() => import('../../components/about/TechContainer/TechContainer'));
 
 
 
@@ -23,6 +24,7 @@ function About() {
             <Bio />
             <Suspense fallback={<div>Loading…</div>}>
                 <FavoriteThings />
+                <CareerContainer />
                 <TechContainer />
             </Suspense>
         </>

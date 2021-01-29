@@ -38,24 +38,20 @@ function MainArticleContainer() {
     }, []);
 
 
-    useEffect(() => {
-        apiCall(1);
 
-        // if (articles) {
-        //     setOldContentAvailable(true);
-        // } else {
-        //     setOldContentAvailable(false);
-        // }
+    // Checks if there are Newer posts available 
+    useEffect(() => {
+        // Calls first page from API on initial load
+        apiCall();
 
         if (currentPage > 1) {
             setNewContentAvailable(true);
         } else {
             setNewContentAvailable(false);
         }
-
-        console.log(currentPage)
     }, [currentPage])
 
+    // Checks if there are older posts available 
     useEffect(() => {
         if (articles.length === 0) {
             setOldContentAvailable(false);
@@ -64,13 +60,12 @@ function MainArticleContainer() {
         }
     }, [articles])
 
+
+    // Calls Dev.To Api
     const apiCall = () => {
 
-        console.log("[ARTICLES] Api Ran");
-
-        axios.get(`https://dev.to/api/articles?username=gedalyakrycer&per_page=3&page=${currentPage}`)
+        axios.get(`https://dev.to/api/articles?username=gedalyakrycer&per_page=9&page=${currentPage}`)
             .then(res => {
-                console.log(res.data);
                 setArticles(res.data);
             })
             .catch(error => {
@@ -99,9 +94,14 @@ function MainArticleContainer() {
                         <>
                             <div className="mtc__row">
 
-                                {articles && articles.map((article) => {
+                                {articles.length === 0 ? (
+                                    <div className="mtc__article-end">
+                                        <h3>Thank you for reading!</h3>
+                                        <p>This is the end of the available articles. You can cycle back below for more recent ones.</p>
+                                    </div>
+                                ) : null}
 
-                                    console.log('MAP RAN')
+                                {articles && articles.map((article) => {
 
                                     // Create Date
                                     let date = new Date(article.published_at);
@@ -131,7 +131,7 @@ function MainArticleContainer() {
                     : <p>{apiError}</p>
                 }
 
-                {articles.length === 0 ? <p>No More Articles</p> : null}
+
 
                 <ArticlePagination
                     oldContentAvailable={oldContentAvailable}

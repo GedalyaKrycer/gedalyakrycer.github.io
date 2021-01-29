@@ -3,7 +3,6 @@ import './articleThumbnail.css';
 
 const ArticleThumbnail = ({ url, img, title, reactions, tag, date }) => {
 
-
     // Intern States
     const [isHovering, setIsHovering] = useState(false);
 

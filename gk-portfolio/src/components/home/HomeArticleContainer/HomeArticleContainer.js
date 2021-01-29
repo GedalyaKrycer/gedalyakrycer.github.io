@@ -52,11 +52,8 @@ function HomeArticleContainer() {
 
     useEffect(() => {
 
-        console.log("[HOME] Api Ran");
-
         axios.get('https://dev.to/api/articles?username=gedalyakrycer&per_page=6')
             .then(res => {
-                // console.log(res.data);
                 setArticles(res.data);
             })
             .catch(error => {
@@ -91,8 +88,6 @@ function HomeArticleContainer() {
                 <div className="atc__row">
 
                     {articles && articles.map((article) => {
-
-                        console.log('MAP RAN')
 
                         // Create Date
                         let date = new Date(article.published_at);

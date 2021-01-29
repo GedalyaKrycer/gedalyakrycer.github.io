@@ -14,6 +14,11 @@
     padding-bottom: 90px;
 }
 
+.mtc__article-end {
+    color: var(--light-grey);
+    text-align: center;
+}
+
 
 
 @media screen and (max-width: 809px) {

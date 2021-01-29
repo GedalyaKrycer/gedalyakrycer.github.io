@@ -1,56 +1,16 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useEffect, useRef } from 'react';
 import './careerContainer.css';
-import Container from 'react-bootstrap/Container';
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
 import careerHistory from '../../../utils/careerHistory.json';
+import CareerCard from '../CareerCard/CareerCard';
 import { gsap } from "gsap";
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import ScrollContainer from 'react-indiana-drag-scroll';
 gsap.registerPlugin(ScrollTrigger);
 
 
+
+
 function CareerContainer() {
-
-    // State to hold which buttons to show
-    // const [techArray, setTechArray] = useState(tech);
-
-
-
-
-
-    // Helper function to make setting the active states DRYer
-    // const activeSelector = (selector) => {
-    //     switch (selector) {
-    //         case "dev":
-    //             setDevFilterActive(true);
-    //             setDesignFilterActive(false);
-    //             setLearnFilterActive(false);
-    //             break;
-    //         case "design":
-    //             setDevFilterActive(false);
-    //             setDesignFilterActive(true);
-    //             setLearnFilterActive(false);
-    //             break;
-    //         case "learn":
-    //             setDevFilterActive(false);
-    //             setDesignFilterActive(false);
-    //             setLearnFilterActive(true);
-    //             break;
-    //         default:
-    //             setDevFilterActive(false);
-    //             setDesignFilterActive(false);
-    //             setLearnFilterActive(false);
-    //     }
-    // }
-
-
-
-
-
-
-
-
-
 
     // Ref for Tech Title
     const careerTitleRef = useRef(null);
@@ -123,54 +83,37 @@ function CareerContainer() {
 
 
     return (
-        <section>
-            <Container className="g__about-sections">
-                <h2 ref={careerTitleRef}>Career</h2>
+        <section className="g__about-sections">
+            <h2 ref={careerTitleRef}>Career</h2>
 
-                <Row className="justify-content-md-center g_negative-margin">
-                    <Col lg={8}>
-                        <p className="cc__intro-text g__body-lg"
-                            ref={introTxtRef}
-                        >Here is what I have been up to in <span className="g_secondary-blue-color">Development</span>, <span className="g_secondary-design-color">Design</span> and <span className="g_secondary-learn-color">Education</span>.</p>
-                    </Col>
-                </Row>
-                <Row
-                    ref={timelineRef}
-                    className="justify-content-md-center"
-                >
-                    <Col
-                        lg={12}
-                        className="cc__wrapper"
-                    >
+            <div
+                className="g_negative-margin cc__intro-wrapper"
+                ref={introTxtRef}
+            >
+                <p className="cc__intro-text g__body-lg">Here is what I have been up to in <span className="cc__intro-text--dev">Development</span>, <span className="cc__intro-text--design">Design</span> and <span className="cc__intro-text--learn">Education</span>.</p>
 
+            </div>
+            <div
+                ref={timelineRef}
+                className="cc__timeline-wrapper">
+                <ScrollContainer className="cc__overflow" >
 
-                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Asperiores, fugiat modi porro omnis alias illo dolorem tempore fuga vel quia! Placeat deserunt a dolorem corrupti explicabo libero voluptates repellat itaque?</p>
+                    <div className="cc__buffer"></div>
+                    {careerHistory && careerHistory.map((card, index) => {
+                        return <CareerCard
+                            key={index + card.title}
+                            title={card.title}
+                            company={card.company}
+                            timeFrame={card.time_frame}
+                            startDate={card.start_date}
+                            description={card.description}
+                            type={card.type}
+                        />
+                    })}
+                    <div className="cc__buffer"></div>
 
-                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Asperiores, fugiat modi porro omnis alias illo dolorem tempore fuga vel quia! Placeat deserunt a dolorem corrupti explicabo libero voluptates repellat itaque?</p>
-
-                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Asperiores, fugiat modi porro omnis alias illo dolorem tempore fuga vel quia! Placeat deserunt a dolorem corrupti explicabo libero voluptates repellat itaque?</p>
-
-                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Asperiores, fugiat modi porro omnis alias illo dolorem tempore fuga vel quia! Placeat deserunt a dolorem corrupti explicabo libero voluptates repellat itaque?</p>
-
-                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Asperiores, fugiat modi porro omnis alias illo dolorem tempore fuga vel quia! Placeat deserunt a dolorem corrupti explicabo libero voluptates repellat itaque?</p>
-
-                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Asperiores, fugiat modi porro omnis alias illo dolorem tempore fuga vel quia! Placeat deserunt a dolorem corrupti explicabo libero voluptates repellat itaque?</p>
-
-                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Asperiores, fugiat modi porro omnis alias illo dolorem tempore fuga vel quia! Placeat deserunt a dolorem corrupti explicabo libero voluptates repellat itaque?</p>
-
-                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Asperiores, fugiat modi porro omnis alias illo dolorem tempore fuga vel quia! Placeat deserunt a dolorem corrupti explicabo libero voluptates repellat itaque?</p>
-
-                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Asperiores, fugiat modi porro omnis alias illo dolorem tempore fuga vel quia! Placeat deserunt a dolorem corrupti explicabo libero voluptates repellat itaque?</p>
-
-                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Asperiores, fugiat modi porro omnis alias illo dolorem tempore fuga vel quia! Placeat deserunt a dolorem corrupti explicabo libero voluptates repellat itaque?</p>
-
-                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Asperiores, fugiat modi porro omnis alias illo dolorem tempore fuga vel quia! Placeat deserunt a dolorem corrupti explicabo libero voluptates repellat itaque?</p>
-
-
-                    </Col>
-                </Row>
-
-            </Container>
+                </ScrollContainer>
+            </div>
 
         </section>
     )

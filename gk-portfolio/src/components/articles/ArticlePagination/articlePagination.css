@@ -1,0 +1,6 @@
+.ap__btn {
+    color: green;
+}
+.ap__btn:disabled {
+    color: grey;
+}

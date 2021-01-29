@@ -1,6 +1,8 @@
-import React from 'react';
+import React, { Suspense, lazy } from 'react';
 import './articles.css';
 import Header from '../../components/ui/Header/Header';
+
+const MainArticleContainer = lazy(() => import('../../components/articles/MainArticleContainer/MainArticleContainer'));
 
 
 function Articles() {
@@ -10,7 +12,11 @@ function Articles() {
                 title="Articles"
                 subTitleOne={`I love to writing about the details of code, design, and productivity.`}
             />
-           
+
+            <Suspense fallback={<div>Loading…</div>}>
+                <MainArticleContainer />
+            </Suspense>
+
         </div>
     )
 }

@@ -165,7 +165,7 @@ function ContactForm() {
 
         },
             {
-                y: 0
+                y: -15
 
             }
 
@@ -177,8 +177,8 @@ function ContactForm() {
 
     return (
         <section>
-            <Container className="g__about-sections" id="contact">
-                <h2 className="contact__title" ref={contactTitle1Ref}>Contact</h2>
+            <Container id="contact">
+                <h2 className="contact__title" ref={contactTitle1Ref}>Email</h2>
                 <Row className="justify-content-md-center g_negative-margin">
                     <Col className="white-color" lg={8}>
                         <div className="contact__form-bg">

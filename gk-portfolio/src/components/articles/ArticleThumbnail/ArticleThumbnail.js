@@ -3,6 +3,7 @@ import './articleThumbnail.css';
 
 const ArticleThumbnail = ({ url, img, title, reactions, tag, date }) => {
 
+
     // Intern States
     const [isHovering, setIsHovering] = useState(false);
 
@@ -75,6 +76,9 @@ const ArticleThumbnail = ({ url, img, title, reactions, tag, date }) => {
         fill: "var(--primary-blue)",
         transition: 'all 0.7s cubic-bezier(.8,.02,.52,1)'
     }
+
+
+
 
     return (
         <a

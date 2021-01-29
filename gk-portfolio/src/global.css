@@ -54,17 +54,18 @@ Base Styles
 ————————————————————————————————————————————————— */
 
 
-body::-webkit-scrollbar {
+::-webkit-scrollbar {
   width: 10px;
+  height: 10px;
 }
 body {
   scrollbar-width: thin;
   scrollbar-color: var(--primary-blue-dark) var(--darker-gray);
 }
-body::-webkit-scrollbar-track {
+::-webkit-scrollbar-track {
   background: var(--darker-gray);
 }
-body::-webkit-scrollbar-thumb {
+::-webkit-scrollbar-thumb {
   background-color: var(--primary-blue-dark) ;
   border-radius: 6px;
   border: 3px solid var(--darker-gray);

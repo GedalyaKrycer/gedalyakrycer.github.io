@@ -129,7 +129,7 @@ function CareerContainer() {
 
                 <Row className="justify-content-md-center g_negative-margin">
                     <Col lg={8}>
-                        <p className="techContainer__intro-text g__body-lg"
+                        <p className="cc__intro-text g__body-lg"
                             ref={introTxtRef}
                         >Here is what I have been up to in <span className="g_secondary-blue-color">Development</span>, <span className="g_secondary-design-color">Design</span> and <span className="g_secondary-learn-color">Education</span>.</p>
                     </Col>
@@ -139,11 +139,32 @@ function CareerContainer() {
                     className="justify-content-md-center"
                 >
                     <Col
-                        lg={12} className="techContainer__tech-wrapper"
+                        lg={12}
+                        className="cc__wrapper"
                     >
 
 
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Asperiores, fugiat modi porro omnis alias illo dolorem tempore fuga vel quia! Placeat deserunt a dolorem corrupti explicabo libero voluptates repellat itaque?</p>
 
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Asperiores, fugiat modi porro omnis alias illo dolorem tempore fuga vel quia! Placeat deserunt a dolorem corrupti explicabo libero voluptates repellat itaque?</p>
+
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Asperiores, fugiat modi porro omnis alias illo dolorem tempore fuga vel quia! Placeat deserunt a dolorem corrupti explicabo libero voluptates repellat itaque?</p>
+
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Asperiores, fugiat modi porro omnis alias illo dolorem tempore fuga vel quia! Placeat deserunt a dolorem corrupti explicabo libero voluptates repellat itaque?</p>
+
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Asperiores, fugiat modi porro omnis alias illo dolorem tempore fuga vel quia! Placeat deserunt a dolorem corrupti explicabo libero voluptates repellat itaque?</p>
+
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Asperiores, fugiat modi porro omnis alias illo dolorem tempore fuga vel quia! Placeat deserunt a dolorem corrupti explicabo libero voluptates repellat itaque?</p>
+
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Asperiores, fugiat modi porro omnis alias illo dolorem tempore fuga vel quia! Placeat deserunt a dolorem corrupti explicabo libero voluptates repellat itaque?</p>
+
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Asperiores, fugiat modi porro omnis alias illo dolorem tempore fuga vel quia! Placeat deserunt a dolorem corrupti explicabo libero voluptates repellat itaque?</p>
+
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Asperiores, fugiat modi porro omnis alias illo dolorem tempore fuga vel quia! Placeat deserunt a dolorem corrupti explicabo libero voluptates repellat itaque?</p>
+
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Asperiores, fugiat modi porro omnis alias illo dolorem tempore fuga vel quia! Placeat deserunt a dolorem corrupti explicabo libero voluptates repellat itaque?</p>
+
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Asperiores, fugiat modi porro omnis alias illo dolorem tempore fuga vel quia! Placeat deserunt a dolorem corrupti explicabo libero voluptates repellat itaque?</p>
 
 
                     </Col>

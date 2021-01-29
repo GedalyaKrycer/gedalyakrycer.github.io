@@ -208,12 +208,8 @@ function TechContainer() {
                         >These are some of the tools I use on projects or currently learning.</p>
                     </Col>
                 </Row>
-                <Row
-                    ref={techButtonsRef}
-                    className="justify-content-md-center"
-                >
-                    <Col
-                        lg={12} className="techContainer__tech-wrapper"
+                <div ref={techButtonsRef}>
+                    <div className="techContainer__tech-wrapper"
                     >
 
                         <TechFilter
@@ -240,8 +236,8 @@ function TechContainer() {
                             ))}
                         </div>
 
-                    </Col>
-                </Row>
+                    </div>
+                </div>
 
             </Container>
 

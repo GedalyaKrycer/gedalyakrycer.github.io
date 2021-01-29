@@ -3,8 +3,6 @@
     margin: 0 auto;
 }
 
-
-
 .mtc__row {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(266px, 1fr));

@@ -42,7 +42,14 @@ function MainArticleContainer() {
     // Checks if there are Newer posts available 
     useEffect(() => {
         // Calls first page from API on initial load
-        apiCall();
+        axios.get(`https://dev.to/api/articles?username=gedalyakrycer&per_page=9&page=${currentPage}`)
+            .then(res => {
+                setArticles(res.data);
+            })
+            .catch(error => {
+                console.log(error);
+                setApiError(error);
+            })
 
         if (currentPage > 1) {
             setNewContentAvailable(true);
@@ -60,19 +67,6 @@ function MainArticleContainer() {
         }
     }, [articles])
 
-
-    // Calls Dev.To Api
-    const apiCall = () => {
-
-        axios.get(`https://dev.to/api/articles?username=gedalyakrycer&per_page=9&page=${currentPage}`)
-            .then(res => {
-                setArticles(res.data);
-            })
-            .catch(error => {
-                console.log(error);
-                setApiError(error);
-            })
-    }
 
     const handleNextPage = () => {
         setCurrentPage(prevPage => prevPage + 1);

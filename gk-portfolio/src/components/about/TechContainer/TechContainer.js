@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState } from 'react';
 import './techContainer.css';
 import TechButton from '../TechButton/TechButton';
 import TechFilter from '../TechFilter/TechFilter';
@@ -6,10 +6,6 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import tech from '../../../utils/tech.json';
-import { gsap } from "gsap";
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
-gsap.registerPlugin(ScrollTrigger);
-
 
 function TechContainer() {
 
@@ -125,118 +121,44 @@ function TechContainer() {
         }
     }
 
-
-    // Ref for Tech Title
-    const techTitleRef = useRef(null);
-
-    // Ref for Lead Text
-    const introTxtRef = useRef(null);
-
-    // Ref for Tech Buttons
-    const techButtonsRef = useRef(null);
-
-
-
-    // GSAP ANIMATIONS
-    useEffect(() => {
-
-        // Save Initial Styles
-        ScrollTrigger.saveStyles([
-            techTitleRef.current,
-            introTxtRef.current,
-            techButtonsRef.current
-        ]);
-
-
-        let animateIn = gsap.timeline({
-            scrollTrigger: {
-                trigger: techTitleRef.current,
-                toggleActions: 'play none none none',
-                start: 'bottom bottom',
-                end: '-=50'
-            }
-        });
-
-        animateIn.fromTo(techTitleRef.current, {
-            autoAlpha: 0,
-            y: 100
-        },
-            {
-                autoAlpha: 1,
-                y: 0,
-                ease: "expo.out"
-            })
-
-        animateIn.fromTo(introTxtRef.current, {
-            autoAlpha: 0,
-            y: 0
-
-        },
-            {
-                autoAlpha: 1,
-                y: -20,
-                ease: "expo.out"
-            }
-
-        );
-
-        animateIn.fromTo(techButtonsRef.current, {
-            autoAlpha: 0,
-            y: 0
-
-        },
-            {
-                autoAlpha: 1,
-                y: -20,
-                ease: "expo.out"
-            }
-
-        );
-
-    }, []);
-
-
     return (
         <section>
             <Container className="g__about-sections">
-                <h2 ref={techTitleRef}>Tech</h2>
+                <h2 >Tech</h2>
 
                 <Row className="justify-content-md-center g_negative-margin">
                     <Col lg={8}>
-                        <p className="techContainer__intro-text g__body-lg"
-                            ref={introTxtRef}
-                        >These are some of the tools I use on projects or currently learning.</p>
+                        <p className="techContainer__intro-text g__body-lg">These are some of the tools I use on projects or currently learning.</p>
                     </Col>
                 </Row>
-                <div ref={techButtonsRef}>
-                    <div className="techContainer__tech-wrapper"
-                    >
 
-                        <TechFilter
-                            devFilterActive={devFilterActive}
-                            designFilterActive={designFilterActive}
-                            learnFilterActive={learnFilterActive}
-                            handleDevFilter={handleDevFilter}
-                            handleDesignFilter={handleDesignFilter}
-                            handleLearnFilter={handleLearnFilter}
+                <div className="techContainer__tech-wrapper"
+                >
 
-                        />
+                    <TechFilter
+                        devFilterActive={devFilterActive}
+                        designFilterActive={designFilterActive}
+                        learnFilterActive={learnFilterActive}
+                        handleDevFilter={handleDevFilter}
+                        handleDesignFilter={handleDesignFilter}
+                        handleLearnFilter={handleLearnFilter}
 
-                        <div className="techContainer__tech-btn-container" >
-                            {techArray.map(technology => (
-                                <TechButton
-                                    key={technology.name}
-                                    name={technology.name}
-                                    link={technology.link}
-                                    svg={technology.svg}
-                                    type={technology.type}
+                    />
+
+                    <div className="techContainer__tech-btn-container" >
+                        {techArray.map(technology => (
+                            <TechButton
+                                key={technology.name}
+                                name={technology.name}
+                                link={technology.link}
+                                svg={technology.svg}
+                                type={technology.type}
 
 
-                                />
-                            ))}
-                        </div>
-
+                            />
+                        ))}
                     </div>
+
                 </div>
 
             </Container>

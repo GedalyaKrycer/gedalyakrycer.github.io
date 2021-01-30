@@ -6,7 +6,7 @@
 }
 
 .techContainer__tech-wrapper {
-    margin: 1rem auto 0;
+    margin: 1rem auto 10rem;
     display: flex;
     flex-direction: column;
     text-align: center;

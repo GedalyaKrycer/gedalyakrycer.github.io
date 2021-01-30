@@ -1,42 +1,9 @@
-import React, { useEffect, useRef } from "react";
+import React from "react";
 import './favoriteThings.css';
 import favThings from '../../../utils/about-fav-things.json';
-import { gsap } from "gsap";
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
-gsap.registerPlugin(ScrollTrigger);
 
 
 function FavoriteThings() {
-
-    // Ref for Fav Things Section Title
-    const favThingsSection = useRef(null);
-
-
-
-
-    // GSAP ANIMATIONS
-    useEffect(() => {
-
-        // Save Initial Styles
-        ScrollTrigger.saveStyles(favThingsSection.current);
-
-        gsap.fromTo(favThingsSection.current, {
-
-            autoAlpha: 0,
-            y: 150,
-
-        }, {
-            scrollTrigger: {
-                trigger: favThingsSection.current,
-                start: "top bottom",
-                end: "-=50",
-                scrub: true
-            },
-            autoAlpha: 1,
-            y: 0
-        });
-
-    }, []);
 
     const populatedCards = []
 
@@ -56,7 +23,7 @@ function FavoriteThings() {
 
 
     return (
-        <section ref={favThingsSection}>
+        <section>
             <div className="fav__section-container">
 
                 <h3 className="fav__section-title">Things I enjoy when not coding…</h3>

@@ -4,7 +4,25 @@ This is an experimental Bootstrap 4 portfolio site. The goal is to grow this web
 ### [View Deployed Site](https://practical-neumann-1924c6.netlify.app/)
 
 
-## V5 (Current)
+## V6 (Current)
+* Re-Structured React components into a more logical page and section folder structure. This will allow for easier discovery as the site grows. 
+
+* Created new sitemap structure that includes individual pages for the Portfolio/Home, Articles, About and Contact.
+
+* Integrated dev.to API on the homepage to show latest 6 blog posts.
+
+* Added new Articles page, with Pagination that pulls latest 9 articles per page, from the dev.to API. 
+
+* Updated bio on About page and added a new Career Timeline section
+
+* Rebuilt NavBar to not use bootstrap and simplified the use of bootstrap across the app. (Future goal is to remove Bootstrap completely and add SASS.)
+
+* Made many ui and animation fixes 
+
+---
+
+
+## V5
 * Complete refresh of the design.
 
 * Site rebuilt in React.js and react-bootstrap

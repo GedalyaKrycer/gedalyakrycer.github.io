@@ -1,0 +1,66 @@
+[
+    {
+        "title": "Contract Web Development",
+        "company": "Gedalya Krycer Designs",
+        "time_frame": "5 yr",
+        "start_date": "Present",
+        "description": "Providing web design and development services via React, Wordpress and Squarespace.",
+        "type": "dev"
+    },
+    {
+        "title": "Full-Stack Certification",
+        "company": "University of Arizona Bootcamp",
+        "time_frame": "6 mos",
+        "start_date": "2020",
+        "description": "Learned core languages and coding methodologies, while building multiple team-based projects.",
+        "type": "learning"
+    },
+    {
+        "title": "Digital Design Director",
+        "company": "Lúgh Studio",
+        "time_frame": "4 mos",
+        "start_date": "2020",
+        "description": "Lead both design and development teams, provided HR support and managed key accounts.",
+        "type": "design"
+    },
+    {
+        "title": "Sr. Web Designer",
+        "company": "Lúgh Studio",
+        "time_frame": "1 yr 8 mos",
+        "start_date": "2018",
+        "description": "Created WordPress designs, mentored junior designers and created web processes.",
+        "type": "design"
+    },
+    {
+        "title": "Designer",
+        "company": "Mila International",
+        "time_frame": "3 mos",
+        "start_date": "2018",
+        "description": "Provided graphic design for marketing collateral and event materials (booth & signage).",
+        "type": "design"
+    },
+    {
+        "title": "Lead Graphic Designer",
+        "company": "Lúgh Studio",
+        "time_frame": "2 yr 11 mos",
+        "start_date": "2015",
+        "description": "Worked on print, web, branding and motion graphic projects for multiple client accounts.",
+        "type": "design"
+    },
+    {
+        "title": "Graphic Designer",
+        "company": "Winky Designs",
+        "time_frame": "5 mos",
+        "start_date": "2014",
+        "description": "Served as an intern and then came on board part-time. Designed watch interfaces and product brochure.",
+        "type": "design"
+    },
+    {
+        "title": "Bachelors | Graphic Design",
+        "company": "The Art Institute of Las Vegas",
+        "time_frame": "4 yr",
+        "start_date": "2011",
+        "description": "AIGA Treasurer, won 3 student ADDY Awards and served as a tutor for graphic design subjects.",
+        "type": "learning"
+    }
+]

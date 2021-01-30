@@ -1,0 +1,61 @@
+.tech-filter__container {
+    margin: 30px 0 15px;
+}
+
+.tech-filter__nav {
+    margin: 0 auto;
+    max-width: 300px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.tech-filter__nav-dev,
+.tech-filter__nav-design,
+.tech-filter__nav-learn,
+.tech-filter__nav-reset {
+    color: var(--nav-filter-links);
+    transition: ease .5s;
+    height: 50px;
+    min-width: initial;
+}
+
+.tech-filter__nav-dev:hover,
+.tech-filter__nav-dev--active {
+    color: var(--primary-blue);
+    border-bottom: 2px solid var(--primary-blue);
+    font-weight: bold;
+    transition: ease .5s;
+}
+
+.tech-filter__nav-design:hover,
+.tech-filter__nav-design--active {
+    color: var(--secondary-design);
+    border-bottom: 2px solid var(--secondary-design);
+    font-weight: bold;
+    transition: ease .5s;
+}
+
+.tech-filter__nav-learn:hover,
+.tech-filter__nav-learn--active {
+    color: var(--secondary-learn);
+    border-bottom: 2px solid var(--secondary-learn);
+    font-weight: bold;
+    transition: ease .5s;
+}
+
+.tech-filter__nav-reset:hover,
+.tech-filter__nav-reset--active {
+    color: var(--nav-filter-links);
+    border-bottom: 2px solid var(--nav-filter-links);
+    font-weight: bold;
+    transition: ease .5s;
+}
+
+
+.tech-filter__nav-dev:focus,
+.tech-filter__nav-design:focus,
+.tech-filter__nav-learn:focus,
+.tech-filter__nav-reset:focus {
+    outline: solid 1px var(--section-headlines); 
+    
+}

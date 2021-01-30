@@ -1,0 +1,28 @@
+.rightInfoPin {
+    transform: rotate(90deg);
+    color: white;
+    top: calc(50% + 30px);
+    right: 0;
+    margin-right: -9px;
+    position: fixed;
+    text-align: center;
+    z-index: 3;
+}
+
+.rightInfoPin__link {
+    display: block;
+    color: var(--nav-filter-links);
+    transition: ease .5s;
+    font-size: 18px;
+
+}
+.rightInfoPin__link:hover {
+    text-decoration: none;
+}
+        
+
+@media screen and (max-width: 809px) {
+    .rightInfoPin {
+        display: none;
+    }
+}

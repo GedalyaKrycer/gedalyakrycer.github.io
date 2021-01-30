@@ -1,0 +1,100 @@
+.fav__section-container {
+    border-top: var(--section-headlines) solid 1px;
+    border-bottom: var(--section-headlines) solid 1px;
+    padding: 80px 0 100px;
+    width: calc(100% - 120px);
+    margin: 10rem auto 180px;
+    
+}
+
+.fav__section-title {
+    position: relative;
+    text-align: center;
+    color: var(--light-grey);
+    margin-bottom: 3rem;
+    font-size: 22px;
+    
+}
+
+.fav__cards-wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    column-gap: 30px;
+    row-gap: 40px;
+    justify-items: center;
+    max-width: 850px;
+    margin: 0 auto;
+    padding: 0 20px;
+
+}
+
+.fav__card {
+    background: #202120;
+    box-shadow: 0px 14px 30px rgba(0, 0, 0, 0.25), 0px 4px 8px rgba(0, 0, 0, 0.45), 0px 10px 40px 10px rgba(0, 0, 0, 0.15);
+    border-radius: 30px;
+    position: relative;
+    overflow: hidden;
+    padding-bottom: 2rem;
+    width: 200px;
+    height: 230px;
+    margin: 0 auto;
+    
+}
+
+.fav__card-img {
+    margin-bottom: 2.3rem;
+    border-radius: 30px 30px 0 0;
+    opacity: .6;
+    width: 100%;
+    object-fit: cover;
+    height: 130px;
+    transition: all .3s ease-in-out;
+    
+}
+
+.fav__card-title {
+    color: var(--primary-blue);
+    text-align: center;
+}
+
+
+
+.fav__hidden-text {
+    position: absolute;
+    bottom: -150px;
+    transition: ease-in .3s;
+    text-align: center;
+    width: 100%;
+    padding: 15px;
+}
+
+.fav__hidden-text p {
+   font-size: 16px;
+}
+
+.fav__card:hover {
+    cursor: pointer;
+}
+
+.fav__card:hover .fav__card-img  {
+   height: 60px;
+   transition: all .3s ease-in-out;
+   opacity: .2;
+   margin-bottom: -2.4rem;
+}
+
+.fav__card:hover .fav__card-title {
+    color: white;
+}
+
+
+.fav__card:hover .fav__hidden-text {
+    transition: ease-in .3s;
+    bottom: 10px;
+}
+
+@media screen and (max-width: 809px) {
+    .fav__section-container {
+        width: 100%;
+    }
+}

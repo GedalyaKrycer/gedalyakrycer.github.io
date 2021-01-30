@@ -1,0 +1,26 @@
+.mainThumbnailContainer {
+    width: calc(100% - 120px);
+    margin: 0 auto;
+}
+
+.mtc__row {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(266px, 1fr));
+    column-gap: 30px;
+    row-gap: 30px;
+    justify-items: center;
+    padding-bottom: 90px;
+}
+
+.mtc__article-end {
+    color: var(--light-grey);
+    text-align: center;
+}
+
+
+
+@media screen and (max-width: 809px) {
+    .mainThumbnailContainer {
+        width: 100%;
+    }
+}

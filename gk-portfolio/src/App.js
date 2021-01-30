@@ -1,13 +1,15 @@
 import React, { useEffect, useRef } from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import { PortfolioProvider } from './utils/PortfolioContext';
-import Home from "./pages/Home";
-import GithubPin from "./components/GithubPin";
-import ContactPin from "./components/ContactPin";
-import About from "./pages/About";
-import NotFound from "./pages/NotFound";
-import TopNavbar from "./components/TopNavbar";
-import Footer from "./components/Footer";
+import Home from "./pages/Home/Home";
+import GithubPin from "./components/ui/LeftInfoPin/LeftInfoPin";
+import ContactPin from "./components/ui/RightInfoPin/RightInfoPin";
+import About from "./pages/About/About";
+import Articles from "./pages//Articles/Articles";
+import Contact from "./pages/Contact/Contact";
+import NotFound from "./pages/NotFound/NotFound";
+import TopNavbar from "./components/ui/TopNavbar/TopNavbar";
+import Footer from "./components/ui/Footer/Footer";
 import ReactGA from 'react-ga';
 import { gsap } from "gsap";
 
@@ -62,7 +64,9 @@ function App() {
           <Switch>
 
             <Route exact path="/" component={Home} />
-            <Route exact path="/about" component={About} />
+            <Route path="/articles" component={Articles} />
+            <Route path="/about" component={About} />
+            <Route path="/contact" component={Contact} />
             <NotFound />
           </Switch>
         </main>

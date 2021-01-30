@@ -5,6 +5,8 @@
   "dependencies": {
     "axios": "^0.21.1",
     "bootstrap": "^4.5.2",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
     "formik": "^2.1.5",
     "gsap": "^3.5.1",
     "qs": "^6.9.4",
@@ -13,10 +15,9 @@
     "react-dom": "^16.13.1",
     "react-ga": "^3.1.2",
     "react-icons": "^3.11.0",
-    "react-router-bootstrap": "^0.25.0",
+    "react-indiana-drag-scroll": "^1.8.0",
     "react-router-dom": "^5.2.0",
-    "react-router-hash-link": "^2.3.1",
-    "react-scripts": "3.4.3",
+    "react-scripts": "^4.0.1",
     "reaptcha": "^1.7.2",
     "uuid": "^8.3.0"
   },

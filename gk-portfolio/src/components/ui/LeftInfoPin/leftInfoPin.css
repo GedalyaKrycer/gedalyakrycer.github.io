@@ -1,0 +1,23 @@
+.leftInfoPin {
+    color: white;
+    top: calc(50%);
+    left: 0;
+    width: 53px;
+    position: fixed;
+    text-align: center;
+    z-index: 3;
+}
+
+.leftInfoPin_link {
+    display: block;
+    margin-bottom: 5px;
+    color: var(--nav-filter-links);
+    transition: ease .5s;
+    font-size: 18px;
+}
+
+@media screen and (max-width: 809px) {
+    .leftInfoPin {
+        display: none;
+    }
+}

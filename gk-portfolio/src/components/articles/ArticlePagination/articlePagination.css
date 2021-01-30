@@ -1,0 +1,49 @@
+.articlePagination {
+    padding-bottom: 4rem;
+    grid-template-columns: repeat(2, max-content);
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    column-gap: 20px;
+}
+
+.ap__btn {
+    background-color: var(--dark-gray);
+    box-shadow: -4px -4px 8px rgba(52, 51, 51, 0.25), 4px 4px 8px rgba(0, 0, 0, 0.25);
+    padding: 15px;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 45px;
+    height: 45px;
+    transition: 0.3s ease-in-out;
+}
+
+
+.ap__icon {
+    transition: 0.3s ease-in-out;
+    width: 10px;
+    fill: var(--primary-blue);
+}
+
+.ap__btn:hover {
+    box-shadow: inset -4px -4px 8px rgba(52, 51, 51, 0.25), inset 4px 4px 8px rgba(0, 0, 0, 0.25);
+}
+
+.ap__btn:hover .ap__icon {
+   transform: scale(0.9);
+   fill: var(--primary-blue-dark);
+}
+
+.ap__btn:disabled  {
+    box-shadow: -4px -4px 8px rgba(52, 51, 51, 0.25), 4px 4px 8px rgba(0, 0, 0, 0.25);
+}
+
+.ap__btn:disabled .ap__icon  {
+    fill: var(--section-headlines);
+    transform: scale(1);
+}
+
+
+

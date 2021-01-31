@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import './bio.css';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
@@ -10,51 +10,6 @@ gsap.registerPlugin(ScrollTrigger);
 // This is static top section of the page and gives it semantic value.
 function Bio() {
 
-    // GSAP ANIMATIONS
-    useEffect(() => {
-
-
-        // Save Initial Styles
-        ScrollTrigger.saveStyles([
-            "#bioTitle",
-            ".bioContainer"
-        ]);
-
-
-        gsap.fromTo(
-            "#bioTitle",
-            {
-                autoAlpha: 0,
-                y: 50
-            },
-            {
-                autoAlpha: 1,
-                y: 0,
-                ease: "expo",
-                delay: 1
-            });
-
-        gsap.fromTo(
-            ".bioContainer",
-            {
-                autoAlpha: 0,
-                y: 180
-            },
-            {
-                scrollTrigger: {
-                    trigger: "#bioTitle",
-                    start: "top center",
-                    end: "-=50",
-                    scrub: true
-                },
-                autoAlpha: 1,
-                y: 0
-            });
-
-
-
-    }, []);
-
     return (
         <section>
             <Container>
@@ -63,7 +18,6 @@ function Bio() {
                 >Bio</h2>
 
                 <Row
-                    style={{ opacity: 0, transform: "translateY(180px)" }}
                     className="bioContainer justify-content-md-center g_negative-margin"
                 >
                     <Col className="g_white-color" lg={8}>

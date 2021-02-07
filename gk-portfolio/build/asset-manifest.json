@@ -3,10 +3,10 @@
     "static/js/0.b780d700.chunk.js": "/static/js/0.b780d700.chunk.js",
     "static/js/0.b780d700.chunk.js.map": "/static/js/0.b780d700.chunk.js.map",
     "main.css": "/static/css/main.8da0922a.chunk.css",
-    "main.js": "/static/js/main.46e3ed73.chunk.js",
-    "main.js.map": "/static/js/main.46e3ed73.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.ccf9d0d3.js",
-    "runtime-main.js.map": "/static/js/runtime-main.ccf9d0d3.js.map",
+    "main.js": "/static/js/main.2faeb8e2.chunk.js",
+    "main.js.map": "/static/js/main.2faeb8e2.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.39f28d20.js",
+    "runtime-main.js.map": "/static/js/runtime-main.39f28d20.js.map",
     "static/css/3.d470c34f.chunk.css": "/static/css/3.d470c34f.chunk.css",
     "static/js/3.57988dd4.chunk.js": "/static/js/3.57988dd4.chunk.js",
     "static/js/3.57988dd4.chunk.js.map": "/static/js/3.57988dd4.chunk.js.map",
@@ -21,8 +21,8 @@
     "static/js/7.e977b3ef.chunk.js": "/static/js/7.e977b3ef.chunk.js",
     "static/js/7.e977b3ef.chunk.js.map": "/static/js/7.e977b3ef.chunk.js.map",
     "static/css/8.e54fd516.chunk.css": "/static/css/8.e54fd516.chunk.css",
-    "static/js/8.94933b08.chunk.js": "/static/js/8.94933b08.chunk.js",
-    "static/js/8.94933b08.chunk.js.map": "/static/js/8.94933b08.chunk.js.map",
+    "static/js/8.61012b1d.chunk.js": "/static/js/8.61012b1d.chunk.js",
+    "static/js/8.61012b1d.chunk.js.map": "/static/js/8.61012b1d.chunk.js.map",
     "static/css/9.05381355.chunk.css": "/static/css/9.05381355.chunk.css",
     "static/js/9.9331875e.chunk.js": "/static/js/9.9331875e.chunk.js",
     "static/js/9.9331875e.chunk.js.map": "/static/js/9.9331875e.chunk.js.map",
@@ -51,17 +51,17 @@
     "static/css/main.8da0922a.chunk.css.map": "/static/css/main.8da0922a.chunk.css.map",
     "static/js/3.57988dd4.chunk.js.LICENSE.txt": "/static/js/3.57988dd4.chunk.js.LICENSE.txt",
     "static/js/4.64783ed6.chunk.js.LICENSE.txt": "/static/js/4.64783ed6.chunk.js.LICENSE.txt",
-    "static/js/8.94933b08.chunk.js.LICENSE.txt": "/static/js/8.94933b08.chunk.js.LICENSE.txt",
+    "static/js/8.61012b1d.chunk.js.LICENSE.txt": "/static/js/8.61012b1d.chunk.js.LICENSE.txt",
     "static/media/figma-thumbnail.60fdc632.jpg": "/static/media/figma-thumbnail.60fdc632.jpg",
-    "static/media/gedalya-krycer-resume.cd528ade.pdf": "/static/media/gedalya-krycer-resume.cd528ade.pdf",
+    "static/media/gedalya-krycer-resume.a89c9bfe.pdf": "/static/media/gedalya-krycer-resume.a89c9bfe.pdf",
     "static/media/motion-design-web.772ef2a6.webp": "/static/media/motion-design-web.772ef2a6.webp",
     "static/media/motion-design-web.d3c03d7d.mp4": "/static/media/motion-design-web.d3c03d7d.mp4"
   },
   "entrypoints": [
-    "static/js/runtime-main.ccf9d0d3.js",
+    "static/js/runtime-main.39f28d20.js",
     "static/css/3.d470c34f.chunk.css",
     "static/js/3.57988dd4.chunk.js",
     "static/css/main.8da0922a.chunk.css",
-    "static/js/main.46e3ed73.chunk.js"
+    "static/js/main.2faeb8e2.chunk.js"
   ]
 }

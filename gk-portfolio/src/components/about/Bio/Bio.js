@@ -55,7 +55,7 @@ function Bio() {
                         </p>
 
                         <p>
-                            In 2020 I decided to <s>change</s> expand my career to follow my true passion—building websites from the ground up as a front-end web developer. I graduated from the University of Arizona's Coding Bootcamp, with a certification in Full Stack Development.
+                            In 2020 I decided to <s>change</s> expand my career to follow my true passion—building websites from the ground up as a front-end web developer. I graduated from the University of Arizona's Coding Bootcamp, with a certification in Full-Stack Development.
                         </p>
                         <p>
                             These days I get the joy of building things with code and <a

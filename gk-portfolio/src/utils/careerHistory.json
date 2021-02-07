@@ -1,5 +1,13 @@
 [
     {
+        "title": "Junior React Native Developer",
+        "company": "WorkoutMe",
+        "time_frame": "1 mo",
+        "start_date": "Present",
+        "description": "Supporting our Sr. developer in adding new functionality and screens for iOS. Latest project included adding localization for multi-language support.",
+        "type": "dev"
+    },
+    {
         "title": "Contract Web Development",
         "company": "Gedalya Krycer Designs",
         "time_frame": "5 yr",

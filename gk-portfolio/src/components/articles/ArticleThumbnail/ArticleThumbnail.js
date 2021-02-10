@@ -1,10 +1,14 @@
-import React, { useState } from 'react';
+import React, {useEffect, useState} from 'react';
 import './articleThumbnail.css';
 
 const ArticleThumbnail = ({ url, img, title, reactions, tag, date }) => {
 
     // Intern States
     const [isHovering, setIsHovering] = useState(false);
+
+    useEffect(() => {
+        setIsHovering(false);
+    }, [])
 
     // Styles For Elements Effected By Hover
     const atMainSectionImgStyle = {

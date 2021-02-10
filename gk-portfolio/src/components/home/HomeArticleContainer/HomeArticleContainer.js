@@ -1,9 +1,7 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useHistory } from "react-router-dom";
 import './homeArticleContainer.css';
 import Container from 'react-bootstrap/Container';
-import { gsap } from "gsap";
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import ArticleThumbnail from '../../articles/ArticleThumbnail/ArticleThumbnail';
 import axios from 'axios';
 
@@ -18,32 +16,6 @@ function HomeArticleContainer() {
     // React Router
     const history = useHistory();
 
-    // Ref for Article Section
-    const articleSection = useRef(null);
-
-    // GSAP ANIMATIONS
-    useEffect(() => {
-
-        // Save Initial Styles
-        ScrollTrigger.saveStyles(articleSection.current);
-
-        gsap.fromTo(articleSection.current, {
-
-            autoAlpha: 0,
-            y: 150,
-
-        }, {
-            scrollTrigger: {
-                trigger: articleSection.current,
-                start: "top bottom",
-                end: "-=50",
-                scrub: true
-            },
-            autoAlpha: 1,
-            y: 0
-        });
-
-    }, []);
 
     const handleViewArticles = () => {
         history.push('/articles');
@@ -69,7 +41,6 @@ function HomeArticleContainer() {
 
     return (
         <section
-            ref={articleSection}
             className="articleThumbnailContainer">
             <button
                 className="atc__article-btn"

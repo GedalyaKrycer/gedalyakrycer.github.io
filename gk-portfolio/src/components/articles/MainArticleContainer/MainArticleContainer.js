@@ -23,7 +23,6 @@ function MainArticleContainer() {
     // // GSAP ANIMATIONS
     useEffect(() => {
 
-
         gsap.fromTo(articleSection.current, {
             autoAlpha: 0,
             y: 50
@@ -39,7 +38,7 @@ function MainArticleContainer() {
 
 
 
-    // Checks if there are Newer posts available 
+    // Checks if there are Newer posts available
     useEffect(() => {
         // Calls first page from API on initial load
         axios.get(`https://dev.to/api/articles?username=gedalyakrycer&per_page=9&page=${currentPage}`)
@@ -58,7 +57,7 @@ function MainArticleContainer() {
         }
     }, [currentPage])
 
-    // Checks if there are older posts available 
+    // Checks if there are older posts available
     useEffect(() => {
         if (articles.length === 0) {
             setOldContentAvailable(false);
@@ -82,6 +81,14 @@ function MainArticleContainer() {
             ref={articleSection}
             className="mainThumbnailContainer">
             <Container>
+
+                <ArticlePagination
+                    oldContentAvailable={oldContentAvailable}
+                    newContentAvailable={newContentAvailable}
+                    nextPage={handleNextPage}
+                    prevPage={handlePrevPage}
+                />
+
 
                 {!apiError ?
                     (
@@ -124,16 +131,6 @@ function MainArticleContainer() {
                         </>)
                     : <p>{apiError}</p>
                 }
-
-
-
-                <ArticlePagination
-                    oldContentAvailable={oldContentAvailable}
-                    newContentAvailable={newContentAvailable}
-                    nextPage={handleNextPage}
-                    prevPage={handlePrevPage}
-                />
-
 
             </Container>
 

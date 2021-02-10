@@ -29,7 +29,7 @@ const ArticleThumbnail = ({ url, img, title, reactions, tag, date }) => {
         transition: 'all 0.5s cubic-bezier(.8,.02,.52,1)'
     }
 
-    const atTitle = {
+    const atTitleStyle = {
         opacity: isHovering ? 0 : 1,
         transform: isHovering ? "scale(1.1)" : "scale(1)",
         color: "white",
@@ -52,7 +52,7 @@ const ArticleThumbnail = ({ url, img, title, reactions, tag, date }) => {
         top: 5
     }
 
-    const atMetaTag = {
+    const atMetaTagStyle = {
         fontSize: 12,
         color: 'var(--nav-filter-links)',
         margin: 0,
@@ -62,7 +62,7 @@ const ArticleThumbnail = ({ url, img, title, reactions, tag, date }) => {
         transition: 'all 0.5s cubic-bezier(.8,.02,.52,1)'
     }
 
-    const atCtaText = {
+    const atCtaTextStyle = {
         opacity: isHovering ? 1 : 0,
         transform: isHovering ? "translateX(5px)" : "translateX(0)",
         color: "var(--primary-blue)",
@@ -71,7 +71,7 @@ const ArticleThumbnail = ({ url, img, title, reactions, tag, date }) => {
         transition: 'all 0.5s cubic-bezier(.8,.02,.52,1)'
     }
 
-    const atCtaIcon = {
+    const atCtaIconStyle = {
         opacity: isHovering ? 1 : 0,
         transform: isHovering ? "translateX(5px)" : "translateX(0)",
         width: 7,
@@ -93,17 +93,17 @@ const ArticleThumbnail = ({ url, img, title, reactions, tag, date }) => {
             rel="noopener noreferrer"
         >
             <div className="at__main-section">
-                <h4 style={atTitle}>{title}</h4>
+                <h4 style={atTitleStyle}>{title}</h4>
                 <div style={atMainSectionImgStyle}></div>
 
             </div>
             <div className="at__meta-section">
                 <div className="at__meta-left-group">
-                    <p style={atMetaTag}>#{tag}</p>
+                    <p style={atMetaTagStyle}>#{tag}</p>
                     <div style={atCTASectionStyle}>
-                        <h5 style={atCtaText} >Read article</h5>
+                        <h5 style={atCtaTextStyle} >Read article</h5>
                         <svg
-                            style={atCtaIcon}
+                            style={atCtaIconStyle}
                             viewBox="0 0 7 6"
                             xmlns="http://www.w3.org/2000/svg"
                         >

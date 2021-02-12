@@ -98,7 +98,7 @@ function MainArticleContainer() {
                                 {articles.length === 0 ? (
                                     <div className="mtc__article-end">
                                         <h3>Thank you for reading!</h3>
-                                        <p>This is the end of the available articles. You can cycle back below for more recent ones.</p>
+                                        <p>This is the end of the available articles.</p>
                                     </div>
                                 ) : null}
 

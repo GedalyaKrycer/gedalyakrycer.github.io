@@ -28,7 +28,7 @@ function Bio() {
                             (I also obsess over movies and love everything from superhero blockbusters to romcoms.)
                         </p>
                         <p>
-                            For over five years I have had the privilege to work remotely with a great team at a design agency in Brooklyn, starting as an intern and concluding as a Digital Design Director.
+                            For over five years I have had the privilege to work remotely with a wonderful team at a design agency in Brooklyn, starting as an intern and concluding as a Digital Design Director.
                         </p>
                         <p>
                             It provided the opportunity to serve some great clients, including; <a
@@ -55,7 +55,7 @@ function Bio() {
                         </p>
 
                         <p>
-                            In 2020 I decided to <s>change</s> expand my career to follow my true passion—building websites from the ground up as a front-end web developer. I graduated from the University of Arizona's Coding Bootcamp, with a certification in Full-Stack Development.
+                            In 2020 I decided to <s>change</s> expand my career to follow my true passion—building websites from the ground up as a front-end developer. I graduated from the University of Arizona's Coding Bootcamp, with a certification in Full-Stack Development.
                         </p>
                         <p>
                             These days I get the joy of building things with code and <a

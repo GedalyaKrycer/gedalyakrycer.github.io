@@ -42,8 +42,14 @@
         "type": "dev"
     },
     {
-        "name": "React.js",
-        "link": "https://github.com/GedalyaKrycer/digibit-employee-directory",
+        "name": "React",
+        "link": "https://github.com/GedalyaKrycer/the-shoppies",
+        "svg": "/assets/images/tech-icons/react-tech-icon.svg",
+        "type": "dev"
+    },
+    {
+        "name": "React Native",
+        "link": "https://workoutme.app/",
         "svg": "/assets/images/tech-icons/react-tech-icon.svg",
         "type": "dev"
     },
@@ -108,9 +114,21 @@
         "type": "dev"
     },
     {
+        "name": "PHPStorm",
+        "link": "https://workoutme.app/",
+        "svg": "/assets/images/tech-icons/phpstorm-tech-icon.svg",
+        "type": "dev"
+    },
+    {
         "name": "Visual Studio Code",
         "link": "https://github.com/GedalyaKrycer",
         "svg": "/assets/images/tech-icons/vs-code-tech-icon.svg",
+        "type": "dev"
+    },
+    {
+        "name": "Jira",
+        "link": "https://workoutme.app/",
+        "svg": "/assets/images/tech-icons/jira-tech-icon.svg",
         "type": "dev"
     },
     {

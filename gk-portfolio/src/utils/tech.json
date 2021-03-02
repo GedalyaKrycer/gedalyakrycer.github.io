@@ -96,6 +96,12 @@
         "type": "dev"
     },
     {
+        "name": "Firebase",
+        "link": "https://workoutme.app/",
+        "svg": "/assets/images/tech-icons/firebase-tech-icon.svg",
+        "type": "dev"
+    },
+    {
         "name": "JSON",
         "link": "https://github.com/GedalyaKrycer/digibit-employee-directory",
         "svg": "/assets/images/tech-icons/json-tech-icon.svg",

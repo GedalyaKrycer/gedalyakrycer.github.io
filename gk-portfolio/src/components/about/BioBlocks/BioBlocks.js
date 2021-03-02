@@ -8,9 +8,49 @@ import gitIcon from './bio-block-icons/git-tech-icon.svg';
 import figmaIcon from './bio-block-icons/figma-tech-icon.svg';
 import phpStormIcon from './bio-block-icons/phpstorm-tech-icon.svg';
 import jiraIcon from './bio-block-icons/jira-tech-icon.svg';
+import reactionIcon from './bio-block-icons/reaction-icon.svg';
+import followerIcon from './bio-block-icons/follower-icon.svg';
+import viewIcon from './bio-block-icons/view-icon.svg';
+import codeDocIcon from './bio-block-icons/code-doc-icon.svg';
 
 // This is static top section of the page and gives it semantic value.
 function BioBlocks() {
+
+    const blogStats = [
+        {
+            stat: 'reactions',
+            statNumber: '1.5k',
+            icon: reactionIcon,
+        },
+        {
+            stat: 'followers',
+            statNumber: '950+',
+            icon: followerIcon,
+        },
+        {
+            stat: 'views',
+            statNumber: '27k+',
+            icon: viewIcon,
+        },
+        {
+            stat: 'articles',
+            statNumber: '16',
+            icon: codeDocIcon,
+        },
+    ];
+    let statElements = [];
+
+
+    blogStats.forEach(stat => {
+        let singleStat = (
+            <div className="block__blog-stat" key={stat.stat}>
+                <img src={stat.icon} alt="Start checkered flag icon" className="block__icon-left" />
+                <p className="block__stat-text">{stat.statNumber} <span className="block__stat-type">{stat.stat}</span></p>
+            </div>
+        )
+
+        return statElements.push(singleStat)
+    })
 
     return (
         <section className="bio-blocks">
@@ -54,10 +94,13 @@ function BioBlocks() {
                 </div>
 
             </a>
-            <a className="block">
+            <a className="block" href={"#"} rel="noopener noreferrer" target="_blank">
                 <div className="block__header">
-                    <h5>Latest article...</h5>
+                    <h5>Read latest article...</h5>
                     <h3>10 Things I Learned As A Junior Developer (First...</h3>
+                </div>
+                <div className="block__blog-container">
+                    {statElements}
                 </div>
 
             </a>

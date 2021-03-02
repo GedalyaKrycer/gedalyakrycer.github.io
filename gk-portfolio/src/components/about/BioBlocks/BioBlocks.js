@@ -89,7 +89,7 @@ function BioBlocks() {
     const blogStatsData = [
         {
             stat: 'reactions',
-            statNumber: abbrNum(reactions, 2),
+            statNumber: abbrNum(reactions, 1) + '+',
             icon: reactionIcon,
         },
         {
@@ -99,7 +99,7 @@ function BioBlocks() {
         },
         {
             stat: 'views',
-            statNumber: '27k+',
+            statNumber: '28k+',
             icon: viewIcon,
         },
         {

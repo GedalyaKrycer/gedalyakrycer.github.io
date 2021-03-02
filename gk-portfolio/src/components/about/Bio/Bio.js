@@ -22,10 +22,7 @@ function Bio() {
                 >
                     <Col className="g_white-color" lg={8}>
                         <p className="g__body-lg">
-                            I am a Vegas-based front-end developer and creative. I obsess over the details and love learning new technologies.
-                        </p>
-                        <p>
-                            (I also obsess over movies and love everything from superhero blockbusters to romcoms.)
+                            I am a Vegas-based front-end developer and designer who takes pride in perfecting the little details.
                         </p>
                         <p>
                             For over five years I have had the privilege to work remotely with a wonderful team at a design agency in Brooklyn, starting as an intern and concluding as a Digital Design Director.
@@ -58,11 +55,7 @@ function Bio() {
                             In 2020 I decided to <s>change</s> expand my career to follow my true passion—building websites from the ground up as a front-end developer. I graduated from the University of Arizona's Coding Bootcamp, with a certification in Full-Stack Development.
                         </p>
                         <p>
-                            These days I get the joy of building things with code and <a
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                href="https://dev.to/gedalyakrycer"
-                                className="bio__link">writing about code</a>. I am excited about this next stage in web development, built on a strong design foundation.
+                            These days I get the joy of building things with and writing about code.
                         </p>
 
 

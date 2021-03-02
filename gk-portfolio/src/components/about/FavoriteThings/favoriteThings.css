@@ -4,7 +4,7 @@
     padding: 80px 0 100px;
     width: calc(100% - 120px);
     margin: 10rem auto 180px;
-    
+
 }
 
 .fav__section-title {
@@ -13,7 +13,6 @@
     color: var(--light-grey);
     margin-bottom: 3rem;
     font-size: 22px;
-    
 }
 
 .fav__cards-wrapper {
@@ -38,7 +37,7 @@
     width: 200px;
     height: 230px;
     margin: 0 auto;
-    
+
 }
 
 .fav__card-img {
@@ -49,7 +48,7 @@
     object-fit: cover;
     height: 130px;
     transition: all .3s ease-in-out;
-    
+
 }
 
 .fav__card-title {
@@ -57,7 +56,11 @@
     text-align: center;
 }
 
-
+.fav__card-title::after {
+    position: relative;
+    content: '+';
+    left: 5px;
+}
 
 .fav__hidden-text {
     position: absolute;

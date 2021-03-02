@@ -19,8 +19,13 @@
     text-decoration: none;
 }
 
-.block:hover .block__header h3 {
+.block:hover .block__header h3,
+.block:hover .block__stat-text {
     color: var(--primary-blue);
+}
+
+.block:hover .block__stat-type {
+    color: var(--nav-filter-links);
 }
 
 .block:hover .block__work-cta {
@@ -58,6 +63,7 @@
     color: var(--mid-grey1);
     font-size: 24px;
     margin: 0;
+    line-height: 1.3;
     transition: .3s ease-in-out;
 }
 
@@ -155,6 +161,7 @@
     color: var(--nav-filter-links);
     font-size: 14px;
     font-weight: bold;
+    transition: .3s ease-in-out;
 }
 
 .block__stat-type {

@@ -1,5 +1,6 @@
-import React from "react";
+import React, {useEffect, useState} from "react";
 import './bioBlocks.css';
+import axios from 'axios';
 import companyIcon from './bio-block-icons/company-icon.svg';
 import startFlagIcon from './bio-block-icons/start-flag-icon.svg';
 import reactIcon from './bio-block-icons/react-tech-icon.svg';
@@ -16,10 +17,79 @@ import codeDocIcon from './bio-block-icons/code-doc-icon.svg';
 // This is static top section of the page and gives it semantic value.
 function BioBlocks() {
 
-    const blogStats = [
+    // Local State
+    const [articleCount, setArticlesCount] = useState([]);
+    const [latestArticle, setLatestArticle] = useState([]);
+    const [reactions, setReactions] = useState(0);
+
+    useEffect(() => {
+
+        axios.get('https://dev.to/api/articles?username=gedalyakrycer')
+            .then(res => {
+                setArticlesCount(res.data.length);
+                setLatestArticle(res.data[0]);
+
+                let reactionsArray = []
+
+                res.data.forEach(article => {
+                    reactionsArray.push(article.public_reactions_count);
+                });
+
+                const reactionsTotal = reactionsArray.reduce((accumulator, currentValue) => accumulator + currentValue)
+                setReactions(reactionsTotal);
+            })
+            .catch(error => {
+                console.log(error)
+            })
+
+        return () => {
+
+        }
+
+    }, [])
+
+    // Created by https://stackoverflow.com/a/2686098/12817163
+    const abbrNum = (number, decPlaces) => {
+        // 2 decimal places => 100, 3 => 1000, etc
+        decPlaces = Math.pow(10,decPlaces);
+
+        // Enumerate number abbreviations
+        const abbrev = [ "k", "m", "b", "t" ];
+
+        // Go through the array backwards, so we do the largest first
+        for (let i=abbrev.length-1; i>=0; i--) {
+
+            // Convert array index to "1000", "1000000", etc
+            const size = Math.pow(10,(i+1)*3);
+
+            // If the number is bigger or equal do the abbreviation
+            if(size <= number) {
+                // Here, we multiply by decPlaces, round, and then divide by decPlaces.
+                // This gives us nice rounding to a particular decimal place.
+                number = Math.round(number*decPlaces/size)/decPlaces;
+
+                // Handle special case where we round up to the next abbreviation
+                if((number === 1000) && (i < abbrev.length - 1)) {
+                    number = 1;
+                    i++;
+                }
+
+                // Add the letter for the abbreviation
+                number += abbrev[i];
+
+                // We are done... stop
+                break;
+            }
+        }
+
+        return number;
+    }
+
+
+    const blogStatsData = [
         {
             stat: 'reactions',
-            statNumber: '1.5k',
+            statNumber: abbrNum(reactions, 2),
             icon: reactionIcon,
         },
         {
@@ -34,14 +104,14 @@ function BioBlocks() {
         },
         {
             stat: 'articles',
-            statNumber: '16',
+            statNumber: articleCount,
             icon: codeDocIcon,
         },
     ];
+
     let statElements = [];
 
-
-    blogStats.forEach(stat => {
+    blogStatsData.forEach(stat => {
         let singleStat = (
             <div className="block__blog-stat" key={stat.stat}>
                 <img src={stat.icon} alt="Start checkered flag icon" className="block__icon-left" />
@@ -51,6 +121,11 @@ function BioBlocks() {
 
         return statElements.push(singleStat)
     })
+
+    const titleFormater = title => {
+        const titleArray = title.split('');
+        return titleArray.length < 48 ? titleArray : titleArray.slice(0, 48).join('') + '...';
+    }
 
     return (
         <section className="bio-blocks">
@@ -94,10 +169,10 @@ function BioBlocks() {
                 </div>
 
             </a>
-            <a className="block" href={"#"} rel="noopener noreferrer" target="_blank">
+            <a className="block" href={latestArticle.url} rel="noopener noreferrer" target="_blank">
                 <div className="block__header">
                     <h5>Read latest article...</h5>
-                    <h3>10 Things I Learned As A Junior Developer (First...</h3>
+                    <h3>{titleFormater(latestArticle.title)}</h3>
                 </div>
                 <div className="block__blog-container">
                     {statElements}

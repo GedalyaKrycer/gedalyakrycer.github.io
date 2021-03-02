@@ -13,6 +13,7 @@ import reactionIcon from './bio-block-icons/reaction-icon.svg';
 import followerIcon from './bio-block-icons/follower-icon.svg';
 import viewIcon from './bio-block-icons/view-icon.svg';
 import codeDocIcon from './bio-block-icons/code-doc-icon.svg';
+import firebaseIcon from './bio-block-icons/firebase-icon.svg';
 
 // This is static top section of the page and gives it semantic value.
 function BioBlocks() {
@@ -161,6 +162,7 @@ function BioBlocks() {
                     <div className="blocks__tool-icons">
                         <img src={reactIcon} alt="React logo" />
                         <img src={jsIcon} alt="JavaScript logo" />
+                        <img src={firebaseIcon} alt="FireBase logo" />
                         <img src={gitIcon} alt="Git logo" />
                         <img src={figmaIcon} alt="Figma logo" />
                         <img src={phpStormIcon} alt="PHPStorm logo" />

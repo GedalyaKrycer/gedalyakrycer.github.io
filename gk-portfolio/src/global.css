@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;900&display=swap');
 
 /* ————————————————————————————————————————————————
-Colors Variables 
+Colors Variables
 ————————————————————————————————————————————————— */
 :root {
   --primary-blue: #007CBA;
@@ -11,12 +11,13 @@ Colors Variables
   --primary-blue-darker: #015779;
   --secondary-design: #B12851;
   --secondary-learn: #37A168;
+  --section-headlines: #353535;
+  --light-grey: #c6cccf;
+  --mid-grey1: #868686;
+  --mid-grey: #545657;
   --dark-gray: #202120;
   --darker-gray: #191a19;
-  --section-headlines: #353535;
-  --mid-grey: #545657;
   --nav-filter-links: #6C6C6C;
-  --light-grey: #c6cccf;
 }
 
 
@@ -50,7 +51,7 @@ Colors Variables
 /* Any class pre-pended with "g_" is a custom class that is applied globally */
 
 /* ————————————————————————————————————————————————
-Base Styles 
+Base Styles
 ————————————————————————————————————————————————— */
 
 
@@ -91,10 +92,10 @@ header {
 
 hr {
   border-top: solid var(--primary-blue) 9px;
-  
+
   /* width: 210px;   */
   border-radius: 20px;
-  width: 9px;  
+  width: 9px;
 }
 
 a {
@@ -130,7 +131,7 @@ s:after {
 
 
 /* ————————————————————————————————————————————————
-Fonts 
+Fonts
 ————————————————————————————————————————————————— */
 h1 {
   font-weight: 900;
@@ -192,7 +193,7 @@ Forms Overrides
 .form-control {
   background-color: var(--section-headlines);
   color: aliceblue;
-  border: 1px var(--dark-grey) solid;
+  border: 1px var(--dark-gray) solid;
   /* margin-bottom: 30px; */
   height: 50px;
   padding: 15px;
@@ -222,10 +223,10 @@ Buttons
   width: 130px;
 }
 
-.btn-primary, 
-.btn, 
+.btn-primary,
+.btn,
 .contact__submit-btn {
-    border-color: none;
+    border-color: initial;
     border: none;
 }
 
@@ -239,7 +240,7 @@ button {
 Flex Utils
 ————————————————————————————————————————————————— */
 .g_justify-end {
-  justify-content: flex-end;    
+  justify-content: flex-end;
 }
 
 
@@ -270,9 +271,9 @@ Project Styles
   .g_projects-container {
       /* margin-top: -170px; */
 
-      
+
   }
-  
+
 
   .g_meta-container {
   background: var(--primary-blue);
@@ -283,7 +284,7 @@ Project Styles
   z-index: 1;
   margin-bottom: 1rem;
   color: white;
-  
+
 }
 
 .g_project-img {
@@ -299,25 +300,25 @@ Project Styles
   position: relative;
   top: 0;
   z-index: 2;
-  color: none;
+  color: initial;
   padding: 0;
   border-radius: 23px;
   display: inline-block;
-  -webkit-box-shadow: 0px 4px 23px 0px rgba(0,0,0,0.65);
-     -moz-box-shadow: 0px 4px 23px 0px rgba(0,0,0,0.65);
-          box-shadow: 0px 4px 23px 0px rgba(0,0,0,0.65);
+  -webkit-box-shadow: 0 4px 23px 0 rgba(0,0,0,0.65);
+     -moz-box-shadow: 0 4px 23px 0 rgba(0,0,0,0.65);
+          box-shadow: 0 4px 23px 0 rgba(0,0,0,0.65);
           transition: ease .5s;
 }
 
 .g_card-slide:hover,
 .g__design-project__card-slide:hover {
-  -webkit-box-shadow: 0px 20px 50px 0px rgba(0,0,0,0.95);
-  -moz-box-shadow: 0px 20px 50px 0px rgba(0,0,0,0.95);
-       box-shadow: 0px 20px 50px 0px rgba(0,0,0,0.95);
+  -webkit-box-shadow: 0 20px 50px 0 rgba(0,0,0,0.95);
+  -moz-box-shadow: 0 20px 50px 0 rgba(0,0,0,0.95);
+       box-shadow: 0 20px 50px 0 rgba(0,0,0,0.95);
        transition: ease .5s;
 }
 
-.g_card-slide:focus, 
+.g_card-slide:focus,
 .g__design-project__card-slide:focus {
   border: none;
   outline: none;
@@ -338,7 +339,7 @@ Project Styles
 
 
 /* ————————————————————————————————————————————————
-Accordion Overrides 
+Accordion Overrides
 ————————————————————————————————————————————————— */
 
 .accordion>.card {
@@ -347,13 +348,13 @@ Accordion Overrides
 
 .card {
   position: initial;
-  display: block; 
-  min-width: none; 
+  display: block;
+  min-width: 0;
   word-wrap: break-word;
   background: none;
-  background-clip: border-box; 
+  background-clip: border-box;
   border: none;
-  border-radius: none;
+  border-radius: 0;
 }
 
 .card-header {
@@ -369,7 +370,7 @@ Accordion Overrides
 
 
 /* ————————————————————————————————————————————————
-Global About Page 
+Global About Page
 ————————————————————————————————————————————————— */
 .g__about-sections {
   margin-top: 10rem;
@@ -404,7 +405,7 @@ Mobile Styles
 
 /* 1201px — Breakpoint */
 @media only screen and (max-width: 1201px) {
-  
+
   h2 {
     font-size: 155px;
   }
@@ -414,13 +415,13 @@ Mobile Styles
     transition: ease 1s;
   }
 
-  
+
 }
 
 
 /* 993px — Breakpoint */
 @media only screen and (max-width: 993px) {
-  
+
   h2 {
     font-size: 110px;
   }
@@ -458,7 +459,7 @@ Mobile Styles
   header {
     padding: 80px 0;
   }
-  
+
   h2 {
     font-size: 70px;
     line-height: 90%;
@@ -511,7 +512,7 @@ Mobile Styles
 
 /* 350px — Breakpoint */
 @media only screen and (max-width: 350px) {
-  
+
   .design-project__card-slide {
     top: 93px;
     border-radius: 23px;

@@ -15,6 +15,8 @@ This is an experimental Bootstrap 4 portfolio site. The goal is to grow this web
 
 * Updated bio on About page and added a new Career Timeline section
 
+* Added blocks under the bio showing my latest job and blog stats
+
 * Rebuilt NavBar to not use bootstrap and simplified the use of bootstrap across the app. (Future goal is to remove Bootstrap completely and add SASS.)
 
 * Made many ui and animation fixes 

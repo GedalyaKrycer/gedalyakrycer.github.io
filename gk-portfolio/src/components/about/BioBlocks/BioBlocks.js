@@ -123,7 +123,7 @@ function BioBlocks() {
     })
 
     const titleFormater = title => {
-        const titleArray = title.split('');
+        const titleArray = title === undefined ? 'Loading...' : title.split('');
         return titleArray.length < 48 ? titleArray : titleArray.slice(0, 48).join('') + '...';
     }
 

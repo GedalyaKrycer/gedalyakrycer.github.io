@@ -24,7 +24,7 @@ function HomeArticleContainer() {
 
     useEffect(() => {
 
-        axios.get('https://dev.to/api/articles?username=gedalyakrycer&per_page=6')
+        axios.get('https://dev.to/api/articles?username=gedalyakrycer&per_page=1000&per_page=6')
             .then(res => {
                 setArticles(res.data);
             })

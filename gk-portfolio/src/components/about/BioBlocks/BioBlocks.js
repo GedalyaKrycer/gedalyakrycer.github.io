@@ -25,7 +25,7 @@ function BioBlocks() {
 
     useEffect(() => {
 
-        axios.get('https://dev.to/api/articles?username=gedalyakrycer')
+        axios.get('https://dev.to/api/articles?username=gedalyakrycer&per_page=1000')
             .then(res => {
                 setArticlesCount(res.data.length);
                 setLatestArticle(res.data[0]);
@@ -90,17 +90,17 @@ function BioBlocks() {
     const blogStatsData = [
         {
             stat: 'reactions',
-            statNumber: abbrNum(reactions, 1) + '+',
+            statNumber: abbrNum(reactions, 2) + '+',
             icon: reactionIcon,
         },
         {
             stat: 'followers',
-            statNumber: '950+',
+            statNumber: '1k+',
             icon: followerIcon,
         },
         {
             stat: 'views',
-            statNumber: '28k+',
+            statNumber: '30k+',
             icon: viewIcon,
         },
         {

@@ -32,10 +32,6 @@ function HomeArticleContainer() {
                 console.log(error)
             })
 
-        return () => {
-
-        }
-
     }, [])
 
 

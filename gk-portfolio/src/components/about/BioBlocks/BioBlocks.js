@@ -100,7 +100,7 @@ function BioBlocks() {
         },
         {
             stat: 'views',
-            statNumber: '30k+',
+            statNumber: '40k+',
             icon: viewIcon,
         },
         {

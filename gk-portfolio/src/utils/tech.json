@@ -7,13 +7,13 @@
     },
     {
         "name": "CSS",
-        "link": "https://github.com/NinaRocket/DRIVERkick",
+        "link": "https://dev.to/gedalyakrycer/ohsnap-staggered-css-animations-sass-loops-4dk0",
         "svg": "/assets/images/tech-icons/css-tech-icon.svg",
         "type": "dev"
     },
     {
         "name": "SASS",
-        "link": "https://www.trust4leaders.com/",
+        "link": "https://dev.to/gedalyakrycer/the-shoppies-my-project-submission-for-shopify-s-front-end-internship-36ee",
         "svg": "/assets/images/tech-icons/sass-tech-icon.svg",
         "type": "dev"
     },
@@ -43,7 +43,7 @@
     },
     {
         "name": "React",
-        "link": "https://github.com/GedalyaKrycer/the-shoppies",
+        "link": "https://dev.to/gedalyakrycer/react-and-its-lifecycle-methods-explained-1589",
         "svg": "/assets/images/tech-icons/react-tech-icon.svg",
         "type": "dev"
     },
@@ -55,13 +55,13 @@
     },
     {
         "name": "Redux",
-        "link": "https://seeit.netlify.app/",
+        "link": "https://github.com/GedalyaKrycer/screen-it",
         "svg": "/assets/images/tech-icons/redux-tech-icon.svg",
         "type": "dev"
     },
     {
         "name": "JavaScript",
-        "link": "https://github.com/GedalyaKrycer/hw-10-employee-summary",
+        "link": "https://github.com/GedalyaKrycer/digibit-employee-directory",
         "svg": "/assets/images/tech-icons/js-tech-icon.svg",
         "type": "dev"
     },
@@ -84,12 +84,6 @@
         "type": "dev"
     },
     {
-        "name": "API",
-        "link": "https://github.com/GedalyaKrycer/weather-forecaster",
-        "svg": "/assets/images/tech-icons/api-tech-icon.svg",
-        "type": "dev"
-    },
-    {
         "name": "Axios",
         "link": "https://github.com/GedalyaKrycer/weather-forecaster",
         "svg": "/assets/images/tech-icons/axios-tech-icon.svg",
@@ -99,12 +93,6 @@
         "name": "Firebase",
         "link": "https://workoutme.app/",
         "svg": "/assets/images/tech-icons/firebase-tech-icon.svg",
-        "type": "dev"
-    },
-    {
-        "name": "JSON",
-        "link": "https://github.com/GedalyaKrycer/digibit-employee-directory",
-        "svg": "/assets/images/tech-icons/json-tech-icon.svg",
         "type": "dev"
     },
     {
@@ -127,7 +115,7 @@
     },
     {
         "name": "Visual Studio Code",
-        "link": "https://github.com/GedalyaKrycer",
+        "link": "https://dev.to/gedalyakrycer/10-visual-studio-code-tricks-to-unleash-your-productivity-p6a",
         "svg": "/assets/images/tech-icons/vs-code-tech-icon.svg",
         "type": "dev"
     },
@@ -220,6 +208,12 @@
         "link": "https://gedalya.myportfolio.com/photography",
         "svg": "/assets/images/tech-icons/lr-tech-icon.svg",
         "type": "design"
+    },
+    {
+        "name": "Gatsby",
+        "link": "https://youtube.com/playlist?list=PL4cUxeGkcC9hw1g77I35ZivVLe8k2nvjB",
+        "svg": "/assets/images/tech-icons/gatsby-tech-icon.svg",
+        "type": "learning"
     },
     {
         "name": "Express",

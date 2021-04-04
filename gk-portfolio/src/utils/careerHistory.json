@@ -1,24 +1,24 @@
 [
     {
-        "title": "Junior React Native Developer",
-        "company": "WorkoutMe",
-        "time_frame": "2 mo",
-        "start_date": "Present",
-        "description": "Supporting our Sr. developer in adding new functionality and screens for iOS. Latest project included adding localization for multi-language support.",
+        "title": "Front-End Designer",
+        "company": "Planning Center",
+        "time_frame": "Started April",
+        "start_date": "2021",
+        "description": "Designer and front-end developer on the Groups product team using Figma, React, React Native and Rails.",
         "type": "dev"
     },
     {
-        "title": "Contract Web Development",
-        "company": "Gedalya Krycer Designs",
-        "time_frame": "5 yr",
-        "start_date": "Present",
-        "description": "Providing web design and development services via React, Wordpress and Squarespace.",
+        "title": "Junior React Native Developer",
+        "company": "WorkoutMe",
+        "time_frame": "2 months",
+        "start_date": "2021",
+        "description": "Assisted on iOS app by adding multi-language localization support and building the front-end for multiple new screens.",
         "type": "dev"
     },
     {
         "title": "Full-Stack Web Development Certification",
         "company": "University of Arizona Bootcamp",
-        "time_frame": "6 mos",
+        "time_frame": "6 months",
         "start_date": "2020",
         "description": "Learned core languages and coding methodologies, while building multiple team-based projects.",
         "type": "learning"
@@ -26,7 +26,7 @@
     {
         "title": "Digital Design Director",
         "company": "Lúgh Studio",
-        "time_frame": "4 mos",
+        "time_frame": "4 months",
         "start_date": "2020",
         "description": "Lead both design and development teams, provided HR support and managed key client accounts.",
         "type": "design"
@@ -34,7 +34,7 @@
     {
         "title": "Sr. Web Designer",
         "company": "Lúgh Studio",
-        "time_frame": "1 yr 8 mos",
+        "time_frame": "1 yr 8 months",
         "start_date": "2018",
         "description": "Designed multiple WordPress sites from the sitemap to performing final QA, mentored junior designers, and created processes for web production.",
         "type": "design"
@@ -42,15 +42,23 @@
     {
         "title": "Designer",
         "company": "Mila International",
-        "time_frame": "3 mos",
+        "time_frame": "3 months",
         "start_date": "2018",
         "description": "Provided graphic design for print based marketing collateral and multiple event materials (booth & signage).",
         "type": "design"
     },
     {
+        "title": "Web Designer & Developer",
+        "company": "Syntixi",
+        "time_frame": "3 yr",
+        "start_date": "2017",
+        "description": "Designed, conducted UX interviews and contributed code to several Wordpress websites including the new LVMPD Explorer Metro site.",
+        "type": "dev"
+    },
+    {
         "title": "Lead Graphic Designer",
         "company": "Lúgh Studio",
-        "time_frame": "2 yr 11 mos",
+        "time_frame": "2 yr 11 months",
         "start_date": "2015",
         "description": "Worked on print, web, branding and motion graphic projects for multiple client accounts.",
         "type": "design"
@@ -58,7 +66,7 @@
     {
         "title": "Graphic Designer",
         "company": "Winky Designs",
-        "time_frame": "5 mos",
+        "time_frame": "5 months",
         "start_date": "2014",
         "description": "Served as an intern and then came on board part-time. Designed watch interfaces and product brochure.",
         "type": "design"

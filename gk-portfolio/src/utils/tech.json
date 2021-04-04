@@ -48,12 +48,6 @@
         "type": "dev"
     },
     {
-        "name": "React Native",
-        "link": "https://workoutme.app/",
-        "svg": "/assets/images/tech-icons/react-tech-icon.svg",
-        "type": "dev"
-    },
-    {
         "name": "Redux",
         "link": "https://github.com/GedalyaKrycer/screen-it",
         "svg": "/assets/images/tech-icons/redux-tech-icon.svg",
@@ -99,6 +93,12 @@
         "name": "Wordpress",
         "link": "https://www.trust4leaders.com/",
         "svg": "/assets/images/tech-icons/wp-tech-icon.svg",
+        "type": "dev"
+    },
+    {
+        "name": "Mailchimp",
+        "link": "https://github.com/GedalyaKrycer/genhybridsystems",
+        "svg": "/assets/images/tech-icons/mailchimp-tech-icon.svg",
         "type": "dev"
     },
     {
@@ -216,39 +216,15 @@
         "type": "learning"
     },
     {
-        "name": "Express",
-        "link": "https://www.udemy.com/course/mern-stack-front-to-back/",
-        "svg": "/assets/images/tech-icons/code-tech-icon.svg",
+        "name": "React Native",
+        "link": "https://www.udemy.com/course/react-native-the-practical-guide/",
+        "svg": "/assets/images/tech-icons/react-native-tech-icon.svg",
         "type": "learning"
     },
     {
-        "name": "Mongoose",
-        "link": "https://www.udemy.com/course/mern-stack-front-to-back/",
-        "svg": "/assets/images/tech-icons/code-tech-icon.svg",
-        "type": "learning"
-    },
-    {
-        "name": "Compass",
-        "link": "https://www.udemy.com/course/mern-stack-front-to-back/",
-        "svg": "/assets/images/tech-icons/compass-tech-icon.svg",
-        "type": "learning"
-    },
-    {
-        "name": "MongoDB",
-        "link": "https://www.udemy.com/course/mern-stack-front-to-back/",
-        "svg": "/assets/images/tech-icons/compass-tech-icon.svg",
-        "type": "learning"
-    },
-    {
-        "name": "Postman",
-        "link": "https://www.udemy.com/course/mern-stack-front-to-back/",
-        "svg": "/assets/images/tech-icons/postman-tech-icon.svg",
-        "type": "learning"
-    },
-    {
-        "name": "Mailchimp",
-        "link": "https://www.youtube.com/playlist?list=PLR_ZJO3q73HalAe5sRs7ByjHvptmbflsL",
-        "svg": "/assets/images/tech-icons/mailchimp-tech-icon.svg",
+        "name": "Rails",
+        "link": "https://www.youtube.com/watch?v=fmyvWz5TUWg",
+        "svg": "/assets/images/tech-icons/rails-tech-icon.svg",
         "type": "learning"
     }
 ]

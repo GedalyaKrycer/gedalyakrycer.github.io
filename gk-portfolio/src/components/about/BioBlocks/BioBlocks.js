@@ -127,7 +127,7 @@ function BioBlocks() {
 
     return (
         <section className="bio-blocks">
-            <a className="block" href="https://workoutme.app/" rel="noopener noreferrer" target="_blank">
+            <a className="block" href="https://www.planningcenter.com/" rel="noopener noreferrer" target="_blank">
                 <div className="block__header">
                     <h5>Working as a…</h5>
                     <h3>Front-End Designer</h3>

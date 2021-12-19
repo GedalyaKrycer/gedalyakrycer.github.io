@@ -67,7 +67,7 @@ function DesignPortfolio() {
     return (
         <>
             <div className="design-project__container" ref={designCard1Ref}>
-                <a href="http://gedalya.myportfolio.com/"
+                <a href="https://www.behance.net/gedalyakrycer"
                     target="_blank"
                     rel="noopener noreferrer" >
                     <div className="g__design-project__card-slide">
